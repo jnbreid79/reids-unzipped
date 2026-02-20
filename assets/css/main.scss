@@ -1,0 +1,408 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@charset "utf-8";
+
+// Import the Minimal Mistakes theme styles
+@import "minimal-mistakes";
+
+// =============================================================================
+// ZIPPER CUSTOM OVERRIDES
+// =============================================================================
+
+// ---- Masthead ---------------------------------------------------------------
+.masthead {
+  background-color: #1a3a5c;
+  border-bottom: 3px solid #b8d4e8;
+
+  .site-title {
+    color: #b8d4e8;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+  }
+
+  .site-logo img {
+    max-height: 48px;
+  }
+
+  .greedy-nav {
+    background: #1a3a5c;
+
+    a {
+      color: #b8d4e8;
+      font-weight: 400;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      font-size: 0.8em;
+
+      &:hover {
+        color: #ffffff;
+      }
+    }
+
+    .visible-links a::before {
+      background: #b8d4e8;
+    }
+
+    button {
+      background-color: #2d6a9f;
+    }
+  }
+}
+
+// ---- Footer -----------------------------------------------------------------
+.page__footer {
+  background-color: #1a3a5c;
+  color: #b8d4e8;
+
+  a {
+    color: #b8d4e8;
+    &:hover { color: #ffffff; }
+  }
+
+  footer {
+    border-top: 1px solid #2d6a9f;
+  }
+}
+
+// =============================================================================
+// HOMEPAGE HERO BANNER
+// =============================================================================
+// Used on index.html — a full-width banner with the boat name and tagline.
+// Drop a wide ocean/sailing photo in as the background image.
+
+.hero-banner {
+  position: relative;
+  width: 100%;
+  min-height: 65vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #1a3a5c;
+  background-image: url('/assets/images/hero-banner.jpg');  // ← add your hero photo
+  background-size: cover;
+  background-position: center 40%;
+  overflow: hidden;
+  margin-bottom: 2rem;
+
+  // Dark navy gradient overlay so text pops over any photo
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(26, 58, 92, 0.55) 0%,
+      rgba(26, 58, 92, 0.75) 100%
+    );
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 2rem;
+    color: #ffffff;
+
+    .hero-logo {
+      max-width: 280px;
+      margin-bottom: 1.2rem;
+      filter: drop-shadow(0 2px 8px rgba(0,0,0,0.4));
+    }
+
+    h1 {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 200;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #ffffff;
+      margin: 0 0 0.5rem;
+      text-shadow: 0 2px 12px rgba(0,0,0,0.5);
+    }
+
+    .hero-tagline {
+      font-size: clamp(1rem, 2.5vw, 1.35rem);
+      font-weight: 300;
+      color: #b8d4e8;
+      letter-spacing: 0.06em;
+      margin-bottom: 1.8rem;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      a {
+        display: inline-block;
+        padding: 0.7rem 1.8rem;
+        border-radius: 2px;
+        font-size: 0.85rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        font-weight: 500;
+        text-decoration: none;
+        transition: all 0.2s ease;
+
+        &.btn-primary {
+          background: #b8d4e8;
+          color: #1a3a5c;
+          &:hover {
+            background: #ffffff;
+            color: #1a3a5c;
+          }
+        }
+
+        &.btn-outline {
+          border: 1.5px solid #b8d4e8;
+          color: #b8d4e8;
+          &:hover {
+            background: rgba(184, 212, 232, 0.15);
+            color: #ffffff;
+          }
+        }
+      }
+    }
+  }
+}
+
+// ---- Live position strip below hero ----------------------------------------
+.tracker-strip {
+  background: #1f4a73;
+  color: #b8d4e8;
+  text-align: center;
+  padding: 0.6rem 1rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+
+  a {
+    color: #deedf7;
+    font-weight: 600;
+    text-decoration: none;
+    &:hover { color: #ffffff; text-decoration: underline; }
+  }
+
+  .tracker-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: #4caf8a;   // green "live" dot
+    border-radius: 50%;
+    margin-right: 0.4rem;
+    animation: pulse 2s ease-in-out infinite;
+    vertical-align: middle;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.5; transform: scale(1.3); }
+}
+
+// =============================================================================
+// SECTION HEADINGS ON HOMEPAGE
+// =============================================================================
+.section-heading {
+  text-align: center;
+  margin: 2.5rem 0 1.5rem;
+  
+  h2 {
+    font-size: 1.4rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #1a3a5c;
+    display: inline-block;
+    border-bottom: 2px solid #b8d4e8;
+    padding-bottom: 0.4rem;
+  }
+}
+
+// =============================================================================
+// CREW CARDS — used on /crew/ overview page
+// =============================================================================
+.crew-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.crew-card {
+  position: relative;
+  border-radius: 3px;
+  overflow: hidden;
+  background: #1a3a5c;
+  box-shadow: 0 4px 16px rgba(26, 58, 92, 0.18);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  text-decoration: none;
+  display: block;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(26, 58, 92, 0.28);
+    text-decoration: none;
+  }
+
+  img {
+    width: 100%;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    transition: opacity 0.3s ease;
+  }
+
+  &:hover img {
+    opacity: 0.85;
+  }
+
+  .crew-card__info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2.5rem 1rem 1rem;
+    background: linear-gradient(to top, rgba(26,58,92,0.95) 0%, transparent 100%);
+    color: white;
+
+    .name {
+      font-size: 1.15rem;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+      color: #ffffff;
+      display: block;
+    }
+
+    .role {
+      font-size: 0.8rem;
+      color: #b8d4e8;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 300;
+    }
+  }
+}
+
+// =============================================================================
+// VOYAGE TIMELINE — creative alternative to simple blog list
+// Used on the Blog / Voyage Log page
+// =============================================================================
+.voyage-timeline {
+  position: relative;
+  padding-left: 2rem;
+  margin: 2rem 0;
+
+  // Vertical line
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, #b8d4e8, #1a3a5c);
+  }
+}
+
+.voyage-entry {
+  position: relative;
+  margin-bottom: 2.5rem;
+
+  // Circle on timeline
+  &::before {
+    content: '';
+    position: absolute;
+    left: -2.45rem;
+    top: 0.4rem;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #b8d4e8;
+    border: 2px solid #1a3a5c;
+  }
+
+  .voyage-meta {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #5a7a96;
+    margin-bottom: 0.2rem;
+  }
+
+  h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.1rem;
+
+    a {
+      color: #1a3a5c;
+      &:hover { color: #2d6a9f; }
+    }
+  }
+
+  .voyage-excerpt {
+    font-size: 0.9rem;
+    color: #3a5a78;
+    margin: 0;
+  }
+
+  .voyage-thumb {
+    float: right;
+    margin: 0 0 0.5rem 1rem;
+    width: 140px;
+    border-radius: 2px;
+    object-fit: cover;
+    aspect-ratio: 16/9;
+
+    @media (max-width: 500px) {
+      float: none;
+      width: 100%;
+      margin: 0 0 0.5rem;
+    }
+  }
+}
+
+// =============================================================================
+// POST / PAGE TYPOGRAPHY POLISH
+// =============================================================================
+.page__content {
+  h2, h3 {
+    color: #1a3a5c;
+  }
+
+  blockquote {
+    border-left: 4px solid #b8d4e8;
+    background: #f0f7fc;
+    color: #2d5070;
+    font-style: italic;
+  }
+
+  a {
+    color: #2d6a9f;
+    &:hover { color: #1a3a5c; }
+  }
+}
+
+// Post hero image — give it a subtle navy tint on hover
+.page__hero-image {
+  transition: filter 0.3s ease;
+}
+
+// =============================================================================
+// READ MORE BUTTON
+// =============================================================================
+.btn--zipper {
+  background: #1a3a5c;
+  color: #b8d4e8 !important;
+  border: none;
+  letter-spacing: 0.08em;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+
+  &:hover {
+    background: #2d6a9f;
+    color: #ffffff !important;
+  }
+}

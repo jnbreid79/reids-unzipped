@@ -1,0 +1,44 @@
+/* =============================================================================
+   ZIPPER SKIN — Reid's Unzipped
+   Brand palette: deep navy (#1a3a5c) + ice blue (#b8d4e8) + white
+   ============================================================================= */
+
+// ---- Core palette ----------------------------------------------------------
+$zipper-navy:      #1a3a5c;   // deep navy (background / masthead)
+$zipper-navy-mid:  #1f4a73;   // slightly lighter navy for hover states
+$zipper-blue:      #2d6a9f;   // mid blue (links, accents)
+$zipper-ice:       #b8d4e8;   // ice blue (logo colour, highlights)
+$zipper-ice-light: #deedf7;   // very pale blue (subtle backgrounds)
+$zipper-white:     #f8fbfd;   // off-white (main background)
+$zipper-text:      #1a2a38;   // near-black with blue tint (body text)
+$zipper-muted:     #5a7a96;   // muted blue-grey (meta text, captions)
+
+// ---- Minimal Mistakes variable overrides -----------------------------------
+
+// Background & text
+$background-color:     $zipper-white       !default;
+$text-color:           $zipper-text        !default;
+$muted-text-color:     $zipper-muted       !default;
+$border-color:         mix($zipper-ice, white, 40%) !default;
+
+// Links
+$link-color:           $zipper-blue        !default;
+$link-color-hover:     $zipper-navy        !default;
+$link-color-visited:   mix($zipper-blue, $zipper-navy, 60%) !default;
+
+// Masthead (top navigation bar)
+$masthead-link-color:          $zipper-ice       !default;
+$masthead-link-color-hover:    white             !default;
+
+// Primary / accent (buttons, highlighted elements)
+$primary-color:        $zipper-blue        !default;
+
+// Footer
+$footer-background-color: $zipper-navy     !default;
+
+// Code blocks
+$code-background-color:   $zipper-ice-light !default;
+
+// ---- Masthead background override (inject via custom CSS below) ------------
+// Minimal Mistakes doesn't expose a masthead-background variable in all versions,
+// so we use a targeted override in _masthead.scss or via custom.css (see assets/css/main.scss)

@@ -1,0 +1,150 @@
+# =============================================================================
+# Reid's Unzipped – Jekyll / Minimal Mistakes configuration
+# =============================================================================
+
+# Theme
+remote_theme: "mmistakes/minimal-mistakes@4.26.2"
+minimal_mistakes_skin: "zipper"   # our custom skin (see _sass/minimal-mistakes/skins/_zipper.scss)
+
+# Site settings
+title: "Reid's Unzipped"
+title_separator: "·"
+subtitle: "Reid family cruising the world on Zipper"
+name: "The Reid Family"
+description: "Following the Reid family as they sail their catamaran Zipper across the world's oceans — adventures, mishaps, and everything in between."
+url: "https://yourusername.github.io"        # ← change to your GitHub Pages URL
+baseurl: ""                                   # ← or "/repo-name" if not a user/org page
+repository: "yourusername/reids-unzipped"     # ← change to your GitHub repo
+
+# Logo shown in masthead (use the light version on dark header)
+logo: "/assets/images/zipper-logo-light.png"
+
+# Author (used in sidebar bio etc.)
+author:
+  name: "The Reid Family"
+  avatar: "/assets/images/crew-photo.jpg"     # ← add a crew photo here
+  bio: "Angus, Sophie, Isla & Jamie — sailing catamaran Zipper from Cherbourg to wherever the wind takes us."
+  location: "Currently: Whangarei, NZ"
+  links:
+    - label: "Live Tracker"
+      icon: "fas fa-map-marker-alt"
+      url: "https://forecast.predictwind.com/tracking/display/SV-Zipper"
+    - label: "Telegram Updates"
+      icon: "fab fa-telegram"
+      url: "https://t.me/+q5LLo7TNObg3NGY0"
+    - label: "Email"
+      icon: "fas fa-envelope"
+      url: "mailto:jnbreid@gmail.com"
+
+# Footer links
+footer:
+  links:
+    - label: "Live Tracker"
+      icon: "fas fa-map-marker-alt"
+      url: "https://forecast.predictwind.com/tracking/display/SV-Zipper"
+    - label: "Telegram"
+      icon: "fab fa-telegram"
+      url: "https://t.me/+q5LLo7TNObg3NGY0"
+
+# =============================================================================
+# Reading / build
+# =============================================================================
+timezone: "Pacific/Auckland"
+locale: "en-GB"
+
+include:
+  - _pages
+
+# =============================================================================
+# Plugins
+# =============================================================================
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jekyll-include-cache
+
+# Paginate blog posts
+paginate: 10
+paginate_path: /blog/page:num/
+
+# =============================================================================
+# Defaults – applied automatically to all posts / pages
+# =============================================================================
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: false          # set to true and configure a provider when ready
+      share: true
+      related: true
+      show_date: true
+
+  # _pages
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+      author_profile: false
+
+# =============================================================================
+# Category / tag pages (powered by jekyll-archives or manual pages)
+# =============================================================================
+category_archive:
+  type: liquid
+  path: /categories/
+
+tag_archive:
+  type: liquid
+  path: /tags/
+
+# =============================================================================
+# Collections — Crew members as a collection (creative alternative to pages)
+# =============================================================================
+collections:
+  crew:
+    output: true
+    permalink: /:collection/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: crew
+    values:
+      layout: single
+      author_profile: false
+
+# =============================================================================
+# Analytics / comments (fill in when ready)
+# =============================================================================
+# analytics:
+#   provider: "google-gtag"
+#   google:
+#     tracking_id: "UA-XXXXXXXX-X"
+
+# comments:
+#   provider: "utterances"
+#   utterances:
+#     theme: "github-light"
+#     issue_term: "pathname"
+
+# =============================================================================
+# SEO / social
+# =============================================================================
+twitter:
+  username:
+og_image: "/assets/images/zipper-og-image.jpg"   # ← a nice hero shot for social sharing
+
+# =============================================================================
+# Sass
+# =============================================================================
+sass:
+  sass_dir: _sass
+  style: compressed

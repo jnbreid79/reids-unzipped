@@ -1,0 +1,19 @@
+# =============================================================================
+# Navigation — Reid's Unzipped
+# =============================================================================
+
+main:
+  - title: "Voyage Log"
+    url: /voyage-log/
+
+  - title: "The Crew"
+    url: /crew/
+
+  - title: "The Boat"
+    url: /the-boat/
+
+  - title: "Supporters"
+    url: /supporters/
+
+  - title: "Live Tracker"
+    url: https://forecast.predictwind.com/tracking/display/SV-Zipper
