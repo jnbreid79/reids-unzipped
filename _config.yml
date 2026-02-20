@@ -12,9 +12,9 @@ title_separator: "·"
 subtitle: "Reid family cruising the world on Zipper"
 name: "The Reid Family"
 description: "Following the Reid family as they sail their catamaran Zipper across the world's oceans — adventures, mishaps, and everything in between."
-url: "https://yourusername.github.io"        # ← change to your GitHub Pages URL
-baseurl: ""                                   # ← or "/repo-name" if not a user/org page
-repository: "yourusername/reids-unzipped"     # ← change to your GitHub repo
+url: "https://jnbreid79.github.io"         # ← change to your GitHub Pages URL
+baseurl: "/reids-unzipped"                    # ← or "/repo-name" if not a user/org page
+repository: "jnbreid79/reids-unzipped"     # ← change to your GitHub repo
 
 # Logo shown in masthead (use the light version on dark header)
 logo: "/assets/images/zipper-logo-light.png"
