@@ -17,7 +17,7 @@ baseurl: "/reids-unzipped"                    # ← or "/repo-name" if not a use
 repository: "jnbreid79/reids-unzipped"     # ← change to your GitHub repo
 
 # Logo shown in masthead (use the light version on dark header)
-logo: "/assets/images/zipper-logo-light.png"
+logo: "/assets/images/zipper-logo-light.svg"
 
 # Author (used in sidebar bio etc.)
 author:
