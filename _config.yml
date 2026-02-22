@@ -148,4 +148,3 @@ og_image: "/assets/images/zipper-og-image.jpg"   # ← a nice hero shot for soci
 sass:
   sass_dir: _sass
   style: compressed
-  
