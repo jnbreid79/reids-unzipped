@@ -1,88 +1,587 @@
 ---
-layout: single
-author_profile: false
-classes: wide
+layout: none
 ---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reid's Unzipped — Reid family cruising the world on Zipper</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500&family=Merriweather:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy:      #1a3a5c;
+    --navy-mid:  #1f4a73;
+    --blue:      #2d6a9f;
+    --ice:       #b8d4e8;
+    --ice-light: #deedf7;
+    --white:     #f8fbfd;
+    --text:      #1a2a38;
+    --muted:     #5a7a96;
+  }
 
-<!-- ================================================================
-     HERO BANNER
-     Replace hero-banner.jpg with your best sailing shot.
-     The navy overlay means almost any photo looks great.
-     ================================================================ -->
-<div class="hero-banner">
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Merriweather', Georgia, serif;
+    background: var(--white);
+    color: var(--text);
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  /* =====================================================================
+     MASTHEAD
+     ===================================================================== */
+  .masthead {
+    background: var(--navy);
+    border-bottom: 3px solid var(--ice);
+    padding: 0 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+    position: sticky;
+    top: 0;
+    z-index: 9000;
+    isolation: isolate;
+  }
+
+  .masthead-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    text-decoration: none;
+  }
+
+  .masthead-logo .site-name {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+    font-size: 1.1rem;
+    color: var(--ice);
+    letter-spacing: 0.1em;
+    white-space: nowrap;
+  }
+
+  /* Hamburger */
+  .hamburger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 300;
+  }
+  .hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--ice);
+    transition: all 0.3s ease;
+    transform-origin: center;
+  }
+  .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+  .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  /* Nav dropdown */
+  .nav-dropdown {
+    position: fixed;
+    top: 67px;
+    right: 0;
+    width: 280px;
+    background: var(--navy);
+    border-left: 3px solid var(--ice);
+    border-bottom: 3px solid var(--ice);
+    border-bottom-left-radius: 4px;
+    transform: translateX(100%);
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 9999;
+    padding: 1rem 0;
+    box-shadow: -6px 6px 24px rgba(0,0,0,0.4);
+  }
+  .nav-dropdown.open { transform: translateX(0); }
+  .nav-dropdown a {
+    display: block;
+    padding: 0.75rem 1.8rem;
+    color: var(--ice);
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-weight: 400;
+    border-bottom: 1px solid rgba(184,212,232,0.08);
+    transition: background 0.15s, color 0.15s;
+  }
+  .nav-dropdown a:hover { background: rgba(184,212,232,0.1); color: white; }
+  .nav-dropdown a:last-child { border-bottom: none; }
+
+  /* Overlay */
+  .nav-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9998;
+  }
+  .nav-overlay.open { display: block; }
+
+  /* Tracker pill */
+  .tracker-pill {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.75rem;
+    color: #4cbb9a;
+    letter-spacing: 0.08em;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    text-decoration: none;
+    padding: 0.35rem 0.8rem;
+    border: 1px solid rgba(76,187,154,0.35);
+    border-radius: 20px;
+    transition: all 0.2s;
+    white-space: nowrap;
+  }
+  .tracker-pill:hover { background: rgba(76,187,154,0.1); border-color: #4cbb9a; }
+  .dot {
+    display: inline-block;
+    width: 7px; height: 7px;
+    background: #4cbb9a;
+    border-radius: 50%;
+    animation: pulse 2s ease-in-out infinite;
+    flex-shrink: 0;
+  }
+  @keyframes pulse {
+    0%,100% { opacity:1; transform:scale(1); }
+    50% { opacity:0.4; transform:scale(1.5); }
+  }
+
+  /* =====================================================================
+     HERO
+     ===================================================================== */
+  .hero {
+    position: relative;
+    min-height: 72vh;
+    background: var(--navy);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 30% 65%, rgba(45,106,159,0.45) 0%, transparent 55%),
+      radial-gradient(ellipse at 75% 30%, rgba(26,58,92,0.7) 0%, transparent 60%),
+      linear-gradient(160deg, #0d2438 0%, #1a3a5c 40%, #1f5a8a 70%, #1a4a72 100%);
+  }
+
+  /* If a hero photo exists, it overlays the gradient */
+  .hero.has-photo::before {
+    background-image: url('{{ "/assets/images/hero-banner.jpg" | relative_url }}');
+    background-size: cover;
+    background-position: center 40%;
+    background-color: transparent;
+  }
+  .hero.has-photo::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(13,36,56,0.55) 0%, rgba(26,58,92,0.75) 100%);
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 2rem;
+    max-width: 700px;
+  }
+
+  .hero-content h1 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+    font-size: clamp(1.8rem, 5vw, 3rem);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: white;
+    margin: 1.2rem 0 0.6rem;
+  }
+
+  .hero-tagline {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    color: var(--ice);
+    letter-spacing: 0.08em;
+    margin-bottom: 2rem;
+  }
+
+  .hero-buttons {
+    display: flex;
+    gap: 0.9rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .btn-primary {
+    background: var(--ice);
+    color: var(--navy);
+    padding: 0.7rem 1.8rem;
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 500;
+    border-radius: 2px;
+    transition: all 0.2s;
+  }
+  .btn-primary:hover { background: white; }
+
+  .btn-outline {
+    border: 1.5px solid rgba(184,212,232,0.7);
+    color: var(--ice);
+    padding: 0.7rem 1.8rem;
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 400;
+    border-radius: 2px;
+    transition: all 0.2s;
+  }
+  .btn-outline:hover { background: rgba(184,212,232,0.12); color: white; }
+
+  /* =====================================================================
+     PAGE SECTIONS
+     ===================================================================== */
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  .section-heading {
+    text-align: center;
+    margin: 3rem 0 1.8rem;
+  }
+  .section-heading h2 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.28em;
+    color: var(--navy);
+    display: inline-block;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--ice);
+  }
+
+  /* Posts grid */
+  .posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .post-card {
+    background: white;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(26,58,92,0.1);
+    transition: transform 0.25s, box-shadow 0.25s;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+  .post-card:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(26,58,92,0.16); }
+
+  .post-card-img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: linear-gradient(135deg, var(--navy-mid), var(--blue));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--ice);
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    overflow: hidden;
+  }
+  .post-card-img img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+  }
+
+  .post-card-body { padding: 1.1rem 1.3rem 1.3rem; }
+  .post-card-meta {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.73rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+    margin-bottom: 0.4rem;
+  }
+  .post-card h3 { font-size: 1rem; font-weight: 400; color: var(--navy); margin-bottom: 0.5rem; line-height: 1.4; }
+  .post-card p { font-size: 0.85rem; color: #4a6a80; margin: 0; line-height: 1.5; }
+
+  /* About / stats strip */
+  .about-strip {
+    background: var(--navy);
+    color: var(--ice-light);
+    padding: 2.5rem 2rem;
+    text-align: center;
+    margin: 2rem 0;
+  }
+  .about-strip p { max-width: 620px; margin: 0 auto 1.2rem; font-size: 0.95rem; line-height: 1.8; color: var(--ice-light); }
+  .stat-row { display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; margin-top: 1.5rem; }
+  .stat { font-family: 'Raleway', sans-serif; }
+  .stat .number { display: block; font-size: 2rem; font-weight: 200; color: var(--ice); letter-spacing: 0.05em; }
+  .stat .label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--muted); }
+
+  /* Crew grid */
+  .crew-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+  }
+  @media (max-width: 700px) { .crew-grid { grid-template-columns: repeat(2,1fr); } }
+
+  .crew-card {
+    position: relative;
+    border-radius: 3px;
+    overflow: hidden;
+    background: var(--navy);
+    aspect-ratio: 3/4;
+    display: flex;
+    align-items: flex-end;
+    box-shadow: 0 3px 12px rgba(26,58,92,0.2);
+    transition: transform 0.25s, box-shadow 0.25s;
+    text-decoration: none;
+  }
+  .crew-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(26,58,92,0.3); }
+
+  .crew-photo-placeholder {
+    position: absolute; inset: 0;
+    display: flex; align-items: center; justify-content: center; font-size: 3rem;
+  }
+  .crew-card:nth-child(1) .crew-photo-placeholder { background: linear-gradient(160deg, #1a4060, #0d2030); }
+  .crew-card:nth-child(2) .crew-photo-placeholder { background: linear-gradient(160deg, #1a3a5c, #122840); }
+  .crew-card:nth-child(3) .crew-photo-placeholder { background: linear-gradient(160deg, #1f4a70, #162035); }
+  .crew-card:nth-child(4) .crew-photo-placeholder { background: linear-gradient(160deg, #1a3050, #0e1e2e); }
+
+  .crew-photo {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  .crew-info {
+    position: relative; z-index: 2; width: 100%;
+    padding: 2rem 1rem 0.8rem;
+    background: linear-gradient(to top, rgba(10,25,40,0.95) 0%, transparent 100%);
+  }
+  .crew-name { font-family: 'Raleway', sans-serif; font-weight: 400; font-size: 1rem; display: block; color: white; }
+  .crew-role { font-family: 'Raleway', sans-serif; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--ice); font-weight: 300; }
+
+  /* Footer */
+  footer {
+    background: var(--navy);
+    color: var(--muted);
+    padding: 2rem;
+    text-align: center;
+    border-top: 1px solid rgba(184,212,232,0.15);
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.82rem;
+    letter-spacing: 0.04em;
+  }
+  footer a { color: var(--ice); text-decoration: none; }
+  footer a:hover { color: white; }
+
+  /* SVG logo sizing */
+  .zipper-svg-hero { width: 280px; height: auto; margin: 0 auto 0.5rem; display: block; }
+  .zipper-svg-masthead { width: 120px; height: auto; }
+</style>
+</head>
+<body>
+
+<!-- Click-away overlay -->
+<div class="nav-overlay" id="overlay" onclick="closeMenu()"></div>
+
+<!-- =====================================================================
+     MASTHEAD
+     ===================================================================== -->
+<div class="masthead">
+  <a href="{{ '/' | relative_url }}" class="masthead-logo">
+    <svg class="zipper-svg-masthead" viewBox="0 0 240 48" xmlns="http://www.w3.org/2000/svg" aria-label="Zipper">
+      <line x1="26" y1="14.2" x2="50" y2="14.2" stroke="#b8d4e8" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="26" y1="38"   x2="50" y2="38"   stroke="#b8d4e8" stroke-width="2.5" stroke-linecap="round"/>
+      <text x="120" y="38" text-anchor="middle"
+        font-family="Raleway, 'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-weight="200" font-size="34" fill="#b8d4e8" letter-spacing="2">Zipper</text>
+      <line x1="190" y1="26.1" x2="214" y2="26.1" stroke="#b8d4e8" stroke-width="2.5" stroke-linecap="round"/>
+    </svg>
+  </a>
+
+  <div style="display:flex; align-items:center; gap:1.2rem;">
+    <a href="https://forecast.predictwind.com/tracking/display/SV-Zipper" class="tracker-pill" target="_blank">
+      <span class="dot"></span> Live Tracker
+    </a>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</div>
+
+<!-- Nav dropdown -->
+<nav class="nav-dropdown" id="nav-dropdown">
+  <a href="{{ '/voyage-log/' | relative_url }}" onclick="closeMenu()">Voyage Log</a>
+  <a href="{{ '/crew/' | relative_url }}" onclick="closeMenu()">The Crew</a>
+  <a href="{{ '/the-boat/' | relative_url }}" onclick="closeMenu()">The Boat</a>
+  <a href="{{ '/supporters/' | relative_url }}" onclick="closeMenu()">Supporters</a>
+</nav>
+
+<!-- =====================================================================
+     HERO
+     ===================================================================== -->
+<div class="hero has-photo">
   <div class="hero-content">
-    <img src="{{ '/assets/images/zipper-logo-light.svg' | relative_url }}" alt="Zipper" class="hero-logo">
+    <svg class="zipper-svg-hero" viewBox="0 0 380 70" xmlns="http://www.w3.org/2000/svg" aria-label="Zipper">
+      <line x1="52" y1="21.6" x2="86" y2="21.6" stroke="#b8d4e8" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="52" y1="58"   x2="86" y2="58"   stroke="#b8d4e8" stroke-width="2.5" stroke-linecap="round"/>
+      <text x="190" y="58" text-anchor="middle"
+        font-family="Raleway, 'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-weight="200" font-size="52" fill="#b8d4e8" letter-spacing="4">Zipper</text>
+      <line x1="294" y1="39.8" x2="328" y2="39.8" stroke="#b8d4e8" stroke-width="2.5" stroke-linecap="round"/>
+    </svg>
     <h1>Reid's Unzipped</h1>
     <p class="hero-tagline">Reid family · Sailing catamaran Zipper · Around the world</p>
     <div class="hero-buttons">
-      <a href="/voyage-log/" class="btn-primary">Voyage Log</a>
-      <a href="/crew/" class="btn-outline">Meet the Crew</a>
-      <a href="https://forecast.predictwind.com/tracking/display/SV-Zipper" class="btn-outline" target="_blank">Live Tracker ↗</a>
+      <a href="{{ '/voyage-log/' | relative_url }}" class="btn-primary">Voyage Log</a>
+      <a href="{{ '/crew/' | relative_url }}" class="btn-outline">Meet the Crew</a>
     </div>
   </div>
 </div>
 
-<!-- Live position strip -->
-<div class="tracker-strip">
-  <span class="tracker-dot"></span>
-  Follow us live on the water →
-  <a href="https://forecast.predictwind.com/tracking/display/SV-Zipper" target="_blank">PredictWind Tracker</a>
-  &nbsp;|&nbsp; Short updates on
-  <a href="https://t.me/+q5LLo7TNObg3NGY0" target="_blank">Telegram</a>
+<!-- =====================================================================
+     LATEST POSTS
+     ===================================================================== -->
+<div class="container">
+  <div class="section-heading"><h2>Latest from Zipper</h2></div>
+  <div class="posts-grid">
+    {% for post in site.posts limit:3 %}
+    <a href="{{ post.url | relative_url }}" class="post-card">
+      <div class="post-card-img">
+        {% if post.header.teaser %}
+          <img src="{{ post.header.teaser | relative_url }}" alt="{{ post.title }}">
+        {% else %}
+          [ No photo yet ]
+        {% endif %}
+      </div>
+      <div class="post-card-body">
+        <div class="post-card-meta">{{ post.date | date: "%-d %b %Y" }}{% if post.location %} · {{ post.location }}{% endif %}</div>
+        <h3>{{ post.title }}</h3>
+        <p>{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
 </div>
 
-<!-- ================================================================
-     LATEST FROM THE BLOG
-     ================================================================ -->
-<div class="section-heading">
-  <h2>Latest from Zipper</h2>
+<!-- =====================================================================
+     ABOUT / STATS STRIP
+     ===================================================================== -->
+<div class="about-strip">
+  <p>The Reids put work, school and day-to-day life on pause to sail their catamaran Zipper across the world's oceans. This is where they share what they find.</p>
+  <div class="stat-row">
+    <div class="stat"><span class="number">15,577</span><span class="label">Nautical miles</span></div>
+    <div class="stat"><span class="number">4</span><span class="label">Crew aboard</span></div>
+    <div class="stat"><span class="number">1</span><span class="label">Lucky catamaran</span></div>
+    <div class="stat"><span class="number">∞</span><span class="label">Adventures</span></div>
+  </div>
 </div>
 
-<!-- Minimal Mistakes home layout renders paginated posts below this point.
-     The posts are pulled automatically from _posts/.
-     You can also manually list featured posts here if you prefer. -->
-
-{{ content }}
-
-<!-- ================================================================
-     MEET THE CREW STRIP
-     ================================================================ -->
-<div class="section-heading" style="margin-top: 3rem;">
-  <h2>The Crew</h2>
+<!-- =====================================================================
+     CREW
+     ===================================================================== -->
+<div class="container">
+  <div class="section-heading"><h2>The Crew</h2></div>
+  <div class="crew-grid">
+    <a href="{{ '/crew/angus/' | relative_url }}" class="crew-card">
+      <div class="crew-photo-placeholder">🧑‍✈️</div>
+      <div class="crew-info">
+        <span class="crew-name">Angus</span>
+        <span class="crew-role">Captain</span>
+      </div>
+    </a>
+    <a href="{{ '/crew/sophie/' | relative_url }}" class="crew-card">
+      <div class="crew-photo-placeholder">👩‍🍳</div>
+      <div class="crew-info">
+        <span class="crew-name">Sophie</span>
+        <span class="crew-role">Ship's Cook</span>
+      </div>
+    </a>
+    <a href="{{ '/crew/isla/' | relative_url }}" class="crew-card">
+      <div class="crew-photo-placeholder">⚓</div>
+      <div class="crew-info">
+        <span class="crew-name">Isla</span>
+        <span class="crew-role">First Mate</span>
+      </div>
+    </a>
+    <a href="{{ '/crew/jamie/' | relative_url }}" class="crew-card">
+      <div class="crew-photo-placeholder">🐾</div>
+      <div class="crew-info">
+        <span class="crew-name">Jamie</span>
+        <span class="crew-role">Cabin Boy</span>
+      </div>
+    </a>
+  </div>
 </div>
 
-<div class="crew-grid">
-  <a href="/crew/angus/" class="crew-card">
-    <img src="/assets/images/crew/angus.jpg" alt="Angus">
-    <div class="crew-card__info">
-      <span class="name">Angus</span>
-      <span class="role">Captain</span>
-    </div>
-  </a>
-  <a href="/crew/sophie/" class="crew-card">
-    <img src="/assets/images/crew/sophie.jpg" alt="Sophie">
-    <div class="crew-card__info">
-      <span class="name">Sophie</span>
-      <span class="role">Ship's Cook</span>
-    </div>
-  </a>
-  <a href="/crew/isla/" class="crew-card">
-    <img src="/assets/images/crew/isla.jpg" alt="Isla">
-    <div class="crew-card__info">
-      <span class="name">Isla</span>
-      <span class="role">First Mate</span>
-    </div>
-  </a>
-  <a href="/crew/jamie/" class="crew-card">
-    <img src="/assets/images/crew/jamie.jpg" alt="Jamie">
-    <div class="crew-card__info">
-      <span class="name">Jamie</span>
-      <span class="role">Cabin Boy</span>
-    </div>
-  </a>
-</div>
+<!-- =====================================================================
+     FOOTER
+     ===================================================================== -->
+<footer>
+  <div style="margin-bottom:0.8rem;">
+    <a href="https://forecast.predictwind.com/tracking/display/SV-Zipper" target="_blank">PredictWind Tracker</a>
+    &nbsp;·&nbsp;
+    <a href="{{ '/voyage-log/' | relative_url }}">Voyage Log</a>
+    &nbsp;·&nbsp;
+    <a href="{{ '/crew/' | relative_url }}">The Crew</a>
+    &nbsp;·&nbsp;
+    <a href="{{ '/supporters/' | relative_url }}">Supporters</a>
+  </div>
+  © Reid's Unzipped — Reid family cruising the world on Zipper
+</footer>
 
-<!-- The Boat teaser -->
-<div style="text-align:center; margin: 2.5rem 0 3rem;">
-  <a href="/the-boat/" class="btn btn--zipper">About Zipper the Boat</a>
-</div>
+<script>
+  window.closeMenu = function() {
+    document.getElementById('nav-dropdown').classList.remove('open');
+    document.getElementById('hamburger').classList.remove('open');
+    document.getElementById('overlay').classList.remove('open');
+  };
+  window.toggleMenu = function() {
+    const menu = document.getElementById('nav-dropdown');
+    if (menu.classList.contains('open')) {
+      window.closeMenu();
+    } else {
+      menu.classList.add('open');
+      document.getElementById('hamburger').classList.add('open');
+      document.getElementById('overlay').classList.add('open');
+    }
+  };
+</script>
+</body>
+</html>
