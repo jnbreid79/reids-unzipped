@@ -1,6 +1,7 @@
 ---
 title: "Cherbourg to Whangarei: 15,577Nm"
 date: 2024-11-06
+layout: post
 author: Jamie Reid
 location: Whangarei, New Zealand
 tags: [cruising, new-zealand, passage, sailing, whangarei, zipper]

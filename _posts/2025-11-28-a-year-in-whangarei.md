@@ -1,6 +1,7 @@
 ---
 title: "A year in Whangarei?!"
 date: 2025-11-28
+layout: post
 author: Jamie Reid
 location: Whangarei, New Zealand
 tags: [cruising, whangarei, zipper]

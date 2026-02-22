@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ page.title }} — Reid's Unzipped</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500&family=Merriweather:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy:      #1a3a5c;
+    --navy-mid:  #1f4a73;
+    --blue:      #2d6a9f;
+    --ice:       #b8d4e8;
+    --ice-light: #deedf7;
+    --white:     #f8fbfd;
+    --text:      #1a2a38;
+    --muted:     #5a7a96;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Merriweather', Georgia, serif;
+    background: var(--white);
+    color: var(--text);
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  /* =====================================================================
+     MASTHEAD
+     ===================================================================== */
+  .masthead {
+    background: var(--navy);
+    border-bottom: 3px solid var(--ice);
+    padding: 0 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+    position: sticky;
+    top: 0;
+    z-index: 9000;
+  }
+
+  .masthead-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  .hamburger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 300;
+  }
+  .hamburger span {
+    display: block;
+    width: 24px; height: 2px;
+    background: var(--ice);
+    transition: all 0.3s ease;
+    transform-origin: center;
+  }
+  .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+  .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  .nav-dropdown {
+    position: fixed;
+    top: 67px; right: 0;
+    width: 280px;
+    background: var(--navy);
+    border-left: 3px solid var(--ice);
+    border-bottom: 3px solid var(--ice);
+    border-bottom-left-radius: 4px;
+    transform: translateX(100%);
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 9999;
+    padding: 1rem 0;
+    box-shadow: -6px 6px 24px rgba(0,0,0,0.4);
+  }
+  .nav-dropdown.open { transform: translateX(0); }
+  .nav-dropdown a {
+    display: block;
+    padding: 0.75rem 1.8rem;
+    color: var(--ice);
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-weight: 400;
+    border-bottom: 1px solid rgba(184,212,232,0.08);
+    transition: background 0.15s;
+  }
+  .nav-dropdown a:hover { background: rgba(184,212,232,0.1); color: white; }
+  .nav-dropdown a:last-child { border-bottom: none; }
+
+  .nav-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9998;
+  }
+  .nav-overlay.open { display: block; }
+
+  .tracker-pill {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.75rem;
+    color: #4cbb9a;
+    letter-spacing: 0.08em;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    text-decoration: none;
+    padding: 0.35rem 0.8rem;
+    border: 1px solid rgba(76,187,154,0.35);
+    border-radius: 20px;
+    transition: all 0.2s;
+    white-space: nowrap;
+  }
+  .tracker-pill:hover { background: rgba(76,187,154,0.1); }
+  .dot {
+    display: inline-block;
+    width: 7px; height: 7px;
+    background: #4cbb9a;
+    border-radius: 50%;
+    animation: pulse 2s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%,100% { opacity:1; transform:scale(1); }
+    50% { opacity:0.4; transform:scale(1.5); }
+  }
+
+  /* =====================================================================
+     POST HERO STRIP
+     ===================================================================== */
+  .post-hero {
+    background: var(--navy);
+    padding: 3.5rem 1.5rem 2.5rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .post-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(160deg, #0d2438 0%, #1a3a5c 50%, #1f4a73 100%);
+    opacity: 0.9;
+  }
+  {% if page.header.teaser %}
+  .post-hero {
+    background-image: url('{{ page.header.teaser }}');
+    background-size: cover;
+    background-position: center;
+  }
+  .post-hero::before {
+    background: linear-gradient(to bottom, rgba(13,36,56,0.7), rgba(26,58,92,0.92));
+    opacity: 1;
+  }
+  {% endif %}
+
+  .post-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 740px;
+    margin: 0 auto;
+  }
+
+  .post-meta-top {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--ice);
+    opacity: 0.8;
+    margin-bottom: 1rem;
+    display: flex;
+    gap: 1.2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .post-meta-top span { display: flex; align-items: center; gap: 0.3rem; }
+
+  .post-hero h1 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+    font-size: clamp(1.6rem, 4vw, 2.6rem);
+    letter-spacing: 0.06em;
+    color: white;
+    line-height: 1.25;
+    margin-bottom: 1rem;
+  }
+
+  .post-excerpt {
+    font-family: 'Merriweather', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 1rem;
+    color: var(--ice-light);
+    line-height: 1.7;
+    max-width: 600px;
+    margin: 0 auto 1.5rem;
+  }
+
+  .post-tags {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .post-tag {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--ice);
+    border: 1px solid rgba(184,212,232,0.35);
+    padding: 0.2rem 0.7rem;
+    border-radius: 2px;
+  }
+
+  /* =====================================================================
+     POST BODY
+     ===================================================================== */
+  .post-body {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 4rem;
+  }
+
+  /* Drop cap on first paragraph */
+  .post-body > p:first-of-type::first-letter {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+    font-size: 4.2rem;
+    line-height: 0.8;
+    float: left;
+    margin: 0.1rem 0.15rem -0.1rem 0;
+    color: var(--navy);
+  }
+
+  .post-body p {
+    margin-bottom: 1.6rem;
+    font-size: 1rem;
+    line-height: 1.85;
+    color: var(--text);
+  }
+
+  .post-body h2 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.28em;
+    color: var(--navy);
+    margin: 3rem 0 1.2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--ice);
+  }
+
+  .post-body h3 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 1.1rem;
+    color: var(--navy);
+    margin: 2rem 0 0.8rem;
+  }
+
+  .post-body ul, .post-body ol {
+    margin: 0 0 1.6rem 1.5rem;
+  }
+  .post-body li {
+    margin-bottom: 0.5rem;
+    line-height: 1.7;
+  }
+
+  .post-body strong { color: var(--navy); font-weight: 400; }
+
+  /* =====================================================================
+     PULL QUOTE
+     Use in markdown as: {:.pullquote}
+     > Your quote here
+     ===================================================================== */
+  .post-body blockquote {
+    margin: 2.5rem -1rem;
+    padding: 1.8rem 2rem;
+    border-left: 4px solid var(--ice);
+    background: linear-gradient(135deg, rgba(184,212,232,0.08), rgba(184,212,232,0.04));
+    font-family: 'Merriweather', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: var(--navy-mid);
+  }
+  .post-body blockquote p { margin: 0; font-size: 1.15rem; }
+  .post-body blockquote p::before { content: '\201C'; }
+  .post-body blockquote p::after  { content: '\201D'; }
+
+  /* Section divider — use <hr> in markdown */
+  .post-body hr {
+    border: none;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--ice), transparent);
+    margin: 3rem 0;
+  }
+
+  /* =====================================================================
+     IMAGE GALLERIES
+     Use in markdown:
+       Single:  ![alt](url)
+       Gallery: wrap consecutive images — they auto-detect neighbours
+     ===================================================================== */
+
+  /* Single image */
+  .post-body img {
+    width: 100%;
+    height: auto;
+    border-radius: 2px;
+    display: block;
+    margin: 0.5rem 0;
+    cursor: zoom-in;
+    transition: opacity 0.2s;
+  }
+  .post-body img:hover { opacity: 0.92; }
+
+  /* Gallery grid — JS will wrap consecutive images in .gallery */
+  .gallery {
+    display: grid;
+    gap: 6px;
+    margin: 2rem -1.5rem;
+  }
+  .gallery.count-1 { grid-template-columns: 1fr; margin: 2rem 0; }
+  .gallery.count-2 { grid-template-columns: 1fr 1fr; }
+  .gallery.count-3 { grid-template-columns: 1fr 1fr 1fr; }
+  .gallery.count-4 { grid-template-columns: 1fr 1fr; }
+  .gallery.count-5 { grid-template-columns: 1fr 1fr 1fr; }
+  .gallery.count-6 { grid-template-columns: 1fr 1fr 1fr; }
+
+  .gallery-item {
+    overflow: hidden;
+    border-radius: 2px;
+    cursor: zoom-in;
+    position: relative;
+    background: var(--navy-mid);
+  }
+  .gallery-item img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    margin: 0;
+    aspect-ratio: 4/3;
+    transition: transform 0.3s ease, opacity 0.2s;
+  }
+  .gallery-item:hover img { transform: scale(1.03); opacity: 1; }
+
+  /* For count-3 galleries, make first image span full width */
+  .gallery.count-3 .gallery-item:first-child {
+    grid-column: 1 / -1;
+  }
+  .gallery.count-3 .gallery-item:first-child img {
+    aspect-ratio: 16/7;
+  }
+
+  /* 5-image: first two bigger */
+  .gallery.count-5 .gallery-item:nth-child(-n+2) { }
+
+  @media (max-width: 600px) {
+    .gallery.count-3,
+    .gallery.count-5,
+    .gallery.count-6 { grid-template-columns: 1fr 1fr; }
+    .gallery.count-3 .gallery-item:first-child { grid-column: 1 / -1; }
+  }
+
+  /* =====================================================================
+     LIGHTBOX
+     ===================================================================== */
+  .lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(10, 20, 35, 0.95);
+    z-index: 99999;
+    align-items: center;
+    justify-content: center;
+    cursor: zoom-out;
+  }
+  .lightbox.open { display: flex; }
+
+  .lightbox-inner {
+    position: relative;
+    max-width: 92vw;
+    max-height: 92vh;
+  }
+
+  .lightbox-inner img {
+    max-width: 90vw;
+    max-height: 88vh;
+    object-fit: contain;
+    border-radius: 2px;
+    display: block;
+    cursor: default;
+    margin: 0;
+    width: auto;
+  }
+
+  .lightbox-close {
+    position: fixed;
+    top: 1.2rem; right: 1.5rem;
+    color: var(--ice);
+    font-size: 2rem;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+    cursor: pointer;
+    line-height: 1;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+    background: none;
+    border: none;
+  }
+  .lightbox-close:hover { opacity: 1; }
+
+  .lightbox-nav {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: var(--ice);
+    font-size: 2rem;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+    cursor: pointer;
+    padding: 1rem;
+    opacity: 0.5;
+    transition: opacity 0.2s;
+  }
+  .lightbox-nav:hover { opacity: 1; }
+  .lightbox-prev { left: 1rem; }
+  .lightbox-next { right: 1rem; }
+
+  .lightbox-caption {
+    position: fixed;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--ice);
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    opacity: 0.6;
+    white-space: nowrap;
+  }
+
+  /* =====================================================================
+     POST FOOTER NAV
+     ===================================================================== */
+  .post-footer {
+    background: var(--navy);
+    padding: 2rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .post-footer a {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--ice);
+    text-decoration: none;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+  }
+  .post-footer a:hover { opacity: 1; }
+  .post-footer .back { font-size: 0.85rem; opacity: 1; font-weight: 400; }
+
+  /* =====================================================================
+     SITE FOOTER
+     ===================================================================== */
+  footer {
+    background: var(--navy);
+    color: var(--muted);
+    padding: 2rem;
+    text-align: center;
+    border-top: 1px solid rgba(184,212,232,0.15);
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.82rem;
+    letter-spacing: 0.04em;
+  }
+  footer a { color: var(--ice); text-decoration: none; }
+
+  .zipper-svg-masthead { width: 120px; height: auto; }
+</style>
+</head>
+<body>
+
+<div class="nav-overlay" id="overlay" onclick="closeMenu()"></div>
+
+<!-- MASTHEAD -->
+<div class="masthead">
+  <a href="{{ '/' | relative_url }}" class="masthead-logo">
+    <svg class="zipper-svg-masthead" viewBox="0 0 240 48" xmlns="http://www.w3.org/2000/svg" aria-label="Zipper">
+      <line x1="26" y1="14.2" x2="50" y2="14.2" stroke="#b8d4e8" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="26" y1="38"   x2="50" y2="38"   stroke="#b8d4e8" stroke-width="2.5" stroke-linecap="round"/>
+      <text x="120" y="38" text-anchor="middle"
+        font-family="Raleway, 'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-weight="200" font-size="34" fill="#b8d4e8" letter-spacing="2">Zipper</text>
+      <line x1="190" y1="26.1" x2="214" y2="26.1" stroke="#b8d4e8" stroke-width="2.5" stroke-linecap="round"/>
+    </svg>
+  </a>
+  <div style="display:flex; align-items:center; gap:1.2rem;">
+    <a href="https://forecast.predictwind.com/tracking/display/SV-Zipper" class="tracker-pill" target="_blank">
+      <span class="dot"></span> Live Tracker
+    </a>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</div>
+
+<nav class="nav-dropdown" id="nav-dropdown">
+  <a href="{{ '/voyage-log/' | relative_url }}" onclick="closeMenu()">Voyage Log</a>
+  <a href="{{ '/crew/' | relative_url }}" onclick="closeMenu()">The Crew</a>
+  <a href="{{ '/the-boat/' | relative_url }}" onclick="closeMenu()">The Boat</a>
+  <a href="{{ '/supporters/' | relative_url }}" onclick="closeMenu()">Supporters</a>
+</nav>
+
+<!-- POST HERO -->
+<div class="post-hero">
+  <div class="post-hero-content">
+    <div class="post-meta-top">
+      <span>📅 {{ page.date | date: "%-d %B %Y" }}</span>
+      {% if page.author %}<span>✍️ {{ page.author }}</span>{% endif %}
+      {% if page.location %}<span>📍 {{ page.location }}</span>{% endif %}
+    </div>
+    <h1>{{ page.title }}</h1>
+    {% if page.excerpt %}
+    <p class="post-excerpt">{{ page.excerpt }}</p>
+    {% endif %}
+    {% if page.tags %}
+    <div class="post-tags">
+      {% for tag in page.tags %}
+      <span class="post-tag">{{ tag }}</span>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+</div>
+
+<!-- POST CONTENT -->
+<article class="post-body">
+  {{ content }}
+</article>
+
+<!-- POST FOOTER -->
+<div class="post-footer">
+  <a href="{{ '/voyage-log/' | relative_url }}" class="back">← All Posts</a>
+  <div style="display:flex; gap:2rem;">
+    {% if page.previous.url %}
+    <a href="{{ page.previous.url | relative_url }}">← {{ page.previous.title }}</a>
+    {% endif %}
+    {% if page.next.url %}
+    <a href="{{ page.next.url | relative_url }}">{{ page.next.title }} →</a>
+    {% endif %}
+  </div>
+</div>
+
+<!-- SITE FOOTER -->
+<footer>
+  <div style="margin-bottom:0.8rem;">
+    <a href="https://forecast.predictwind.com/tracking/display/SV-Zipper" target="_blank">PredictWind Tracker</a>
+    &nbsp;·&nbsp;
+    <a href="{{ '/voyage-log/' | relative_url }}">Voyage Log</a>
+    &nbsp;·&nbsp;
+    <a href="{{ '/crew/' | relative_url }}">The Crew</a>
+    &nbsp;·&nbsp;
+    <a href="{{ '/supporters/' | relative_url }}">Supporters</a>
+  </div>
+  © Reid's Unzipped — Reid family cruising the world on Zipper
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+  <button class="lightbox-nav lightbox-prev" onclick="event.stopPropagation(); navigateLightbox(-1)">‹</button>
+  <div class="lightbox-inner" onclick="event.stopPropagation()">
+    <img id="lightbox-img" src="" alt="">
+  </div>
+  <button class="lightbox-nav lightbox-next" onclick="event.stopPropagation(); navigateLightbox(1)">›</button>
+  <div class="lightbox-caption" id="lightbox-caption"></div>
+</div>
+
+<script>
+  // ── Hamburger nav ──────────────────────────────────────────────────────
+  window.closeMenu = function() {
+    document.getElementById('nav-dropdown').classList.remove('open');
+    document.getElementById('hamburger').classList.remove('open');
+    document.getElementById('overlay').classList.remove('open');
+  };
+  window.toggleMenu = function() {
+    const menu = document.getElementById('nav-dropdown');
+    if (menu.classList.contains('open')) { window.closeMenu(); }
+    else {
+      menu.classList.add('open');
+      document.getElementById('hamburger').classList.add('open');
+      document.getElementById('overlay').classList.add('open');
+    }
+  };
+
+  // ── Gallery builder ────────────────────────────────────────────────────
+  // Finds consecutive <img> tags in the post body and wraps them in a .gallery grid
+  (function() {
+    const body = document.querySelector('.post-body');
+    if (!body) return;
+
+    // Collect all images that are direct children of p tags or the body
+    const imgs = Array.from(body.querySelectorAll('p img, img'));
+    // Unwrap images from their p tags first
+    imgs.forEach(img => {
+      const p = img.parentElement;
+      if (p && p.tagName === 'P' && p.children.length === 1) {
+        p.replaceWith(img);
+      }
+    });
+
+    // Now find runs of consecutive sibling images
+    const allImgs = Array.from(body.querySelectorAll('img'));
+    let i = 0;
+    while (i < allImgs.length) {
+      const run = [allImgs[i]];
+      let next = allImgs[i].nextElementSibling;
+      while (next && next.tagName === 'IMG') {
+        run.push(next);
+        next = next.nextElementSibling;
+      }
+      // Wrap run in gallery
+      const gallery = document.createElement('div');
+      gallery.className = `gallery count-${Math.min(run.length, 6)}`;
+      run[0].parentNode.insertBefore(gallery, run[0]);
+      run.forEach(img => {
+        const item = document.createElement('div');
+        item.className = 'gallery-item';
+        gallery.appendChild(item);
+        item.appendChild(img);
+      });
+      i += run.length;
+    }
+  })();
+
+  // ── Lightbox ───────────────────────────────────────────────────────────
+  let lightboxImages = [];
+  let currentIndex = 0;
+
+  function openLightbox(src, alt, index) {
+    document.getElementById('lightbox-img').src = src;
+    document.getElementById('lightbox-img').alt = alt;
+    document.getElementById('lightbox-caption').textContent = alt || '';
+    document.getElementById('lightbox').classList.add('open');
+    currentIndex = index;
+    document.body.style.overflow = 'hidden';
+  }
+
+  window.closeLightbox = function() {
+    document.getElementById('lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+  };
+
+  window.navigateLightbox = function(dir) {
+    currentIndex = (currentIndex + dir + lightboxImages.length) % lightboxImages.length;
+    const img = lightboxImages[currentIndex];
+    document.getElementById('lightbox-img').src = img.src;
+    document.getElementById('lightbox-img').alt = img.alt;
+    document.getElementById('lightbox-caption').textContent = img.alt || '';
+  };
+
+  // Attach click handlers to all images in the post
+  (function() {
+    const allImgs = Array.from(document.querySelectorAll('.post-body img'));
+    lightboxImages = allImgs;
+    allImgs.forEach((img, idx) => {
+      img.addEventListener('click', () => openLightbox(img.src, img.alt, idx));
+    });
+  })();
+
+  // Close lightbox on Escape
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowRight') navigateLightbox(1);
+    if (e.key === 'ArrowLeft') navigateLightbox(-1);
+  });
+</script>
+</body>
+</html>
