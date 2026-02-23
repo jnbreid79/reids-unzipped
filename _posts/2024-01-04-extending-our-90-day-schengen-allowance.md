@@ -20,8 +20,8 @@ We broke the boat, and it was going to take time to fix.
 
 We suffered a major structural failure on our passage to the Canaries; luckily we were not too far away, around 200Nm North of Lanzarote. Having secured the rig temporarily we managed to get there without any further damage. However, Zipper was not seaworthy, we could not consider sailing (or motoring) any further without fixing the problem.
 
-![Structural failure at the beam](https://jnbreid7.wordpress.com/wp-content/uploads/2023/12/img_4972.jpg)
-![A-frame failure close up](https://jnbreid7.wordpress.com/wp-content/uploads/2023/12/img_4973.jpg)
+![Structural failure at the beam](/assets/images/posts/img_4972.webp)
+![A-frame failure close up](/assets/images/posts/img_4973.webp)
 
 ![Beam damage detail](https://jnbreid7.wordpress.com/wp-content/uploads/2023/12/img_4971.jpg)
 
