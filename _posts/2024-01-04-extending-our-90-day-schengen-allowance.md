@@ -7,7 +7,7 @@ location: Lanzarote, Canary Islands
 tags: [cruising, lanzarote, schengen, bureaucracy, canary-islands]
 excerpt: "We broke the boat and couldn't leave Spain — which meant five trips to the police station, a 58-euro taxi, a mobile printer, and one of the more memorable bureaucratic adventures of our lives."
 header:
-  teaser: https://jnbreid7.wordpress.com/wp-content/uploads/2023/12/img_5246_copy.jpg
+  teaser: {{ site.baseurl }}/assets/images/posts/img_5246_copy.webp
 ---
 
 In summary — we got a 1 month extension to our 90-day Schengen stay from the Spanish police in Arrecife, Lanzarote (stamped into our passports, valid for Spain). It took us about two weeks, 5 trips to the police station, 2 trips to the photocopiers and 2 (successful) trips to the bank (several unsuccessful ones).
@@ -23,9 +23,9 @@ We suffered a major structural failure on our passage to the Canaries; luckily w
 ![Structural failure at the beam]({{ site.baseurl }}/assets/images/posts/img_4972.webp)
 ![A-frame failure close up]({{ site.baseurl }}/assets/images/posts/img_4973.webp)
 
-![Beam damage detail](https://jnbreid7.wordpress.com/wp-content/uploads/2023/12/img_4971.jpg)
+![Beam damage detail]({{ site.baseurl }}/assets/images/posts/img_4971.webp)
 
-![Temporary rig security](https://jnbreid7.wordpress.com/wp-content/uploads/2023/12/img_4969.jpg)
+![Temporary rig security]({{ site.baseurl }}/assets/images/posts/img_4969.webp)
 
 The forestay attaches, and pulls up, in the middle of the beam. This is resisted by the A frame struts, held in compression against the beam by a cable. Our problem was that the frame rotated forwards, breaking the welds between themselves and the beam. With the frame out of alignment the forestay could simply fold the beam upwards in the middle. For the remainder of the passage we secured the mast with halyards directly to the bow of each hull, and secured the frame in position by pulling it backwards with purchases to the mast.
 
@@ -45,7 +45,7 @@ We concluded that we had to turn up somewhere in person. We were relatively conf
 
 We were in Marina Rubicon, right at the South of the island, because the other marinas were full and couldn't give us a berth. Unfortunately this is a long way from Arrecife, the capital and where the National Police are based. So we determined to hire a car and drive up; but, it turns out the hire car offices had shut shortly after 1100 that day (closing times appear to be based on staff preference on the day) and weren't opening again until 1630, by which time we'd definitely be too late. In a mixture of panic and frustration we got in a taxi before lunch — a one-way ride to Arrecife, less than 45mins drive, cost us 58Eu. In context that's nearly double the advertised daily rate for a hire car. We were going to have to get back too, but we left that as a problem to deal with later.
 
-![Lanzarote map showing distance to Arrecife](https://jnbreid7.wordpress.com/wp-content/uploads/2023/12/map-lanzarote.png)
+![Lanzarote map showing distance to Arrecife]({{ site.baseurl }}/assets/images/posts/map-lanzarote.webp)
 
 ## Humanitarian case
 
@@ -61,7 +61,7 @@ Flexibility around driving to and from the police was slightly complicated by th
 
 ## Policia Nacional
 
-![Arrecife police station](https://jnbreid7.wordpress.com/wp-content/uploads/2023/12/img_5142.jpg)
+![Arrecife police station]({{ site.baseurl }}/assets/images/posts/img_5142.webp)
 
 Each arrival at the police station was started by an initial conversation with the security desk at the door. This was a complete lottery, some were helpful, one went and found an English speaker to help, and another I swear had me sitting in the waiting room with no possibility of anyone ever coming to see what it was I was actually there for. Luckily we made it through each time, with a mixture of other visitors helping translate for us, some poor use (by us) of Google translate, or simply grabbing a staff member recognised from a previous visit when they coincidentally passed near the waiting room. The main problem was that we never had appointments, we were just told to 'come back tomorrow' with the next set of forms / payments. We weren't able to ask for the right person because we found out that the police don't give out their real names, so the names we had didn't exist and therefore the security person couldn't know who it was we were there to see. Needless to say each of our five visits took about two frustrating hours.
 
@@ -89,7 +89,7 @@ As it turned out we had a phone call back the next afternoon; Wednesday, confirm
 
 The last trip to the police station (another early morning bus round-trip) was the most painful, I couldn't even get the security lady to understand that they had our passports in their office and I was there (I hoped) to collect them. Anyway, when all was said and done, I left with four passports stamped with permission to remain in Spain until the end of January.
 
-![Four passports with Schengen extension stamps](https://jnbreid7.wordpress.com/wp-content/uploads/2023/12/img_5246_copy.jpg)
+![Four passports with Schengen extension stamps]({{ site.baseurl }}/assets/images/posts/img_5246_copy.webp)
 
 Stamped passports all round
 
