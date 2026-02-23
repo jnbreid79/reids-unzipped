@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Supporters — Reid's Unzipped</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500&family=Merriweather:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy:      #1a3a5c;
+    --navy-mid:  #1f4a73;
+    --blue:      #2d6a9f;
+    --ice:       #b8d4e8;
+    --ice-light: #deedf7;
+    --white:     #f8fbfd;
+    --text:      #1a2a38;
+    --muted:     #5a7a96;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Merriweather', Georgia, serif; background: var(--white); color: var(--text); font-size: 16px; line-height: 1.7; }
+
+  /* ── Masthead ── */
+  .masthead { background: var(--navy); border-bottom: 3px solid var(--ice); padding: 0 1.5rem; display: flex; align-items: center; justify-content: space-between; height: 64px; position: sticky; top: 0; z-index: 9000; isolation: isolate; }
+  .masthead-logo { display: flex; align-items: center; text-decoration: none; }
+  .zipper-svg-masthead { width: 120px; height: auto; }
+  .hamburger { background: none; border: none; cursor: pointer; padding: 0.5rem; display: flex; flex-direction: column; gap: 5px; z-index: 300; }
+  .hamburger span { display: block; width: 24px; height: 2px; background: var(--ice); transition: all 0.3s ease; transform-origin: center; }
+  .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+  .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  .nav-dropdown { position: fixed; top: 67px; right: 0; width: 280px; background: var(--navy); border-left: 3px solid var(--ice); border-bottom: 3px solid var(--ice); border-bottom-left-radius: 4px; transform: translateX(100%); transition: transform 0.35s cubic-bezier(0.4,0,0.2,1); z-index: 9999; padding: 1rem 0; box-shadow: -6px 6px 24px rgba(0,0,0,0.4); }
+  .nav-dropdown.open { transform: translateX(0); }
+  .nav-dropdown a { display: block; padding: 0.75rem 1.8rem; color: var(--ice); text-decoration: none; font-family: 'Raleway', sans-serif; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.14em; font-weight: 400; border-bottom: 1px solid rgba(184,212,232,0.08); transition: background 0.15s, color 0.15s; }
+  .nav-dropdown a:hover { background: rgba(184,212,232,0.1); color: white; }
+  .nav-dropdown a:last-child { border-bottom: none; }
+  .nav-overlay { display: none; position: fixed; inset: 0; z-index: 9998; }
+  .nav-overlay.open { display: block; }
+  .tracker-pill { font-family: 'Raleway', sans-serif; font-size: 0.75rem; color: #4cbb9a; letter-spacing: 0.08em; display: flex; align-items: center; gap: 0.4rem; text-decoration: none; padding: 0.35rem 0.8rem; border: 1px solid rgba(76,187,154,0.35); border-radius: 20px; transition: all 0.2s; white-space: nowrap; }
+  .tracker-pill:hover { background: rgba(76,187,154,0.1); border-color: #4cbb9a; }
+  .dot { display: inline-block; width: 7px; height: 7px; background: #4cbb9a; border-radius: 50%; animation: pulse 2s ease-in-out infinite; flex-shrink: 0; }
+  @keyframes pulse { 0%,100% { opacity:1; transform:scale(1); } 50% { opacity:0.4; transform:scale(1.5); } }
+
+  /* ── Hero ── */
+  .page-hero { background: linear-gradient(160deg, #0d2438 0%, #1a3a5c 50%, #1f4a73 100%); padding: 4rem 1.5rem 3.5rem; text-align: center; position: relative; overflow: hidden; }
+  .page-hero::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(ellipse at 20% 80%, rgba(45,106,159,0.35) 0%, transparent 50%), radial-gradient(ellipse at 80% 20%, rgba(31,74,115,0.4) 0%, transparent 50%); pointer-events: none; }
+  .page-hero-content { position: relative; z-index: 2; max-width: 700px; margin: 0 auto; }
+  .page-hero-eyebrow { font-family: 'Raleway', sans-serif; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.3em; color: var(--ice); opacity: 0.7; margin-bottom: 1rem; }
+  .page-hero h1 { font-family: 'Raleway', sans-serif; font-weight: 200; font-size: clamp(1.8rem, 5vw, 3rem); letter-spacing: 0.12em; text-transform: uppercase; color: white; margin-bottom: 1rem; border-bottom: 2px solid rgba(184,212,232,0.4); padding-bottom: 1rem; display: inline-block; }
+  .page-hero-desc { font-family: 'Merriweather', serif; font-style: italic; font-weight: 300; font-size: 0.95rem; color: var(--ice-light); line-height: 1.8; max-width: 580px; margin: 0 auto; }
+
+  /* ── Main ── */
+  .page-container { max-width: 900px; margin: 0 auto; padding: 3.5rem 1.5rem 5rem; }
+
+  .opening-note { font-size: 1rem; line-height: 1.9; color: var(--text); margin-bottom: 3rem; }
+  .opening-note p { margin-bottom: 1.3rem; }
+  .opening-note p:last-child { margin-bottom: 0; font-style: italic; font-size: 0.92rem; color: var(--muted); }
+
+  /* Supporters table */
+  .supporters-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 3.5rem;
+    font-size: 0.92rem;
+  }
+  .supporters-table thead th {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--muted);
+    border-bottom: 2px solid rgba(184,212,232,0.5);
+    padding: 0.6rem 1rem;
+    text-align: left;
+    background: var(--white);
+  }
+  .supporters-table tbody tr { border-bottom: 1px solid rgba(184,212,232,0.2); transition: background 0.15s; }
+  .supporters-table tbody tr:last-child { border-bottom: none; }
+  .supporters-table tbody tr:hover { background: rgba(184,212,232,0.07); }
+  .supporters-table td { padding: 1rem; vertical-align: top; line-height: 1.7; }
+  .supporters-table td:first-child {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    color: var(--navy);
+    width: 30%;
+    min-width: 160px;
+  }
+  .supporters-table td:last-child { color: #3a5a70; }
+
+  /* on mobile, stack the table columns */
+  @media (max-width: 600px) {
+    .supporters-table thead { display: none; }
+    .supporters-table tbody tr { display: block; padding: 1rem 0; }
+    .supporters-table td { display: block; padding: 0.2rem 0; width: 100% !important; min-width: unset; }
+    .supporters-table td:first-child { font-size: 0.95rem; margin-bottom: 0.3rem; }
+  }
+
+  /* stay connected */
+  .connect-strip { background: var(--navy); border-radius: 3px; padding: 2.5rem; text-align: center; }
+  .connect-strip h3 { font-family: 'Raleway', sans-serif; font-weight: 200; font-size: 1.4rem; color: white; letter-spacing: 0.1em; margin-bottom: 0.6rem; }
+  .connect-strip p { font-size: 0.9rem; color: var(--ice-light); margin-bottom: 1.8rem; line-height: 1.75; max-width: 480px; margin-left: auto; margin-right: auto; }
+  .connect-buttons { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
+  .btn-ice { display: inline-block; background: var(--ice); color: var(--navy); padding: 0.65rem 1.6rem; text-decoration: none; font-family: 'Raleway', sans-serif; font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 500; border-radius: 2px; transition: all 0.2s; }
+  .btn-ice:hover { background: white; }
+  .btn-outline-light { display: inline-block; border: 1.5px solid rgba(184,212,232,0.6); color: var(--ice); padding: 0.65rem 1.6rem; text-decoration: none; font-family: 'Raleway', sans-serif; font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 400; border-radius: 2px; transition: all 0.2s; }
+  .btn-outline-light:hover { background: rgba(184,212,232,0.1); color: white; }
+
+  /* ── Footer ── */
+  footer { background: var(--navy); color: var(--muted); padding: 2rem; text-align: center; border-top: 1px solid rgba(184,212,232,0.15); font-family: 'Raleway', sans-serif; font-size: 0.82rem; letter-spacing: 0.04em; }
+  footer a { color: var(--ice); text-decoration: none; }
+  footer a:hover { color: white; }
+</style>
+</head>
+<body>
+
+<div class="nav-overlay" id="overlay" onclick="closeMenu()"></div>
+
+<div class="masthead">
+  <a href="{{ '/' | relative_url }}" class="masthead-logo">
+    <svg class="zipper-svg-masthead" viewBox="0 0 240 48" xmlns="http://www.w3.org/2000/svg">
+      <line x1="26" y1="14.2" x2="50" y2="14.2" stroke="#b8d4e8" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="26" y1="38"   x2="50" y2="38"   stroke="#b8d4e8" stroke-width="2.5" stroke-linecap="round"/>
+      <text x="120" y="38" text-anchor="middle" font-family="Raleway, sans-serif" font-weight="200" font-size="34" fill="#b8d4e8" letter-spacing="2">Zipper</text>
+      <line x1="190" y1="26.1" x2="214" y2="26.1" stroke="#b8d4e8" stroke-width="2.5" stroke-linecap="round"/>
+    </svg>
+  </a>
+  <div style="display:flex;align-items:center;gap:1.2rem;">
+    <a href="https://forecast.predictwind.com/tracking/display/SV-Zipper" class="tracker-pill" target="_blank"><span class="dot"></span> Live Tracker</a>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</div>
+<nav class="nav-dropdown" id="nav-dropdown">
+  <a href="{{ '/voyage-log/' | relative_url }}" onclick="closeMenu()">Voyage Log</a>
+  <a href="{{ '/crew/' | relative_url }}" onclick="closeMenu()">The Crew</a>
+  <a href="{{ '/the-boat/' | relative_url }}" onclick="closeMenu()">The Boat</a>
+  <a href="{{ '/supporters/' | relative_url }}" onclick="closeMenu()">Supporters</a>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-content">
+    <div class="page-hero-eyebrow">Reid's Unzipped</div>
+    <h1>Supporters</h1>
+    <p class="page-hero-desc">Going sailing for a bit — we should be able to sort that out fairly easily, we don't need too much help to make that happen, do we? Well, actually it turns out we do.</p>
+  </div>
+</div>
+
+<div class="page-container">
+
+  <div class="opening-note">
+    <p>This page is testament to the wonderful friends and family we are so fortunate to have, who have supported us in so many ways. We'll try and keep this page up-to-date — we're so sorry if we've missed anyone off, which is bound to happen as everyone has been so kind to us…</p>
+  </div>
+
+  <table class="supporters-table">
+    <thead>
+      <tr>
+        <th>Supporter</th>
+        <th>For (in addition to being lovely people…)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Our parents — Nigel (Bumpy), Angela (Ganny), Julia (Dottie) and Rob (Grumpy)</td>
+        <td>Everything! From moral support to financial support, physical support and emotional support our parents have been through the lot with us. They've moved us out of home, stored our house, transported kit by cross channel ferries, cars/vans, and planes to various locations around Europe — and that's just in recent weeks. They've been instrumental in getting the sailing project off the ground and listening to us talking about sailing over the years (presumably not expecting anything to <em>actually</em> come of it?!).</td>
+      </tr>
+      <tr>
+        <td>Jonathan Williams</td>
+        <td>Sourcing medical supplies for us, and driving around the South of England at short notice!</td>
+      </tr>
+      <tr>
+        <td>David &amp; Annette Rideout</td>
+        <td>Inspiration, and a wealth of knowledge — a library of books, and one of those tools we have to have onboard but hope never to use — rig cutters!</td>
+      </tr>
+      <tr>
+        <td>Nick and Sophie Bubb</td>
+        <td>Setting the example, proving what's possible, sharing their experiences and generally being enthusiastic and excited when we were struggling to get off the ground.</td>
+      </tr>
+      <tr>
+        <td>Robert Holbrook</td>
+        <td>A sound voice of reason, helping us navigate the minefield of yacht registration and insurance in the post-Brexit world.</td>
+      </tr>
+      <tr>
+        <td>Hilary Keatinge</td>
+        <td>General advice and guidance. Sailing would may well have come to an abrupt halt for a long time without Hilary's contacts in Lanzarote.</td>
+      </tr>
+      <tr>
+        <td>Loic Begue</td>
+        <td>Owner of sistership <em>Nawaks</em>, extremely generous with his time in sharing advice, experiences, and contacts with us — no more than strangers getting in touch out of the blue. At any time of day, any part of the world.</td>
+      </tr>
+      <tr>
+        <td>Stephane Gautier</td>
+        <td>Going above and beyond in helping us get the most out of our electrical upgrade. Fortunately the cork stayed in the bottle of red as we didn't have to return to St Malo again — but we hope to visit another time in the future!</td>
+      </tr>
+      <tr>
+        <td>Pierre and Raphael at GLS</td>
+        <td>Providing guidance and assistance over the sat phone when we had our breakage en route to Lanzarote. Hearing from the experts was invaluable in those circumstances.</td>
+      </tr>
+      <tr>
+        <td>David and Sarah Smith</td>
+        <td>Lending their van for the initial kit transport across to France — we would have definitely needed at least one additional return ferry trip without it.</td>
+      </tr>
+      <tr>
+        <td>Andrew Flegg &amp; Alfa</td>
+        <td>Supporting us in our plans, granting Jamie his sabbatical to make this possible, and being so flexible amongst uncertainty with dates through the summer.</td>
+      </tr>
+      <tr>
+        <td>Itchen Abbas Primary School</td>
+        <td>Supporting Isla and Angus on their venture, and providing materials, guidance and support for the year ahead.</td>
+      </tr>
+      <tr>
+        <td>George &amp; Alison Scott-Welsh</td>
+        <td>Next door neighbours, managing our house for us whilst we're away to save us from the agony of estate agents. With heating, electrical and pest challenges already we're hoping it becomes an easier gig.</td>
+      </tr>
+      <tr>
+        <td>Daniel and Iona Reading</td>
+        <td>For taking care of our fifth family member whilst we are away. We are all missing Sprout, our black lab, but are delighted with her new home — sorry about the mince pies Daniel and Io, we hope you found some more!</td>
+      </tr>
+      <tr>
+        <td>Henry Marsh</td>
+        <td>Sourcing our most-valuable and most-worn items of clothing — our Spinlock D6 lifejackets, literally a lifesaver.</td>
+      </tr>
+      <tr>
+        <td>Judy Barnes</td>
+        <td>The hammock… enough said!</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Stay connected -->
+  <div class="connect-strip">
+    <h3>Follow along</h3>
+    <p>The best ways to keep up with where we are and what we're up to — tracking offshore, short updates in port.</p>
+    <div class="connect-buttons">
+      <a href="https://forecast.predictwind.com/tracking/display/SV-Zipper" target="_blank" class="btn-ice">📍 Live Tracker</a>
+      <a href="https://t.me/+q5LLo7TNObg3NGY0" target="_blank" class="btn-outline-light">✈️ Telegram updates</a>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div style="margin-bottom:0.8rem;">
+    <a href="https://forecast.predictwind.com/tracking/display/SV-Zipper" target="_blank">PredictWind Tracker</a>
+    &nbsp;·&nbsp; <a href="{{ '/voyage-log/' | relative_url }}">Voyage Log</a>
+    &nbsp;·&nbsp; <a href="{{ '/crew/' | relative_url }}">The Crew</a>
+    &nbsp;·&nbsp; <a href="{{ '/supporters/' | relative_url }}">Supporters</a>
+  </div>
+  © Reid's Unzipped — Reid family cruising the world on Zipper
+</footer>
+
+<script>
+  window.closeMenu = function() {
+    document.getElementById('nav-dropdown').classList.remove('open');
+    document.getElementById('hamburger').classList.remove('open');
+    document.getElementById('overlay').classList.remove('open');
+  };
+  window.toggleMenu = function() {
+    const menu = document.getElementById('nav-dropdown');
+    if (menu.classList.contains('open')) { window.closeMenu(); }
+    else { menu.classList.add('open'); document.getElementById('hamburger').classList.add('open'); document.getElementById('overlay').classList.add('open'); }
+  };
+</script>
+</body>
+</html>
