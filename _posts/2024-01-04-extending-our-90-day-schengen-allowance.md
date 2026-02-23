@@ -7,7 +7,7 @@ location: Lanzarote, Canary Islands
 tags: [cruising, lanzarote, schengen, bureaucracy, canary-islands]
 excerpt: "We broke the boat and couldn't leave Spain — which meant five trips to the police station, a 58-euro taxi, a mobile printer, and one of the more memorable bureaucratic adventures of our lives."
 header:
-  teaser: ../assets/images/posts/img_5246_copy.webp
+  teaser: /reids-unzipped/assets/images/posts/img_5246_copy.webp
 ---
 
 In summary — we got a 1 month extension to our 90-day Schengen stay from the Spanish police in Arrecife, Lanzarote (stamped into our passports, valid for Spain). It took us about two weeks, 5 trips to the police station, 2 trips to the photocopiers and 2 (successful) trips to the bank (several unsuccessful ones).
