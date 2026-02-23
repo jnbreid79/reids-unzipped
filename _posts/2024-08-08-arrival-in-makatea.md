@@ -7,7 +7,7 @@ location: Makatea, French Polynesia
 tags: [makatea, cruising, sailing, tuamotus]
 excerpt: "We were just starting to feel a bit sad as we left the Tuamotus behind — we needn't have worried. Makatea is spectacular."
 header:
-  teaser: https://jnbreid7.wordpress.com/wp-content/uploads/2024/08/jr1_4470.jpg
+  teaser: "/reids-unzipped/assets/images/posts/jr1_4470.webp"
 ---
 
 Wowsers, what a place this is!!!
@@ -18,11 +18,11 @@ But we needn't have worried. Makatea really is spectacular! The coastline is ext
 
 It was only in 2018 that the buoys were installed on the edge of the reef. Prior to that it hadn't been possible to visit Makatea, so it really is a very recent addition to the cruising route. And what an amazing addition it is!
 
-![Makatea coastline](https://jnbreid7.wordpress.com/wp-content/uploads/2024/08/jr1_4470.jpg)
-![Sheer cliffs](https://jnbreid7.wordpress.com/wp-content/uploads/2024/08/jr1_4452.jpg)
-![Coral overhangs](https://jnbreid7.wordpress.com/wp-content/uploads/2024/08/jr1_4473.jpg)
-![Approaching by sea](https://jnbreid7.wordpress.com/wp-content/uploads/2024/08/jr1_4441.jpg)
-![The anchorage](https://jnbreid7.wordpress.com/wp-content/uploads/2024/08/jr1_4491.jpg)
+![Makatea coastline]({{ site.baseurl }}/assets/images/posts/jr1_4470.webp)
+![Sheer cliffs]({{ site.baseurl }}/assets/images/posts/jr1_4452.webp)
+![Coral overhangs]({{ site.baseurl }}/assets/images/posts/jr1_4473.webp)
+![Approaching by sea]({{ site.baseurl }}/assets/images/posts/jr1_4441.webp)
+![The anchorage]({{ site.baseurl }}/assets/images/posts/jr1_4491.webp)
 
 As we headed up to drop the mainsail Sophie spotted two humpback whales breaching ahead of us, perhaps a little over a mile away. Enormous plumes of spray shot up, so we stayed watching the show for a while as they slapped their pectorals and tails between their occasional breaches. Wow! We had heard whale season had started in the leeward islands, but we weren't expecting any here. What an incredible welcome!
 
@@ -32,14 +32,14 @@ Now we just needed to find the free buoy. Picking it up really *did* feel close 
 
 The proximity is understandable — just a further boat length offshore and the depth is, as far as our instruments can determine, infinite. The coral wall simply falls into the abyss. The water is crystal clear, this feels very like mooring in Bonaire but with a more extreme drop-off.
 
-![Close to the reef](https://jnbreid7.wordpress.com/wp-content/uploads/2024/08/jr1_4487.jpg)
-![Mooring in clear water](https://jnbreid7.wordpress.com/wp-content/uploads/2024/08/jr1_4491-1.jpg)
-![The reef edge](https://jnbreid7.wordpress.com/wp-content/uploads/2024/08/jr1_4493.jpg)
-![Crystal clear water](https://jnbreid7.wordpress.com/wp-content/uploads/2024/08/jr1_4494-1.jpg)
+![Close to the reef]({{ site.baseurl }}/assets/images/posts/jr1_4487.webp)
+![Mooring in clear water]({{ site.baseurl }}/assets/images/posts/jr1_4491-1.webp)
+![The reef edge]({{ site.baseurl }}/assets/images/posts/jr1_4493.webp)
+![Crystal clear water]({{ site.baseurl }}/assets/images/posts/jr1_4494-1.webp)
 
 Tapu, the mayor's son whom we had a WhatsApp chat with a few days earlier, came down to the harbour to welcome us. He hailed us on VHF16 and we went into the harbour in the dinghy to meet him. His English is excellent, and with a tour around the island to look forward to tomorrow we are very excited.
 
 The next morning, after moving South to a buoy slightly further from the reef:
 
-![Aerial view of Makatea](https://jnbreid7.wordpress.com/wp-content/uploads/2024/08/dji_0064-1.jpg)
-![Zipper on the mooring](https://jnbreid7.wordpress.com/wp-content/uploads/2024/08/dji_0069-1.jpg)
+![Aerial view of Makatea]({{ site.baseurl }}/assets/images/posts/dji_0064-1.webp)
+![Zipper on the mooring]({{ site.baseurl }}/assets/images/posts/dji_0069-1.webp)

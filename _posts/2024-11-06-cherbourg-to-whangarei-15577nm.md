@@ -7,7 +7,7 @@ location: Whangarei, New Zealand
 tags: [cruising, new-zealand, passage, sailing, whangarei, zipper]
 excerpt: "15,577 miles since leaving France, we have arrived in New Zealand — and we brought three Kiwis home with us."
 header:
-  teaser: https://jnbreid7.wordpress.com/wp-content/uploads/2024/11/img_8256.jpg
+  teaser: "/reids-unzipped/assets/images/posts/img_8256.webp"
 ---
 
 15,577 miles since leaving France we have arrived in New Zealand…
@@ -16,7 +16,7 @@ One thing we've learned since setting out from Cherbourg almost exactly a year a
 
 We have so much more we would like to share, but for now, because we've arrived in New Zealand, it's time for some headlines. It's kind of cool, and feels totally crazy, to look at our track — we have to zoom out on the whole world to really appreciate it:
 
-![World track map](https://jnbreid7.wordpress.com/wp-content/uploads/2024/11/image.png)
+![World track map]({{ site.baseurl }}/assets/images/posts/image.webp)
 
 ## Some context to the adventure
 
@@ -38,18 +38,18 @@ Our arrival into New Zealand was one we couldn't possibly have imagined. We left
 
 We sailed down the Northland coastline on a beautiful morning with a glorious wind for our Code 0. There was no evidence, other than in our exhausted emotions, of the rough seas and frontal winds from the previous couple of days. This was sailing at its best (although a bit cold for us — we're not in the tropics anymore)!
 
-![Sailing down the Northland coast](https://jnbreid7.wordpress.com/wp-content/uploads/2024/11/img_8256.jpg)
+![Sailing down the Northland coast]({{ site.baseurl }}/assets/images/posts/img_8256.webp)
 
-![Arrival](https://jnbreid7.wordpress.com/wp-content/uploads/2024/11/img_8257.jpg)
+![Arrival]({{ site.baseurl }}/assets/images/posts/img_8257.webp)
 
-![On deck](https://jnbreid7.wordpress.com/wp-content/uploads/2024/11/img_8262.jpg)
+![On deck]({{ site.baseurl }}/assets/images/posts/img_8262.webp)
 
 ## Whangarei
 
 We're now moored in the Town Basin marina in Whangarei surrounded by a plethora of amazing cafes, bars, restaurants and supermarkets. This is taking us some getting used to after being so remote for so long — shopping in a supermarket feels overwhelming to say the least. How do you possibly choose what to buy when literally everything is available?!
 
-![Town Basin marina](https://jnbreid7.wordpress.com/wp-content/uploads/2024/11/img_8292.jpg)
+![Town Basin marina]({{ site.baseurl }}/assets/images/posts/img_8292.webp)
 
-![Whangarei](https://jnbreid7.wordpress.com/wp-content/uploads/2024/11/img_8301.jpg)
+![Whangarei]({{ site.baseurl }}/assets/images/posts/img_8301.webp)
 
 We have a few more days to relax and unwind as we prepare for getting back into the routines of work and school. For now, Zipper is staying put — we won't be adding to the mileage for at least a few months…

@@ -7,7 +7,7 @@ location: Toau, French Polynesia
 tags: [toau, tuamotus, cruising, sailing, lobster]
 excerpt: "Our last atoll in the Tuamotus, and it did not disappoint. Lobster, spearfishing, diving, and the warmth of Gaston and Valentine's hospitality."
 header:
-  teaser: https://jnbreid7.wordpress.com/wp-content/uploads/2024/09/dji_0058-still.jpg
+  teaser: "/reids-unzipped/assets/images/posts/dji_0058-still.webp"
 ---
 
 A couple of days in the false pass at Anse Amyot on the NW of Toau. This was our last atoll in the Tuamotus — and it did not disappoint.
@@ -20,11 +20,11 @@ After a slightly damp start the clouds dispersed and we had a perfect downwind s
 
 After taking up the buoy, we put the dinghy in the water and headed ashore to say hello to Gaston and Valentine. They gave us a warm welcome and invited us to look around — they have lots of animals and the children were particularly taken with the little piglets that came running up as we approached the pig pen.
 
-![The farm](https://jnbreid7.wordpress.com/wp-content/uploads/2024/09/img_7613.jpg)
-![Piglets!](https://jnbreid7.wordpress.com/wp-content/uploads/2024/09/img_7616.jpg)
-![Valentine's place](https://jnbreid7.wordpress.com/wp-content/uploads/2024/09/jr1_4409.jpg)
-![Around the lagoon](https://jnbreid7.wordpress.com/wp-content/uploads/2024/09/jr1_4412.jpg)
-![Sunset colours](https://jnbreid7.wordpress.com/wp-content/uploads/2024/09/jr1_4420.jpg)
+![The farm]({{ site.baseurl }}/assets/images/posts/img_7613.webp)
+![Piglets!]({{ site.baseurl }}/assets/images/posts/img_7616.webp)
+![Valentine's place]({{ site.baseurl }}/assets/images/posts/jr1_4409.webp)
+![Around the lagoon]({{ site.baseurl }}/assets/images/posts/jr1_4412.webp)
+![Sunset colours]({{ site.baseurl }}/assets/images/posts/jr1_4420.webp)
 
 Valentine speaks wonderful English and told us where to snorkel and dive. We went back the following day and ordered cooked lobster — it was the same price whether Gaston cooked it or not, so we decided to have him cook it on his BBQ. A great decision; the lobster was fantastic!
 
@@ -32,8 +32,8 @@ Valentine speaks wonderful English and told us where to snorkel and dive. We wen
 
 Valentine told us that in 60 years they had never had ciguatera, but they ate the parrot fish and never grouper or snapper. They were very happy for us to try and catch our own. Jamie has been eager to try out the spear gun so it seemed an opportunity not to miss. After a few warm-up shots, the hunter gatherer returned to Zipper with parrot fish for supper! They are beautiful fish and unlike others retain their colour when they die. They have a very delicate white flesh and are absolutely delicious.
 
-![Jamie with the spear gun](https://jnbreid7.wordpress.com/wp-content/uploads/2024/08/j-with-speargun-still.jpg)
-![The catch](https://jnbreid7.wordpress.com/wp-content/uploads/2024/09/img_7619.jpg)
+![Jamie with the spear gun]({{ site.baseurl }}/assets/images/posts/j-with-speargun-still.webp)
+![The catch]({{ site.baseurl }}/assets/images/posts/img_7619.webp)
 
 ## The Outside Wall
 
@@ -43,5 +43,5 @@ Because of the limited mooring balls and the communal area created by Valentine 
 
 We really enjoyed our time here and highly recommend it to anyone in the Tuamotus.
 
-![Aerial view of Anse Amyot](https://jnbreid7.wordpress.com/wp-content/uploads/2024/09/dji_0058-still-2.jpg)
-![Zipper at anchor](https://jnbreid7.wordpress.com/wp-content/uploads/2024/09/dji_0058-still.jpg)
+![Aerial view of Anse Amyot]({{ site.baseurl }}/assets/images/posts/dji_0058-still-2.webp)
+![Zipper at anchor]({{ site.baseurl }}/assets/images/posts/dji_0058-still.webp)

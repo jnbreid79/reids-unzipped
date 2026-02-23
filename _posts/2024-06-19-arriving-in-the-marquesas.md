@@ -7,7 +7,7 @@ location: Hiva Oa, Marquesas
 tags: [marquesas, hiva-oa, cruising, sailing, french-polynesia]
 excerpt: "Zipper's arrival into Hiva Oa — checking in to French Polynesia, the bureaucratic workaround everyone uses, and a drive around one of the world's most spectacular islands."
 header:
-  teaser: https://jnbreid7.wordpress.com/wp-content/uploads/2024/06/p6173007-2.jpg
+  teaser: "/reids-unzipped/assets/images/posts/p6173007-2.webp"
 ---
 
 The passage to the Marquesas was just over 2,000 miles for us, despite the stopover in the Galapagos which substantially shortens the distance from Panama by ~900 miles. We headed to Atuona on Hiva Oa, one of the two official check-in ports.

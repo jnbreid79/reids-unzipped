@@ -7,7 +7,7 @@ location: Tobago Cays, Grenadines
 tags: [caribbean, rays, tobago-cays, turtle, zipper]
 excerpt: "Time and again people told us Tobago Cays was their favourite place in the Caribbean. It certainly didn't disappoint."
 header:
-  teaser: https://jnbreid7.wordpress.com/wp-content/uploads/2024/08/turtle-feeding-2-still.jpg
+  teaser: "/reids-unzipped/assets/images/posts/turtle-feeding-2-still.webp"
 ---
 
 Wow!

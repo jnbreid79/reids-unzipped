@@ -7,7 +7,7 @@ location: Martinique, Caribbean
 tags: [cruising, lobster-pots, martinique, sailing]
 excerpt: "We bought Zipper in Martinique, and now we've sailed her all the way back — though our arrival was rather more dramatic than we'd have liked, courtesy of a stray fishing line and a stalled engine."
 header:
-  teaser: https://jnbreid7.wordpress.com/wp-content/uploads/2024/02/img_5905-edited.jpg
+  teaser: "/reids-unzipped/assets/images/posts/img_5905-edited.webp"
 ---
 
 Slow passage and lobster pots
@@ -18,14 +18,14 @@ We planned our early morning departure from Barbados (2am) to give ourselves ple
 
 This meant it got dark about an hour before we arrived. However as luck would have it the nearly-full moon was shining brightly, so getting in was going to be Ok. I was up on the bow looking out as we motored into the outside edge of the anchorage at Sainte Anne, and got ready to anchor in ~4m of water. As I was about to drop Sophie alerted me that the port engine was stuck in reverse, and then shortly afterwards that it had stopped running entirely. OK, we're stationary, so let's just drop the anchor first then work out what's happened. And yes, sure enough, we've caught another fishing line…
 
-![Fishing line caught on skeg](https://jnbreid7.wordpress.com/wp-content/uploads/2024/02/img_5905-edited.jpg)
+![Fishing line caught on skeg]({{ site.baseurl }}/assets/images/posts/img_5905-edited.webp)
 
 It was late and we still needed supper, so working out what's happened needed to wait until the morning. But having been serious enough to stall the engine, it wasn't a very relaxing and confident sleep.
 
 So, first thing this morning was time to dive in and have a look. The news underneath was about as good as it could have been — the line was caught by the skeg, not wrapped on the prop, and although in the gap above the rudder didn't appear to be doing anything untoward there:
 
-![Fishing line around skeg underwater](https://jnbreid7.wordpress.com/wp-content/uploads/2024/02/p2220677.jpg)
-![Rope fouling inspection](https://jnbreid7.wordpress.com/wp-content/uploads/2024/02/p2220678.jpg)
+![Fishing line around skeg underwater]({{ site.baseurl }}/assets/images/posts/p2220677.webp)
+![Rope fouling inspection]({{ site.baseurl }}/assets/images/posts/p2220678.webp)
 
 So having cleared the rope it was time to start the engine and cross our fingers. Why had it stalled, had it been damaged, would it start? Fortunately yes, it did start, and yes, it did engage both forward and reverse gears (without making any of the horrendous noises we had on M&D's Coriander when we wrapped the jib sheet around her prop and unseated the engine a couple of years ago), and we have been in and out of Le Marin today without issue. Phew!!
 

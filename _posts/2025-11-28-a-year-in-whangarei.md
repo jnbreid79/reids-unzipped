@@ -7,7 +7,7 @@ location: Whangarei, New Zealand
 tags: [cruising, whangarei, zipper]
 excerpt: "An unplanned year in Whangarei — dealing with a stroke, skin cancer and a broken arm, we feel we've tested the NZ health service sufficiently. It's time to go sailing again."
 header:
-  teaser: https://jnbreid7.wordpress.com/wp-content/uploads/2025/11/img_9898.jpg
+  teaser: "/reids-unzipped/assets/images/posts/img_9898.webp"
 ---
 
 An unplanned year in Whangarei! During a year working and at school we've dealt with a stroke, skin cancer and now a broken arm — we feel we've tested the NZ health service sufficiently, so it's time to go sailing again. It's also been a blast, between times!
@@ -26,7 +26,7 @@ Today, 27th November, is a date we'll always remember. One year ago today I had 
 
 The service to get me from the street into a CT scanner and the care of a specialist stroke consultant within an hour was outstanding. There are not many places in the world where that would happen, so although I might be a little aggrieved to have had a stroke, I was seriously lucky that we had just arrived here. I can't imagine what it would have been like at sea. Fortunately, my symptoms resolved themselves naturally whilst I was in the scanner; by the time I was back on the ward I was able to talk properly again, and my limbs were behaving when asked to move. This was a relief, to say the least!
 
-![Recovery in Whangarei](https://jnbreid7.wordpress.com/wp-content/uploads/2025/11/img_8382.jpg)
+![Recovery in Whangarei]({{ site.baseurl }}/assets/images/posts/img_8382.webp)
 
 After some recovery and a few tests it was confirmed I needed a heart op, which I had in Auckland in April. The hardest part for me had been getting my head around why and how this had happened when I was about as fit and healthy as I've ever been.
 
@@ -40,18 +40,18 @@ The most frustrating thing is that this was a mole Sophie had had for years — 
 
 But anyway, it's off now, Sophie has pretty much rebuilt her muscle movement and is working on improving her sensation further. She has one more trip to the surgeon in Auckland before her "nose job" is complete. A lesson for us all though — if you're not already, you should learn to be a smiler. Sophie's smile creases have been perfect for hiding her scars!
 
-![Sophie's recovery](https://jnbreid7.wordpress.com/wp-content/uploads/2025/11/img_9898.jpg)
+![Sophie's recovery]({{ site.baseurl }}/assets/images/posts/img_9898.webp)
 
 ## Angus Joins the Club
 
 And then, just as we thought we'd tested the New Zealand health service enough, Angus wanted in — breaking his arm at the first cricket practice of the year. Although it was obviously pretty painful at the time, it was fortunately a greenstick and not a bad fracture, so we're still hoping our plan for a pre-Christmas departure from Whangarei is on. His cast came off this week!
 
-![Angus with cast](https://jnbreid7.wordpress.com/wp-content/uploads/2025/11/img_0897.jpg)
+![Angus with cast]({{ site.baseurl }}/assets/images/posts/img_0897.webp)
 
 ## And Isla
 
 Finally, just in case she gets any ideas, we're considering locking Isla in her cabin until we get out of New Zealand waters. But it wouldn't be fair if we didn't put her in here too — the girl keeping the whole show on the road, who turned 10 last week!
 
-![Isla's birthday](https://jnbreid7.wordpress.com/wp-content/uploads/2025/11/img_0855.jpg)
+![Isla's birthday]({{ site.baseurl }}/assets/images/posts/img_0855.webp)
 
 So there you have it — a bit of a tumultuous year that we will be pleased to put behind us. But it hasn't all been bad; we have made some incredible friends and have really enjoyed our stay in Whangarei. It's time to get back to what we love and start sailing and exploring again.

@@ -7,14 +7,14 @@ location: Fakarava, French Polynesia
 tags: [anchor, anchoring, cruising, rocna, sailing, travel]
 excerpt: "A 180-degree wind shift as a front went overhead, and our anchor didn't reset. A textbook example of a Rocna failure mode — and a lesson about bimini sides in strong winds."
 header:
-  teaser: https://jnbreid7.wordpress.com/wp-content/uploads/2024/07/fakarava-anchor-drag-annotated.jpg
+  teaser: "/reids-unzipped/assets/images/posts/fakarava-anchor-drag-annotated.webp"
 ---
 
 We've seen quite a deep low pressure developing in the forecasts for the last week or so, travelling from West to East passing well to the South of us. This has a front extending to the North which we've been planning to shelter from in a good anchorage — our choice was the South East corner of Fakarava.
 
 We arrived and found our anchor spot in plenty of time, with the gribs suggesting we might see gusts of 25kts as the front came through, probably with a lot of rain:
 
-![Weather forecast chart](https://jnbreid7.wordpress.com/wp-content/uploads/2024/07/forecast-fakarava-front.png)
+![Weather forecast chart]({{ site.baseurl }}/assets/images/posts/forecast-fakarava-front.webp)
 
 The biggest island in this weather map is Tahiti (towards the bottom left), the island group top right is the Marquesas. We are at the green marker. Nastier colours of red and bigger arrows mean more wind, with the arrows indicating direction — we were expecting a big shift very quickly from the North all the way round to South, through the West.
 
@@ -22,7 +22,7 @@ The biggest island in this weather map is Tahiti (towards the bottom left), the 
 
 The front duly arrived at around 10am. We were anchored in 9m depth on sand, ~50m chain out, with floats at roughly 20m, 30m and 40m. This shows what happened according to our anchor alarm:
 
-![Anchor drag track annotated](https://jnbreid7.wordpress.com/wp-content/uploads/2024/07/fakarava-anchor-drag-annotated.jpg)
+![Anchor drag track annotated]({{ site.baseurl }}/assets/images/posts/fakarava-anchor-drag-annotated.webp)
 
 The cross in the middle is where we set the anchor. The red lines are the track of the boat. The green ring is the alarm.
 
