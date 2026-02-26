@@ -7,7 +7,7 @@ location: Fakarava, French Polynesia
 tags: [anchor, anchoring, cruising, rocna, sailing, travel]
 excerpt: "A 180-degree wind shift as a front went overhead, and our anchor didn't reset. A textbook example of a Rocna failure mode — and a lesson about bimini sides in strong winds."
 header:
-  teaser: "/reids-unzipped/assets/images/posts/fakarava-anchor-drag-annotated.webp"
+  teaser: "/assets/images/posts/fakarava-anchor-drag-annotated.webp"
 ---
 
 We've seen quite a deep low pressure developing in the forecasts for the last week or so, travelling from West to East passing well to the South of us. This has a front extending to the North which we've been planning to shelter from in a good anchorage — our choice was the South East corner of Fakarava.

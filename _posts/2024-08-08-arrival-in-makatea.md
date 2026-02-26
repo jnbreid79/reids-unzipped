@@ -7,7 +7,7 @@ location: Makatea, French Polynesia
 tags: [makatea, cruising, sailing, tuamotus]
 excerpt: "We were just starting to feel a bit sad as we left the Tuamotus behind — we needn't have worried. Makatea is spectacular."
 header:
-  teaser: "/reids-unzipped/assets/images/posts/jr1_4470.webp"
+  teaser: "/assets/images/posts/jr1_4470.webp"
 ---
 
 Wowsers, what a place this is!!!

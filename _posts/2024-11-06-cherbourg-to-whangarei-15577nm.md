@@ -7,7 +7,7 @@ location: Whangarei, New Zealand
 tags: [cruising, new-zealand, passage, sailing, whangarei, zipper]
 excerpt: "15,577 miles since leaving France, we have arrived in New Zealand — and we brought three Kiwis home with us."
 header:
-  teaser: "/reids-unzipped/assets/images/posts/img_8256.webp"
+  teaser: "/assets/images/posts/img_8256.webp"
 ---
 
 15,577 miles since leaving France we have arrived in New Zealand…

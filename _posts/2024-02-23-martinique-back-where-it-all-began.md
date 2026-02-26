@@ -7,7 +7,7 @@ location: Martinique, Caribbean
 tags: [cruising, lobster-pots, martinique, sailing]
 excerpt: "We bought Zipper in Martinique, and now we've sailed her all the way back — though our arrival was rather more dramatic than we'd have liked, courtesy of a stray fishing line and a stalled engine."
 header:
-  teaser: "/reids-unzipped/assets/images/posts/img_5905-edited.webp"
+  teaser: "/assets/images/posts/img_5905-edited.webp"
 ---
 
 Slow passage and lobster pots

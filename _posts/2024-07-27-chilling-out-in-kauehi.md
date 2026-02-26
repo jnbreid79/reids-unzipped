@@ -7,7 +7,7 @@ location: Kauehi, French Polynesia
 tags: [kauehi, tuamotus, cruising, sailing, snorkelling]
 excerpt: "Visiting Tearavero and a few days relaxing on a secluded motu in the East of Kauehi — shell beaches, hermit crabs, bonfires, and a perfect drift snorkel out of the pass."
 header:
-  teaser: "/reids-unzipped/assets/images/posts/gopr0944-1.webp"
+  teaser: "/assets/images/posts/gopr0944-1.webp"
 ---
 
 We left Tahanea early in the morning in company with several other boats who had been waiting for the weather. We were heading for the South pass at Fakarava, however the wind angle made a trip instead up to Kauehi look much more attractive — so we headed there instead. A great day sail and easy entrance got us anchored off the town in plenty of time before dark.

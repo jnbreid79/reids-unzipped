@@ -7,7 +7,7 @@ location: Marin, Martinique
 tags: [antifoul, boat-work, boatwork, cruising, hydraulics, mast, yard]
 excerpt: "Rudders, saildrive seals, a mast that needed to come out, a waterline that needed raising — two weeks in the yard in Marin and Zipper got a proper overhaul."
 header:
-  teaser: "/reids-unzipped/assets/images/posts/img_6068-1.webp"
+  teaser: "/assets/images/posts/img_6068-1.webp"
 ---
 
 Working through the jobs list in the yard…

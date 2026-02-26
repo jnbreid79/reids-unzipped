@@ -7,7 +7,7 @@ location: Panama
 tags: [panama, canal, cruising, sailing, provisioning]
 excerpt: "Arriving in Panama, preparing for the canal, provisioning for the Pacific — and a gooseneck pin that nearly ruined everything."
 header:
-  teaser: "/reids-unzipped/assets/images/posts/img_6579-1.webp"
+  teaser: "/assets/images/posts/img_6579-1.webp"
 ---
 
 After a long and hot trip to the shops for provisions in Bonaire we went to customs to check out then back to the dinghy to leave — slightly hindered by me (Sophie) falling out of the dinghy as we left the dock, much to everyone's amusement! Luckily it's the cleanest dinghy dock we've been to so far. Once the team had successfully rescued the MOB we headed back to Zipper, had a quick lunch and set sail.

@@ -7,7 +7,7 @@ location: Barbados, Caribbean
 tags: [barbados, caribbean, cruising, sailing, travel]
 excerpt: "9 months since we bought the boat, 5,000 miles sailed, and finally — snorkelling with turtles before boat-school on a Monday morning — we feel like proper cruisers at last."
 header:
-  teaser: "/reids-unzipped/assets/images/posts/img_5466-edited.webp"
+  teaser: "/assets/images/posts/img_5466-edited.webp"
 ---
 
 I think it's official, we've made it, we have now joined the world of the cruising sailor. It's 9 months since we bought [the boat](https://jnbreid7.wordpress.com/the-boat/), 7 months since the children finished school last year, 5 months since I started my sabbatical and 4 months since we moved onboard. Since sailing out of Cherbourg harbour we've sailed about 5,000 miles.

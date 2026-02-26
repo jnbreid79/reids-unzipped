@@ -7,7 +7,7 @@ location: Martinique, Caribbean
 tags: [cruising, martinique, snorkelling]
 excerpt: "It's not all spanners and epoxy — in between the jobs list we found time to snorkel, meet our sister ships, and celebrate a couple of very important birthdays."
 header:
-  teaser: "/reids-unzipped/assets/images/posts/little-fishes-still.webp"
+  teaser: "/assets/images/posts/little-fishes-still.webp"
 ---
 
 Fun in Martinique, including a video of our underwater exploits

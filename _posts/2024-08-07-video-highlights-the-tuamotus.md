@@ -7,7 +7,7 @@ location: Tuamotus, French Polynesia
 tags: [tuamotus, video, cruising, sailing]
 excerpt: "What an amazing month in the most spectacular coral atolls in the middle of the Pacific."
 header:
-  teaser: "/reids-unzipped/assets/images/posts/in-the-middle-of-shark-alley-still-1.webp"
+  teaser: "/assets/images/posts/in-the-middle-of-shark-alley-still-1.webp"
 ---
 
 What an amazing month we've had in the most spectacular coral atolls — the Tuamotus, in the middle of the Pacific!

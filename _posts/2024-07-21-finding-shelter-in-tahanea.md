@@ -7,7 +7,7 @@ location: Tahanea, French Polynesia
 tags: [tahanea, tuamotus, cruising, sailing, snorkelling, manta]
 excerpt: "Hiding out from a weather front in the South of Tahanea after snorkelling the passes in the North — coral bleaching? Not here. The Tuamotus are spectacular."
 header:
-  teaser: "/reids-unzipped/assets/images/posts/manta-ray-in-pass-still.webp"
+  teaser: "/assets/images/posts/manta-ray-in-pass-still.webp"
 ---
 
 Picture postcard perfect! The Tuamotus have been the place that we've wanted to get to the most — crystal clear waters, beautiful corals, more seaside than you can imagine.

@@ -7,7 +7,7 @@ location: Barbados, Caribbean
 tags: [barbados, carburettor, cruising, dinghy, marine-park, sailing, turtles]
 excerpt: "Snorkelling with turtles straight off the back of the boat, a run-in with some particularly unhelpful lifeguards, and an unexpected carburettor lesson in the chop behind the boat."
 header:
-  teaser: "/reids-unzipped/assets/images/posts/p2190662_2.webp"
+  teaser: "/assets/images/posts/p2190662_2.webp"
 ---
 
 Marine parks, turtles and carburettors.

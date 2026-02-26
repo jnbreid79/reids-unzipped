@@ -7,7 +7,7 @@ location: Passage
 tags: [passage, tuamotus, marquesas, sailing, cruising]
 excerpt: "Timing is everything, especially when you are dependent on the weather. The predicament for this 450Nm passage — leave too early and it will be very rough, too late and the wind dies."
 header:
-  teaser: "/reids-unzipped/assets/images/posts/img_7393.webp"
+  teaser: "/assets/images/posts/img_7393.webp"
 ---
 
 Timing is everything, especially when you are dependent on the weather. The predicament for this 450Nm passage — leave too early and it will be very rough (tail end of the weather we'd been hiding from in Anaho and Hatiheu), too late and the wind would die before we got there.

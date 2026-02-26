@@ -7,7 +7,7 @@ location: Makatea, French Polynesia
 tags: [caves, makatea, zipper, video]
 excerpt: "Some highlights of our stay in Makatea, exploring the island with the irrepressible Tapu."
 header:
-  teaser: "/reids-unzipped/assets/images/posts/dji_0069.webp"
+  teaser: "/assets/images/posts/dji_0069.webp"
 ---
 
 Some highlights of our stay in Makatea — exploring the island with Tapu.
