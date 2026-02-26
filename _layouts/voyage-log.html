@@ -580,7 +580,7 @@
       <!-- thumbnail -->
       <div class="post-card-img">
         {% if post.header.teaser %}
-          <img src="{{ post.header.teaser }}" alt="{{ post.title }}" loading="lazy">
+		  <img src="{{ post.header.teaser | relative_url }}" alt="{{ post.title }}" loading="lazy">
         {% else %}
           <div class="post-card-img-placeholder">
             <svg viewBox="0 0 24 24" fill="none" stroke="#b8d4e8" stroke-width="1.5">

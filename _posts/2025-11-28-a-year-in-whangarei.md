@@ -7,7 +7,8 @@ location: Whangarei, New Zealand
 tags: [cruising, whangarei, zipper]
 excerpt: "An unplanned year in Whangarei — dealing with a stroke, skin cancer and a broken arm, we feel we've tested the NZ health service sufficiently. It's time to go sailing again."
 header:
-  teaser: /assets/images/posts/img_9898.webp
+  teaser: "/assets/images/posts/img_9898.webp"
+  overlay_image: "/assets/images/posts/img_9898.webp"
 ---
 
 An unplanned year in Whangarei! During a year working and at school we've dealt with a stroke, skin cancer and now a broken arm — we feel we've tested the NZ health service sufficiently, so it's time to go sailing again. It's also been a blast, between times!
