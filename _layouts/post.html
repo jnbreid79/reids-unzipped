@@ -157,7 +157,7 @@
   }
   {% if page.header.teaser %}
   .post-hero {
-    background-image: url('{{ page.header.teaser }}');
+    background-image: url('{{ page.header.teaser | relative_url }}');
     background-size: cover;
     background-position: center;
   }
