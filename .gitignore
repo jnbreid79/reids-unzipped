@@ -1,0 +1,3 @@
+# Ignore specific folders
+gitignore/
+_posts/_drafts/
