@@ -1,26 +1,32 @@
-#!/bin/bash
+:: 1. Define the paths (relative to the script location)
+set RAW_DIR=gitignore\_raw_photos
+set ARCHIVE_DIR=gitignore\archive
+set POSTS_DIR=assets\images\posts
 
-# 1. Check if there are any new photos to process
-if ls _raw_photos/*.{jpg,jpeg,png,JPG,JPEG,PNG} 1> /dev/null 2>&1; then
-    echo "Processing new photos..."
-    
-    # 2. Convert and resize to WebP directly into the Jekyll images folder
-    magick mogrify -path assets/images/ -resize "1200x>" -quality 80 -format webp _raw_photos/*.{jpg,jpeg,png,JPG,JPEG,PNG}
-    
-    # 3. Move the originals to the archive so they aren't processed again
-    mv _raw_photos/*.{jpg,jpeg,png,JPG,JPEG,PNG} _raw_photos/archive/
-    echo "Photos optimized and originals archived."
-else
-    echo "No new photos found. Skipping optimization."
-fi
+:: 2. Check if the folders exist, create them if they don't
+if not exist "%ARCHIVE_DIR%" mkdir "%ARCHIVE_DIR%"
+if not exist "%POSTS_DIR%" mkdir "%POSTS_DIR%"
 
-# 4. Stage all changes (new post + new images)
-git add .
+:: 3. Check if there are any images to process
+dir /b /a-d "%RAW_DIR%\*.jpg" "%RAW_DIR%\*.jpeg" "%RAW_DIR%\*.png" "%RAW_DIR%\*.JPG" >nul 2>&1
+if %errorlevel% neq 0 (
+    echo No new photos found in %RAW_DIR%. Skipping optimization.
+    pause
+    exit /b
+)
 
-# 5. Commit the changes to Git with the current date/time
-git commit -m "New blog post and photos published on $(date +'%Y-%m-%d %H:%M')"
+echo Processing new photos...
 
-# 6. Push to GitHub Pages to make the site live
-git push origin main
+:: 4. Convert, resize, and save to the posts folder
+:: We use 'magick' for v7+ or 'mogrify' for older versions. 
+magick mogrify -path "%POSTS_DIR%" -resize "1200x>" -quality 80 -format webp "%RAW_DIR%\*.*"
 
-echo "Success! Your new post is live."
+:: 5. Move the originals to the archive
+echo Archiving originals...
+move "%RAW_DIR%\*.jpg" "%ARCHIVE_DIR%\" >nul 2>&1
+move "%RAW_DIR%\*.jpeg" "%ARCHIVE_DIR%\" >nul 2>&1
+move "%RAW_DIR%\*.png" "%ARCHIVE_DIR%\" >nul 2>&1
+move "%RAW_DIR%\*.JPG" "%ARCHIVE_DIR%\" >nul 2>&1
+
+echo Done! Photos optimized in %POSTS_DIR% and archived in %ARCHIVE_DIR%.
+pause
