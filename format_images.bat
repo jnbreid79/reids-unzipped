@@ -8,7 +8,7 @@ if not exist "%ARCHIVE_DIR%" mkdir "%ARCHIVE_DIR%"
 if not exist "%POSTS_DIR%" mkdir "%POSTS_DIR%"
 
 :: 3. Check if there are any images to process
-dir /b /a-d "%RAW_DIR%\*.jpg" "%RAW_DIR%\*.jpeg" "%RAW_DIR%\*.png" "%RAW_DIR%\*.JPG" >nul 2>&1
+dir /b /a-d "%RAW_DIR%\*.jpg" "%RAW_DIR%\*.jpeg" "%RAW_DIR%\*.png" "%RAW_DIR%\*.JPG" "%RAW_DIR%\*.heic" >nul 2>&1
 if %errorlevel% neq 0 (
     echo No new photos found in %RAW_DIR%. Skipping optimization.
     pause
