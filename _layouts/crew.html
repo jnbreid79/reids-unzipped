@@ -156,12 +156,15 @@
   <a href="{{ '/supporters/' | relative_url }}" onclick="closeMenu()">Supporters</a>
 </nav>
 
-<!-- <div class="page-hero">  -->
-<div class="page-hero" style="background-image: url('/reids-unzipped/assets/images/crew/crew-photo_1.webp');">
-  <div class="page-hero-content">
-    <div class="page-hero-eyebrow">Reid's Unzipped</div>
+
+<style>
+  .hero-banner { background-image: url("{{ '/assets/images/crew/crew-photo_1.webp' | relative_url }}"); }
+</style>
+<div class="hero-banner">
+<div class="hero-content">
+  <div class="page-hero-eyebrow">Reid's Unzipped</div>
     <h1>The Crew</h1>
-    <p class="page-hero-desc">This is who we are.</p>
+    <p class="hero-tagline">This is who we are.</p>
   </div>
 </div>
 
