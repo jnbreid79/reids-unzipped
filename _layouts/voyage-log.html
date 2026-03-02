@@ -1058,9 +1058,24 @@
   };
 
   // ── Pagination ──────────────────────────────────────────────────────
-  const POSTS_PER_PAGE = 9; // 3 cols × 3 rows; first card spans 2 cols so effectively ~8 visible
+  const POSTS_PER_PAGE = 9; // 3 cols × 3 rows
+  const POSTS_PAGE_ONE = 8; // featured card spans 2 cols, so 1+3+4 = 3 clean rows
   let currentPage = 1;
   let currentTag = 'all';
+
+  function pageSize(page) {
+    return page === 1 ? POSTS_PAGE_ONE : POSTS_PER_PAGE;
+  }
+
+  function pageStart(page) {
+    if (page === 1) return 0;
+    return POSTS_PAGE_ONE + (page - 2) * POSTS_PER_PAGE;
+  }
+
+  function totalPages(cardCount) {
+    if (cardCount <= POSTS_PAGE_ONE) return 1;
+    return 1 + Math.ceil((cardCount - POSTS_PAGE_ONE) / POSTS_PER_PAGE);
+  }
 
   function getFilteredCards() {
     return Array.from(document.querySelectorAll('#posts-grid .post-card')).filter(card => {
@@ -1072,11 +1087,10 @@
   function showPage(page) {
     currentPage = page;
     const cards = getFilteredCards();
-    const totalPages = Math.ceil(cards.length / POSTS_PER_PAGE);
-    const start = (page - 1) * POSTS_PER_PAGE;
-    const end = start + POSTS_PER_PAGE;
+    const total = totalPages(cards.length);
+    const start = pageStart(page);
+    const end = start + pageSize(page);
 
-    // Show/hide all cards based on page
     Array.from(document.querySelectorAll('#posts-grid .post-card')).forEach(card => {
       card.style.display = 'none';
     });
@@ -1084,11 +1098,10 @@
       card.style.display = (i >= start && i < end) ? '' : 'none';
     });
 
-    // Featured class only on first card of page
     cards.forEach(c => c.classList.remove('featured'));
     if (cards[start]) cards[start].classList.add('featured');
 
-    renderPagination(page, totalPages);
+    renderPagination(page, total);
 
     // Scroll to top of grid smoothly
     if (page !== 1) {
@@ -1096,17 +1109,14 @@
     }
   }
 
-  function renderPagination(page, totalPages) {
+  function renderPagination(page, total) {
     const container = document.getElementById('pagination');
-    if (totalPages <= 1) { container.innerHTML = ''; return; }
+    if (total <= 1) { container.innerHTML = ''; return; }
 
     let html = '';
-
-    // Prev button
     html += `<button class="page-btn prev-next" onclick="showPage(${page - 1})" ${page === 1 ? 'disabled' : ''}>← Prev</button>`;
 
-    // Page numbers with ellipsis
-    const pages = pageRange(page, totalPages);
+    const pages = pageRange(page, total);
     pages.forEach(p => {
       if (p === '…') {
         html += `<span class="page-ellipsis">…</span>`;
@@ -1115,9 +1125,7 @@
       }
     });
 
-    // Next button
-    html += `<button class="page-btn prev-next" onclick="showPage(${page + 1})" ${page === totalPages ? 'disabled' : ''}>Next →</button>`;
-
+    html += `<button class="page-btn prev-next" onclick="showPage(${page + 1})" ${page === total ? 'disabled' : ''}>Next →</button>`;
     container.innerHTML = html;
   }
 
