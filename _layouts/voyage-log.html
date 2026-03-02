@@ -567,6 +567,16 @@
   {% endfor %}
 </div>
 
+
+<!-- Tab switcher -->
+<div class="view-tabs">
+  <button class="view-tab active" data-tab="grid">Grid</button>
+  <button class="view-tab" data-tab="archive">Archive</button>
+</div>
+
+<!-- Existing grid view (wrap your existing cards in this div) -->
+<div id="view-grid" class="view-panel active">
+  <!-- your existing post cards here, unchanged -->
 <!-- POSTS GRID -->
 <div class="log-container">
   <div class="posts-grid" id="posts-grid">
@@ -624,6 +634,36 @@
 
   </div><!-- /posts-grid -->
 </div><!-- /log-container -->
+
+</div>
+
+<!-- Archive view -->
+<div id="view-archive" class="view-panel">
+  {% assign posts_by_year = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+  {% for year in posts_by_year %}
+    <div class="archive-year">
+      <h2 class="archive-year-heading">{{ year.name }}</h2>
+      {% assign posts_by_month = year.items | group_by_exp: "post", "post.date | date: '%B'" %}
+      {% for month in posts_by_month %}
+        <div class="archive-month">
+          <h3 class="archive-month-heading">{{ month.name }}</h3>
+          <ul class="archive-post-list">
+            {% for post in month.items %}
+              <li class="archive-post-item">
+                <span class="archive-post-date">{{ post.date | date: "%-d %b" }}</span>
+                <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% endfor %}
+    </div>
+  {% endfor %}
+</div>
+
+
+
+
 
 <!-- FOOTER -->
 <footer>
@@ -692,6 +732,17 @@
     const firstVisible = Array.from(cards).find(c => c.style.display !== 'none');
     if (firstVisible) firstVisible.classList.add('featured');
   };
+
+  // ── Listing ──────────────────────────────────────────────────────
+  document.querySelectorAll('.view-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.view-tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.view-panel').forEach(p => p.classList.remove('active'));
+      tab.classList.add('active');
+      document.getElementById('view-' + tab.dataset.tab).classList.add('active');
+    });
+  });
+
 </script>
 </body>
 </html>
