@@ -475,6 +475,96 @@
     letter-spacing: 0.06em;
   }
 
+  .tracker-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: #4cbb9a;
+    text-decoration: none;
+    margin-top: 1.8rem;
+    padding: 0.4rem 1rem;
+    border: 1px solid rgba(76,187,154,0.3);
+    border-radius: 20px;
+    transition: all 0.2s;
+  }
+  .tracker-link:hover { background: rgba(76,187,154,0.1); border-color: #4cbb9a; color: #4cbb9a; }
+  .tracker-link .dot { animation: pulse 2s ease-in-out infinite; }
+
+  /* =====================================================================
+     YOUTUBE STRIP
+     ===================================================================== */
+  .youtube-strip {
+    background: linear-gradient(135deg, #0d2438 0%, #1a3a5c 60%, #1f4a73 100%);
+    border-top: 1px solid rgba(184,212,232,0.1);
+    border-bottom: 1px solid rgba(184,212,232,0.1);
+    padding: 2.8rem 2rem;
+    text-align: center;
+  }
+
+  .youtube-strip-inner {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .youtube-icon {
+    width: 48px;
+    height: 48px;
+    background: #ff0000;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 4px 16px rgba(255,0,0,0.3);
+  }
+  .youtube-icon svg { width: 22px; height: 22px; }
+
+  .youtube-strip h3 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    font-size: 1.1rem;
+    letter-spacing: 0.08em;
+    color: white;
+    margin: 0;
+  }
+
+  .youtube-strip p {
+    font-family: 'Merriweather', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 0.88rem;
+    color: var(--ice-light);
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  .btn-youtube {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: #ff0000;
+    color: white;
+    padding: 0.65rem 1.6rem;
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-weight: 500;
+    border-radius: 2px;
+    transition: all 0.2s;
+    margin-top: 0.4rem;
+  }
+  .btn-youtube:hover { background: #cc0000; transform: translateY(-1px); box-shadow: 0 4px 16px rgba(255,0,0,0.35); }
+
   /* =====================================================================
      VIEW TABS  (Grid / Archive switcher)
      ===================================================================== */
@@ -825,6 +915,7 @@
   <a href="{{ '/crew/' | relative_url }}" onclick="closeMenu()">The Crew</a>
   <a href="{{ '/the-boat/' | relative_url }}" onclick="closeMenu()">The Boat</a>
   <a href="{{ '/supporters/' | relative_url }}" onclick="closeMenu()">Supporters</a>
+  <a href="https://www.youtube.com/playlist?list=PLz8fOLkM7BZv1mgPl7UieR7eBcL09XtLE" target="_blank" rel="noopener" onclick="closeMenu()" style="color:#ff6b6b;">▶ Watch on YouTube</a>
 </nav>
 
 <!-- PAGE HERO -->
@@ -836,7 +927,7 @@
       Chronicles from 15,577 nautical miles and counting — passages,
       anchorages, adventures ashore, and everything in between.
     </p>
-<!--    <div class="hero-stats">
+    <div class="hero-stats">
       <div class="hero-stat">
         <span class="n">{{ site.posts | size }}</span>
         <span class="l">Log entries</span>
@@ -849,8 +940,10 @@
         <span class="n">4</span>
         <span class="l">Oceans crossed</span>
       </div>
-	</div>
-	-->
+    </div>
+    <a href="https://forecast.predictwind.com/tracking/display/SV-Zipper" class="tracker-link" target="_blank" rel="noopener">
+      <span class="dot"></span> Follow Zipper in real time
+    </a>
   </div>
 </div>
 
@@ -867,6 +960,24 @@
   {% endfor %}
 </div>
 
+
+<!-- YOUTUBE STRIP -->
+<div class="youtube-strip">
+  <div class="youtube-strip-inner">
+    <div class="youtube-icon">
+      <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+        <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8z"/>
+        <polygon fill="white" points="9.75,15.02 15.5,12 9.75,8.98"/>
+      </svg>
+    </div>
+    <h3>Watch the Voyage</h3>
+    <p>Our video highlights from the Atlantic crossing, Pacific passages, and everywhere in between — all in one place.</p>
+    <a href="https://www.youtube.com/playlist?list=PLz8fOLkM7BZv1mgPl7UieR7eBcL09XtLE" class="btn-youtube" target="_blank" rel="noopener">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8z"/><polygon fill="white" points="9.75,15.02 15.5,12 9.75,8.98"/></svg>
+      Watch on YouTube
+    </a>
+  </div>
+</div>
 
 <!-- VIEW TAB SWITCHER -->
 <div class="view-tabs-bar">
@@ -1016,6 +1127,8 @@
     <a href="{{ '/crew/' | relative_url }}">The Crew</a>
     &nbsp;·&nbsp;
     <a href="{{ '/supporters/' | relative_url }}">Supporters</a>
+    &nbsp;·&nbsp;
+    <a href="https://www.youtube.com/playlist?list=PLz8fOLkM7BZv1mgPl7UieR7eBcL09XtLE" target="_blank" rel="noopener">YouTube</a>
   </div>
   © Reid's Unzipped — Reid family cruising the world on Zipper
 </footer>
