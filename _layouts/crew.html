@@ -1,3 +1,7 @@
+---
+layout: none
+permalink: /crew/
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,13 +45,35 @@
   .dot { display: inline-block; width: 7px; height: 7px; background: #4cbb9a; border-radius: 50%; animation: pulse 2s ease-in-out infinite; flex-shrink: 0; }
   @keyframes pulse { 0%,100% { opacity:1; transform:scale(1); } 50% { opacity:0.4; transform:scale(1.5); } }
 
-  /* ── Hero ── */
-  .page-hero { background: linear-gradient(160deg, #0d2438 0%, #1a3a5c 50%, #1f4a73 100%); padding: 4rem 1.5rem 3.5rem; text-align: center; position: relative; overflow: hidden; }
-  .page-hero::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(ellipse at 20% 80%, rgba(45,106,159,0.35) 0%, transparent 50%), radial-gradient(ellipse at 80% 20%, rgba(31,74,115,0.4) 0%, transparent 50%); pointer-events: none; }
-  .page-hero-content { position: relative; z-index: 2; max-width: 700px; margin: 0 auto; }
-  .page-hero-eyebrow { font-family: 'Raleway', sans-serif; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.3em; color: var(--ice); opacity: 0.7; margin-bottom: 1rem; }
-  .page-hero h1 { font-family: 'Raleway', sans-serif; font-weight: 200; font-size: clamp(1.8rem, 5vw, 3rem); letter-spacing: 0.12em; text-transform: uppercase; color: white; margin-bottom: 1rem; border-bottom: 2px solid rgba(184,212,232,0.4); padding-bottom: 1rem; display: inline-block; }
-  .page-hero-desc { font-family: 'Merriweather', serif; font-style: italic; font-weight: 300; font-size: 0.95rem; color: var(--ice-light); line-height: 1.8; max-width: 540px; margin: 0 auto; }
+  /* ── Hero Banner ── */
+  .hero-banner {
+    position: relative;
+    width: 100%;
+    height: 45vh;
+    min-height: 280px;
+    background-color: var(--navy);
+    background-size: cover;
+    background-position: center 30%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+  }
+  .hero-banner::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(10,25,40,0.85) 0%, rgba(10,25,40,0.4) 50%, rgba(10,25,40,0.2) 100%);
+    pointer-events: none;
+  }
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 2.5rem 2rem;
+    max-width: 700px;
+  }
+  .page-hero-eyebrow { font-family: 'Raleway', sans-serif; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.3em; color: var(--ice); opacity: 0.8; margin-bottom: 0.6rem; }
+  .hero-content h1 { font-family: 'Raleway', sans-serif; font-weight: 200; font-size: clamp(2rem, 5vw, 3.2rem); letter-spacing: 0.14em; text-transform: uppercase; color: white; margin-bottom: 0.6rem; }
+  .hero-tagline { font-family: 'Merriweather', serif; font-style: italic; font-weight: 300; font-size: 0.95rem; color: var(--ice-light); }
 
   /* ── Page container ── */
   .page-container { max-width: 1100px; margin: 0 auto; padding: 3.5rem 1.5rem 5rem; }
@@ -61,7 +87,6 @@
 
   .crew-card { display: flex; flex-direction: column; }
 
-  /* photo placeholder block */
   .crew-photo-wrap {
     aspect-ratio: 3/4;
     border-radius: 3px;
@@ -73,7 +98,6 @@
     align-items: center;
     justify-content: center;
   }
-  /* each card gets a slightly different dark gradient */
   .crew-card:nth-child(1) .crew-photo-wrap { background: linear-gradient(160deg, #1a4060, #0d2030); }
   .crew-card:nth-child(2) .crew-photo-wrap { background: linear-gradient(160deg, #1a3a5c, #122840); }
   .crew-card:nth-child(3) .crew-photo-wrap { background: linear-gradient(160deg, #1f4a70, #162035); }
@@ -81,7 +105,6 @@
 
   .crew-photo-wrap img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
 
-  /* initials placeholder shown until real photo loaded */
   .crew-initials {
     font-family: 'Raleway', sans-serif;
     font-weight: 200;
@@ -93,14 +116,12 @@
     z-index: 1;
   }
 
-  /* gradient fade at bottom over placeholder/photo */
   .crew-photo-wrap::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 45%; background: linear-gradient(to top, rgba(10,25,40,0.85), transparent); pointer-events: none; z-index: 2; }
 
   .crew-name-badge { position: absolute; bottom: 0.8rem; left: 0.9rem; right: 0.9rem; z-index: 3; }
   .crew-name-badge .name { display: block; font-family: 'Raleway', sans-serif; font-weight: 400; font-size: 1.15rem; color: white; line-height: 1.2; }
   .crew-name-badge .role { font-family: 'Raleway', sans-serif; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.14em; color: var(--ice); font-weight: 300; }
 
-  /* bio text below photo */
   .crew-bio-title { font-family: 'Raleway', sans-serif; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.14em; color: var(--navy); font-weight: 400; margin-bottom: 0.4rem; }
   .crew-bio { font-size: 0.87rem; line-height: 1.75; color: #3a5a70; margin-bottom: 1rem; }
   .crew-quote { border-left: 2px solid var(--ice); padding: 0.5rem 0.8rem; margin-top: 0.5rem; }
@@ -108,7 +129,7 @@
   .crew-quote cite { font-family: 'Raleway', sans-serif; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); opacity: 0.7; font-style: normal; }
 
   /* ── Bumpy ── */
-  .bumpy-section { background: var(--navy); border-radius: 3px; padding: 2rem 2.5rem; display: flex; gap: 2rem; align-items: center; flex-wrap: wrap; margin-bottom: 4rem; box-shadow: 0 4px 20px rgba(26,58,92,0.15); }
+  .bumpy-section { background: var(--navy); border-radius: 3px; padding: 2rem 2.5rem; display: flex; gap: 2rem; align-items: center; flex-wrap: wrap; margin-bottom: 2rem; box-shadow: 0 4px 20px rgba(26,58,92,0.15); }
   .bumpy-avatar { width: 110px; height: 110px; border-radius: 50%; flex-shrink: 0; background: linear-gradient(135deg, #1f4a70, #0d2030); display: flex; align-items: center; justify-content: center; font-size: 3rem; border: 3px solid rgba(184,212,232,0.25); overflow: hidden; }
   .bumpy-avatar img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
   .bumpy-text h3 { font-family: 'Raleway', sans-serif; font-weight: 300; font-size: 1.1rem; color: white; margin-bottom: 0.2rem; letter-spacing: 0.06em; }
@@ -149,6 +170,7 @@
     <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </div>
+
 <nav class="nav-dropdown" id="nav-dropdown">
   <a href="{{ '/voyage-log/' | relative_url }}" onclick="closeMenu()">Voyage Log</a>
   <a href="{{ '/crew/' | relative_url }}" onclick="closeMenu()">The Crew</a>
@@ -156,16 +178,12 @@
   <a href="{{ '/supporters/' | relative_url }}" onclick="closeMenu()">Supporters</a>
 </nav>
 
-
-<style>
-  .hero-banner { background-image: url("{{ '/assets/images/crew/crew-photo_1.webp' | relative_url }}"); }
-</style>
-<div class="hero-banner">
+<!-- ── Hero Banner ── -->
+<div class="hero-banner" style="background-image: url('{{ '/assets/images/crew/crew-photo_1.webp' | relative_url }}');">
   <div class="hero-content">
     <div class="page-hero-eyebrow">Reid's Unzipped</div>
-      <h1>The Crew</h1>
-      <p class="hero-tagline">This is who we are.</p>
-    </div>
+    <h1>The Crew</h1>
+    <p class="hero-tagline">This is who we are.</p>
   </div>
 </div>
 
@@ -179,7 +197,6 @@
     <div class="crew-card">
       <div class="crew-photo-wrap">
         <img src="{{ '/assets/images/crew/isla-chess.webp' | relative_url }}" alt="Isla" onerror="this.style.display='none'">
-<!--        <span class="crew-initials">I</span>  -->
         <div class="crew-name-badge">
           <span class="name">Isla</span>
           <span class="role">"First Mate"</span>
@@ -197,7 +214,6 @@
     <div class="crew-card">
       <div class="crew-photo-wrap">
         <img src="{{ '/assets/images/crew/angus hiding.webp' | relative_url }}" alt="Angus" onerror="this.style.display='none'">
-<!--        <span class="crew-initials">A</span> -->
         <div class="crew-name-badge">
           <span class="name">Angus</span>
           <span class="role">"Captain"</span>
@@ -215,7 +231,6 @@
     <div class="crew-card">
       <div class="crew-photo-wrap">
         <img src="{{ '/assets/images/crew/JR1_3751.webp' | relative_url }}" alt="Sophie" onerror="this.style.display='none'">
-<!--        <span class="crew-initials">S</span> -->
         <div class="crew-name-badge">
           <span class="name">Sophie</span>
           <span class="role">"Ship's Cook"</span>
@@ -233,14 +248,13 @@
     <div class="crew-card">
       <div class="crew-photo-wrap">
         <img src="{{ '/assets/images/crew/IMG_4841.webp' | relative_url }}" alt="Jamie" onerror="this.style.display='none'">
-<!--        <span class="crew-initials">J</span>  -->
         <div class="crew-name-badge">
           <span class="name">Jamie</span>
           <span class="role">"Cabin Boy"</span>
         </div>
       </div>
       <div class="crew-bio-title">2-in-1</div>
-      <p class="crew-bio">Jamie's favourite thing about Zipper is that she is a catamaran; two-boats-in-one, the port hull for the children and starboard for us. The engineer keeping the mechanical and electrical systems running, he also leads the sailing programme. </p>
+      <p class="crew-bio">Jamie's favourite thing about Zipper is that she is a catamaran; two-boats-in-one, the port hull for the children and starboard for us. The engineer keeping the mechanical and electrical systems running, he also leads the sailing programme.</p>
       <div class="crew-quote">
         <p>"This will be easy, it's going to be downwind warm weather sailing"</p>
         <cite>— Jamie Reid (before leaving Northern France, reefed down into a headwind, wearing every item of clothing aboard)</cite>
@@ -249,18 +263,10 @@
 
   </div><!-- /crew-grid -->
 
-
-  <!-- Guests -->
+  <!-- Guest appearances -->
   <div class="section-label">Guest appearances</div>
-  <div class="guests-strip">
-    <h3>Friends &amp; family who've joined along the way</h3>
-    <p>On our way round we are welcoming family and friends aboard at various times — both to come and say hi, and to help with the sailing, particularly on longer passages.</p>
-    <table class="guests-table">
-      <thead>
-        <tr><th>Passage</th><th>Guest</th><th>Notes</th></tr>
-      </thead>
-      <tbody>
 
+  <!-- Bumpy — sits ABOVE the table, outside it entirely -->
   <div class="bumpy-section">
     <div class="bumpy-avatar">
       <img src="{{ '/assets/images/crew/bumpy.jpg' | relative_url }}" alt="Bumpy" onerror="this.style.display='none'; this.parentNode.textContent='🐾';">
@@ -271,7 +277,15 @@
       <p>Bumpy joined us for our very first passage on Zipper — Cherbourg to St Malo, anchoring off Sark overnight on the way. A natural sailor, and the inspiration behind the name of this blog.</p>
     </div>
   </div>
-  
+
+  <div class="guests-strip">
+    <h3>Friends &amp; family who've joined along the way</h3>
+    <p>On our way round we are welcoming family and friends aboard at various times — both to come and say hi, and to help with the sailing, particularly on longer passages.</p>
+    <table class="guests-table">
+      <thead>
+        <tr><th>Passage</th><th>Guest</th><th>Notes</th></tr>
+      </thead>
+      <tbody>
         <tr><td>Cherbourg → St Malo</td><td>Bumpy</td><td>Helped us learn to sail Zipper on our very first passage.</td></tr>
         <tr><td>Roscoff → Lanzarote</td><td>Tom</td><td>MVP for the Hill Climb game on his phone — Angus is still obsessed.</td></tr>
         <tr><td>Roscoff → Lanzarote</td><td>Neal</td><td>Closely fought but second place with Wordscape. Another winner on the phone!</td></tr>
@@ -280,7 +294,7 @@
     </table>
   </div>
 
-</div>
+</div><!-- /page-container -->
 
 <footer>
   <div style="margin-bottom:0.8rem;">
