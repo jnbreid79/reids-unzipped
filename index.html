@@ -429,8 +429,8 @@ layout: none
     display: inline-flex;
     align-items: center;
     gap: 0.6rem;
-    background: #ff0000;
-    color: white;
+    background: var(--ice);
+    color: var(--navy);
     padding: 0.65rem 1.6rem;
     text-decoration: none;
     font-family: 'Raleway', sans-serif;
@@ -442,7 +442,7 @@ layout: none
     transition: all 0.2s;
     margin-top: 0.4rem;
   }
-  .btn-youtube:hover { background: #cc0000; transform: translateY(-1px); box-shadow: 0 4px 16px rgba(255,0,0,0.35); }
+  .btn-youtube:hover { background: var(--ice-light); transform: translateY(-1px); box-shadow: 0 4px 16px rgba(184,212,232,0.25); }
 
   /* Crew grid */
   .crew-grid {
@@ -563,10 +563,10 @@ layout: none
       <line x1="294" y1="39.8" x2="328" y2="39.8" stroke="#b8d4e8" stroke-width="2.5" stroke-linecap="round"/>
     </svg>
     <h1>Reid's Unzipped</h1>
-    <p class="hero-tagline">Reid family sailing Zipper · Across the oceans · Under the stars</p>
+    <p class="hero-tagline">beyond the horizon · across the oceans · under the stars</p>
     <div class="hero-buttons">
-      <a href="{{ '/voyage-log/' | relative_url }}" class="btn-outline">Voyage Log</a>
-      <a href="{{ '/crew/' | relative_url }}" class="btn-outline">Meet the Crew</a>
+      <a href="{{ '/voyage-log/' | relative_url }}" class="btn-outline">Voyage log</a>
+      <a href="{{ '/crew/' | relative_url }}" class="btn-outline">Meet the crew</a>
       <a href="{{ '/the-boat/' | relative_url }}" class="btn-outline">See the boat</a>
     </div>
   </div>
@@ -602,18 +602,18 @@ layout: none
      ===================================================================== -->
 <div class="youtube-strip">
   <div class="youtube-strip-inner">
-    <div class="youtube-icon">
+<!--    <div class="youtube-icon">
       <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
         <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8z"/>
         <polygon fill="#ff0000" points="9.75,15.02 15.5,12 9.75,8.98"/>
         <polygon fill="white" points="9.75,15.02 15.5,12 9.75,8.98"/>
       </svg>
-    </div>
-    <h3>Watch the Voyage</h3>
-    <p>Our video highlights from the Atlantic crossing, Pacific passages, and everywhere in between — all in one place.</p>
+-->    </div>
+    <h3>Video Highlights</h3>
+    <p>Watch our videos from the Atlantic crossing, Pacific passages and everywhere in between — all in one place.</p>
     <a href="https://www.youtube.com/playlist?list=PLz8fOLkM7BZv1mgPl7UieR7eBcL09XtLE" class="btn-youtube" target="_blank" rel="noopener">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8z"/><polygon fill="#ff0000" points="9.75,15.02 15.5,12 9.75,8.98"/><polygon fill="white" points="9.75,15.02 15.5,12 9.75,8.98"/></svg>
-      Watch on YouTube
+      <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#1a3a5c" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8z"/><polygon fill="#b8d4e8" points="9.75,15.02 15.5,12 9.75,8.98"/></svg>
+      YouTube playlist - "Zipper"
     </a>
   </div>
 </div>
