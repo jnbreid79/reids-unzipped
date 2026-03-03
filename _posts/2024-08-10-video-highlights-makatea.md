@@ -21,14 +21,14 @@ We took a tour with Tapu, an energetic and passionate guy working hard to bring 
         <path fill="#b8d4e8" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8z"/>
         <polygon fill="#1a3a5c" points="9.75,15.02 15.5,12 9.75,8.98"/>
       </svg>
-      Video — Makatea
+      Makatea Highlights
     </span>
     <a href="https://www.youtube.com/watch?v=Z2DEtczkYE4" class="video-embed-yt-link" target="_blank" rel="noopener">Open in YouTube ↗</a>
   </div>
   <div class="video-embed-frame">
     <iframe
-      src="https://www.youtube-nocookie.com/embed/Z2DEtczkYE4?si=W-IQNciMoNEBjTyD"
-      title="Video Highlights – Makatea"
+      src="https://www.youtube-nocookie.com/embed/Z2DEtczkYE4"
+      title="Makatea Highlights"
       frameborder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       referrerpolicy="strict-origin-when-cross-origin"
