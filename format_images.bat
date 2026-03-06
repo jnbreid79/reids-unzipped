@@ -1,7 +1,8 @@
 :: 1. Define the paths (relative to the script location)
 set RAW_DIR=gitignore\_raw_photos
 set ARCHIVE_DIR=gitignore\archive
-set POSTS_DIR=assets\images\posts
+:: set POSTS_DIR=assets\images\posts
+set POSTS_DIR=gitignore\converted
 
 :: 2. Check if the folders exist, create them if they don't
 if not exist "%ARCHIVE_DIR%" mkdir "%ARCHIVE_DIR%"
