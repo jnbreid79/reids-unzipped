@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Boat work in Marin — Reid's Unzipped</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500&family=Merriweather:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy:      #1a3a5c;
+    --navy-mid:  #1f4a73;
+    --blue:      #2d6a9f;
+    --ice:       #b8d4e8;
+    --ice-light: #deedf7;
+    --white:     #f8fbfd;
+    --text:      #1a2a38;
+    --muted:     #5a7a96;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Merriweather', Georgia, serif;
+    background: var(--white);
+    color: var(--text);
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  /* =====================================================================
+     MASTHEAD
+     ===================================================================== */
+  .masthead {
+    background: var(--navy);
+    border-bottom: 3px solid var(--ice);
+    padding: 0 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+    position: sticky;
+    top: 0;
+    z-index: 9000;
+  }
+
+  .masthead-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  .hamburger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 300;
+  }
+  .hamburger span {
+    display: block;
+    width: 24px; height: 2px;
+    background: var(--ice);
+    transition: all 0.3s ease;
+    transform-origin: center;
+  }
+  .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+  .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  .nav-dropdown {
+    position: fixed;
+    top: 67px; right: 0;
+    width: 280px;
+    background: var(--navy);
+    border-left: 3px solid var(--ice);
+    border-bottom: 3px solid var(--ice);
+    border-bottom-left-radius: 4px;
+    transform: translateX(100%);
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 9999;
+    padding: 1rem 0;
+    box-shadow: -6px 6px 24px rgba(0,0,0,0.4);
+  }
+  .nav-dropdown.open { transform: translateX(0); }
+  .nav-dropdown a {
+    display: block;
+    padding: 0.75rem 1.8rem;
+    color: var(--ice);
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-weight: 400;
+    border-bottom: 1px solid rgba(184,212,232,0.08);
+    transition: background 0.15s;
+  }
+  .nav-dropdown a:hover { background: rgba(184,212,232,0.1); color: white; }
+  .nav-dropdown a:last-child { border-bottom: none; }
+
+  .nav-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9998;
+  }
+  .nav-overlay.open { display: block; }
+
+  .tracker-pill {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.75rem;
+    color: #4cbb9a;
+    letter-spacing: 0.08em;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    text-decoration: none;
+    padding: 0.35rem 0.8rem;
+    border: 1px solid rgba(76,187,154,0.35);
+    border-radius: 20px;
+    transition: all 0.2s;
+    white-space: nowrap;
+  }
+  .tracker-pill:hover { background: rgba(76,187,154,0.1); }
+  .dot {
+    display: inline-block;
+    width: 7px; height: 7px;
+    background: #4cbb9a;
+    border-radius: 50%;
+    animation: pulse 2s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%,100% { opacity:1; transform:scale(1); }
+    50% { opacity:0.4; transform:scale(1.5); }
+  }
+
+  /* =====================================================================
+     POST HERO STRIP
+     ===================================================================== */
+  .post-hero {
+    background: var(--navy);
+    padding: 3.5rem 1.5rem 2.5rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .post-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(160deg, #0d2438 0%, #1a3a5c 50%, #1f4a73 100%);
+    opacity: 0.9;
+  }
+  
+  .post-hero {
+    background-image: url('/reids-unzipped/assets/images/posts/img_6068-1.webp');
+    background-size: cover;
+    background-position: center;
+  }
+  .post-hero::before {
+    background: linear-gradient(to bottom, rgba(13,36,56,0.7), rgba(26,58,92,0.92));
+    opacity: 1;
+  }
+  
+
+  .post-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 740px;
+    margin: 0 auto;
+  }
+
+  .post-meta-top {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--ice);
+    opacity: 0.8;
+    margin-bottom: 1rem;
+    display: flex;
+    gap: 1.2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .post-meta-top span { display: flex; align-items: center; gap: 0.3rem; }
+
+  .post-hero h1 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+    font-size: clamp(1.6rem, 4vw, 2.6rem);
+    letter-spacing: 0.06em;
+    color: white;
+    line-height: 1.25;
+    margin-bottom: 1rem;
+  }
+
+  .post-excerpt {
+    font-family: 'Merriweather', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 1rem;
+    color: var(--ice-light);
+    line-height: 1.7;
+    max-width: 600px;
+    margin: 0 auto 1.5rem;
+  }
+
+  .post-tags {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .post-tag {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--ice);
+    border: 1px solid rgba(184,212,232,0.35);
+    padding: 0.2rem 0.7rem;
+    border-radius: 2px;
+  }
+
+  /* =====================================================================
+     POST BODY
+     ===================================================================== */
+  .post-body {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 4rem;
+  }
+
+  /* Drop cap on first paragraph */
+  .post-body > p:first-of-type::first-letter {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+    font-size: 4.2rem;
+    line-height: 0.8;
+    float: left;
+    margin: 0.1rem 0.15rem -0.1rem 0;
+    color: var(--navy);
+  }
+
+  .post-body p {
+    margin-bottom: 1.6rem;
+    font-size: 1rem;
+    line-height: 1.85;
+    color: var(--text);
+  }
+
+  .post-body h2 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.28em;
+    color: var(--navy);
+    margin: 3rem 0 1.2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--ice);
+  }
+
+  .post-body h3 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 1.1rem;
+    color: var(--navy);
+    margin: 2rem 0 0.8rem;
+  }
+
+  .post-body ul, .post-body ol {
+    margin: 0 0 1.6rem 1.5rem;
+  }
+  .post-body li {
+    margin-bottom: 0.5rem;
+    line-height: 1.7;
+  }
+
+  .post-body strong { color: var(--navy); font-weight: 400; }
+
+  /* =====================================================================
+     PULL QUOTE
+     Use in markdown as: {:.pullquote}
+     > Your quote here
+     ===================================================================== */
+  .post-body blockquote {
+    margin: 2.5rem -1rem;
+    padding: 1.8rem 2rem;
+    border-left: 4px solid var(--ice);
+    background: linear-gradient(135deg, rgba(184,212,232,0.08), rgba(184,212,232,0.04));
+    font-family: 'Merriweather', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: var(--navy-mid);
+  }
+  .post-body blockquote p { margin: 0; font-size: 1.15rem; }
+  .post-body blockquote p::before { content: '\201C'; }
+  .post-body blockquote p::after  { content: '\201D'; }
+
+  /* Section divider — use <hr> in markdown */
+  .post-body hr {
+    border: none;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--ice), transparent);
+    margin: 3rem 0;
+  }
+
+  /* =====================================================================
+     VIDEO EMBED
+     Use in markdown posts as a raw HTML block:
+       <div class="video-embed">
+         <div class="video-embed-frame">
+           <iframe src="https://www.youtube-nocookie.com/embed/VIDEO_ID" ...></iframe>
+         </div>
+       </div>
+     ===================================================================== */
+  .video-embed {
+    margin: 2.5rem 0;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba(26,58,92,0.18);
+  }
+
+  .video-embed-header {
+    background: var(--navy);
+    padding: 0.65rem 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--ice);
+  }
+
+  .video-embed-label {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--ice);
+  }
+
+  .video-embed-label svg {
+    flex-shrink: 0;
+  }
+
+  .video-embed-yt-link {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+  .video-embed-yt-link:hover { color: var(--ice); }
+
+  .video-embed-frame {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #0d1f33;
+  }
+
+  .video-embed-frame iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    border: none;
+  }
+
+  /* =====================================================================
+     IMAGE GALLERIES
+     Use in markdown:
+       Single:  ![alt](url)
+       Gallery: wrap consecutive images — they auto-detect neighbours
+     ===================================================================== */
+
+  /* Single image */
+  .post-body img {
+    width: 100%;
+    height: auto;
+    border-radius: 2px;
+    display: block;
+    margin: 0.5rem 0;
+    cursor: zoom-in;
+    transition: opacity 0.2s;
+  }
+  .post-body img:hover { opacity: 0.92; }
+
+  /* Gallery grid — JS will wrap consecutive images in .gallery */
+  .gallery {
+    display: grid;
+    gap: 6px;
+    margin: 2rem -1.5rem;
+  }
+  .gallery.count-1 { grid-template-columns: 1fr; margin: 2rem 0; }
+  .gallery.count-2 { grid-template-columns: 1fr 1fr; }
+  .gallery.count-3 { grid-template-columns: 1fr 1fr 1fr; }
+  .gallery.count-4 { grid-template-columns: 1fr 1fr; }
+  .gallery.count-5 { grid-template-columns: 1fr 1fr 1fr; }
+  .gallery.count-6 { grid-template-columns: 1fr 1fr 1fr; }
+
+  .gallery-item {
+    overflow: hidden;
+    border-radius: 2px;
+    cursor: zoom-in;
+    position: relative;
+    background: var(--navy-mid);
+  }
+  .gallery-item img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    margin: 0;
+    aspect-ratio: 4/3;
+    transition: transform 0.3s ease, opacity 0.2s;
+  }
+  .gallery-item:hover img { transform: scale(1.03); opacity: 1; }
+
+  /* For count-3 galleries, make first image span full width */
+  .gallery.count-3 .gallery-item:first-child {
+    grid-column: 1 / -1;
+  }
+  .gallery.count-3 .gallery-item:first-child img {
+    aspect-ratio: 16/7;
+  }
+
+  /* 5-image: first two bigger */
+  .gallery.count-5 .gallery-item:nth-child(-n+2) { }
+
+  @media (max-width: 600px) {
+    .gallery.count-3,
+    .gallery.count-5,
+    .gallery.count-6 { grid-template-columns: 1fr 1fr; }
+    .gallery.count-3 .gallery-item:first-child { grid-column: 1 / -1; }
+  }
+
+  /* =====================================================================
+     LIGHTBOX
+     ===================================================================== */
+  .lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(10, 20, 35, 0.95);
+    z-index: 99999;
+    align-items: center;
+    justify-content: center;
+    cursor: zoom-out;
+  }
+  .lightbox.open { display: flex; }
+
+  .lightbox-inner {
+    position: relative;
+    max-width: 92vw;
+    max-height: 92vh;
+  }
+
+  .lightbox-inner img {
+    max-width: 90vw;
+    max-height: 88vh;
+    object-fit: contain;
+    border-radius: 2px;
+    display: block;
+    cursor: default;
+    margin: 0;
+    width: auto;
+  }
+
+  .lightbox-close {
+    position: fixed;
+    top: 1.2rem; right: 1.5rem;
+    color: var(--ice);
+    font-size: 2rem;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+    cursor: pointer;
+    line-height: 1;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+    background: none;
+    border: none;
+  }
+  .lightbox-close:hover { opacity: 1; }
+
+  .lightbox-nav {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: var(--ice);
+    font-size: 2rem;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+    cursor: pointer;
+    padding: 1rem;
+    opacity: 0.5;
+    transition: opacity 0.2s;
+  }
+  .lightbox-nav:hover { opacity: 1; }
+  .lightbox-prev { left: 1rem; }
+  .lightbox-next { right: 1rem; }
+
+  .lightbox-caption {
+    position: fixed;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--ice);
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    opacity: 0.6;
+    white-space: nowrap;
+  }
+
+  /* =====================================================================
+     POST FOOTER NAV
+     ===================================================================== */
+  .post-footer {
+    background: var(--navy);
+    padding: 2rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .post-footer a {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--ice);
+    text-decoration: none;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+  }
+  .post-footer a:hover { opacity: 1; }
+  .post-footer .back { font-size: 0.85rem; opacity: 1; font-weight: 400; }
+
+  /* =====================================================================
+     SITE FOOTER
+     ===================================================================== */
+  footer {
+    background: var(--navy);
+    color: var(--muted);
+    padding: 2rem;
+    text-align: center;
+    border-top: 1px solid rgba(184,212,232,0.15);
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.82rem;
+    letter-spacing: 0.04em;
+  }
+  footer a { color: var(--ice); text-decoration: none; }
+
+  .zipper-svg-masthead { width: 120px; height: auto; }
+</style>
+</head>
+<body>
+
+<div class="nav-overlay" id="overlay" onclick="closeMenu()"></div>
+
+<!-- MASTHEAD -->
+<div class="masthead">
+  <a href="/reids-unzipped/" class="masthead-logo">
+    <svg class="zipper-svg-masthead" viewBox="0 0 240 48" xmlns="http://www.w3.org/2000/svg" aria-label="Zipper">
+      <line x1="26" y1="14.2" x2="50" y2="14.2" stroke="#b8d4e8" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="26" y1="38"   x2="50" y2="38"   stroke="#b8d4e8" stroke-width="2.5" stroke-linecap="round"/>
+      <text x="120" y="38" text-anchor="middle"
+        font-family="Raleway, 'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-weight="200" font-size="34" fill="#b8d4e8" letter-spacing="2">Zipper</text>
+      <line x1="190" y1="26.1" x2="214" y2="26.1" stroke="#b8d4e8" stroke-width="2.5" stroke-linecap="round"/>
+    </svg>
+  </a>
+  <div style="display:flex; align-items:center; gap:1.2rem;">
+    <a href="https://forecast.predictwind.com/tracking/display/SV-Zipper" class="tracker-pill" target="_blank">
+      <span class="dot"></span> Live Tracker
+    </a>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</div>
+
+<nav class="nav-dropdown" id="nav-dropdown">
+  <a href="/reids-unzipped/voyage-log/" onclick="closeMenu()">Voyage Log</a>
+  <a href="/reids-unzipped/crew/" onclick="closeMenu()">The Crew</a>
+  <a href="/reids-unzipped/the-boat/" onclick="closeMenu()">The Boat</a>
+  <a href="/reids-unzipped/supporters/" onclick="closeMenu()">Supporters</a>
+</nav>
+
+<!-- POST HERO -->
+<div class="post-hero">
+  <div class="post-hero-content">
+    <div class="post-meta-top">
+      <span>📅 19 March 2024</span>
+      <span>✍️ Jamie Reid</span>
+      <span>📍 Marin, Martinique</span>
+    </div>
+    <h1>Boat work in Marin</h1>
+    
+    <p class="post-excerpt">Rudders, saildrive seals, a mast that needed to come out, a waterline that needed raising — two weeks in the yard in Marin and Zipper got a proper overhaul.</p>
+    
+    
+    <div class="post-tags">
+      
+      <span class="post-tag">antifoul</span>
+      
+      <span class="post-tag">boat-work</span>
+      
+      <span class="post-tag">boatwork</span>
+      
+      <span class="post-tag">cruising</span>
+      
+      <span class="post-tag">hydraulics</span>
+      
+      <span class="post-tag">mast</span>
+      
+      <span class="post-tag">yard</span>
+      
+    </div>
+    
+  </div>
+</div>
+
+<!-- POST CONTENT -->
+<article class="post-body">
+  <p>Working through the jobs list in the yard…</p>
+
+<p>It’s been a busy couple of weeks of boat work in Marin. We decided to take the opportunity whilst we’re here, with the excellent facilities, to fix up all the issues and niggles we’ve encountered.</p>
+
+<p>This included lifting the boat out for a few days:</p>
+
+<p><img src="/reids-unzipped/assets/images/posts/img_6068-1.webp" alt="Zipper lifted out of water" />
+<img src="/reids-unzipped/assets/images/posts/img_6071-1.webp" alt="Boat on the hard in Marin" />
+<img src="/reids-unzipped/assets/images/posts/img_6078-1.webp" alt="Underside of Zipper in the yard" /></p>
+
+<p>It’s very frustrating that we had to do this at all, but she needs to come out to get the rudders off. When they were built new for us the rudder posts weren’t fitted with the ability to attach the emergency steering. In our opinion this should have been done at the time, however we also should have noticed it too, but we didn’t for one reason and another (new boat to us, learning about everything else) until we were suffering other steering issues in the Atlantic and worrying about the hydraulics. That’s when we realised we had no other viable alternative — not ideal! So, time to resolve that. And whilst she’s out also replace the saildrive seals that are both falling off (again — this is annoying as they too were fitted new in France), as well as fit the second new escape hatch. This one is lower than the one we replaced in St. Malo, changing is a nice-to-have rather than a necessity, having bought the hatch in France it’s been ready to go on next time we lifted. So really 2 jobs that are fixing up work finished 5 months ago in France.</p>
+
+<p>We then decided at the last minute, after discussion with the yard, to raise the waterline by an inch and a half. We’ve been toiling trying to keep the waterline clean and are starting to damage the gelcoat. So, tape on and sand — doesn’t sound that tricky but 45ft down both sides of 2 hulls is nearly 200ft of waterline! So that took a day, and the yard took on the painting so we could spend Angus’ birthday with him. We didn’t get the blue colour right, but no matter as it’s well under the water and not noticeable afloat:</p>
+
+<p><img src="/reids-unzipped/assets/images/posts/img_6093-1.webp" alt="Taping the waterline" />
+<img src="/reids-unzipped/assets/images/posts/img_6099-1.webp" alt="Sanding the waterline" />
+<img src="/reids-unzipped/assets/images/posts/img_6102-1.webp" alt="Antifoul painting in progress" />
+<img src="/reids-unzipped/assets/images/posts/img_6110-1.webp" alt="New waterline painted" />
+<img src="/reids-unzipped/assets/images/posts/img_6114-1.webp" alt="Zipper's hull in the yard" /></p>
+
+<p>Photos of the saildrive seals, and we also had a look into the starboard prop as we had (a little) seawater in the saildrive oil:</p>
+
+<p><img src="/reids-unzipped/assets/images/posts/img_6111-1.webp" alt="Saildrive seal worn and failing" />
+<img src="/reids-unzipped/assets/images/posts/img_6112-1.webp" alt="Saildrive inspection" />
+<img src="/reids-unzipped/assets/images/posts/img_6083-1.webp" alt="Prop inspection" /></p>
+
+<p>The other two jobs we wanted help with were to fix the biggest concerns we had on passage across the Atlantic:</p>
+
+<ol>
+  <li>The mast — we had noticed movement and wear at the foot of the mast on our way across the Atlantic, this has been worrying us</li>
+  <li>Hydraulics, more hydraulic concerns (fortunately not the autopilot this time, that is now behaving perfectly and silently 👍) with the fluid levels in header tanks above each steering wheel going up and down by more than the height of each tank — i.e. alternately emptying and overflowing. To ensure we didn’t get air into the system on either side we spent a lot of the passage moving fluid from one tank to the other, and vice versa (with Calpol syringes — as well as being perfect for measuring epoxy parts they really are useful!). We have been unable to get any confirmation as to whether we should expect the levels to change when sailing, or whether this did indeed pose a risk.</li>
+</ol>
+
+<p><img src="/reids-unzipped/assets/images/posts/img_5900.webp" alt="Empty hydraulic header tank" />
+<img src="/reids-unzipped/assets/images/posts/img_5904.webp" alt="Full hydraulic header tank" /></p>
+
+<p>One header tank empty and the other full to overflow</p>
+
+<p>Mast panting and dust from foot plate wearing (when flying gennaker):</p>
+
+<p><img src="/reids-unzipped/assets/images/posts/screenshot-2024-03-18-232107.webp" alt="Mast foot wear and dust" /></p>
+
+<p>The mast came out a few days before we lifted (you may have noticed the mast missing from the lift pictures above):</p>
+
+<p><img src="/reids-unzipped/assets/images/posts/img_5992-1.webp" alt="Mast coming out of Zipper" />
+<img src="/reids-unzipped/assets/images/posts/img_5997-1.webp" alt="Mast on the ground" />
+<img src="/reids-unzipped/assets/images/posts/img_5999-1.webp" alt="Mast foot inspection" />
+<img src="/reids-unzipped/assets/images/posts/img_6010-1.webp" alt="Mast foot close-up" />
+<img src="/reids-unzipped/assets/images/posts/img_6023-1.webp" alt="Mast work underway" /></p>
+
+<p>Without a mast, we pretended we were a motorboat for a weekend — it felt very strange out in the anchorage without a mast!</p>
+
+<p><img src="/reids-unzipped/assets/images/posts/img_6059-1.webp" alt="Zipper at anchor without mast" />
+<img src="/reids-unzipped/assets/images/posts/img_6051-1.webp" alt="Mastless Zipper in anchorage" /></p>
+
+<p>The profile of the mast foot is far from ideal, with 4 very small areas of contact between the foot and the oval mast profile:</p>
+
+<p><img src="/reids-unzipped/assets/images/posts/img_6015-1.webp" alt="Mast foot profile problem" />
+<img src="/reids-unzipped/assets/images/posts/img_6011-1.webp" alt="Mast foot wear detail" /></p>
+
+<p>Time for some more welding then; we now have some nice new plates to sit along the inner sidewalls of the mast, and they’ve cut the bottom centimetre off the mast to remove the cracks and badly worn areas:</p>
+
+<p><img src="/reids-unzipped/assets/images/posts/img_6161-1.webp" alt="New welded mast foot plates" />
+<img src="/reids-unzipped/assets/images/posts/img_6159-1.webp" alt="Mast foot after repair" /></p>
+
+<p>And we’re nearly done — we are back in the water now but still motorboating:</p>
+
+<p><img src="/reids-unzipped/assets/images/posts/img_6119-1.webp" alt="Zipper back in the water" />
+<img src="/reids-unzipped/assets/images/posts/img_6122-1.webp" alt="Back afloat in Marin" />
+<img src="/reids-unzipped/assets/images/posts/img_6125-1.webp" alt="Motoring without mast" /></p>
+
+<p>The mast is scheduled to go back up at lunch tomorrow — what more could Sophie hope for as her 40th birthday present?!</p>
+
+<p>Today’s good news was the thumbs up from the hydraulic expert here; we will now sail and simply let the fluid move between tanks without fretting or interfering, it seems that moving backwards and forwards is just what the fluid does on the (rare) two-wheel setup we have. As long as we don’t lose it from both tanks…!</p>
+
+<p>In the meantime we’ve been servicing our engines, but that’s a story for another post…</p>
+
+</article>
+
+<!-- POST FOOTER -->
+<div class="post-footer">
+  <a href="/reids-unzipped/voyage-log/" class="back">← All Posts</a>
+  <div style="display:flex; gap:2rem;">
+    
+    <a href="/reids-unzipped/2024/02/23/martinique-back-where-it-all-began.html">← Martinique – back where it all began</a>
+    
+    
+    <a href="/reids-unzipped/2024/03/23/scope-creep.html">Scope creep →</a>
+    
+  </div>
+</div>
+
+<!-- SITE FOOTER -->
+<footer>
+  <div style="margin-bottom:0.8rem;">
+    <a href="https://forecast.predictwind.com/tracking/display/SV-Zipper" target="_blank">PredictWind Tracker</a>
+    &nbsp;·&nbsp;
+    <a href="/reids-unzipped/voyage-log/">Voyage Log</a>
+    &nbsp;·&nbsp;
+    <a href="/reids-unzipped/crew/">The Crew</a>
+    &nbsp;·&nbsp;
+    <a href="/reids-unzipped/supporters/">Supporters</a>
+  </div>
+  © Reid's Unzipped — Reid family cruising the world on Zipper
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+  <button class="lightbox-nav lightbox-prev" onclick="event.stopPropagation(); navigateLightbox(-1)">‹</button>
+  <div class="lightbox-inner" onclick="event.stopPropagation()">
+    <img id="lightbox-img" src="" alt="">
+  </div>
+  <button class="lightbox-nav lightbox-next" onclick="event.stopPropagation(); navigateLightbox(1)">›</button>
+  <div class="lightbox-caption" id="lightbox-caption"></div>
+</div>
+
+<script>
+  // ── Hamburger nav ──────────────────────────────────────────────────────
+  window.closeMenu = function() {
+    document.getElementById('nav-dropdown').classList.remove('open');
+    document.getElementById('hamburger').classList.remove('open');
+    document.getElementById('overlay').classList.remove('open');
+  };
+  window.toggleMenu = function() {
+    const menu = document.getElementById('nav-dropdown');
+    if (menu.classList.contains('open')) { window.closeMenu(); }
+    else {
+      menu.classList.add('open');
+      document.getElementById('hamburger').classList.add('open');
+      document.getElementById('overlay').classList.add('open');
+    }
+  };
+
+  // ── Gallery builder ────────────────────────────────────────────────────
+  // Finds consecutive <img> tags in the post body and wraps them in a .gallery grid
+  (function() {
+    const body = document.querySelector('.post-body');
+    if (!body) return;
+
+    // Collect all images that are direct children of p tags or the body
+    const imgs = Array.from(body.querySelectorAll('p img, img'));
+    // Unwrap images from their p tags first
+    imgs.forEach(img => {
+      const p = img.parentElement;
+      if (p && p.tagName === 'P' && p.children.length === 1) {
+        p.replaceWith(img);
+      }
+    });
+
+    // Now find runs of consecutive sibling images
+    const allImgs = Array.from(body.querySelectorAll('img'));
+    let i = 0;
+    while (i < allImgs.length) {
+      const run = [allImgs[i]];
+      let next = allImgs[i].nextElementSibling;
+      while (next && next.tagName === 'IMG') {
+        run.push(next);
+        next = next.nextElementSibling;
+      }
+      // Wrap run in gallery
+      const gallery = document.createElement('div');
+      gallery.className = `gallery count-${Math.min(run.length, 6)}`;
+      run[0].parentNode.insertBefore(gallery, run[0]);
+      run.forEach(img => {
+        const item = document.createElement('div');
+        item.className = 'gallery-item';
+        gallery.appendChild(item);
+        item.appendChild(img);
+      });
+      i += run.length;
+    }
+  })();
+
+  // ── Lightbox ───────────────────────────────────────────────────────────
+  let lightboxImages = [];
+  let currentIndex = 0;
+
+  function openLightbox(src, alt, index) {
+    document.getElementById('lightbox-img').src = src;
+    document.getElementById('lightbox-img').alt = alt;
+    document.getElementById('lightbox-caption').textContent = alt || '';
+    document.getElementById('lightbox').classList.add('open');
+    currentIndex = index;
+    document.body.style.overflow = 'hidden';
+  }
+
+  window.closeLightbox = function() {
+    document.getElementById('lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+  };
+
+  window.navigateLightbox = function(dir) {
+    currentIndex = (currentIndex + dir + lightboxImages.length) % lightboxImages.length;
+    const img = lightboxImages[currentIndex];
+    document.getElementById('lightbox-img').src = img.src;
+    document.getElementById('lightbox-img').alt = img.alt;
+    document.getElementById('lightbox-caption').textContent = img.alt || '';
+  };
+
+  // Attach click handlers to all images in the post
+  (function() {
+    const allImgs = Array.from(document.querySelectorAll('.post-body img'));
+    lightboxImages = allImgs;
+    allImgs.forEach((img, idx) => {
+      img.addEventListener('click', () => openLightbox(img.src, img.alt, idx));
+    });
+  })();
+
+  // Close lightbox on Escape
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowRight') navigateLightbox(1);
+    if (e.key === 'ArrowLeft') navigateLightbox(-1);
+  });
+</script>
+</body>
+</html>
