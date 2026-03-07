@@ -132,22 +132,22 @@ permalink: /gallery/
   }
 
   .gallery-grid {
-    columns: 3;
-    column-gap: 8px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 8px;
+    align-items: start;
   }
 
-  @media (max-width: 900px) { .gallery-grid { columns: 2; } }
-  @media (max-width: 500px) { .gallery-grid { columns: 1; } }
+  @media (max-width: 900px) { .gallery-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 500px) { .gallery-grid { grid-template-columns: 1fr; } }
 
   .gallery-item {
-    break-inside: avoid;
-    margin-bottom: 8px;
     position: relative;
     overflow: hidden;
     border-radius: 2px;
     cursor: zoom-in;
     background: var(--navy-mid);
-    display: block; /* block by default; hidden via JS when filtered out */
+    display: block;
   }
 
   .gallery-item img {
@@ -372,6 +372,35 @@ permalink: /gallery/
     .lightbox-nav { display: none; }
   }
 
+  /* ── Pagination ── */
+  .pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    padding: 2rem 1.5rem 3rem;
+  }
+  .page-btn {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--muted);
+    background: none;
+    border: 1px solid rgba(184,212,232,0.35);
+    border-radius: 2px;
+    padding: 0.45rem 0.9rem;
+    cursor: pointer;
+    transition: all 0.18s;
+    white-space: nowrap;
+  }
+  .page-btn:hover { color: var(--navy); border-color: var(--ice); background: rgba(184,212,232,0.08); }
+  .page-btn.active { background: var(--navy); color: var(--ice); border-color: var(--navy); }
+  .page-btn:disabled { opacity: 0.3; cursor: default; pointer-events: none; }
+  .page-btn.prev-next { padding: 0.45rem 1.2rem; }
+  .page-ellipsis { font-family: 'Raleway', sans-serif; font-size: 0.7rem; color: var(--muted); padding: 0 0.2rem; }
+
   /* ── Footer ── */
   footer { background: var(--navy); color: var(--muted); padding: 2rem; text-align: center; border-top: 1px solid rgba(184,212,232,0.15); font-family: 'Raleway', sans-serif; font-size: 0.82rem; letter-spacing: 0.04em; }
   footer a { color: var(--ice); text-decoration: none; }
@@ -432,6 +461,7 @@ permalink: /gallery/
 <!-- GALLERY COUNT -->
 <div class="gallery-meta">
   <div class="gallery-count">Showing <span id="count-shown">0</span> of <span id="count-total">0</span> photographs</div>
+  <div class="gallery-count" id="page-indicator"></div>
 </div>
 
 <!-- GALLERY GRID -->
@@ -481,6 +511,8 @@ permalink: /gallery/
   <div class="gallery-empty" id="gallery-empty">No photographs found for this filter.</div>
 </div>
 
+<div class="pagination" id="pagination"></div>
+
 <!-- FOOTER -->
 <footer>
   <div style="margin-bottom:0.8rem;">
@@ -522,19 +554,124 @@ permalink: /gallery/
     else { menu.classList.add('open'); document.getElementById('hamburger').classList.add('open'); document.getElementById('overlay').classList.add('open'); }
   };
 
-  // ── Gallery data — built from DOM so it's always in sync ──────────────
-  // Each item's data attributes carry everything we need.
+  // ── Gallery data ───────────────────────────────────────────────────────
   const allItems = Array.from(document.querySelectorAll('.gallery-item'));
   let visibleItems = [...allItems]; // current filtered set
   let currentLightboxIndex = 0;    // index into visibleItems
+  let currentPage = 1;
+  const PER_PAGE = 24;             // photos per page
 
-  // ── Initialise count and All button state ────────────────────────────
-  function updateCount() {
-    document.getElementById('count-shown').textContent = visibleItems.length;
-    document.getElementById('count-total').textContent  = allItems.length;
+  // ── Pagination helpers ────────────────────────────────────────────────
+  function totalPages() {
+    return Math.max(1, Math.ceil(visibleItems.length / PER_PAGE));
   }
-  updateCount();
-  document.querySelector('.filter-btn[data-tag="all"]').classList.add('active');
+
+  function pageItems() {
+    const start = (currentPage - 1) * PER_PAGE;
+    return visibleItems.slice(start, start + PER_PAGE);
+  }
+
+  function pageRange(current, total) {
+    const delta = 1;
+    const range = [];
+    const withDots = [];
+    let l;
+    for (let i = 1; i <= total; i++) {
+      if (i === 1 || i === total || (i >= current - delta && i <= current + delta)) {
+        range.push(i);
+      }
+    }
+    range.forEach(i => {
+      if (l) {
+        if (i - l === 2) withDots.push(l + 1);
+        else if (i - l !== 1) withDots.push('…');
+      }
+      withDots.push(i);
+      l = i;
+    });
+    return withDots;
+  }
+
+  function renderPagination() {
+    const container = document.getElementById('pagination');
+    const total = totalPages();
+    if (total <= 1) { container.innerHTML = ''; return; }
+
+    let html = `<button class="page-btn prev-next" onclick="goToPage(${currentPage - 1})" ${currentPage === 1 ? 'disabled' : ''}>← Prev</button>`;
+    pageRange(currentPage, total).forEach(p => {
+      if (p === '…') {
+        html += `<span class="page-ellipsis">…</span>`;
+      } else {
+        html += `<button class="page-btn${p === currentPage ? ' active' : ''}" onclick="goToPage(${p})">${p}</button>`;
+      }
+    });
+    html += `<button class="page-btn prev-next" onclick="goToPage(${currentPage + 1})" ${currentPage === total ? 'disabled' : ''}>Next →</button>`;
+    container.innerHTML = html;
+  }
+
+  window.goToPage = function(page) {
+    currentPage = page;
+    renderPage();
+    // Scroll to top of gallery smoothly
+    document.getElementById('gallery-grid').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+
+  // ── Count ─────────────────────────────────────────────────────────────
+  function updateCount() {
+    const start = (currentPage - 1) * PER_PAGE + 1;
+    const end = Math.min(currentPage * PER_PAGE, visibleItems.length);
+    const total = visibleItems.length;
+    const grandTotal = allItems.length;
+
+    document.getElementById('count-shown').textContent =
+      total > 0 ? `${start}–${end}` : '0';
+    document.getElementById('count-total').textContent = grandTotal;
+
+    const pageEl = document.getElementById('page-indicator');
+    if (totalPages() > 1) {
+      pageEl.textContent = `Page ${currentPage} of ${totalPages()}`;
+    } else {
+      pageEl.textContent = '';
+    }
+  }
+
+  // ── Row-first reorder ─────────────────────────────────────────────────
+  function getColumnCount() {
+    const grid = document.getElementById('gallery-grid');
+    const cols = window.getComputedStyle(grid).gridTemplateColumns.split(' ').length;
+    return cols || 3;
+  }
+
+  function reorderRowFirst(items) {
+    const grid = document.getElementById('gallery-grid');
+    const cols = getColumnCount();
+    const n = items.length;
+    const rows = Math.ceil(n / cols);
+    const reordered = new Array(n);
+    for (let i = 0; i < n; i++) {
+      const col = i % cols;
+      const row = Math.floor(i / cols);
+      const dest = col * rows + row;
+      if (dest < n) reordered[dest] = items[i];
+    }
+    reordered.forEach(item => { if (item) grid.appendChild(item); });
+  }
+
+  // ── Render current page ───────────────────────────────────────────────
+  function renderPage() {
+    const page = pageItems();
+
+    // Hide all, show only this page's items
+    allItems.forEach(item => { item.style.display = 'none'; });
+    page.forEach(item => { item.style.display = 'block'; });
+
+    reorderRowFirst(page);
+    renderPagination();
+    updateCount();
+
+    const empty = document.getElementById('gallery-empty');
+    empty.style.display = visibleItems.length === 0 ? 'block' : 'none';
+  }
 
   // ── Multi-tag filter ──────────────────────────────────────────────────
   let activeTags = new Set();
@@ -546,13 +683,10 @@ permalink: /gallery/
       return [...activeTags].every(t => photoTags.includes(t));
     });
 
-    allItems.forEach(item => { item.style.display = 'none'; });
-    visibleItems.forEach(item => { item.style.display = 'block'; });
+    // Reset to page 1 on filter change
+    currentPage = 1;
 
-    const empty = document.getElementById('gallery-empty');
-    empty.style.display = visibleItems.length === 0 ? 'block' : 'none';
-
-    // Update "All" button state — active (dimly) when nothing else is
+    // Update "All" button state
     const allBtn = document.querySelector('.filter-btn[data-tag="all"]');
     if (activeTags.size === 0) {
       allBtn.classList.add('active');
@@ -560,7 +694,7 @@ permalink: /gallery/
       allBtn.classList.remove('active');
     }
 
-    // Update URL — comma-separated tags for shareability
+    // Update URL
     if (activeTags.size > 0) {
       history.replaceState(null, '', window.location.pathname + '?tags=' +
         [...activeTags].map(encodeURIComponent).join(','));
@@ -568,8 +702,12 @@ permalink: /gallery/
       history.replaceState(null, '', window.location.pathname);
     }
 
-    updateCount();
+    renderPage();
   }
+
+  // ── Initialise ───────────────────────────────────────────────────────
+  document.querySelector('.filter-btn[data-tag="all"]').classList.add('active');
+  renderPage();
 
   window.filterGallery = function(tag, btn) {
     if (tag === 'all') {
