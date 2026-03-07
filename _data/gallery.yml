@@ -1,0 +1,93 @@
+# gallery.yml — managed by gallery_import.py
+# Add new entries via the import tool; most recent first.
+
+- src: /assets/images/gallery/2026-02/resolution-bay.webp
+  title: Resolution Bay
+  date: Feb 2026
+  tags:
+  - anchorages
+  - new_zealand
+  - marlborough_sounds
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2026-02/on-the-queen-charlotte-track.webp
+  title: On the Queen Charlotte Track
+  date: Feb 2026
+  tags:
+  - family
+  - new_zealand
+  - marlborough_sounds
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2026-02/resolution-bay-view-from-queen-charlotte-track.webp
+  title: Resolution Bay view from Queen Charlotte Track
+  date: Feb 2026
+  tags:
+  - landscapes
+  - new_zealand
+  - marlborough_sounds
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2026-02/queen-charlotte-sound-view.webp
+  title: Queen Charlotte Sound view
+  date: Feb 2026
+  tags:
+  - landscapes
+  - new_zealand
+  - marlborough_sounds
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2026-02/queen-charlotte-sound-view-1.webp
+  title: Queen Charlotte Sound view
+  date: Feb 2026
+  tags:
+  - landscapes
+  - new_zealand
+  - marlborough_sounds
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2026-02/overlooking-motuara-island.webp
+  title: Overlooking Motuara Island
+  date: Feb 2026
+  tags:
+  - family
+  - new_zealand
+  - marlborough_sounds
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2026-02/overlooking-motuara-island-2.webp
+  title: Overlooking Motuara Island 2
+  date: Feb 2026
+  tags:
+  - family
+  - new_zealand
+  - marlborough_sounds
+  width: 1067
+  height: 1600
+- src: /assets/images/gallery/2026-02/mistletoe-bay.webp
+  title: Mistletoe Bay
+  date: Feb 2026
+  tags:
+  - anchorages
+  - new_zealand
+  - marlborough_sounds
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2026-02/onahau-lookout.webp
+  title: Onahau Lookout
+  date: Feb 2026
+  tags:
+  - landscapes
+  - new_zealand
+  - marlborough_sounds
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2026-02/queen-charlotte-track-view-into-pelorus-sound.webp
+  title: Queen Charlotte track view into Pelorus Sound
+  date: Feb 2026
+  tags:
+  - landscapes
+  - new_zealand
+  - marlborough_sounds
+  width: 1600
+  height: 1067
