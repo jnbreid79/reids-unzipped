@@ -81,7 +81,7 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: false          # set to true and configure a provider when ready
+      comments: true
       share: true
       related: true
       show_date: true
@@ -129,11 +129,15 @@ defaults:
 #   google:
 #     tracking_id: "UA-XXXXXXXX-X"
 
-# comments:
-#   provider: "utterances"
-#   utterances:
-#     theme: "github-light"
-#     issue_term: "pathname"
+comments:
+  provider: "giscus"
+  giscus:
+    repo_id: "R_kgDORUkkAw"
+    category_name: "General"
+    category_id: "DIC_kwDORUkkA84C4S7h"
+    discussion_term: "pathname"
+    reactions_enabled: "1"
+    theme: "preferred_color_scheme"
 
 # =============================================================================
 # SEO / social
