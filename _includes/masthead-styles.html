@@ -1,0 +1,37 @@
+{% comment %}
+  _includes/masthead-styles.html
+  Include this INSIDE an existing <style> block:
+      <style>
+        {% include masthead-styles.html %}
+        /* ...rest of page styles... */
+      </style>
+{% endcomment %}
+
+  /* ── Masthead ── */
+  .masthead { background: var(--navy); border-bottom: 3px solid var(--ice); padding: 0 1.5rem; display: flex; align-items: center; justify-content: space-between; height: 64px; position: sticky; top: 0; z-index: 9000; isolation: isolate; }
+  .masthead-logo { display: flex; align-items: center; text-decoration: none; }
+  .zipper-svg-masthead { width: 120px; height: auto; }
+
+  /* Hamburger */
+  .hamburger { background: none; border: none; cursor: pointer; padding: 0.5rem; display: flex; flex-direction: column; gap: 5px; z-index: 300; }
+  .hamburger span { display: block; width: 24px; height: 2px; background: var(--ice); transition: all 0.3s ease; transform-origin: center; }
+  .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+  .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  /* Slide-out nav */
+  .nav-dropdown { position: fixed; top: 67px; right: 0; width: 280px; background: var(--navy); border-left: 3px solid var(--ice); border-bottom: 3px solid var(--ice); border-bottom-left-radius: 4px; transform: translateX(100%); transition: transform 0.35s cubic-bezier(0.4,0,0.2,1); z-index: 9999; padding: 1rem 0; box-shadow: -6px 6px 24px rgba(0,0,0,0.4); }
+  .nav-dropdown.open { transform: translateX(0); }
+  .nav-dropdown a { display: block; padding: 0.75rem 1.8rem; color: var(--ice); text-decoration: none; font-family: 'Raleway', sans-serif; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.14em; font-weight: 400; border-bottom: 1px solid rgba(184,212,232,0.08); transition: background 0.15s, color 0.15s; }
+  .nav-dropdown a:hover { background: rgba(184,212,232,0.1); color: white; }
+  .nav-dropdown a:last-child { border-bottom: none; }
+
+  /* Click-away overlay */
+  .nav-overlay { display: none; position: fixed; inset: 0; z-index: 9998; }
+  .nav-overlay.open { display: block; }
+
+  /* Live Tracker pill */
+  .tracker-pill { font-family: 'Raleway', sans-serif; font-size: 0.75rem; color: #4cbb9a; letter-spacing: 0.08em; display: flex; align-items: center; gap: 0.4rem; text-decoration: none; padding: 0.35rem 0.8rem; border: 1px solid rgba(76,187,154,0.35); border-radius: 20px; transition: all 0.2s; white-space: nowrap; }
+  .tracker-pill:hover { background: rgba(76,187,154,0.1); border-color: #4cbb9a; }
+  .dot { display: inline-block; width: 7px; height: 7px; background: #4cbb9a; border-radius: 50%; animation: pulse 2s ease-in-out infinite; flex-shrink: 0; }
+  @keyframes pulse { 0%,100% { opacity:1; transform:scale(1); } 50% { opacity:0.4; transform:scale(1.5); } }

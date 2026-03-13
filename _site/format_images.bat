@@ -20,7 +20,8 @@ echo Processing new photos...
 
 :: 4. Convert, resize, and save to the posts folder
 :: We use 'magick' for v7+ or 'mogrify' for older versions. 
-magick mogrify -path "%POSTS_DIR%" -resize "1200x>" -quality 80 -format webp "%RAW_DIR%\*.*"
+:: magick mogrify -path "%POSTS_DIR%" -resize "1200x>" -quality 80 -format webp "%RAW_DIR%\*.*"
+magick mogrify -auto-orient -path "%POSTS_DIR%" -resize "1200x>" -quality 80 -format webp "%RAW_DIR%\*.*"
 
 :: 5. Move the originals to the archive
 echo Archiving originals...

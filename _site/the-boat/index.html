@@ -20,26 +20,37 @@
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: 'Merriweather', Georgia, serif; background: var(--white); color: var(--text); font-size: 16px; line-height: 1.7; }
 
+    
+
   /* ── Masthead ── */
   .masthead { background: var(--navy); border-bottom: 3px solid var(--ice); padding: 0 1.5rem; display: flex; align-items: center; justify-content: space-between; height: 64px; position: sticky; top: 0; z-index: 9000; isolation: isolate; }
   .masthead-logo { display: flex; align-items: center; text-decoration: none; }
   .zipper-svg-masthead { width: 120px; height: auto; }
+
+  /* Hamburger */
   .hamburger { background: none; border: none; cursor: pointer; padding: 0.5rem; display: flex; flex-direction: column; gap: 5px; z-index: 300; }
   .hamburger span { display: block; width: 24px; height: 2px; background: var(--ice); transition: all 0.3s ease; transform-origin: center; }
   .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
   .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
   .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  /* Slide-out nav */
   .nav-dropdown { position: fixed; top: 67px; right: 0; width: 280px; background: var(--navy); border-left: 3px solid var(--ice); border-bottom: 3px solid var(--ice); border-bottom-left-radius: 4px; transform: translateX(100%); transition: transform 0.35s cubic-bezier(0.4,0,0.2,1); z-index: 9999; padding: 1rem 0; box-shadow: -6px 6px 24px rgba(0,0,0,0.4); }
   .nav-dropdown.open { transform: translateX(0); }
   .nav-dropdown a { display: block; padding: 0.75rem 1.8rem; color: var(--ice); text-decoration: none; font-family: 'Raleway', sans-serif; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.14em; font-weight: 400; border-bottom: 1px solid rgba(184,212,232,0.08); transition: background 0.15s, color 0.15s; }
   .nav-dropdown a:hover { background: rgba(184,212,232,0.1); color: white; }
   .nav-dropdown a:last-child { border-bottom: none; }
+
+  /* Click-away overlay */
   .nav-overlay { display: none; position: fixed; inset: 0; z-index: 9998; }
   .nav-overlay.open { display: block; }
+
+  /* Live Tracker pill */
   .tracker-pill { font-family: 'Raleway', sans-serif; font-size: 0.75rem; color: #4cbb9a; letter-spacing: 0.08em; display: flex; align-items: center; gap: 0.4rem; text-decoration: none; padding: 0.35rem 0.8rem; border: 1px solid rgba(76,187,154,0.35); border-radius: 20px; transition: all 0.2s; white-space: nowrap; }
   .tracker-pill:hover { background: rgba(76,187,154,0.1); border-color: #4cbb9a; }
   .dot { display: inline-block; width: 7px; height: 7px; background: #4cbb9a; border-radius: 50%; animation: pulse 2s ease-in-out infinite; flex-shrink: 0; }
   @keyframes pulse { 0%,100% { opacity:1; transform:scale(1); } 50% { opacity:0.4; transform:scale(1.5); } }
+
 
   /* ── Hero ── */
   .page-hero {
@@ -77,11 +88,23 @@
   .section-label::after { content: ''; flex: 1; height: 1px; background: rgba(184,212,232,0.4); }
 
   /* photo gallery */
-  .boat-gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.6rem; margin-bottom: 3rem; border-radius: 3px; overflow: hidden; }
-  .boat-gallery img { width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; transition: transform 0.3s; cursor: zoom-in; }
-  .boat-gallery img:hover { transform: scale(1.03); }
-  .boat-gallery img:first-child { grid-column: span 3; aspect-ratio: 21/9; }
-  @media (max-width: 600px) { .boat-gallery { grid-template-columns: 1fr 1fr; } .boat-gallery img:first-child { aspect-ratio: 16/9; } }
+  .boat-gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.5rem; margin-bottom: 3rem; }
+  .boat-gallery-item { position: relative; overflow: hidden; border-radius: 2px; cursor: zoom-in; }
+  .boat-gallery-item img { width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; transition: transform 0.35s ease, filter 0.35s ease; }
+  .boat-gallery-item:hover img { transform: scale(1.06); filter: brightness(0.82); }
+  .boat-gallery-item .img-caption {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    background: linear-gradient(to top, rgba(10,25,40,0.85) 0%, transparent 100%);
+    color: var(--ice-light); font-family: 'Raleway', sans-serif; font-size: 0.72rem;
+    letter-spacing: 0.06em; padding: 1.2rem 0.6rem 0.5rem;
+    opacity: 0; transform: translateY(4px); transition: opacity 0.25s ease, transform 0.25s ease;
+    pointer-events: none;
+  }
+  .boat-gallery-item:hover .img-caption { opacity: 1; transform: translateY(0); }
+  .boat-gallery--hero .boat-gallery-item { grid-column: 1 / -1; }
+  .boat-gallery--hero .boat-gallery-item img { aspect-ratio: 21/9; }
+  @media (max-width: 700px) { .boat-gallery { grid-template-columns: repeat(2, 1fr); } .boat-gallery--hero .boat-gallery-item img { aspect-ratio: 16/9; } }
+  @media (max-width: 420px) { .boat-gallery { grid-template-columns: 1fr 1fr; gap: 0.35rem; } }
 
   /* pull quote */
   .pull-quote { border-left: 3px solid var(--ice); padding: 1rem 1.5rem; margin: 2rem 0; }
@@ -122,7 +145,8 @@
   .lightbox-nav:hover { opacity: 1; }
   .lightbox-prev { left: 1rem; }
   .lightbox-next { right: 1rem; }
-  .lightbox-caption { position: fixed; bottom: 1.5rem; left: 50%; transform: translateX(-50%); color: var(--ice); font-family: 'Raleway', sans-serif; font-size: 0.78rem; letter-spacing: 0.08em; opacity: 0.6; white-space: nowrap; }
+  .lightbox-caption { position: fixed; bottom: 1.5rem; left: 50%; transform: translateX(-50%); color: var(--ice); font-family: 'Raleway', sans-serif; font-size: 0.78rem; letter-spacing: 0.08em; opacity: 0.6; white-space: nowrap; text-align: center; }
+  .lightbox-counter { position: fixed; top: 1.3rem; left: 50%; transform: translateX(-50%); color: var(--ice); font-family: 'Raleway', sans-serif; font-size: 0.72rem; letter-spacing: 0.15em; opacity: 0.5; }
 
   /* ── Footer ── */
   footer { background: var(--navy); color: var(--muted); padding: 2rem; text-align: center; border-top: 1px solid rgba(184,212,232,0.15); font-family: 'Raleway', sans-serif; font-size: 0.82rem; letter-spacing: 0.04em; }
@@ -132,28 +156,66 @@
 </head>
 <body>
 
+<!-- ── Click-away overlay ── -->
 <div class="nav-overlay" id="overlay" onclick="closeMenu()"></div>
 
+<!-- ── Masthead ── -->
 <div class="masthead">
   <a href="/reids-unzipped/" class="masthead-logo">
-    <svg class="zipper-svg-masthead" viewBox="0 0 240 48" xmlns="http://www.w3.org/2000/svg">
+    <svg class="zipper-svg-masthead" viewBox="0 0 240 48" xmlns="http://www.w3.org/2000/svg" aria-label="Zipper">
       <line x1="26" y1="14.2" x2="50" y2="14.2" stroke="#b8d4e8" stroke-width="2.5" stroke-linecap="round"/>
       <line x1="26" y1="38"   x2="50" y2="38"   stroke="#b8d4e8" stroke-width="2.5" stroke-linecap="round"/>
-      <text x="120" y="38" text-anchor="middle" font-family="Raleway, sans-serif" font-weight="200" font-size="34" fill="#b8d4e8" letter-spacing="2">Zipper</text>
+      <text x="120" y="38" text-anchor="middle"
+        font-family="Raleway, 'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-weight="200" font-size="34" fill="#b8d4e8" letter-spacing="2">Zipper</text>
       <line x1="190" y1="26.1" x2="214" y2="26.1" stroke="#b8d4e8" stroke-width="2.5" stroke-linecap="round"/>
     </svg>
   </a>
-  <div style="display:flex;align-items:center;gap:1.2rem;">
-    <a href="https://forecast.predictwind.com/tracking/display/SV-Zipper" class="tracker-pill" target="_blank"><span class="dot"></span> Live Tracker</a>
-    <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
+
+  <div style="display:flex; align-items:center; gap:1.2rem;">
+    <a href="https://forecast.predictwind.com/tracking/display/SV-Zipper"
+       class="tracker-pill" target="_blank" rel="noopener">
+      <span class="dot"></span> Live Tracker
+    </a>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </div>
+
+<!-- ── Slide-out nav ── -->
 <nav class="nav-dropdown" id="nav-dropdown">
   <a href="/reids-unzipped/voyage-log/" onclick="closeMenu()">Voyage Log</a>
   <a href="/reids-unzipped/crew/" onclick="closeMenu()">The Crew</a>
   <a href="/reids-unzipped/the-boat/" onclick="closeMenu()">The Boat</a>
+  <a href="/reids-unzipped/gallery/" onclick="closeMenu()">Gallery</a>
   <a href="/reids-unzipped/supporters/" onclick="closeMenu()">Supporters</a>
+  <a href="https://www.youtube.com/playlist?list=PLz8fOLkM7BZv1mgPl7UieR7eBcL09XtLE"
+     target="_blank" rel="noopener" onclick="closeMenu()">▶ Watch our Videos</a>
 </nav>
+
+<!-- ── Masthead JS (idempotent — safe to include once per page) ── -->
+<script>
+  if (!window._mastheadReady) {
+    window._mastheadReady = true;
+    window.closeMenu = function () {
+      document.getElementById('nav-dropdown').classList.remove('open');
+      document.getElementById('hamburger').classList.remove('open');
+      document.getElementById('overlay').classList.remove('open');
+    };
+    window.toggleMenu = function () {
+      const menu = document.getElementById('nav-dropdown');
+      if (menu.classList.contains('open')) {
+        window.closeMenu();
+      } else {
+        menu.classList.add('open');
+        document.getElementById('hamburger').classList.add('open');
+        document.getElementById('overlay').classList.add('open');
+      }
+    };
+  }
+</script>
+
 
 <!-- PAGE HERO — background image set inline so background-size/position in CSS applies correctly -->
 <div class="page-hero" style="background-image: url('/reids-unzipped/assets/images/hero-banner.webp');">
@@ -167,15 +229,11 @@
 
 <div class="page-container">
 
-  <div class="boat-gallery">
-    <img src="/reids-unzipped/assets/images/posts/img_4878.webp" alt="Zipper profile">
-    <img src="/reids-unzipped/assets/images/posts/img_3766.webp" alt="Zipper at anchor">
-    <img src="/reids-unzipped/assets/images/posts/img_3827.webp" alt="Zipper cockpit">
-    <img src="/reids-unzipped/assets/images/posts/img_3772.webp" alt="Zipper interior">
-    <img src="/reids-unzipped/assets/images/posts/img_3709.webp" alt="Zipper bow">
-    <img src="/reids-unzipped/assets/images/posts/img_3771.webp" alt="Zipper helm">
+  <!-- Zipper -->
+  <div class="section-label">Zipper</div>
+  <div class="boat-gallery boat-gallery--hero">
+    <div class="boat-gallery-item"><img src="/reids-unzipped/assets/images/boat/overhead_banner.webp" alt="Zipper — overhead profile view"><span class="img-caption">Zipper — overhead profile view</span></div>
   </div>
-
   <div class="pull-quote">
     <p>"The Outremer 45 is a standout design which has become somewhat iconic"</p>
     <cite><a href="https://www.yachtingworld.com/catamaran-sailing/the-best-bluewater-multihulls-134405" target="_blank">Yachting World</a></cite>
@@ -191,6 +249,59 @@
     <div class="spec-item"><span class="spec-key">Beam</span><span class="spec-val">~7 m (23 ft)</span></div>
     <div class="spec-item"><span class="spec-key">(Our) max speed</span><span class="spec-val">18.3 knots (approaching Bonnaire)</span></div>
   </div>
+
+  <!-- On deck -->
+  <div class="section-label">On deck</div>
+  <div class="boat-gallery">
+    <div class="boat-gallery-item"><img src="/reids-unzipped/assets/images/boat/overhead.webp" alt="Drove overhead profile"><span class="img-caption">Overhead view</span></div>
+    <div class="boat-gallery-item"><img src="/reids-unzipped/assets/images/boat/Zipper%20sails.webp" alt="Zipper under sail"><span class="img-caption">Sailing</span></div>
+    <div class="boat-gallery-item"><img src="/reids-unzipped/assets/images/boat/Sailing.webp" alt="Sailing upwind towards the sunset"><span class="img-caption">Upwind sailing</span></div>
+    <div class="boat-gallery-item"><img src="/reids-unzipped/assets/images/boat/Port%20profile.webp" alt="Port profile at anchor"><span class="img-caption">Port profile</span></div>
+    <div class="boat-gallery-item"><img src="/reids-unzipped/assets/images/boat/Port%20helm.webp" alt="Port helm station"><span class="img-caption">Port helm</span></div>
+    <div class="boat-gallery-item"><img src="/reids-unzipped/assets/images/boat/Deck%20-%20starboard%20(2).webp" alt="Starboard deck and helm station"><span class="img-caption">Starboard deck</span></div>
+    <div class="boat-gallery-item"><img src="/reids-unzipped/assets/images/boat/Port%20hull%20-%20side.webp" alt="Port hull side view"><span class="img-caption">Port hull</span></div>
+    <div class="boat-gallery-item"><img src="/reids-unzipped/assets/images/boat/Foredeck%20-%20forward.webp" alt="Foredeck tidied away"><span class="img-caption">Tidy foredeck</span></div>
+    <div class="boat-gallery-item"><img src="/reids-unzipped/assets/images/boat/Foredeck.webp" alt="Foredeck sails"><span class="img-caption">Sails on foredeck</span></div>
+    <div class="boat-gallery-item"><img src="/reids-unzipped/assets/images/boat/Cockpit%20(3).webp" alt="Cockpit"><span class="img-caption">Cockpit</span></div>
+    <div class="boat-gallery-item"><img src="/reids-unzipped/assets/images/boat/Cockpit%20(2).webp" alt="Cockpit table"><span class="img-caption">Cockpit table </span></div>
+    <div class="boat-gallery-item"><img src="/reids-unzipped/assets/images/boat/Davits.webp" alt="Dinghy davits and solar array"><span class="img-caption">Davits</span></div>
+<!--    <div class="boat-gallery-item"><img src="/reids-unzipped/assets/images/boat/Drying%20out.webp" alt="Drying out after passage"><span class="img-caption">Drying out</span></div>
+    <div class="boat-gallery-item"><img src="/reids-unzipped/assets/images/boat/Deck%20-%20port.webp" alt="Port deck"><span class="img-caption">Port deck</span></div>
+-->
+  </div>
+  <!-- Below deck -->
+  <div class="section-label">Below deck</div>
+  <div class="boat-gallery">
+    <div class="boat-gallery-item"><img src="/reids-unzipped/assets/images/boat/Saloon%20at%20Christmas.webp" alt="Saloon decorated for Christmas"><span class="img-caption">Saloon at Christmas</span></div>
+    <div class="boat-gallery-item"><img src="/reids-unzipped/assets/images/boat/Saloon%20-%20provisioning.webp" alt="Saloon provisioning awaiting stowage"><span class="img-caption">Saloon provisioning</span></div>
+    <div class="boat-gallery-item"><img src="/reids-unzipped/assets/images/boat/Saloon%20-%20water%20tank.webp" alt="Saloon — water tank area"><span class="img-caption">Saloon — water tank</span></div>
+    <div class="boat-gallery-item"><img src="/reids-unzipped/assets/images/boat/Saloon%20-%20galley.webp" alt="Saloon — galley"><span class="img-caption">Galley</span></div>
+    <div class="boat-gallery-item"><img src="/reids-unzipped/assets/images/boat/Bunk%20-%20inhabited.webp" alt="Bunk cabin — inhabited"><span class="img-caption">Bunk — inhabited</span></div>
+    <div class="boat-gallery-item"><img src="/reids-unzipped/assets/images/boat/Bunk%20cabin%20(2).webp" alt="Bunk cabin"><span class="img-caption">Bunk cabin</span></div>
+    <div class="boat-gallery-item"><img src="/reids-unzipped/assets/images/boat/Bunk.webp" alt="Bunk"><span class="img-caption">Bunk</span></div>
+    <div class="boat-gallery-item"><img src="/reids-unzipped/assets/images/boat/Bunk%20cabin%20-%20forward.webp" alt="Forward bunk cabin"><span class="img-caption">Forward bunk cabin</span></div>
+    <div class="boat-gallery-item"><img src="/reids-unzipped/assets/images/boat/Port%20hull%20-%20aft.webp" alt="Port hull aft cabin"><span class="img-caption">Port hull aft</span></div>
+    <div class="boat-gallery-item"><img src="/reids-unzipped/assets/images/boat/Heads%20-%20escape.webp" alt="Heads — escape hatch"><span class="img-caption">Heads — escape hatch</span></div>
+    <div class="boat-gallery-item"><img src="/reids-unzipped/assets/images/boat/Master%20heads.webp" alt="Master heads"><span class="img-caption">Master heads</span></div>
+    <div class="boat-gallery-item"><img src="/reids-unzipped/assets/images/boat/Master%20hull.webp" alt="Master hull cabin"><span class="img-caption">Master hull cabin</span></div>
+    <div class="boat-gallery-item"><img src="/reids-unzipped/assets/images/boat/Saloon.webp" alt="Saloon"><span class="img-caption">Saloon</span></div>
+  </div>
+  <!-- Underwater -->
+  <div class="section-label">Below the waterline</div>
+  <div class="boat-gallery">
+    <div class="boat-gallery-item"><img src="/reids-unzipped/assets/images/boat/Under.webp" alt="Underwater hull"><span class="img-caption">Underwater hull</span></div>
+    <div class="boat-gallery-item"><img src="/reids-unzipped/assets/images/boat/Underwater%20appendages%20aft.webp" alt="Underwater appendages — aft"><span class="img-caption">Appendages aft</span></div>
+    <div class="boat-gallery-item"><img src="/reids-unzipped/assets/images/boat/Underwater%20appendages%20forward.webp" alt="Underwater appendages — forward"><span class="img-caption">Appendages forward</span></div>
+  </div>
+  <!-- Lifted -->
+  <div class="section-label">Lifted out</div>
+  <div class="boat-gallery">
+    <div class="boat-gallery-item"><img src="/reids-unzipped/assets/images/boat/Lift%20-%20forward.webp" alt="Lifted out — forward view"><span class="img-caption">Lift — forward</span></div>
+    <div class="boat-gallery-item"><img src="/reids-unzipped/assets/images/boat/Lift%20-%20aft.webp" alt="Lifted out — aft view"><span class="img-caption">Lift — aft</span></div>
+    <div class="boat-gallery-item"><img src="/reids-unzipped/assets/images/boat/Lift%20-%20trampolenes.webp" alt="Lifted out — trampolines"><span class="img-caption">Lift — trampolines</span></div>
+    <div class="boat-gallery-item"><img src="/reids-unzipped/assets/images/boat/Trailer%20lift.webp" alt="Trailer lift at Marsden Cove"><span class="img-caption">Trailer lift</span></div>
+  </div>
+
 
   <!-- Main systems -->
   <div class="section-label">Main systems</div>
@@ -265,19 +376,29 @@
   </div>
   <button class="lightbox-nav lightbox-next" onclick="event.stopPropagation(); navigateLightbox(1)">›</button>
   <div class="lightbox-caption" id="lightbox-caption"></div>
+  <div class="lightbox-counter" id="lightbox-counter"></div>
 </div>
 
 <script>
-  // ── Lightbox ────────────────────────────────────────────────────────────
-  let lightboxImages = [];
+  // ── Lightbox — per-section navigation ───────────────────────────────────────
+  let currentGalleryImages = [];
   let currentIndex = 0;
 
-  function openLightbox(src, alt, index) {
-    document.getElementById('lightbox-img').src = src;
-    document.getElementById('lightbox-img').alt = alt;
-    document.getElementById('lightbox-caption').textContent = alt || '';
-    document.getElementById('lightbox').classList.add('open');
+  function updateLightbox() {
+    const img = currentGalleryImages[currentIndex];
+    const el = document.getElementById('lightbox-img');
+    el.src = img.src;
+    el.alt = img.alt;
+    document.getElementById('lightbox-caption').textContent = img.alt || '';
+    document.getElementById('lightbox-counter').textContent =
+      (currentIndex + 1) + ' / ' + currentGalleryImages.length;
+  }
+
+  function openLightbox(galleryImages, index) {
+    currentGalleryImages = galleryImages;
     currentIndex = index;
+    updateLightbox();
+    document.getElementById('lightbox').classList.add('open');
     document.body.style.overflow = 'hidden';
   }
 
@@ -287,36 +408,44 @@
   };
 
   window.navigateLightbox = function(dir) {
-    currentIndex = (currentIndex + dir + lightboxImages.length) % lightboxImages.length;
-    const img = lightboxImages[currentIndex];
-    document.getElementById('lightbox-img').src = img.src;
-    document.getElementById('lightbox-img').alt = img.alt;
-    document.getElementById('lightbox-caption').textContent = img.alt || '';
+    currentIndex = (currentIndex + dir + currentGalleryImages.length) % currentGalleryImages.length;
+    updateLightbox();
   };
 
-  // Attach click handlers to all gallery images
-  (function() {
-    lightboxImages = Array.from(document.querySelectorAll('.boat-gallery img'));
-    lightboxImages.forEach((img, idx) => {
-      img.addEventListener('click', () => openLightbox(img.src, img.alt, idx));
+  // Attach click handlers — each gallery navigates only within its own set
+  document.querySelectorAll('.boat-gallery').forEach(function(gallery) {
+    const items = Array.from(gallery.querySelectorAll('.boat-gallery-item img'));
+    items.forEach(function(img, idx) {
+      img.parentElement.addEventListener('click', function() {
+        openLightbox(items, idx);
+      });
     });
-  })();
+  });
 
   // Keyboard navigation
-  document.addEventListener('keydown', e => {
+  document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') closeLightbox();
     if (e.key === 'ArrowRight') navigateLightbox(1);
     if (e.key === 'ArrowLeft') navigateLightbox(-1);
   });
 
-    document.getElementById('nav-dropdown').classList.remove('open');
-    document.getElementById('hamburger').classList.remove('open');
-    document.getElementById('overlay').classList.remove('open');
+  // ── Nav menu ─────────────────────────────────────────────────────────────────
+  window.closeMenu = function() {
+    var menu = document.getElementById('nav-dropdown');
+    var ham  = document.getElementById('hamburger');
+    var ov   = document.getElementById('overlay');
+    if (menu) menu.classList.remove('open');
+    if (ham)  ham.classList.remove('open');
+    if (ov)   ov.classList.remove('open');
   };
   window.toggleMenu = function() {
-    const menu = document.getElementById('nav-dropdown');
-    if (menu.classList.contains('open')) { window.closeMenu(); }
-    else { menu.classList.add('open'); document.getElementById('hamburger').classList.add('open'); document.getElementById('overlay').classList.add('open'); }
+    var menu = document.getElementById('nav-dropdown');
+    if (menu && menu.classList.contains('open')) { window.closeMenu(); }
+    else if (menu) {
+      menu.classList.add('open');
+      document.getElementById('hamburger').classList.add('open');
+      document.getElementById('overlay').classList.add('open');
+    }
   };
 </script>
 </body>

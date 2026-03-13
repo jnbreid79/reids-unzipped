@@ -28,115 +28,37 @@
     line-height: 1.8;
   }
 
-  /* =====================================================================
-     MASTHEAD
-     ===================================================================== */
-  .masthead {
-    background: var(--navy);
-    border-bottom: 3px solid var(--ice);
-    padding: 0 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 64px;
-    position: sticky;
-    top: 0;
-    z-index: 9000;
-  }
+  
 
-  .masthead-logo {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-  }
+  /* ── Masthead ── */
+  .masthead { background: var(--navy); border-bottom: 3px solid var(--ice); padding: 0 1.5rem; display: flex; align-items: center; justify-content: space-between; height: 64px; position: sticky; top: 0; z-index: 9000; isolation: isolate; }
+  .masthead-logo { display: flex; align-items: center; text-decoration: none; }
+  .zipper-svg-masthead { width: 120px; height: auto; }
 
-  .hamburger {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    z-index: 300;
-  }
-  .hamburger span {
-    display: block;
-    width: 24px; height: 2px;
-    background: var(--ice);
-    transition: all 0.3s ease;
-    transform-origin: center;
-  }
+  /* Hamburger */
+  .hamburger { background: none; border: none; cursor: pointer; padding: 0.5rem; display: flex; flex-direction: column; gap: 5px; z-index: 300; }
+  .hamburger span { display: block; width: 24px; height: 2px; background: var(--ice); transition: all 0.3s ease; transform-origin: center; }
   .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
   .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
   .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-  .nav-dropdown {
-    position: fixed;
-    top: 67px; right: 0;
-    width: 280px;
-    background: var(--navy);
-    border-left: 3px solid var(--ice);
-    border-bottom: 3px solid var(--ice);
-    border-bottom-left-radius: 4px;
-    transform: translateX(100%);
-    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-    z-index: 9999;
-    padding: 1rem 0;
-    box-shadow: -6px 6px 24px rgba(0,0,0,0.4);
-  }
+  /* Slide-out nav */
+  .nav-dropdown { position: fixed; top: 67px; right: 0; width: 280px; background: var(--navy); border-left: 3px solid var(--ice); border-bottom: 3px solid var(--ice); border-bottom-left-radius: 4px; transform: translateX(100%); transition: transform 0.35s cubic-bezier(0.4,0,0.2,1); z-index: 9999; padding: 1rem 0; box-shadow: -6px 6px 24px rgba(0,0,0,0.4); }
   .nav-dropdown.open { transform: translateX(0); }
-  .nav-dropdown a {
-    display: block;
-    padding: 0.75rem 1.8rem;
-    color: var(--ice);
-    text-decoration: none;
-    font-family: 'Raleway', sans-serif;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 0.14em;
-    font-weight: 400;
-    border-bottom: 1px solid rgba(184,212,232,0.08);
-    transition: background 0.15s;
-  }
+  .nav-dropdown a { display: block; padding: 0.75rem 1.8rem; color: var(--ice); text-decoration: none; font-family: 'Raleway', sans-serif; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.14em; font-weight: 400; border-bottom: 1px solid rgba(184,212,232,0.08); transition: background 0.15s, color 0.15s; }
   .nav-dropdown a:hover { background: rgba(184,212,232,0.1); color: white; }
   .nav-dropdown a:last-child { border-bottom: none; }
 
-  .nav-overlay {
-    display: none;
-    position: fixed;
-    inset: 0;
-    z-index: 9998;
-  }
+  /* Click-away overlay */
+  .nav-overlay { display: none; position: fixed; inset: 0; z-index: 9998; }
   .nav-overlay.open { display: block; }
 
-  .tracker-pill {
-    font-family: 'Raleway', sans-serif;
-    font-size: 0.75rem;
-    color: #4cbb9a;
-    letter-spacing: 0.08em;
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-    text-decoration: none;
-    padding: 0.35rem 0.8rem;
-    border: 1px solid rgba(76,187,154,0.35);
-    border-radius: 20px;
-    transition: all 0.2s;
-    white-space: nowrap;
-  }
-  .tracker-pill:hover { background: rgba(76,187,154,0.1); }
-  .dot {
-    display: inline-block;
-    width: 7px; height: 7px;
-    background: #4cbb9a;
-    border-radius: 50%;
-    animation: pulse 2s ease-in-out infinite;
-  }
-  @keyframes pulse {
-    0%,100% { opacity:1; transform:scale(1); }
-    50% { opacity:0.4; transform:scale(1.5); }
-  }
+  /* Live Tracker pill */
+  .tracker-pill { font-family: 'Raleway', sans-serif; font-size: 0.75rem; color: #4cbb9a; letter-spacing: 0.08em; display: flex; align-items: center; gap: 0.4rem; text-decoration: none; padding: 0.35rem 0.8rem; border: 1px solid rgba(76,187,154,0.35); border-radius: 20px; transition: all 0.2s; white-space: nowrap; }
+  .tracker-pill:hover { background: rgba(76,187,154,0.1); border-color: #4cbb9a; }
+  .dot { display: inline-block; width: 7px; height: 7px; background: #4cbb9a; border-radius: 50%; animation: pulse 2s ease-in-out infinite; flex-shrink: 0; }
+  @keyframes pulse { 0%,100% { opacity:1; transform:scale(1); } 50% { opacity:0.4; transform:scale(1.5); } }
+
 
   /* =====================================================================
      POST HERO STRIP
@@ -561,9 +483,10 @@
 </head>
 <body>
 
+<!-- ── Click-away overlay ── -->
 <div class="nav-overlay" id="overlay" onclick="closeMenu()"></div>
 
-<!-- MASTHEAD -->
+<!-- ── Masthead ── -->
 <div class="masthead">
   <a href="/reids-unzipped/" class="masthead-logo">
     <svg class="zipper-svg-masthead" viewBox="0 0 240 48" xmlns="http://www.w3.org/2000/svg" aria-label="Zipper">
@@ -575,8 +498,10 @@
       <line x1="190" y1="26.1" x2="214" y2="26.1" stroke="#b8d4e8" stroke-width="2.5" stroke-linecap="round"/>
     </svg>
   </a>
+
   <div style="display:flex; align-items:center; gap:1.2rem;">
-    <a href="https://forecast.predictwind.com/tracking/display/SV-Zipper" class="tracker-pill" target="_blank">
+    <a href="https://forecast.predictwind.com/tracking/display/SV-Zipper"
+       class="tracker-pill" target="_blank" rel="noopener">
       <span class="dot"></span> Live Tracker
     </a>
     <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
@@ -585,12 +510,39 @@
   </div>
 </div>
 
+<!-- ── Slide-out nav ── -->
 <nav class="nav-dropdown" id="nav-dropdown">
   <a href="/reids-unzipped/voyage-log/" onclick="closeMenu()">Voyage Log</a>
   <a href="/reids-unzipped/crew/" onclick="closeMenu()">The Crew</a>
   <a href="/reids-unzipped/the-boat/" onclick="closeMenu()">The Boat</a>
+  <a href="/reids-unzipped/gallery/" onclick="closeMenu()">Gallery</a>
   <a href="/reids-unzipped/supporters/" onclick="closeMenu()">Supporters</a>
+  <a href="https://www.youtube.com/playlist?list=PLz8fOLkM7BZv1mgPl7UieR7eBcL09XtLE"
+     target="_blank" rel="noopener" onclick="closeMenu()">▶ Watch our Videos</a>
 </nav>
+
+<!-- ── Masthead JS (idempotent — safe to include once per page) ── -->
+<script>
+  if (!window._mastheadReady) {
+    window._mastheadReady = true;
+    window.closeMenu = function () {
+      document.getElementById('nav-dropdown').classList.remove('open');
+      document.getElementById('hamburger').classList.remove('open');
+      document.getElementById('overlay').classList.remove('open');
+    };
+    window.toggleMenu = function () {
+      const menu = document.getElementById('nav-dropdown');
+      if (menu.classList.contains('open')) {
+        window.closeMenu();
+      } else {
+        menu.classList.add('open');
+        document.getElementById('hamburger').classList.add('open');
+        document.getElementById('overlay').classList.add('open');
+      }
+    };
+  }
+</script>
+
 
 <!-- POST HERO -->
 <div class="post-hero">
