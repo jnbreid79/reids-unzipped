@@ -621,6 +621,28 @@ layout: none
   <div class="lightbox-caption" id="lightbox-caption"></div>
 </div>
 
+<!-- COMMENTS -->
+{% if page.comments %}
+<div class="post-comments" style="max-width:700px; margin:0 auto; padding:0 1.5rem 4rem;">
+  <script src="https://giscus.app/client.js"
+    data-repo="jnbreid79/reids-unzipped"
+    data-repo-id="R_kgDORUkkAw"
+    data-category="General"
+    data-category-id="DIC_kwDORUkkA84C4S7h"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="top"
+    data-theme="noborder_light"
+    data-lang="en"
+    data-loading="lazy"
+    crossorigin="anonymous"
+    async>
+  </script>
+</div>
+{% endif %}
+
 <script>
   // ── Hamburger nav ──────────────────────────────────────────────────────
   window.closeMenu = function() {
