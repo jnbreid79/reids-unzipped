@@ -29,23 +29,12 @@ author:
     - label: "Live Tracker"
       icon: "fas fa-map-marker-alt"
       url: "https://forecast.predictwind.com/tracking/display/SV-Zipper"
-    - label: "Telegram Updates"
-      icon: "fab fa-telegram"
-      url: "https://t.me/+q5LLo7TNObg3NGY0"
-    - label: "Email"
-      icon: "fas fa-envelope"
-      url: "mailto:jnbreid@gmail.com"
-
 # Footer links
 footer:
   links:
     - label: "Live Tracker"
       icon: "fas fa-map-marker-alt"
       url: "https://forecast.predictwind.com/tracking/display/SV-Zipper"
-    - label: "Telegram"
-      icon: "fab fa-telegram"
-      url: "https://t.me/+q5LLo7TNObg3NGY0"
-
 # =============================================================================
 # Reading / build
 # =============================================================================

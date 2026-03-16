@@ -46,7 +46,6 @@ layout: none
     text-align: center;
     overflow: hidden;
   }
-
   .hero::before {
     content: '';
     position: absolute;
@@ -56,8 +55,6 @@ layout: none
       radial-gradient(ellipse at 75% 30%, rgba(26,58,92,0.7) 0%, transparent 60%),
       linear-gradient(160deg, #0d2438 0%, #1a3a5c 40%, #1f5a8a 70%, #1a4a72 100%);
   }
-
-  /* If a hero photo exists, it overlays the gradient */
   .hero.has-photo::before {
     background-image: url('{{ "/assets/images/hero-banner.jpg" | relative_url }}');
     background-size: cover;
@@ -70,7 +67,6 @@ layout: none
     inset: 0;
     background: linear-gradient(to bottom, rgba(13,36,56,0.55) 0%, rgba(26,58,92,0.75) 100%);
   }
-
   .hero-content {
     position: relative;
     z-index: 2;
@@ -80,7 +76,6 @@ layout: none
     margin: 0 auto;
     text-align: center;
   }
-
   .hero-content h1 {
     font-family: 'Raleway', sans-serif;
     font-weight: 200;
@@ -90,7 +85,6 @@ layout: none
     color: white;
     margin: 1.2rem 0 0.6rem;
   }
-
   .hero-tagline {
     font-family: 'Raleway', sans-serif;
     font-weight: 300;
@@ -99,290 +93,84 @@ layout: none
     letter-spacing: 0.08em;
     margin-bottom: 2rem;
   }
-
-  .hero-buttons {
-    display: flex;
-    gap: 0.9rem;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .btn-primary {
-    background: var(--ice);
-    color: var(--navy);
-    padding: 0.7rem 1.8rem;
-    text-decoration: none;
-    font-family: 'Raleway', sans-serif;
-    font-size: 0.8rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    font-weight: 500;
-    border-radius: 2px;
-    transition: all 0.2s;
-  }
+  .hero-buttons { display: flex; gap: 0.9rem; flex-wrap: wrap; justify-content: center; }
+  .btn-primary { background: var(--ice); color: var(--navy); padding: 0.7rem 1.8rem; text-decoration: none; font-family: 'Raleway', sans-serif; font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 500; border-radius: 2px; transition: all 0.2s; }
   .btn-primary:hover { background: white; }
-
-  .btn-outline {
-    border: 1.5px solid rgba(184,212,232,0.7);
-    color: var(--ice);
-    padding: 0.7rem 1.8rem;
-    text-decoration: none;
-    font-family: 'Raleway', sans-serif;
-    font-size: 0.8rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    font-weight: 400;
-    border-radius: 2px;
-    transition: all 0.2s;
-  }
+  .btn-outline { border: 1.5px solid rgba(184,212,232,0.7); color: var(--ice); padding: 0.7rem 1.8rem; text-decoration: none; font-family: 'Raleway', sans-serif; font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 400; border-radius: 2px; transition: all 0.2s; }
   .btn-outline:hover { background: rgba(184,212,232,0.12); color: white; }
 
   /* =====================================================================
      PAGE SECTIONS
      ===================================================================== */
-  .container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 1.5rem;
-  }
-
-  .section-heading {
-    text-align: center;
-    margin: 3rem 0 1.8rem;
-  }
-  .section-heading h2 {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 300;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 0.28em;
-    color: var(--navy);
-    display: inline-block;
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid var(--ice);
-  }
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+  .section-heading { text-align: center; margin: 3rem 0 1.8rem; }
+  .section-heading h2 { font-family: 'Raleway', sans-serif; font-weight: 300; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.28em; color: var(--navy); display: inline-block; padding-bottom: 0.5rem; border-bottom: 2px solid var(--ice); }
 
   /* Posts grid */
-  .posts-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 1.5rem;
-    margin-bottom: 2rem;
-  }
-
-  .post-card {
-    background: white;
-    border-radius: 3px;
-    overflow: hidden;
-    box-shadow: 0 2px 12px rgba(26,58,92,0.1);
-    transition: transform 0.25s, box-shadow 0.25s;
-    text-decoration: none;
-    color: inherit;
-    display: block;
-  }
+  .posts-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; margin-bottom: 2rem; }
+  .post-card { background: white; border-radius: 3px; overflow: hidden; box-shadow: 0 2px 12px rgba(26,58,92,0.1); transition: transform 0.25s, box-shadow 0.25s; text-decoration: none; color: inherit; display: block; }
   .post-card:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(26,58,92,0.16); }
-
-  .post-card-img {
-    width: 100%;
-    aspect-ratio: 16/9;
-    background: linear-gradient(135deg, var(--navy-mid), var(--blue));
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--ice);
-    font-family: 'Raleway', sans-serif;
-    font-size: 0.8rem;
-    letter-spacing: 0.1em;
-    overflow: hidden;
-  }
-  .post-card-img img {
-    width: 100%; height: 100%;
-    object-fit: cover;
-  }
-
+  .post-card-img { width: 100%; aspect-ratio: 16/9; background: linear-gradient(135deg, var(--navy-mid), var(--blue)); display: flex; align-items: center; justify-content: center; color: var(--ice); font-family: 'Raleway', sans-serif; font-size: 0.8rem; letter-spacing: 0.1em; overflow: hidden; }
+  .post-card-img img { width: 100%; height: 100%; object-fit: cover; }
   .post-card-body { padding: 1.1rem 1.3rem 1.3rem; }
-  .post-card-meta {
-    font-family: 'Raleway', sans-serif;
-    font-size: 0.73rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--muted);
-    margin-bottom: 0.4rem;
-  }
+  .post-card-meta { font-family: 'Raleway', sans-serif; font-size: 0.73rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); margin-bottom: 0.4rem; }
   .post-card h3 { font-size: 1rem; font-weight: 400; color: var(--navy); margin-bottom: 0.5rem; line-height: 1.4; }
   .post-card p { font-size: 0.85rem; color: #4a6a80; margin: 0; line-height: 1.5; }
 
   /* About / stats strip */
-  .about-strip {
-    background: var(--navy);
-    color: var(--ice-light);
-    padding: 2.5rem 2rem;
-    text-align: center;
-    margin: 2rem 0;
-  }
+  .about-strip { background: var(--navy); color: var(--ice-light); padding: 2.5rem 2rem; text-align: center; margin: 2rem 0; }
   .about-strip p { max-width: 620px; margin: 0 auto 1.2rem; font-size: 0.95rem; line-height: 1.8; color: var(--ice-light); }
   .stat-row { display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; margin-top: 1.5rem; }
   .stat { font-family: 'Raleway', sans-serif; }
   .stat .number { display: block; font-size: 2rem; font-weight: 200; color: var(--ice); letter-spacing: 0.05em; }
   .stat .label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--muted); }
-
-  .tracker-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-family: 'Raleway', sans-serif;
-    font-size: 0.72rem;
-    text-transform: uppercase;
-    letter-spacing: 0.18em;
-    color: #4cbb9a;
-    text-decoration: none;
-    margin-top: 1.8rem;
-    padding: 0.4rem 1rem;
-    border: 1px solid rgba(76,187,154,0.3);
-    border-radius: 20px;
-    transition: all 0.2s;
-  }
+  .tracker-link { display: inline-flex; align-items: center; gap: 0.5rem; font-family: 'Raleway', sans-serif; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.18em; color: #4cbb9a; text-decoration: none; margin-top: 1.8rem; padding: 0.4rem 1rem; border: 1px solid rgba(76,187,154,0.3); border-radius: 20px; transition: all 0.2s; }
   .tracker-link:hover { background: rgba(76,187,154,0.1); border-color: #4cbb9a; color: #4cbb9a; }
-  .tracker-link .dot {
-    animation: pulse 2s ease-in-out infinite;
+  .tracker-link .tracker-logo,
+  .tracker-link .tracker-logo-yt {
+    height: 18px;
+    width: auto;
+    object-fit: contain;
+    display: inline-block;
+    vertical-align: middle;
   }
 
   /* =====================================================================
-     YOUTUBE STRIP
+     SUBSCRIBE STRIP
      ===================================================================== */
-  .youtube-strip {
+  .subscribe-strip {
     background: linear-gradient(135deg, #0d2438 0%, #1a3a5c 60%, #1f4a73 100%);
     border-top: 1px solid rgba(184,212,232,0.1);
     border-bottom: 1px solid rgba(184,212,232,0.1);
     padding: 2.8rem 2rem;
     text-align: center;
   }
-
-  .youtube-strip-inner {
-    max-width: 600px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-  }
-
-  .youtube-icon {
-    width: 48px;
-    height: 48px;
-    background: #ff0000;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    box-shadow: 0 4px 16px rgba(255,0,0,0.3);
-  }
-  .youtube-icon svg {
-    width: 22px;
-    height: 22px;
-  }
-
-  .youtube-strip h3 {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 300;
-    font-size: 1.1rem;
-    letter-spacing: 0.08em;
-    color: white;
-    margin: 0;
-  }
-
-  .youtube-strip p {
-    font-family: 'Merriweather', serif;
-    font-style: italic;
-    font-weight: 300;
-    font-size: 0.88rem;
-    color: var(--ice-light);
-    line-height: 1.7;
-    margin: 0;
-  }
-
-  .btn-youtube {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.6rem;
-    background: var(--ice);
-    color: var(--navy);
-    padding: 0.65rem 1.6rem;
-    text-decoration: none;
-    font-family: 'Raleway', sans-serif;
-    font-size: 0.75rem;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    font-weight: 500;
-    border-radius: 2px;
-    transition: all 0.2s;
-    margin-top: 0.4rem;
-  }
-  .btn-youtube:hover { background: var(--ice-light); transform: translateY(-1px); box-shadow: 0 4px 16px rgba(184,212,232,0.25); }
+  .subscribe-strip-inner { max-width: 560px; margin: 0 auto; }
+  .subscribe-strip h3 { font-family: 'Raleway', sans-serif; font-weight: 200; font-size: 1.2rem; letter-spacing: 0.1em; color: white; margin-bottom: 0.5rem; }
+  .subscribe-strip p { font-family: 'Merriweather', serif; font-style: italic; font-weight: 300; font-size: 0.88rem; color: var(--ice-light); line-height: 1.7; margin-bottom: 1.5rem; }
+  .subscribe-actions { display: flex; gap: 0.8rem; justify-content: center; flex-wrap: wrap; align-items: center; }
+  .subscribe-actions a { display: inline-flex; align-items: center; gap: 0.4rem; border: 1.5px solid rgba(184,212,232,0.5); color: var(--ice); padding: 0.6rem 1.3rem; text-decoration: none; font-family: 'Raleway', sans-serif; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; border-radius: 2px; transition: all 0.2s; }
+  .subscribe-actions a:hover { background: rgba(184,212,232,0.1); color: white; border-color: var(--ice); }
 
   /* Crew grid */
-  .crew-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
-    margin-bottom: 2.5rem;
-  }
+  .crew-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 2.5rem; }
   @media (max-width: 700px) { .crew-grid { grid-template-columns: repeat(2,1fr); } }
-
-  .crew-card {
-    position: relative;
-    border-radius: 3px;
-    overflow: hidden;
-    background: var(--navy);
-    aspect-ratio: 3/4;
-    display: flex;
-    align-items: flex-end;
-    box-shadow: 0 3px 12px rgba(26,58,92,0.2);
-    transition: transform 0.25s, box-shadow 0.25s;
-    text-decoration: none;
-  }
+  .crew-card { position: relative; border-radius: 3px; overflow: hidden; background: var(--navy); aspect-ratio: 3/4; display: flex; align-items: flex-end; box-shadow: 0 3px 12px rgba(26,58,92,0.2); transition: transform 0.25s, box-shadow 0.25s; text-decoration: none; }
   .crew-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(26,58,92,0.3); }
-
-  .crew-photo-placeholder {
-    position: absolute; inset: 0;
-    display: flex; align-items: center; justify-content: center; font-size: 3rem;
-  }
   .crew-card:nth-child(1) .crew-photo-placeholder { background: linear-gradient(160deg, #1a4060, #0d2030); }
   .crew-card:nth-child(2) .crew-photo-placeholder { background: linear-gradient(160deg, #1a3a5c, #122840); }
   .crew-card:nth-child(3) .crew-photo-placeholder { background: linear-gradient(160deg, #1f4a70, #162035); }
   .crew-card:nth-child(4) .crew-photo-placeholder { background: linear-gradient(160deg, #1a3050, #0e1e2e); }
-
-  .crew-photo {
-    position: absolute; inset: 0;
-    width: 100%; height: 100%;
-    object-fit: cover;
-    object-position: top;
-  }
-
-  .crew-info {
-    position: relative; z-index: 2; width: 100%;
-    padding: 2rem 1rem 0.8rem;
-    background: linear-gradient(to top, rgba(10,25,40,0.95) 0%, transparent 100%);
-  }
+  .crew-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top; }
+  .crew-info { position: relative; z-index: 2; width: 100%; padding: 2rem 1rem 0.8rem; background: linear-gradient(to top, rgba(10,25,40,0.95) 0%, transparent 100%); }
   .crew-name { font-family: 'Raleway', sans-serif; font-weight: 400; font-size: 1rem; display: block; color: white; }
   .crew-role { font-family: 'Raleway', sans-serif; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--ice); font-weight: 300; }
 
   /* Footer */
-  footer {
-    background: var(--navy);
-    color: var(--muted);
-    padding: 2rem;
-    text-align: center;
-    border-top: 1px solid rgba(184,212,232,0.15);
-    font-family: 'Raleway', sans-serif;
-    font-size: 0.82rem;
-    letter-spacing: 0.04em;
-  }
+  footer { background: var(--navy); color: var(--muted); padding: 2rem; text-align: center; border-top: 1px solid rgba(184,212,232,0.15); font-family: 'Raleway', sans-serif; font-size: 0.82rem; letter-spacing: 0.04em; }
   footer a { color: var(--ice); text-decoration: none; }
   footer a:hover { color: white; }
 
-  /* SVG logo sizing */
   .zipper-svg-hero { width: 280px; height: auto; margin: 0 auto 0.5rem; display: block; }
   .zipper-svg-masthead { width: 120px; height: auto; }
 </style>
@@ -391,9 +179,7 @@ layout: none
 
 {% include masthead.html %}
 
-<!-- =====================================================================
-     HERO
-     ===================================================================== -->
+<!-- HERO -->
 <div class="hero has-photo">
   <div class="hero-content">
     <svg class="zipper-svg-hero" viewBox="0 0 380 70" xmlns="http://www.w3.org/2000/svg" aria-label="Zipper">
@@ -405,7 +191,7 @@ layout: none
       <line x1="294" y1="39.8" x2="328" y2="39.8" stroke="#b8d4e8" stroke-width="2.5" stroke-linecap="round"/>
     </svg>
     <h1>Reid's Unzipped</h1>
-    <p class="hero-tagline">beyond the horizon · across the oceans · under the stars</p>
+    <p class="hero-tagline">over the horizon · under the stars</p>
     <div class="hero-buttons">
       <a href="{{ '/voyage-log/' | relative_url }}" class="btn-outline">Voyage log</a>
       <a href="{{ '/crew/' | relative_url }}" class="btn-outline">Meet the crew</a>
@@ -414,9 +200,7 @@ layout: none
   </div>
 </div>
 
-<!-- =====================================================================
-     LATEST POSTS
-     ===================================================================== -->
+<!-- LATEST POSTS -->
 <div class="container">
   <div class="section-heading"><h2>Latest from the log</h2></div>
   <div class="posts-grid">
@@ -439,33 +223,9 @@ layout: none
   </div>
 </div>
 
-<!-- =====================================================================
-     YOUTUBE STRIP
-     ===================================================================== -->
-<!--<div class="youtube-strip">
-  <div class="youtube-strip-inner">
-<!--    <div class="youtube-icon">
-      <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
-        <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8z"/>
-        <polygon fill="#ff0000" points="9.75,15.02 15.5,12 9.75,8.98"/>
-        <polygon fill="white" points="9.75,15.02 15.5,12 9.75,8.98"/>
-      </svg>
--->    <!-- </div>
-    <h3>Video Highlights</h3>
-    <p>Watch our videos from the Atlantic crossing, Pacific passages and everywhere in between — all in one place.</p>
-    <a href="https://www.youtube.com/playlist?list=PLz8fOLkM7BZv1mgPl7UieR7eBcL09XtLE" class="btn-youtube" target="_blank" rel="noopener">
-      <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#1a3a5c" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8z"/><polygon fill="#b8d4e8" points="9.75,15.02 15.5,12 9.75,8.98"/></svg>
-      YouTube playlist - "Zipper"
-    </a>
-  </div>
-</div>
--->
-
-<!-- =====================================================================
-     ABOUT / STATS STRIP
-     ===================================================================== -->
+<!-- ABOUT / STATS STRIP -->
 <div class="about-strip">
-  <p>The Reids have put work, school and day-to-day life on pause for the adventure of a lifetime, exploring some of the world's most beautiful and remote lands and seas on our catamaran, Zipper. 
+  <p>We have put work, school and day-to-day life on pause for the adventure of a lifetime, exploring some of the world's most beautiful and remote lands and seas on our catamaran, Zipper.
   This is where we try to share some of what we find.</p>
   <div class="stat-row">
     <div class="stat"><span class="number">15,577</span><span class="label">Nautical miles</span></div>
@@ -474,63 +234,139 @@ layout: none
     <div class="stat"><span class="number">∞</span><span class="label">Memories</span></div>
   </div>
   <a href="https://forecast.predictwind.com/tracking/display/SV-Zipper" class="tracker-link" target="_blank" rel="noopener">
-    <span class="dot"></span> Follow Zipper in real time
+    <img src="{{ '/assets/images/predictwind-logo.png' | relative_url }}" alt="PredictWind" class="tracker-logo"> Follow Zipper in real time
   </a>
   <a href="https://www.youtube.com/playlist?list=PLz8fOLkM7BZv1mgPl7UieR7eBcL09XtLE" class="tracker-link" target="_blank" rel="noopener">
-<!--    <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#1a3a5c" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8z"/><polygon fill="#b8d4e8" points="9.75,15.02 15.5,12 9.75,8.98"/></svg>
-    YouTube playlist - "Zipper" -->
-    <span class="dot"></span> Video highlights
+    <img src="https://www.youtube.com/favicon.ico" alt="YouTube" class="tracker-logo-yt"> Video highlights
   </a>
 </div>
 
-<!-- =====================================================================
-     CREW
-     ===================================================================== -->
+<!-- SUBSCRIBE STRIP -->
+<div class="subscribe-strip">
+  <div class="subscribe-strip-inner">
+    <h3>Subscribe to our blog posts</h3>
+    <div class="subscribe-actions">
+      <!-- FOLLOW.IT SUBSCRIBE FORM -->
+      <div class="followit-wrapper">
+        <style>
+          .followit-wrapper .followit--follow-form-container[attr-a][attr-b][attr-c][attr-d][attr-e][attr-f] .form-preview {
+            background-color: transparent !important;
+            border: none !important;
+            box-shadow: none !important;
+            padding: 0 !important;
+            margin-top: 0 !important;
+            border-radius: 0 !important;
+          }
+          .followit-wrapper .followit--follow-form-container[attr-a][attr-b][attr-c][attr-d][attr-e][attr-f] .preview-heading { display: none !important; }
+          .followit-wrapper .followit--follow-form-container[attr-a][attr-b][attr-c][attr-d][attr-e][attr-f] .form-preview .preview-input-field { margin-top: 0 !important; }
+          .followit-wrapper .followit--follow-form-container[attr-a][attr-b][attr-c][attr-d][attr-e][attr-f] .form-preview .preview-input-field input {
+            background-color: rgba(255,255,255,0.1) !important;
+            border: 1px solid rgba(184,212,232,0.45) !important;
+            border-radius: 2px 0 0 2px !important;
+            color: white !important;
+            font-family: 'Raleway', sans-serif !important;
+            font-size: 0.85rem !important;
+            height: 42px !important;
+            text-align: left !important;
+            padding: 0 1rem !important;
+          }
+          .followit-wrapper .followit--follow-form-container[attr-a][attr-b][attr-c][attr-d][attr-e][attr-f] .form-preview .preview-input-field input::placeholder { color: rgba(184,212,232,0.55) !important; }
+          .followit-wrapper .followit--follow-form-container[attr-a][attr-b][attr-c][attr-d][attr-e][attr-f] .form-preview .preview-submit-button { margin-top: 0 !important; }
+          .followit-wrapper .followit--follow-form-container[attr-a][attr-b][attr-c][attr-d][attr-e][attr-f] .form-preview .preview-submit-button button {
+            background-color: #b8d4e8 !important;
+            color: #1a3a5c !important;
+            font-family: 'Raleway', sans-serif !important;
+            font-size: 0.78rem !important;
+            font-weight: 500 !important;
+            letter-spacing: 0.12em !important;
+            text-transform: uppercase !important;
+            border-radius: 0 2px 2px 0 !important;
+            height: 42px !important;
+            padding: 0 1.8rem !important;
+            box-sizing: border-box !important;
+            line-height: 1 !important;
+            border: 1px solid rgba(184,212,232,0.45) !important;
+            white-space: nowrap !important;
+            transition: background-color 0.2s !important;
+          }
+          .followit-wrapper .followit--follow-form-container[attr-a][attr-b][attr-c][attr-d][attr-e][attr-f] .form-preview .preview-submit-button button:hover {
+            background-color: #ffffff !important;
+          }
+          .followit-wrapper .followit--follow-form-container[attr-a][attr-b][attr-c][attr-d][attr-e][attr-f] .form-preview {
+            display: flex !important;
+            flex-direction: row !important;
+            align-items: stretch !important;
+            gap: 0 !important;
+            max-width: 480px !important;
+            margin: 0 auto !important;
+          }
+          .followit-wrapper .powered-by-line {
+            color: rgba(184,212,232,0.35) !important;
+            font-family: 'Raleway', sans-serif !important;
+            font-size: 0.65rem !important;
+            letter-spacing: 0.08em !important;
+            margin-top: 0.7rem !important;
+            opacity: 0.6;
+          }
+          .followit-wrapper .powered-by-line img { filter: brightness(0) invert(1); opacity: 0.4; }
+        </style>
+        <div class="followit--follow-form-container" attr-a attr-b attr-c attr-d attr-e attr-f>
+          <form action="https://api.follow.it/subscription-form/MDg3c0R0ck85aG1xUEFHOTUwK3pKSU11SjZ3YnV0ai95RHpmNXlUL2hZcGNhYmQxUW5JZDFVR0QvaW81UWQ2NVI0Mk1BM1U3VFFMNXhxY0IyOHNHdDNnRW03eFpiVDlHYkFUNkVMd09UQTQ1Yy95Mm1BdkczM2ZISGdNRjJpcTF8a2ZGTzA3WDFnT1pjbXVZMHA4aVZ5dG5RUkVvWllnVXZPODF1aHV3czBzVT0=/8" method="post">
+            <div class="form-preview">
+              <div class="preview-input-field">
+                <input type="email" name="email" required placeholder="Your email address" spellcheck="false">
+              </div>
+              <div class="preview-submit-button">
+                <button type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:0.4rem;margin-bottom:1px;"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>Subscribe</button>
+              </div>
+            </div>
+          </form>
 
+<!--          <a href="https://follow.it" class="powered-by-line">Powered by <img src="https://follow.it/images/colored-logo.svg" alt="follow.it" height="13px"/></a>
+-->
+        </div>
+      </div>
+      <!-- END FOLLOW.IT -->
+<!--      <a href="{{ '/follow/' | relative_url }}">Other ways to follow Zipper's adventures →</a>
+-->
+    </div>
+  </div>
+</div>
+
+<!-- CREW -->
 <div class="container">
   <div class="section-heading"><h2>The Crew</h2></div>
-  <div class="crew-grid">    
-    <a href="{{ '/crew/angus/' | relative_url }}" class="crew-card">      
+  <div class="crew-grid">
+    <a href="{{ '/crew/angus/' | relative_url }}" class="crew-card">
       <div class="crew-photo-container">
-        <img src="{{ '/assets/images/crew/JR1_3703.webp' | relative_url }}" 
-             alt="Angus" 
-             class="crew-photo">
+        <img src="{{ '/assets/images/crew/JR1_3703.webp' | relative_url }}" alt="Angus" class="crew-photo">
       </div>
       <div class="crew-info">
         <span class="crew-name">Angus</span>
         <span class="crew-role">Captain</span>
       </div>
     </a>
-
     <a href="{{ '/crew/isla/' | relative_url }}" class="crew-card">
       <div class="crew-photo-container">
-        <img src="{{ '/assets/images/crew/P7110872.webp' | relative_url }}" 
-             alt="Isla" 
-             class="crew-photo">
+        <img src="{{ '/assets/images/crew/P7110872.webp' | relative_url }}" alt="Isla" class="crew-photo">
       </div>
       <div class="crew-info">
         <span class="crew-name">Isla</span>
         <span class="crew-role">First Mate</span>
       </div>
     </a>
-
     <a href="{{ '/crew/sophie/' | relative_url }}" class="crew-card">
       <div class="crew-photo-container">
-        <img src="{{ '/assets/images/crew/IMG_7241.webp' | relative_url }}" 
-             alt="Sophie" 
-             class="crew-photo">
+        <img src="{{ '/assets/images/crew/IMG_7241.webp' | relative_url }}" alt="Sophie" class="crew-photo">
       </div>
       <div class="crew-info">
         <span class="crew-name">Sophie</span>
         <span class="crew-role">Ship's Cook</span>
       </div>
     </a>
-
     <a href="{{ '/crew/jamie/' | relative_url }}" class="crew-card">
       <div class="crew-photo-container">
-        <img src="{{ '/assets/images/crew/IMG_9016.webp' | relative_url }}" 
-             alt="Jamie" 
-             class="crew-photo">
+        <img src="{{ '/assets/images/crew/IMG_9016.webp' | relative_url }}" alt="Jamie" class="crew-photo">
       </div>
       <div class="crew-info">
         <span class="crew-name">Jamie</span>
@@ -540,9 +376,7 @@ layout: none
   </div>
 </div>
 
-<!-- =====================================================================
-     FOOTER
-     ===================================================================== -->
+<!-- FOOTER -->
 <footer>
   <div style="margin-bottom:0.8rem;">
     <a href="https://forecast.predictwind.com/tracking/display/SV-Zipper" target="_blank">PredictWind Tracker</a>

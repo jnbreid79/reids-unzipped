@@ -1,0 +1,431 @@
+---
+layout: none
+permalink: /follow/
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Follow Zipper — Reid's Unzipped</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500&family=Merriweather:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy:      #1a3a5c;
+    --navy-mid:  #1f4a73;
+    --blue:      #2d6a9f;
+    --ice:       #b8d4e8;
+    --ice-light: #deedf7;
+    --white:     #f8fbfd;
+    --text:      #1a2a38;
+    --muted:     #5a7a96;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Merriweather', Georgia, serif; background: var(--white); color: var(--text); font-size: 16px; line-height: 1.7; }
+
+  {% include masthead-styles.html %}
+
+  /* ── Hero ── */
+  .page-hero {
+    background: linear-gradient(160deg, #0d2438 0%, #1a3a5c 50%, #1f4a73 100%);
+    padding: 4rem 1.5rem 3.5rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .page-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(ellipse at 20% 80%, rgba(45,106,159,0.35) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 20%, rgba(31,74,115,0.4) 0%, transparent 50%);
+    pointer-events: none;
+  }
+  .page-hero-content { position: relative; z-index: 2; max-width: 700px; margin: 0 auto; }
+  .page-hero-eyebrow { font-family: 'Raleway', sans-serif; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.3em; color: var(--ice); opacity: 0.7; margin-bottom: 1rem; }
+  .page-hero h1 { font-family: 'Raleway', sans-serif; font-weight: 200; font-size: clamp(1.8rem, 5vw, 3rem); letter-spacing: 0.12em; text-transform: uppercase; color: white; margin-bottom: 1rem; border-bottom: 2px solid rgba(184,212,232,0.4); padding-bottom: 1rem; display: inline-block; }
+  .page-hero-desc { font-family: 'Merriweather', serif; font-style: italic; font-weight: 300; font-size: 0.95rem; color: var(--ice-light); line-height: 1.8; max-width: 580px; margin: 0 auto; }
+
+  /* ── Page container ── */
+  .page-container { max-width: 860px; margin: 0 auto; padding: 3.5rem 1.5rem 5rem; }
+
+  .intro-text {
+    font-size: 0.97rem;
+    line-height: 1.9;
+    color: var(--text);
+    max-width: 680px;
+    margin: 0 auto 3.5rem;
+    text-align: center;
+  }
+
+  /* ── Channel cards ── */
+  .channels { display: flex; flex-direction: column; gap: 1.5rem; }
+
+  .channel-card {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    background: white;
+    border-radius: 4px;
+    padding: 2rem 2.2rem;
+    box-shadow: 0 2px 16px rgba(26,58,92,0.09);
+    border-left: 4px solid var(--ice);
+    transition: box-shadow 0.2s, transform 0.2s;
+  }
+  .channel-card:hover { box-shadow: 0 6px 24px rgba(26,58,92,0.14); transform: translateY(-2px); }
+  .channel-card.featured { border-left-color: var(--blue); background: linear-gradient(135deg, white 0%, rgba(184,212,232,0.06) 100%); }
+
+  .channel-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 1.5rem;
+  }
+  .channel-icon.tracker  { background: white; padding: 8px; }
+  .channel-icon.blog     { background: linear-gradient(135deg, var(--navy), var(--navy-mid)); }
+  .channel-icon.youtube  { background: linear-gradient(135deg, #8a1a1a, #cc2200); }
+  .channel-icon.email    { background: linear-gradient(135deg, #3a5a2a, #5a8a3a); }
+
+  .channel-body { flex: 1; }
+
+  .channel-label {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: var(--muted);
+    margin-bottom: 0.3rem;
+  }
+
+  .channel-title {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 1.15rem;
+    color: var(--navy);
+    margin-bottom: 0.6rem;
+    letter-spacing: 0.02em;
+  }
+
+  .channel-desc {
+    font-size: 0.88rem;
+    line-height: 1.8;
+    color: #3a5a70;
+    margin-bottom: 1.1rem;
+  }
+
+  .channel-best-for {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--muted);
+    margin-bottom: 1rem;
+  }
+  .channel-best-for strong { color: var(--navy); font-weight: 500; }
+
+  .btn-channel {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--navy);
+    color: var(--ice);
+    padding: 0.6rem 1.4rem;
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 400;
+    border-radius: 2px;
+    transition: all 0.2s;
+  }
+  .btn-channel:hover { background: var(--blue); color: white; }
+
+  .btn-channel-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1.5px solid rgba(26,58,92,0.25);
+    color: var(--navy);
+    padding: 0.6rem 1.4rem;
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 400;
+    border-radius: 2px;
+    transition: all 0.2s;
+    margin-left: 0.6rem;
+  }
+  .btn-channel-outline:hover { background: rgba(26,58,92,0.06); }
+
+  /* ── Subscribe strip ── */
+  .subscribe-strip {
+    background: var(--navy);
+    border-radius: 4px;
+    padding: 2.8rem 2.5rem;
+    text-align: center;
+    margin-top: 3rem;
+  }
+  .subscribe-strip h3 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+    font-size: 1.4rem;
+    color: white;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.6rem;
+  }
+  .subscribe-strip p {
+    font-size: 0.88rem;
+    color: var(--ice-light);
+    line-height: 1.8;
+    max-width: 480px;
+    margin: 0 auto 1.8rem;
+  }
+
+  /* follow.it embed override — keep centred and on-brand */
+  .followit-embed {
+    display: flex;
+    justify-content: center;
+  }
+  .followit-embed input[type="email"] {
+    background: rgba(255,255,255,0.1) !important;
+    border: 1px solid rgba(184,212,232,0.4) !important;
+    color: white !important;
+    font-family: 'Raleway', sans-serif !important;
+    font-size: 0.85rem !important;
+    padding: 0.65rem 1rem !important;
+    border-radius: 2px 0 0 2px !important;
+    outline: none !important;
+  }
+  .followit-embed input[type="email"]::placeholder { color: rgba(184,212,232,0.5) !important; }
+  .followit-embed button, .followit-embed input[type="submit"] {
+    background: var(--ice) !important;
+    color: var(--navy) !important;
+    border: none !important;
+    font-family: 'Raleway', sans-serif !important;
+    font-size: 0.78rem !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.12em !important;
+    text-transform: uppercase !important;
+    padding: 0.65rem 1.4rem !important;
+    border-radius: 0 2px 2px 0 !important;
+    cursor: pointer !important;
+    transition: background 0.2s !important;
+  }
+  .followit-embed button:hover, .followit-embed input[type="submit"]:hover {
+    background: white !important;
+  }
+
+  /* Mobile */
+  @media (max-width: 600px) {
+    .channel-card { flex-direction: column; gap: 1rem; padding: 1.5rem; }
+    .btn-channel-outline { margin-left: 0; margin-top: 0.5rem; }
+  }
+
+  /* ── Footer ── */
+  footer { background: var(--navy); color: var(--muted); padding: 2rem; text-align: center; border-top: 1px solid rgba(184,212,232,0.15); font-family: 'Raleway', sans-serif; font-size: 0.82rem; letter-spacing: 0.04em; }
+  footer a { color: var(--ice); text-decoration: none; }
+  footer a:hover { color: white; }
+</style>
+</head>
+<body>{% include masthead.html %}
+
+<div class="page-hero">
+  <div class="page-hero-content">
+    <div class="page-hero-eyebrow">Reid's Unzipped</div>
+    <h1>Follow Zipper</h1>
+    <p class="page-hero-desc">We're out there somewhere — if you want to you can keep up with where we are, what we're doing, and what we're seeing along the way.</p>
+  </div>
+</div>
+
+<div class="page-container">
+
+  <p class="intro-text">Here's a guide to a few different ways you can follow along, and what each one is best for.</p>
+
+  <div class="channels">
+
+    <!-- Live Tracker -->
+    <div class="channel-card featured">
+      <div class="channel-icon tracker"><img src="{{ '/assets/images/predictwind-logo.png' | relative_url }}" alt="PredictWind" style="width:100%; height:100%; object-fit:contain;"></div>
+      <div class="channel-body">
+        <div class="channel-label">Real-time position</div>
+        <div class="channel-title">PredictWind Tracker</div>
+        <p class="channel-desc">See exactly where Zipper is right now. The tracker shows our position updated every 15 mins when we're underway, along with how fast we're going, in which direction and the current wind conditions. We try and post short updates of life onboard each day when we're on passage, and photos of our anchorage when we arrive. You can trace the track back to see everywhere we've been.</p>
+        <div class="channel-best-for"><strong>Best for:</strong> Finding out where we are now · Map of where we've been </div>
+        <a href="https://forecast.predictwind.com/tracking/display/SV-Zipper" target="_blank" rel="noopener" class="btn-channel">📍 Open Tracker</a>
+      </div>
+    </div>
+
+    <!-- Blog -->
+    <div class="channel-card">
+      <div class="channel-icon blog">📖</div>
+      <div class="channel-body">
+        <div class="channel-label">Our blog posts · Email updates available</div>
+        <div class="channel-title">Voyage Log</div>
+        <p class="channel-desc">We (try to) write some blog posts about the trip on the website. Subscribe by email below and we'll let you know when something new is up — no noise, just new posts. Feel free to comment too, we love to hear from you. We also have a gallery on the website with some photo highlights.</p>
+        <div class="channel-best-for"><strong>Best for:</strong> Deep dives </div>
+        <a href="{{ '/voyage-log/' | relative_url }}" class="btn-channel">Read the Log</a>
+        <a href="{{ '/follow/#subscribe' | relative_url }}" class="btn-channel-outline">Subscribe by email ↓</a>
+      </div>
+    </div>
+
+    <!-- YouTube -->
+    <div class="channel-card">
+      <div class="channel-icon youtube">▶</div>
+      <div class="channel-body">
+        <div class="channel-label">Video · YouTube playlist</div>
+        <div class="channel-title">Video Highlights</div>
+        <p class="channel-desc">We've been putting together video highlights from passages, anchorages and adventures along the way. The playlist collects everything in one place, from the Atlantic crossing to the Pacific islands and beyond.</p>
+        <div class="channel-best-for"><strong>Best for:</strong> Watching some of our highlights · Checking if you still recognise us </div>
+        <a href="https://www.youtube.com/playlist?list=PLz8fOLkM7BZv1mgPl7UieR7eBcL09XtLE" target="_blank" rel="noopener" class="btn-channel">▶ Watch on YouTube</a>
+      </div>
+    </div>
+
+    <!-- NoForeignLand -->
+    <div class="channel-card">
+      <div class="channel-icon noforeignland"><img src="{{ '/assets/images/NoForeignLand-logo.png' | relative_url }}" alt="NoForeignLand" style="width:100%; height:100%; object-fit:contain;"></div>
+      <div class="channel-body">
+        <div class="channel-label">Sailors</div>
+        <div class="channel-title">Connect</div>
+        <p class="channel-desc">Are you out here too? Look us up on NoForeignLand or come over in the dinghy and give us a shout. </p>
+        <div class="channel-best-for"><strong>Best for:</strong> Connecting </div>
+        <a href="https://www.noforeignland.com/map/boat/5136031227576320" target="_blank" rel="noopener" class="btn-channel">📍 Open NoForeignLand</a>        
+      </div>
+    </div>
+
+    <!-- Contact -->
+    <div class="channel-card">
+      <div class="channel-icon email">✉️</div>
+      <div class="channel-body">
+        <div class="channel-label">Direct contact</div>
+        <div class="channel-title">Get in Touch</div>
+        <p class="channel-desc">We love hearing from people — whether you've done a similar passage, have local knowledge for somewhere we're heading, or just saying hello from home. </p>
+        <div class="channel-best-for"><strong>Best for:</strong> Saying hello </div>
+        <a href="{{ '/follow/#contact' | relative_url }}" class="btn-channel" onclick="document.getElementById('contact-note').style.display='block'; return false;">Contact us</a>
+        <p id="contact-note" style="display:none; margin-top:0.8rem; font-size:0.82rem; color:var(--muted); font-family:'Raleway',sans-serif;">Leave a comment on one of our blog posts and we'll get back to you, find us on NoForeignLand, or look us up on Facebook. </p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Subscribe strip -->
+  <div class="subscribe-strip" id="subscribe">
+    <h3>New posts by email</h3>
+    <p>Subscribe and we'll send you an email when a new post goes up on the Voyage Log. No other emails, no noise — just new posts.</p>
+    <div class="followit-embed">
+      <!-- FOLLOW.IT SUBSCRIBE FORM -->
+      <div class="followit-wrapper">
+        <style>
+          .followit-wrapper .followit--follow-form-container[attr-a][attr-b][attr-c][attr-d][attr-e][attr-f] .form-preview {
+            background-color: transparent !important;
+            border: none !important;
+            box-shadow: none !important;
+            padding: 0 !important;
+            margin-top: 0 !important;
+            border-radius: 0 !important;
+          }
+          .followit-wrapper .followit--follow-form-container[attr-a][attr-b][attr-c][attr-d][attr-e][attr-f] .preview-heading { display: none !important; }
+          .followit-wrapper .followit--follow-form-container[attr-a][attr-b][attr-c][attr-d][attr-e][attr-f] .form-preview .preview-input-field { margin-top: 0 !important; }
+          .followit-wrapper .followit--follow-form-container[attr-a][attr-b][attr-c][attr-d][attr-e][attr-f] .form-preview .preview-input-field input {
+            background-color: rgba(255,255,255,0.1) !important;
+            border: 1px solid rgba(184,212,232,0.45) !important;
+            border-radius: 2px 0 0 2px !important;
+            color: white !important;
+            font-family: 'Raleway', sans-serif !important;
+            font-size: 0.85rem !important;
+            height: 42px !important;
+            text-align: left !important;
+            padding: 0 1rem !important;
+          }
+          .followit-wrapper .followit--follow-form-container[attr-a][attr-b][attr-c][attr-d][attr-e][attr-f] .form-preview .preview-input-field input::placeholder { color: rgba(184,212,232,0.55) !important; }
+          .followit-wrapper .followit--follow-form-container[attr-a][attr-b][attr-c][attr-d][attr-e][attr-f] .form-preview .preview-submit-button { margin-top: 0 !important; }
+          .followit-wrapper .followit--follow-form-container[attr-a][attr-b][attr-c][attr-d][attr-e][attr-f] .form-preview .preview-submit-button button {
+            background-color: #b8d4e8 !important;
+            color: #1a3a5c !important;
+            font-family: 'Raleway', sans-serif !important;
+            font-size: 0.78rem !important;
+            font-weight: 500 !important;
+            letter-spacing: 0.12em !important;
+            text-transform: uppercase !important;
+            border-radius: 0 2px 2px 0 !important;
+            height: 42px !important;
+            padding: 0 1.8rem !important;
+            box-sizing: border-box !important;
+            line-height: 1 !important;
+            border: 1px solid rgba(184,212,232,0.45) !important;
+            white-space: nowrap !important;
+            transition: background-color 0.2s !important;
+          }
+          .followit-wrapper .followit--follow-form-container[attr-a][attr-b][attr-c][attr-d][attr-e][attr-f] .form-preview .preview-submit-button button:hover {
+            background-color: #ffffff !important;
+          }
+          .followit-wrapper .followit--follow-form-container[attr-a][attr-b][attr-c][attr-d][attr-e][attr-f] .form-preview {
+            display: flex !important;
+            flex-direction: row !important;
+            align-items: stretch !important;
+            gap: 0 !important;
+            max-width: 480px !important;
+            margin: 0 auto !important;
+          }
+          .followit-wrapper .powered-by-line {
+            color: rgba(184,212,232,0.35) !important;
+            font-family: 'Raleway', sans-serif !important;
+            font-size: 0.65rem !important;
+            letter-spacing: 0.08em !important;
+            margin-top: 0.7rem !important;
+            opacity: 0.6;
+          }
+          .followit-wrapper .powered-by-line img { filter: brightness(0) invert(1); opacity: 0.4; }
+        </style>
+        <div class="followit--follow-form-container" attr-a attr-b attr-c attr-d attr-e attr-f>
+          <form action="https://api.follow.it/subscription-form/MDg3c0R0ck85aG1xUEFHOTUwK3pKSU11SjZ3YnV0ai95RHpmNXlUL2hZcGNhYmQxUW5JZDFVR0QvaW81UWQ2NVI0Mk1BM1U3VFFMNXhxY0IyOHNHdDNnRW03eFpiVDlHYkFUNkVMd09UQTQ1Yy95Mm1BdkczM2ZISGdNRjJpcTF8a2ZGTzA3WDFnT1pjbXVZMHA4aVZ5dG5RUkVvWllnVXZPODF1aHV3czBzVT0=/8" method="post">
+            <div class="form-preview">
+              <div class="preview-input-field">
+                <input type="email" name="email" required placeholder="Your email address" spellcheck="false">
+              </div>
+              <div class="preview-submit-button">
+                <button type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:0.4rem;margin-bottom:1px;"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>Subscribe</button>
+              </div>
+            </div>
+          </form>
+          <a href="https://follow.it" class="powered-by-line">Powered by <img src="https://follow.it/images/colored-logo.svg" alt="follow.it" height="13px"/></a>
+        </div>
+      </div>
+      <!-- END FOLLOW.IT -->
+    </div>
+  </div>
+
+</div><!-- /page-container -->
+
+<footer>
+  <div style="margin-bottom:0.8rem;">
+    <a href="https://forecast.predictwind.com/tracking/display/SV-Zipper" target="_blank">PredictWind Tracker</a>
+    &nbsp;·&nbsp; <a href="{{ '/voyage-log/' | relative_url }}">Voyage Log</a>
+    &nbsp;·&nbsp; <a href="{{ '/crew/' | relative_url }}">The Crew</a>
+    &nbsp;·&nbsp; <a href="{{ '/supporters/' | relative_url }}">Supporters</a>
+  </div>
+  © Reid's Unzipped — Reid family cruising the world on Zipper
+</footer>
+
+<script>
+  window.closeMenu = function() {
+    document.getElementById('nav-dropdown').classList.remove('open');
+    document.getElementById('hamburger').classList.remove('open');
+    document.getElementById('overlay').classList.remove('open');
+  };
+  window.toggleMenu = function() {
+    const menu = document.getElementById('nav-dropdown');
+    if (menu.classList.contains('open')) { window.closeMenu(); }
+    else { menu.classList.add('open'); document.getElementById('hamburger').classList.add('open'); document.getElementById('overlay').classList.add('open'); }
+  };
+</script>
+</body>
+</html>
