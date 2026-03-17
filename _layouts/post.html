@@ -206,80 +206,13 @@ layout: none
     height: 1px;
     background: linear-gradient(to right, transparent, var(--ice), transparent);
     margin: 3rem 0;
+    opacity: 0.5;
   }
 
   /* =====================================================================
-     VIDEO EMBED
-     Use in markdown posts as a raw HTML block:
-       <div class="video-embed">
-         <div class="video-embed-frame">
-           <iframe src="https://www.youtube-nocookie.com/embed/VIDEO_ID" ...></iframe>
-         </div>
-       </div>
-     ===================================================================== */
-  .video-embed {
-    margin: 2.5rem 0;
-    border-radius: 3px;
-    overflow: hidden;
-    box-shadow: 0 4px 24px rgba(26,58,92,0.18);
-  }
-
-  .video-embed-header {
-    background: var(--navy);
-    padding: 0.65rem 1.1rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 2px solid var(--ice);
-  }
-
-  .video-embed-label {
-    display: flex;
-    align-items: center;
-    gap: 0.55rem;
-    font-family: 'Raleway', sans-serif;
-    font-size: 0.68rem;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    color: var(--ice);
-  }
-
-  .video-embed-label svg {
-    flex-shrink: 0;
-  }
-
-  .video-embed-yt-link {
-    font-family: 'Raleway', sans-serif;
-    font-size: 0.65rem;
-    text-transform: uppercase;
-    letter-spacing: 0.14em;
-    color: var(--muted);
-    text-decoration: none;
-    transition: color 0.15s;
-  }
-  .video-embed-yt-link:hover { color: var(--ice); }
-
-  .video-embed-frame {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    background: #0d1f33;
-  }
-
-  .video-embed-frame iframe {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    display: block;
-    border: none;
-  }
-
-  /* =====================================================================
-     IMAGE GALLERIES
-     Use in markdown:
-       Single:  ![alt](url)
-       Gallery: wrap consecutive images — they auto-detect neighbours
+     IMAGES & GALLERY
+     Markdown: ![alt](url)
+     Gallery: wrap consecutive images — they auto-detect neighbours
      ===================================================================== */
 
   /* Single image */
@@ -330,9 +263,6 @@ layout: none
   .gallery.count-3 .gallery-item:first-child img {
     aspect-ratio: 16/7;
   }
-
-  /* 5-image: first two bigger */
-  .gallery.count-5 .gallery-item:nth-child(-n+2) { }
 
   @media (max-width: 600px) {
     .gallery.count-3,
@@ -419,6 +349,109 @@ layout: none
     letter-spacing: 0.08em;
     opacity: 0.6;
     white-space: nowrap;
+  }
+
+  /* =====================================================================
+     CACTUS COMMENTS
+     ===================================================================== */
+  .post-comments {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 4rem;
+  }
+
+  .post-comments h2.comments-heading {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.28em;
+    color: var(--navy);
+    margin-bottom: 2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--ice);
+  }
+
+  /* Override Cactus default styles to match the zipper theme */
+  #comment-section .cactus-editor-container,
+  #comment-section .cactus-timeline-container {
+    font-family: 'Merriweather', Georgia, serif !important;
+    font-size: 0.95rem !important;
+    color: var(--text) !important;
+  }
+
+  #comment-section .cactus-login-container {
+    font-family: 'Raleway', sans-serif !important;
+  }
+
+  /* Comment bubbles */
+  #comment-section .cactus-event-container {
+    border-left: 3px solid var(--ice) !important;
+    padding-left: 1rem !important;
+    margin-bottom: 1.5rem !important;
+    background: rgba(184,212,232,0.05) !important;
+  }
+
+  /* Sender name */
+  #comment-section .cactus-mxid {
+    font-family: 'Raleway', sans-serif !important;
+    font-size: 0.75rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.1em !important;
+    color: var(--navy) !important;
+    font-weight: 500 !important;
+  }
+
+  /* Timestamp */
+  #comment-section .cactus-event-date {
+    font-family: 'Raleway', sans-serif !important;
+    font-size: 0.7rem !important;
+    color: var(--muted) !important;
+    letter-spacing: 0.06em !important;
+  }
+
+  /* "Post comment" / submit button */
+  #comment-section .cactus-send-button,
+  #comment-section button[type="submit"] {
+    font-family: 'Raleway', sans-serif !important;
+    font-size: 0.75rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.12em !important;
+    background: var(--navy) !important;
+    color: var(--ice) !important;
+    border: none !important;
+    padding: 0.6rem 1.4rem !important;
+    border-radius: 2px !important;
+    cursor: pointer !important;
+    transition: background 0.2s !important;
+  }
+  #comment-section .cactus-send-button:hover,
+  #comment-section button[type="submit"]:hover {
+    background: var(--navy-mid) !important;
+  }
+
+  /* Text input / textarea */
+  #comment-section textarea,
+  #comment-section input[type="text"] {
+    font-family: 'Merriweather', serif !important;
+    font-size: 0.9rem !important;
+    border: 1px solid rgba(184,212,232,0.5) !important;
+    border-radius: 2px !important;
+    background: rgba(184,212,232,0.06) !important;
+    color: var(--text) !important;
+    padding: 0.7rem 0.9rem !important;
+    width: 100% !important;
+  }
+  #comment-section textarea:focus,
+  #comment-section input[type="text"]:focus {
+    outline: none !important;
+    border-color: var(--ice) !important;
+    background: rgba(184,212,232,0.1) !important;
+  }
+
+  /* "Powered by" / login links */
+  #comment-section a {
+    color: var(--blue) !important;
   }
 
   /* =====================================================================
@@ -509,59 +542,40 @@ layout: none
             padding: 0 !important;
             margin-top: 0 !important;
             border-radius: 0 !important;
+            display: flex !important;
+            align-items: stretch !important;
+            gap: 0 !important;
           }
           .followit-wrapper .followit--follow-form-container[attr-a][attr-b][attr-c][attr-d][attr-e][attr-f] .preview-heading { display: none !important; }
-          .followit-wrapper .followit--follow-form-container[attr-a][attr-b][attr-c][attr-d][attr-e][attr-f] .form-preview .preview-input-field { margin-top: 0 !important; }
+          .followit-wrapper .followit--follow-form-container[attr-a][attr-b][attr-c][attr-d][attr-e][attr-f] .form-preview .preview-input-field { margin-top: 0 !important; display: flex !important; align-items: stretch !important; }
           .followit-wrapper .followit--follow-form-container[attr-a][attr-b][attr-c][attr-d][attr-e][attr-f] .form-preview .preview-input-field input {
             background-color: rgba(255,255,255,0.1) !important;
             border: 1px solid rgba(184,212,232,0.45) !important;
             border-radius: 2px 0 0 2px !important;
             color: white !important;
             font-family: 'Raleway', sans-serif !important;
-            font-size: 0.85rem !important;
-            height: 42px !important;
-            text-align: left !important;
-            padding: 0 1rem !important;
+            font-size: 0.8rem !important;
+            letter-spacing: 0.06em !important;
+            padding: 0.55rem 0.9rem !important;
+            height: auto !important;
           }
-          .followit-wrapper .followit--follow-form-container[attr-a][attr-b][attr-c][attr-d][attr-e][attr-f] .form-preview .preview-input-field input::placeholder { color: rgba(184,212,232,0.55) !important; }
+          .followit-wrapper .followit--follow-form-container[attr-a][attr-b][attr-c][attr-d][attr-e][attr-f] .form-preview .preview-input-field input::placeholder { color: rgba(255,255,255,0.45) !important; }
           .followit-wrapper .followit--follow-form-container[attr-a][attr-b][attr-c][attr-d][attr-e][attr-f] .form-preview .preview-submit-button { margin-top: 0 !important; }
           .followit-wrapper .followit--follow-form-container[attr-a][attr-b][attr-c][attr-d][attr-e][attr-f] .form-preview .preview-submit-button button {
-            background-color: #b8d4e8 !important;
-            color: #1a3a5c !important;
-            font-family: 'Raleway', sans-serif !important;
-            font-size: 0.78rem !important;
-            font-weight: 500 !important;
-            letter-spacing: 0.12em !important;
-            text-transform: uppercase !important;
+            background-color: var(--ice) !important;
+            color: var(--navy) !important;
             border-radius: 0 2px 2px 0 !important;
-            height: 42px !important;
-            padding: 0 1.8rem !important;
-            box-sizing: border-box !important;
-            line-height: 1 !important;
-            border: 1px solid rgba(184,212,232,0.45) !important;
-            white-space: nowrap !important;
-            transition: background-color 0.2s !important;
-          }
-          .followit-wrapper .followit--follow-form-container[attr-a][attr-b][attr-c][attr-d][attr-e][attr-f] .form-preview .preview-submit-button button:hover {
-            background-color: #ffffff !important;
-          }
-          .followit-wrapper .followit--follow-form-container[attr-a][attr-b][attr-c][attr-d][attr-e][attr-f] .form-preview {
-            display: flex !important;
-            flex-direction: row !important;
-            align-items: stretch !important;
-            gap: 0 !important;
-            max-width: 480px !important;
-            margin: 0 auto !important;
-          }
-          .followit-wrapper .powered-by-line {
-            color: rgba(184,212,232,0.35) !important;
             font-family: 'Raleway', sans-serif !important;
-            font-size: 0.65rem !important;
-            letter-spacing: 0.08em !important;
-            margin-top: 0.7rem !important;
-            opacity: 0.6;
+            font-size: 0.75rem !important;
+            font-weight: 500 !important;
+            text-transform: uppercase !important;
+            letter-spacing: 0.1em !important;
+            padding: 0.55rem 1.1rem !important;
+            height: auto !important;
+            border: none !important;
+            cursor: pointer !important;
           }
-          .followit-wrapper .powered-by-line img { filter: brightness(0) invert(1); opacity: 0.4; }
+          .followit-wrapper .followit--follow-form-container[attr-a][attr-b][attr-c][attr-d][attr-e][attr-f] .powered-by-line { display: none !important; }
         </style>
         <div class="followit--follow-form-container" attr-a attr-b attr-c attr-d attr-e attr-f>
           <form action="https://api.follow.it/subscription-form/MDg3c0R0ck85aG1xUEFHOTUwK3pKSU11SjZ3YnV0ai95RHpmNXlUL2hZcGNhYmQxUW5JZDFVR0QvaW81UWQ2NVI0Mk1BM1U3VFFMNXhxY0IyOHNHdDNnRW03eFpiVDlHYkFUNkVMd09UQTQ1Yy95Mm1BdkczM2ZISGdNRjJpcTF8a2ZGTzA3WDFnT1pjbXVZMHA4aVZ5dG5RUkVvWllnVXZPODF1aHV3czBzVT0=/8" method="post">
@@ -581,6 +595,24 @@ layout: none
       <a href="{{ '/follow/' | relative_url }}" style="display:inline-flex; align-items:center; gap:0.4rem; border: 1.5px solid rgba(184,212,232,0.5); color: var(--ice); padding: 0.6rem 1.3rem; text-decoration: none; font-family: 'Raleway', sans-serif; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; border-radius: 2px; transition: all 0.2s;">Other ways to follow Zipper →</a>
     </div>
   </div>
+</div>
+
+<!-- COMMENTS -->
+<div class="post-comments">
+  <h2 class="comments-heading">Comments</h2>
+  <div id="comment-section"></div>
+  <link rel="stylesheet" href="https://latest.cactus.chat/style.css" type="text/css">
+  <script type="text/javascript" src="https://latest.cactus.chat/cactus.js"></script>
+  <script type="text/javascript">
+    initComments({
+      node: document.getElementById("comment-section"),
+      defaultHomeserverUrl: "https://matrix.cactus.chat:8448",
+      serverName: "cactus.chat",
+      siteName: "reids-unzipped",
+      commentSectionId: "{{ page.slug }}",
+      guestPostingEnabled: true
+    });
+  </script>
 </div>
 
 <!-- POST FOOTER -->
@@ -619,26 +651,6 @@ layout: none
   </div>
   <button class="lightbox-nav lightbox-next" onclick="event.stopPropagation(); navigateLightbox(1)">›</button>
   <div class="lightbox-caption" id="lightbox-caption"></div>
-</div>
-
-<!-- COMMENTS -->
-<div class="post-comments" style="max-width:700px; margin:0 auto; padding:0 1.5rem 4rem;">
-  <script src="https://giscus.app/client.js"
-    data-repo="jnbreid79/reids-unzipped"
-    data-repo-id="R_kgDORUkkAw"
-    data-category="General"
-    data-category-id="DIC_kwDORUkkA84C4S7h"
-    data-mapping="pathname"
-    data-strict="0"
-    data-reactions-enabled="1"
-    data-emit-metadata="0"
-    data-input-position="top"
-    data-theme="noborder_light"
-    data-lang="en"
-    data-loading="lazy"
-    crossorigin="anonymous"
-    async>
-  </script>
 </div>
 
 <script>

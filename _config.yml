@@ -111,24 +111,25 @@ collections:
     permalink: /:collection/:name/
 
 # =============================================================================
-# Analytics / comments (fill in when ready)
+# Analytics / comments
 # =============================================================================
 # analytics:
 #   provider: "google-gtag"
 #   google:
 #     tracking_id: "UA-XXXXXXXX-X"
 
-comments:
-  provider: "giscus"
-  giscus:
-    repo_id: "R_kgDORUkkAw"
-    category_name: "General"
-    category_id: "DIC_kwDORUkkA84C4S7h"
-    discussion_term: "pathname"
-    reactions_enabled: "1"
-    theme: "noborder_light"
-    input_position: "top"
-    loading: "lazy"
+# Giscus config — replaced by Cactus Comments (hardcoded in _layouts/post.html)
+# comments:
+#   provider: "giscus"
+#   giscus:
+#     repo_id: "R_kgDORUkkAw"
+#     category_name: "General"
+#     category_id: "DIC_kwDORUkkA84C4S7h"
+#     discussion_term: "pathname"
+#     reactions_enabled: "1"
+#     theme: "noborder_light"
+#     input_position: "top"
+#     loading: "lazy"
 
 # =============================================================================
 # SEO / social
