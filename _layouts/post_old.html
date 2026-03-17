@@ -123,68 +123,6 @@ layout: none
   }
 
   /* =====================================================================
-     HERO POST NAV
-     ===================================================================== */
-  .post-hero-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-    margin-top: 1.4rem;
-    padding-top: 1rem;
-    border-top: 1px solid rgba(184,212,232,0.2);
-  }
-
-  .post-hero-nav a,
-  .post-hero-nav button {
-    font-family: 'Raleway', sans-serif;
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    letter-spacing: 0.14em;
-    color: var(--ice);
-    text-decoration: none;
-    opacity: 0.6;
-    transition: opacity 0.2s;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    white-space: nowrap;
-  }
-  .post-hero-nav a:hover,
-  .post-hero-nav button:hover { opacity: 1; }
-
-  .hero-nav-back {
-    flex: 0 0 auto;
-    font-weight: 500 !important;
-    opacity: 0.85 !important;
-  }
-
-  .hero-nav-prev-next {
-    display: flex;
-    gap: 1.5rem;
-    flex: 0 0 auto;
-  }
-
-  .hero-nav-prev,
-  .hero-nav-next {
-    max-width: 160px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-
-  /* On narrow screens: hide titles, show arrows only */
-  @media (max-width: 600px) {
-    .hero-nav-prev .nav-title,
-    .hero-nav-next .nav-title { display: none; }
-  }
-
-  /* =====================================================================
-     POST FOOTER NAV — restyled to match hero nav
-     ===================================================================== */
-
-  /* =====================================================================
      POST BODY
      ===================================================================== */
   .post-body {
@@ -440,51 +378,30 @@ layout: none
     border: none !important;
   }
 
+  /* =====================================================================
+     POST FOOTER NAV
+     ===================================================================== */
   .post-footer {
     background: var(--navy);
-    padding: 1.6rem 1.5rem;
+    padding: 2rem 1.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
     flex-wrap: wrap;
   }
-  .post-footer a,
-  .post-footer button {
+  .post-footer a {
     font-family: 'Raleway', sans-serif;
-    font-size: 0.7rem;
+    font-size: 0.78rem;
     text-transform: uppercase;
-    letter-spacing: 0.14em;
+    letter-spacing: 0.12em;
     color: var(--ice);
     text-decoration: none;
-    opacity: 0.6;
+    opacity: 0.7;
     transition: opacity 0.2s;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
   }
-  .post-footer a:hover,
-  .post-footer button:hover { opacity: 1; }
-  .post-footer .footer-back {
-    font-weight: 500;
-    opacity: 0.85;
-  }
-  .post-footer-prev-next {
-    display: flex;
-    gap: 2rem;
-  }
-  .footer-nav-prev,
-  .footer-nav-next {
-    max-width: 200px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-  @media (max-width: 600px) {
-    .footer-nav-prev .nav-title,
-    .footer-nav-next .nav-title { display: none; }
-  }
+  .post-footer a:hover { opacity: 1; }
+  .post-footer .back { font-size: 0.85rem; opacity: 1; font-weight: 400; }
 
   /* =====================================================================
      SITE FOOTER
@@ -525,18 +442,6 @@ layout: none
       {% endfor %}
     </div>
     {% endif %}
-
-    <nav class="post-hero-nav">
-      <button class="hero-nav-back" id="hero-back-btn">← Back</button>
-      <div class="hero-nav-prev-next">
-        {% if page.previous.url %}
-        <a href="{{ page.previous.url | relative_url }}" class="hero-nav-prev">‹ <span class="nav-title">{{ page.previous.title }}</span></a>
-        {% endif %}
-        {% if page.next.url %}
-        <a href="{{ page.next.url | relative_url }}" class="hero-nav-next"><span class="nav-title">{{ page.next.title }}</span> ›</a>
-        {% endif %}
-      </div>
-    </nav>
   </div>
 </div>
 
@@ -631,13 +536,13 @@ layout: none
 
 <!-- POST FOOTER -->
 <div class="post-footer">
-  <button class="footer-back" id="footer-back-btn">← Back</button>
-  <div class="post-footer-prev-next">
+  <a href="{{ '/voyage-log/' | relative_url }}" class="back">← All Posts</a>
+  <div style="display:flex; gap:2rem;">
     {% if page.previous.url %}
-    <a href="{{ page.previous.url | relative_url }}" class="footer-nav-prev">‹ <span class="nav-title">{{ page.previous.title }}</span></a>
+    <a href="{{ page.previous.url | relative_url }}">← {{ page.previous.title }}</a>
     {% endif %}
     {% if page.next.url %}
-    <a href="{{ page.next.url | relative_url }}" class="footer-nav-next"><span class="nav-title">{{ page.next.title }}</span> ›</a>
+    <a href="{{ page.next.url | relative_url }}">{{ page.next.title }} →</a>
     {% endif %}
   </div>
 </div>
@@ -668,23 +573,6 @@ layout: none
 </div>
 
 <script>
-  // ── Back button — smart history-aware navigation ──────────────────────
-  (function() {
-    const fallback = '{{ "/voyage-log/" | relative_url }}';
-    function handleBack(e) {
-      e.preventDefault();
-      if (document.referrer && document.referrer.includes(window.location.hostname)) {
-        history.back();
-      } else {
-        window.location.href = fallback;
-      }
-    }
-    const heroBtn   = document.getElementById('hero-back-btn');
-    const footerBtn = document.getElementById('footer-back-btn');
-    if (heroBtn)   heroBtn.addEventListener('click', handleBack);
-    if (footerBtn) footerBtn.addEventListener('click', handleBack);
-  })();
-
   // ── Hamburger nav ──────────────────────────────────────────────────────
   window.closeMenu = function() {
     document.getElementById('nav-dropdown').classList.remove('open');
