@@ -122,63 +122,7 @@ layout: none
     border-radius: 2px;
   }
 
-  /* =====================================================================
-     HERO POST NAV
-     ===================================================================== */
-  .post-hero-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-    margin-top: 1.4rem;
-    padding-top: 1rem;
-    border-top: 1px solid rgba(184,212,232,0.2);
-  }
 
-  .post-hero-nav a,
-  .post-hero-nav button {
-    font-family: 'Raleway', sans-serif;
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    letter-spacing: 0.14em;
-    color: var(--ice);
-    text-decoration: none;
-    opacity: 0.6;
-    transition: opacity 0.2s;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    white-space: nowrap;
-  }
-  .post-hero-nav a:hover,
-  .post-hero-nav button:hover { opacity: 1; }
-
-  .hero-nav-back {
-    flex: 0 0 auto;
-    font-weight: 500 !important;
-    opacity: 0.85 !important;
-  }
-
-  .hero-nav-prev-next {
-    display: flex;
-    gap: 1.5rem;
-    flex: 0 0 auto;
-  }
-
-  .hero-nav-prev,
-  .hero-nav-next {
-    max-width: 160px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-
-  /* On narrow screens: hide titles, show arrows only */
-  @media (max-width: 600px) {
-    .hero-nav-prev .nav-title,
-    .hero-nav-next .nav-title { display: none; }
-  }
 
   /* =====================================================================
      POST FOOTER NAV — restyled to match hero nav
@@ -419,7 +363,7 @@ layout: none
   .post-comments {
     max-width: 700px;
     margin: 0 auto;
-    padding: 3rem 1.5rem 4rem;
+    padding: 3rem 1.5rem 2rem;
   }
 
   .post-comments h2.comments-heading {
@@ -438,6 +382,8 @@ layout: none
   #cusdis_thread iframe {
     width: 100% !important;
     border: none !important;
+    display: block;
+    height: 600px;
   }
 
   .post-footer {
@@ -501,6 +447,59 @@ layout: none
   }
   footer a { color: var(--ice); text-decoration: none; }
 
+  .footer-follow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.8rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+  }
+  .footer-follow a {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    color: var(--ice);
+    opacity: 0.75;
+    transition: opacity 0.2s;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  .footer-follow a:hover { opacity: 1; color: white; }
+  .footer-follow .f-icon {
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 1rem;
+    line-height: 1;
+  }
+  .footer-follow .f-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+  }
+  .footer-follow a:hover .f-icon img { opacity: 1; }
+  .footer-follow .f-icon svg {
+    color: var(--ice);
+    opacity: 0.7;
+    transition: opacity 0.2s;
+  }
+  .footer-follow a:hover .f-icon svg { opacity: 1; }
+  .footer-ext::after {
+    content: '↗';
+    font-size: 0.6rem;
+    opacity: 0.5;
+    margin-left: 0.1rem;
+    vertical-align: super;
+  }
+
   .zipper-svg-masthead { width: 120px; height: auto; }
 </style>
 </head>
@@ -511,7 +510,7 @@ layout: none
   <div class="post-hero-content">
     <div class="post-meta-top">
       <span>📅 {{ page.date | date: "%-d %B %Y" }}</span>
-      {% if page.author %}<span>✍️ {{ page.author }}</span>{% endif %}
+<!--      {% if page.author %}<span>✍️ {{ page.author }}</span>{% endif %} -->
       {% if page.location %}<span>📍 {{ page.location }}</span>{% endif %}
     </div>
     <h1>{{ page.title }}</h1>
@@ -526,17 +525,6 @@ layout: none
     </div>
     {% endif %}
 
-    <nav class="post-hero-nav">
-      <button class="hero-nav-back" id="hero-back-btn">← Back</button>
-      <div class="hero-nav-prev-next">
-        {% if page.previous.url %}
-        <a href="{{ page.previous.url | relative_url }}" class="hero-nav-prev">‹ <span class="nav-title">{{ page.previous.title }}</span></a>
-        {% endif %}
-        {% if page.next.url %}
-        <a href="{{ page.next.url | relative_url }}" class="hero-nav-next"><span class="nav-title">{{ page.next.title }}</span> ›</a>
-        {% endif %}
-      </div>
-    </nav>
   </div>
 </div>
 
@@ -544,6 +532,19 @@ layout: none
 <article class="post-body">
   {{ content }}
 </article>
+
+<!-- COMMENTS -->
+<div class="post-comments">
+  <h2 class="comments-heading">Comments</h2>
+  <div id="cusdis_thread"
+    data-host="https://cusdis.com"
+    data-app-id="8df4ac82-e9e0-4534-8ea8-28600c591ce7"
+    data-page-id="{{ page.slug }}"
+    data-page-url="{{ page.url | absolute_url }}"
+    data-page-title="{{ page.title | escape }}">
+  </div>
+  <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
+</div>
 
 <!-- SUBSCRIBE NUDGE -->
 <div style="background: var(--navy); padding: 2.2rem 1.5rem; text-align: center;">
@@ -611,22 +612,8 @@ layout: none
         </div>
       </div>
       <!-- END FOLLOW.IT -->
-      <a href="{{ '/follow/' | relative_url }}" style="display:inline-flex; align-items:center; gap:0.4rem; border: 1.5px solid rgba(184,212,232,0.5); color: var(--ice); padding: 0.6rem 1.3rem; text-decoration: none; font-family: 'Raleway', sans-serif; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; border-radius: 2px; transition: all 0.2s;">Other ways to follow Zipper →</a>
     </div>
   </div>
-</div>
-
-<!-- COMMENTS -->
-<div class="post-comments">
-  <h2 class="comments-heading">Comments</h2>
-  <div id="cusdis_thread"
-    data-host="https://cusdis.com"
-    data-app-id="8df4ac82-e9e0-4534-8ea8-28600c591ce7"
-    data-page-id="{{ page.slug }}"
-    data-page-url="{{ page.url | absolute_url }}"
-    data-page-title="{{ page.title | escape }}">
-  </div>
-  <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
 </div>
 
 <!-- POST FOOTER -->
@@ -644,16 +631,33 @@ layout: none
 
 <!-- SITE FOOTER -->
 <footer>
-  <div style="margin-bottom:0.8rem;">
-    <a href="https://forecast.predictwind.com/tracking/display/SV-Zipper" target="_blank">PredictWind Tracker</a>
-    &nbsp;·&nbsp;
-    <a href="{{ '/voyage-log/' | relative_url }}">Voyage Log</a>
-    &nbsp;·&nbsp;
-    <a href="{{ '/crew/' | relative_url }}">The Crew</a>
-    &nbsp;·&nbsp;
-    <a href="{{ '/supporters/' | relative_url }}">Supporters</a>
+  <div class="footer-follow">
+    <a href="https://forecast.predictwind.com/tracking/display/SV-Zipper" target="_blank" rel="noopener" class="footer-ext">
+      <span class="f-icon"><img src="{{ '/assets/images/predictwind-logo.png' | relative_url }}" alt="PredictWind"></span>
+      Tracker
+    </a>
+    <a href="{{ '/voyage-log/' | relative_url }}">
+      <span class="f-icon">📖</span>
+      Voyage Log
+    </a>
+    <a href="https://www.youtube.com/playlist?list=PLz8fOLkM7BZv1mgPl7UieR7eBcL09XtLE" target="_blank" rel="noopener" class="footer-ext">
+      <span class="f-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.7 15.5V8.5l6.3 3.5-6.3 3.5z"/></svg>
+      </span>
+      YouTube
+    </a>
+    <a href="https://www.noforeignland.com/map/boat/5136031227576320" target="_blank" rel="noopener" class="footer-ext">
+      <span class="f-icon"><img src="{{ '/assets/images/NoForeignLand-logo.png' | relative_url }}" alt="NoForeignLand"></span>
+      No Foreign Land
+    </a>
+    <a href="{{ '/gallery/' | relative_url }}">
+      <span class="f-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+      </span>
+      Gallery
+    </a>
   </div>
-  © Reid's Unzipped — Reid family cruising the world on Zipper
+  © Reid's Unzipped — Reid family cruising the world's oceans on Zipper
 </footer>
 
 <!-- LIGHTBOX -->
@@ -679,9 +683,7 @@ layout: none
         window.location.href = fallback;
       }
     }
-    const heroBtn   = document.getElementById('hero-back-btn');
     const footerBtn = document.getElementById('footer-back-btn');
-    if (heroBtn)   heroBtn.addEventListener('click', handleBack);
     if (footerBtn) footerBtn.addEventListener('click', handleBack);
   })();
 
@@ -781,6 +783,14 @@ layout: none
     if (e.key === 'Escape') closeLightbox();
     if (e.key === 'ArrowRight') navigateLightbox(1);
     if (e.key === 'ArrowLeft') navigateLightbox(-1);
+  });
+
+  // ── Cusdis iframe fixed height ─────────────────────────────────────────
+  // Cusdis does not send postMessage height updates in this configuration.
+  // A fixed height is used instead.
+  document.addEventListener('DOMContentLoaded', function() {
+    const iframe = document.querySelector('#cusdis_thread iframe');
+    if (iframe) iframe.style.setProperty('height', '600px', 'important');
   });
 </script>
 </body>
