@@ -38,7 +38,7 @@ Coming out of the North pass at Fakarava this morning, it felt like time to writ
 
 ## Fakarava
 
-![Approaching the pass]({{ site.baseurl }}/assets/images/posts/img_7577-1.webp)
+![Holiday resort ashore, this is as built up as it gets here in South Fakarava]({{ site.baseurl }}/assets/images/posts/img_7577-1.webp)
 
 **Entry:** Having taken the extra time to snorkel on the way out of Kauehi we were a little pressed for time, and the wind unkindly dropped on us — so we arrived late. We were bang on max flood, and the sun set as we were coming in. The pass itself was fine; fast but smooth incoming current. The problem was that we were going to have to anchor without any visibility of what we were dropping onto. The anchor held fine, and left it to the morning to untangle the inevitable mess — with Jamie in the water directing, the children did an amazing job helping Sophie lift the anchor. We had almost been unbelievably lucky; we missed an enormous sand patch by only 5m.
 

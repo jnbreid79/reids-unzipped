@@ -27,9 +27,9 @@ After visiting the village we headed to the far East of the atoll and found the 
 We had a bonfire ashore and a supper of sausages and marshmallows, with a stunning sunset and a location almost all to ourselves.
 
 ![Sunset over the motu]({{ site.baseurl }}/assets/images/posts/gopr0944.webp)
-![Bonfire on the beach]({{ site.baseurl }}/assets/images/posts/gopr0948.webp)
-![Shell beach]({{ site.baseurl }}/assets/images/posts/img_7503.webp)
-![The anchorage]({{ site.baseurl }}/assets/images/posts/img_7565.webp)
+![Slacklining on the beach]({{ site.baseurl }}/assets/images/posts/gopr0948.webp)
+![Bonfire on the beach]({{ site.baseurl }}/assets/images/posts/img_7503.webp)
+![Beautiful sunset]({{ site.baseurl }}/assets/images/posts/img_7565.webp)
 
 After a couple of days of enjoying the remoteness — kitesurfing, slacklining, swimming and generally playing on the beach and in the shallows — it was time to head to Fakarava.
 

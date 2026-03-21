@@ -12,7 +12,7 @@ header:
 
 New standing rigging
 
-![New rigging t-shirts]({{ site.baseurl }}/assets/images/posts/image.webp)
+![New rigging t-shirts]({{ site.baseurl }}/assets/images/posts/rigging-tshirt.webp)
 
 Ok so this wasn't the plan! We have a couple of nice new t-shirts now, but I think you have to commandeer quite a lot of work before you qualify for "free" t-shirt status…
 
@@ -20,7 +20,7 @@ The rigging team here weren't able to properly tension the rig after the mast we
 
 Long story short, we now have completely new standing rigging, except the diamonds (which last longer and don't need changing yet) — both shrouds, forestay and beam cable, including terminals and turn buckles for all. We knew it wasn't going to be long before this was necessary, however we hadn't been prepared for it yet and certainly not this week.
 
-![Broken shroud detail]({{ site.baseurl }}/assets/images/posts/img_6218-1.webp)
+![Zipper on the riggers pontoon]({{ site.baseurl }}/assets/images/posts/img_6218-1.webp)
 
 So the good news for us — if you are going to find a broken shroud, we were exactly where you want to be when you find it; moored to the pontoon of the best rigging company around. Also, we (they) found it before it completely broke — which would likely have been catastrophic, losing the rig somewhere remote doesn't bear thinking about.
 

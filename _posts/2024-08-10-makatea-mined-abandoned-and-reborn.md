@@ -18,7 +18,7 @@ But Makatea is not "just another Tuamotu." Opposing the trend of everything else
 
 ![Cliffs of Makatea]({{ site.baseurl }}/assets/images/posts/jr1_4460.webp)
 ![Coastline]({{ site.baseurl }}/assets/images/posts/jr1_4504.webp)
-![Views from above]({{ site.baseurl }}/assets/images/posts/jr1_4537.webp)
+![Sheer cliffs, a climber's paradise]({{ site.baseurl }}/assets/images/posts/jr1_4537.webp)
 
 ## The Past
 
@@ -32,9 +32,9 @@ Mining stopped in 1966 and most of the workers left. However when a government o
 
 ![Rusting industrial remains]({{ site.baseurl }}/assets/images/posts/img_7649.webp)
 ![Abandoned machinery]({{ site.baseurl }}/assets/images/posts/img_7650.webp)
-![Old buildings]({{ site.baseurl }}/assets/images/posts/img_7653.webp)
+![The old bread oven]({{ site.baseurl }}/assets/images/posts/img_7653.webp)
 ![More ruins]({{ site.baseurl }}/assets/images/posts/img_7654.webp)
-![Industrial remnants]({{ site.baseurl }}/assets/images/posts/img_7656.webp)
+![The rusting remnants of a train]({{ site.baseurl }}/assets/images/posts/img_7656.webp)
 
 The landscape is harsh — although relatively flat at scale, the dried coral is sharp and pitted. And the mining pits are not a foot or two deep; some are 50m deep yet barely 5m across. When the miners started digging a new hole the instruction was simple: keep digging until you can't dig any further.
 
@@ -43,7 +43,7 @@ The landscape is harsh — although relatively flat at scale, the dried coral is
 
 The sand was loaded into wheelbarrows, pushed to the nearest railroad, and then a funicular dropped the material off the high plateau down to sea level. The foundations of a huge swinging crane still stand on the edge of the reef. On approach we thought at first it looked like a huge shipwreck, or an enormous cannon — but of course it is neither!
 
-![The old crane structure]({{ site.baseurl }}/assets/images/posts/jr1_4546.webp)
+![The harbour blasted out of the coral, and the old ship loading infrastructure]({{ site.baseurl }}/assets/images/posts/jr1_4546.webp)
 
 ## The Future
 

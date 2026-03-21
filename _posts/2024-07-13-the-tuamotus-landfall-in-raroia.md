@@ -12,13 +12,13 @@ header:
 
 I (Jamie) had visited Raroia as our first atoll when I sailed to the Tuamotus 12 years ago on Mystic. I have been trying to come up with a different route this time — after all there are loads of atolls, surely we can see different ones?! But after lots of umm'ing and ahh'ing, landfall in Raroia just makes sense. Heading to an atoll further West was not attractive: we'd have fewer options afterwards without sailing back upwind, and generally the Western atolls are more visited and a little less remote.
 
-![Chart showing the route decision]({{ site.baseurl }}/assets/images/posts/image.webp)
+![Chart showing the route decision]({{ site.baseurl }}/assets/images/posts/tuamotus-route.webp)
 
 After an easy pass we had a swim, and despite floating the chain we wrapped our first coral head. Although a bit annoying to have messed it up on anchor #1, this was a great confidence booster — we proved to ourselves that we could unwrap the chain with Jamie in the water and the children running the show on the foredeck, with Sophie on the helm.
 
-![Arriving in the Tuamotus]({{ site.baseurl }}/assets/images/posts/p7110868-1.webp)
-![First views of Raroia]({{ site.baseurl }}/assets/images/posts/p7110871-1.webp)
-![The atoll]({{ site.baseurl }}/assets/images/posts/p7110872-1.webp)
+![Dinghy trip after arrival in the Tuamotus]({{ site.baseurl }}/assets/images/posts/p7110868-1.webp)
+![First exploration in Raroia]({{ site.baseurl }}/assets/images/posts/p7110871-1.webp)
+![Happy to be here]({{ site.baseurl }}/assets/images/posts/p7110872-1.webp)
 
 ## The Octopus
 
@@ -52,12 +52,12 @@ Raroia was also the location for quite a few firsts:
 We also visited the motu where the Kon Tiki crashed, with a small monument and plaque to recognise the adventure. A few tattered flags hang from the trees behind. We took the opportunity to walk out to the reef and wonder what on earth you would do next if you did land here without perishing in the surf on the edge of the reef! It's a frighteningly remote place.
 
 ![The Kon Tiki monument]({{ site.baseurl }}/assets/images/posts/p7110875-1.webp)
-![Looking out to the reef]({{ site.baseurl }}/assets/images/posts/gptempdownload-8-1.webp)
+![Looking out over the reef where the Kin Tiki landed]({{ site.baseurl }}/assets/images/posts/gptempdownload-8-1.webp)
 ![The motu]({{ site.baseurl }}/assets/images/posts/p7110874-1.webp)
 
 And finally, the Raroia Yacht Club — an unofficial sign hanging on a beach with some flags left by other cruisers. Bringing our own beers and beach games we had a lovely evening with the crews of Zen and Eleuthera.
 
-![Raroia Yacht Club]({{ site.baseurl }}/assets/images/posts/jr1_4347.webp)
-![Beach gathering]({{ site.baseurl }}/assets/images/posts/jr1_4350.webp)
+![Returning from Raroia Yacht Club]({{ site.baseurl }}/assets/images/posts/jr1_4347.webp)
+![Sunset after the beach gathering]({{ site.baseurl }}/assets/images/posts/jr1_4350.webp)
 
 After a few wonderful days it was time to move on — there are plenty of other atolls we want to explore!

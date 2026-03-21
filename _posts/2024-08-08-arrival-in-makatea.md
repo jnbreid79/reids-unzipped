@@ -21,8 +21,8 @@ It was only in 2018 that the buoys were installed on the edge of the reef. Prior
 ![Makatea coastline]({{ site.baseurl }}/assets/images/posts/jr1_4470.webp)
 ![Sheer cliffs]({{ site.baseurl }}/assets/images/posts/jr1_4452.webp)
 ![Coral overhangs]({{ site.baseurl }}/assets/images/posts/jr1_4473.webp)
-![Approaching by sea]({{ site.baseurl }}/assets/images/posts/jr1_4441.webp)
-![The anchorage]({{ site.baseurl }}/assets/images/posts/jr1_4491.webp)
+![Approaching under Code 0]({{ site.baseurl }}/assets/images/posts/jr1_4441.webp)
+![The moorings, closer to the coral wall than felt comfortable!]({{ site.baseurl }}/assets/images/posts/jr1_4491.webp)
 
 As we headed up to drop the mainsail Sophie spotted two humpback whales breaching ahead of us, perhaps a little over a mile away. Enormous plumes of spray shot up, so we stayed watching the show for a while as they slapped their pectorals and tails between their occasional breaches. Wow! We had heard whale season had started in the leeward islands, but we weren't expecting any here. What an incredible welcome!
 
@@ -34,8 +34,8 @@ The proximity is understandable — just a further boat length offshore and the 
 
 ![Close to the reef]({{ site.baseurl }}/assets/images/posts/jr1_4487.webp)
 ![Mooring in clear water]({{ site.baseurl }}/assets/images/posts/jr1_4491-1.webp)
-![The reef edge]({{ site.baseurl }}/assets/images/posts/jr1_4493.webp)
-![Crystal clear water]({{ site.baseurl }}/assets/images/posts/jr1_4494-1.webp)
+![The harbour ruins]({{ site.baseurl }}/assets/images/posts/jr1_4493.webp)
+![Full house, all four moorings taken]({{ site.baseurl }}/assets/images/posts/jr1_4494-1.webp)
 
 Tapu, the mayor's son whom we had a WhatsApp chat with a few days earlier, came down to the harbour to welcome us. He hailed us on VHF16 and we went into the harbour in the dinghy to meet him. His English is excellent, and with a tour around the island to look forward to tomorrow we are very excited.
 

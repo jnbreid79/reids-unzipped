@@ -12,7 +12,7 @@ header:
 
 Timing is everything, especially when you are dependent on the weather. The predicament for this 450Nm passage — leave too early and it will be very rough (tail end of the weather we'd been hiding from in Anaho and Hatiheu), too late and the wind would die before we got there.
 
-![Chart showing the Marquesas to Tuamotus route]({{ site.baseurl }}/assets/images/posts/image.webp)
+![Chart showing the Marquesas to Tuamotus route]({{ site.baseurl }}/assets/images/posts/marquesas-to-tuamotus.webp)
 
 Originally we thought we'd leave on Monday, but it became apparent that we'd run out of wind waiting that long. Then we thought Sunday, but in the end left at 6pm on Saturday evening, just as the sun was setting.
 

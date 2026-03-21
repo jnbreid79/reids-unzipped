@@ -1,0 +1,369 @@
+---
+layout: none
+permalink: /crew/
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Crew — Reid's Unzipped</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500&family=Merriweather:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy:      #1a3a5c;
+    --navy-mid:  #1f4a73;
+    --blue:      #2d6a9f;
+    --ice:       #b8d4e8;
+    --ice-light: #deedf7;
+    --white:     #f8fbfd;
+    --text:      #1a2a38;
+    --muted:     #5a7a96;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Merriweather', Georgia, serif; background: var(--white); color: var(--text); font-size: 16px; line-height: 1.7; }
+
+    {% include masthead-styles.html %}
+
+  /* ── Hero Banner ── */
+  .hero-banner {
+    position: relative;
+    width: 100%;
+    height: 45vh;
+    min-height: 280px;
+    background-color: var(--navy);
+    background-size: cover;
+    background-position: center 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .hero-banner::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(10,25,40,0.85) 0%, rgba(10,25,40,0.4) 50%, rgba(10,25,40,0.2) 100%);
+    pointer-events: none;
+  }
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 2.5rem 2rem;
+    max-width: 700px;
+    width: 100%;
+    text-align: center;
+  }
+  .page-hero-eyebrow { font-family: 'Raleway', sans-serif; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.3em; color: var(--ice); opacity: 0.8; margin-bottom: 0.6rem; }
+  .hero-content h1 { font-family: 'Raleway', sans-serif; font-weight: 200; font-size: clamp(2rem, 5vw, 3.2rem); letter-spacing: 0.14em; text-transform: uppercase; color: white; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 2px solid rgba(184,212,232,0.4); display: inline-block; }
+  .hero-tagline { font-family: 'Merriweather', serif; font-style: italic; font-weight: 300; font-size: 0.95rem; color: var(--ice-light); }
+
+  /* ── Page container ── */
+  .page-container { max-width: 1100px; margin: 0 auto; padding: 3.5rem 1.5rem 5rem; }
+
+  .section-label { font-family: 'Raleway', sans-serif; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.28em; color: var(--muted); margin-bottom: 2rem; display: flex; align-items: center; gap: 1rem; }
+  .section-label::after { content: ''; flex: 1; height: 1px; background: rgba(184,212,232,0.4); }
+
+  /* ── Crew grid ── */
+  .crew-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2.5rem; margin-bottom: 4rem; }
+  @media (min-width: 780px) { .crew-grid { grid-template-columns: repeat(4, 1fr); } }
+
+  .crew-card { display: flex; flex-direction: column; }
+
+  .crew-photo-wrap {
+    aspect-ratio: 3/4;
+    border-radius: 3px;
+    overflow: hidden;
+    margin-bottom: 1.2rem;
+    box-shadow: 0 4px 20px rgba(26,58,92,0.18);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .crew-card:nth-child(1) .crew-photo-wrap { background: linear-gradient(160deg, #1a4060, #0d2030); }
+  .crew-card:nth-child(2) .crew-photo-wrap { background: linear-gradient(160deg, #1a3a5c, #122840); }
+  .crew-card:nth-child(3) .crew-photo-wrap { background: linear-gradient(160deg, #1f4a70, #162035); }
+  .crew-card:nth-child(4) .crew-photo-wrap { background: linear-gradient(160deg, #1a3050, #0e1e2e); }
+
+  .crew-photo-wrap img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
+
+  .crew-initials {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+    font-size: 4rem;
+    color: rgba(184,212,232,0.25);
+    letter-spacing: 0.05em;
+    user-select: none;
+    position: relative;
+    z-index: 1;
+  }
+
+  .crew-photo-wrap::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 45%; background: linear-gradient(to top, rgba(10,25,40,0.85), transparent); pointer-events: none; z-index: 2; }
+
+  .crew-name-badge { position: absolute; bottom: 0.8rem; left: 0.9rem; right: 0.9rem; z-index: 3; }
+  .crew-name-badge .name { display: block; font-family: 'Raleway', sans-serif; font-weight: 400; font-size: 1.15rem; color: white; line-height: 1.2; }
+  .crew-name-badge .role { font-family: 'Raleway', sans-serif; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.14em; color: var(--ice); font-weight: 300; }
+
+  .crew-bio-title { font-family: 'Raleway', sans-serif; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.14em; color: var(--navy); font-weight: 400; margin-bottom: 0.4rem; }
+  .crew-bio { font-size: 0.87rem; line-height: 1.75; color: #3a5a70; margin-bottom: 1rem; }
+  .crew-quote { border-left: 2px solid var(--ice); padding: 0.5rem 0.8rem; margin-top: 0.5rem; }
+  .crew-quote p { font-style: italic; font-size: 0.83rem; color: var(--muted); line-height: 1.6; margin-bottom: 0.2rem; }
+  .crew-quote cite { font-family: 'Raleway', sans-serif; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); opacity: 0.7; font-style: normal; }
+
+  /* -- Guest cards -- */
+  .guest-cards { display: flex; flex-direction: column; gap: 1rem; }
+
+  .guest-card {
+    background: var(--ice-light);
+    border: 1px solid rgba(184,212,232,0.6);
+    border-radius: 3px;
+    padding: 1.2rem 1.5rem;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  .guest-avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    background: linear-gradient(135deg, var(--navy-mid), var(--navy));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border: 2px solid rgba(184,212,232,0.5);
+  }
+  .guest-avatar img { width: 100%; height: 100%; object-fit: cover; object-position: top; border-radius: 50%; }
+  .guest-initials {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+    font-size: 1.3rem;
+    color: var(--ice);
+    letter-spacing: 0.05em;
+    user-select: none;
+  }
+
+  .guest-body { flex: 1; min-width: 0; }
+
+  .guest-header {
+    display: flex;
+    align-items: baseline;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.3rem;
+  }
+  .guest-name {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--navy);
+  }
+  .guest-passage {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+  }
+  .guest-note {
+    font-size: 0.86rem;
+    line-height: 1.7;
+    color: #3a5a70;
+    margin: 0;
+  }
+
+  @media (max-width: 500px) {
+    .guest-card { flex-direction: column; align-items: flex-start; }
+  }
+
+  {% include footer-styles.html %}
+</style>
+</head>
+<body>{% include masthead.html %}
+
+<!-- ── Hero Banner ── -->
+<div class="hero-banner" style="background-image: url('{{ '/assets/images/crew/crew-photo_1.webp' | relative_url }}');">
+  <div class="hero-content">
+    <div class="page-hero-eyebrow">Reid's Unzipped</div>
+    <h1>The Crew</h1>
+    <p class="hero-tagline">This is who we are.</p>
+  </div>
+</div>
+
+<div class="page-container">
+
+  <div class="section-label">The crew</div>
+
+  <div class="crew-grid">
+
+    <!-- Isla -->
+    <div class="crew-card">
+      <div class="crew-photo-wrap">
+        <img src="{{ '/assets/images/crew/isla-chess.webp' | relative_url }}" alt="Isla" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+        <div class="crew-name-badge">
+          <span class="name">Isla</span>
+          <span class="role">"First Mate"</span>
+        </div>
+      </div>
+      <div class="crew-bio-title">Built-in chess table</div>
+      <p class="crew-bio">Isla's best thing about Zipper is that she has a built-in chess board on the cockpit table. She would be an "Otter" if she was at school in Itchen Abbas this year — appropriately enough she has chosen to be an otter for boat-school.</p>
+      <div class="crew-quote">
+        <p>"I've never lost at chess to Daddy"</p>
+        <cite>— Isla Reid</cite>
+      </div>
+    </div>
+
+    <!-- Angus -->
+    <div class="crew-card">
+      <div class="crew-photo-wrap">
+        <img src="{{ '/assets/images/crew/angus hiding.webp' | relative_url }}" alt="Angus" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+        <div class="crew-name-badge">
+          <span class="name">Angus</span>
+          <span class="role">"Captain"</span>
+        </div>
+      </div>
+      <div class="crew-bio-title">Hide-and-seek</div>
+      <p class="crew-bio">Angus' best thing about Zipper is that she's great for hide-and-seek — there are so many places to hide. He completed his reception year at school before we set sail, and for boat-school has chosen to be a "sea turtle".</p>
+      <div class="crew-quote">
+        <p>"My superpower is Lego"</p>
+        <cite>— Angus Reid</cite>
+      </div>
+    </div>
+
+    <!-- Sophie -->
+    <div class="crew-card">
+      <div class="crew-photo-wrap">
+        <img src="{{ '/assets/images/crew/JR1_3751.webp' | relative_url }}" alt="Sophie" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+        <div class="crew-name-badge">
+          <span class="name">Sophie</span>
+          <span class="role">"Ship's Cook"</span>
+        </div>
+      </div>
+      <div class="crew-bio-title">I can see!</div>
+      <p class="crew-bio">Sophie's favourite thing about Zipper is that she can see when she's helming — at 5'3" this is something she's not used to on other boats. Headmistress, chief medic and head chef, she's in charge of everything that keeps the team alive.</p>
+      <div class="crew-quote">
+        <p>"Doctors spend 7 years training, I did it in 4 days"</p>
+        <cite>— Sophie Reid, to Dr. Nigel Reid</cite>
+      </div>
+    </div>
+
+    <!-- Jamie -->
+    <div class="crew-card">
+      <div class="crew-photo-wrap">
+        <img src="{{ '/assets/images/crew/IMG_4841.webp' | relative_url }}" alt="Jamie" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+        <div class="crew-name-badge">
+          <span class="name">Jamie</span>
+          <span class="role">"Cabin Boy"</span>
+        </div>
+      </div>
+      <div class="crew-bio-title">2-in-1</div>
+      <p class="crew-bio">Jamie's favourite thing about Zipper is that she is a catamaran; two-boats-in-one, the port hull for the children and starboard for us. The engineer keeping the mechanical and electrical systems running, he also leads the sailing programme.</p>
+      <div class="crew-quote">
+        <p>"This will be easy, it's going to be downwind warm weather sailing"</p>
+        <cite>— Jamie Reid (before leaving Northern France, reefed down into a headwind, wearing every item of clothing aboard)</cite>
+      </div>
+    </div>
+
+  </div><!-- /crew-grid -->
+
+  <!-- Guest appearances -->
+  <div class="section-label">Guest appearances</div>
+
+  <h2 style="font-family: 'Raleway', sans-serif; font-weight: 300; font-size: 1.1rem; color: var(--navy); letter-spacing: 0.06em; margin-bottom: 0.8rem;">Friends, family &amp; hitchhikers who&rsquo;ve joined along the way</h2>
+  <p style="font-size: 0.88rem; color: var(--muted); line-height: 1.7; margin-bottom: 1.8rem;">On our way round we are welcoming family and friends aboard at various times — both to come and say hi, and to help with the sailing, particularly on longer passages.</p>
+
+  <div class="guest-cards">
+
+    <div class="guest-card">
+      <div class="guest-avatar">
+        <img src="{{ '/assets/images/crew/bumpy.jpg' | relative_url }}" alt="Bumpy" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+        <span class="guest-initials" style="display:none">B</span>
+      </div>
+      <div class="guest-body">
+        <div class="guest-header">
+          <span class="guest-name">Bumpy</span>
+          <span class="guest-passage">Shakedown: Cherbourg → St Malo</span>
+        </div>
+        <p class="guest-note">Bumpy joined us for our very first passage on Zipper, anchoring off Sark overnight on the way. A natural sailor, and the inspiration behind the name of this blog.</p>
+      </div>
+    </div>
+
+    <div class="guest-card">
+      <div class="guest-avatar">
+        <img src="{{ '/assets/images/crew/tom.jpg' | relative_url }}" alt="Tom" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+        <span class="guest-initials" style="display:none">T</span>
+      </div>
+      <div class="guest-body">
+        <div class="guest-header">
+          <span class="guest-name">Tom</span>
+          <span class="guest-passage">Bay of Biscay: Roscoff → Lanzarote</span>
+        </div>
+        <p class="guest-note">MVP for the Hill Climb game on his phone — Angus is still obsessed.</p>
+      </div>
+    </div>
+
+    <div class="guest-card">
+      <div class="guest-avatar">
+        <img src="{{ '/assets/images/crew/neal.jpg' | relative_url }}" alt="Neal" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+        <span class="guest-initials" style="display:none">N</span>
+      </div>
+      <div class="guest-body">
+        <div class="guest-header">
+          <span class="guest-name">Neal</span>
+          <span class="guest-passage">Bay of Biscay: Roscoff → Lanzarote</span>
+        </div>
+        <p class="guest-note">Closely fought but second place with Wordscape. Another winner on the phone!</p>
+      </div>
+    </div>
+
+    <div class="guest-card">
+      <div class="guest-avatar">
+        <img src="{{ '/assets/images/crew/dottie.jpg' | relative_url }}" alt="Dottie (Julia)" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+        <span class="guest-initials" style="display:none">J</span>
+      </div>
+      <div class="guest-body">
+        <div class="guest-header">
+          <span class="guest-name">Dottie (Julia)</span>
+          <span class="guest-passage">Atlantic crossing: Tenerife → Mindelo → Barbados</span>
+        </div>
+        <p class="guest-note">Treasure hunt organiser, keeping the children on their toes every other day for prizes hidden around the boat</p>
+      </div>
+    </div>
+
+    <div class="guest-card">
+      <div class="guest-avatar">
+        <img src="{{ '/assets/images/crew/grumpy.jpg' | relative_url }}" alt="Grumpy (Rob)" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+        <span class="guest-initials" style="display:none">R</span>
+      </div>
+      <div class="guest-body">
+        <div class="guest-header">
+          <span class="guest-name">Grumpy (Rob)</span>
+          <span class="guest-passage">Atlantic crossing: Tenerife → Mindelo → Barbados</span>
+        </div>
+        <p class="guest-note">Daily sunset optimist ("it's definitely going to be colourful this time") and welcome icecream supplier</p>
+      </div>
+    </div>
+	
+  </div><!-- /guest-cards -->
+
+</div><!-- /page-container -->
+
+{% include footer.html %}
+
+<script>
+  window.closeMenu = function() {
+    document.getElementById('nav-dropdown').classList.remove('open');
+    document.getElementById('hamburger').classList.remove('open');
+    document.getElementById('overlay').classList.remove('open');
+  };
+  window.toggleMenu = function() {
+    const menu = document.getElementById('nav-dropdown');
+    if (menu.classList.contains('open')) { window.closeMenu(); }
+    else { menu.classList.add('open'); document.getElementById('hamburger').classList.add('open'); document.getElementById('overlay').classList.add('open'); }
+  };
+</script>
+</body>
+</html>

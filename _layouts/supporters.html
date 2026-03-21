@@ -89,10 +89,7 @@ layout: none
   .btn-outline-light { display: inline-block; border: 1.5px solid rgba(184,212,232,0.6); color: var(--ice); padding: 0.65rem 1.6rem; text-decoration: none; font-family: 'Raleway', sans-serif; font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 400; border-radius: 2px; transition: all 0.2s; }
   .btn-outline-light:hover { background: rgba(184,212,232,0.1); color: white; }
 
-  /* ── Footer ── */
-  footer { background: var(--navy); color: var(--muted); padding: 2rem; text-align: center; border-top: 1px solid rgba(184,212,232,0.15); font-family: 'Raleway', sans-serif; font-size: 0.82rem; letter-spacing: 0.04em; }
-  footer a { color: var(--ice); text-decoration: none; }
-  footer a:hover { color: white; }
+  {% include footer-styles.html %}
 </style>
 </head>
 <body>{% include masthead.html %}
@@ -101,14 +98,14 @@ layout: none
   <div class="page-hero-content">
     <div class="page-hero-eyebrow">Reid's Unzipped</div>
     <h1>Supporters</h1>
-    <p class="page-hero-desc">Going sailing for a bit — we should be able to sort that out fairly easily, we don't need too much help to make that happen, do we? Well, actually it turns out we do.</p>
+    <p class="page-hero-desc">Going sailing for a bit — we should be able to sort that out fairly easily, we don't need too much help to make that happen, do we? Well, actually it turns out we do...</p>
   </div>
 </div>
 
 <div class="page-container">
 
   <div class="opening-note">
-    <p>This page is testament to the wonderful friends and family we are so fortunate to have, who have supported us in so many ways. We'll try and keep this page up-to-date — we're so sorry if we've missed anyone off, which is bound to happen as everyone has been so kind to us…</p>
+    <p>This page is testament to the wonderful friends and family we are so fortunate to have, who have supported us in so many ways. We'll try and keep this page up-to-date — we're so sorry if we've missed anyone off, which is bound to happen as everyone has been so kind to us!</p>
   </div>
 
   <table class="supporters-table">
@@ -121,7 +118,7 @@ layout: none
     <tbody>
       <tr>
         <td>Our parents — Nigel (Bumpy), Angela (Ganny), Julia (Dottie) and Rob (Grumpy)</td>
-        <td>Everything! From moral support to financial support, physical support and emotional support our parents have been through the lot with us. They've moved us out of home, stored our house, transported kit by cross channel ferries, cars/vans, and planes to various locations around Europe — and that's just in recent weeks. They've been instrumental in getting the sailing project off the ground and listening to us talking about sailing over the years (presumably not expecting anything to <em>actually</em> come of it?!).</td>
+        <td>Everything! From moral support to financial support, physical support and emotional support our parents have been through the lot with us. They've moved us out of home, stored our house, transported kit by cross channel ferries, cars/vans, and planes to various locations around Europe — and that was just the start. They've been instrumental in getting the sailing project off the ground and listening to us talking about sailing over the years (presumably not expecting anything to <em>actually</em> come of it?!).</td>
       </tr>
       <tr>
         <td>Jonathan Williams</td>
@@ -161,15 +158,15 @@ layout: none
       </tr>
       <tr>
         <td>Andrew Flegg &amp; Alfa</td>
-        <td>Supporting us in our plans, granting Jamie his sabbatical to make this possible, and being so flexible amongst uncertainty with dates through the summer.</td>
+        <td>Supporting us in our plans, granting Jamie sabbaticals to make this possible, and being so flexible amongst uncertainty with dates and weather.</td>
       </tr>
       <tr>
         <td>Itchen Abbas Primary School</td>
-        <td>Supporting Isla and Angus on their venture, and providing materials, guidance and support for the year ahead.</td>
+        <td>Supporting Isla and Angus on their venture, and providing materials, guidance and support as we headed off.</td>
       </tr>
       <tr>
         <td>George &amp; Alison Scott-Welsh</td>
-        <td>Next door neighbours, managing our house for us whilst we're away to save us from the agony of estate agents. With heating, electrical and pest challenges already we're hoping it becomes an easier gig.</td>
+        <td>Next door neighbours, managing our house for us whilst we're away to save us from the agony of estate agents. With heating, electrical and pest challenges early on we hope it has become an easier gig now it's settled down a bit.</td>
       </tr>
       <tr>
         <td>Daniel and Iona Reading</td>
@@ -193,10 +190,10 @@ layout: none
       </tr>    </tbody>
       <tr>
         <td>Hugh and Barb, Eleuthera</td>
-        <td>For (probably feeling sorry for us on the other side of the world) basically taking us under their wing and keeping a kind eye out to ensure we're OK</td>
+        <td>For (probably feeling sorry for us on the other side of the world from our families) basically taking us under their wing and keeping a kind eye out to ensure we're OK</td>
       </tr>    </tbody>
       <tr>
-        <td>The whole Abbot family, Exit Only</td>
+        <td>All three generations of the Abbot family, Exit Only</td>
         <td>For holding the fort (boat and kids) for us on the pontoon whilst Sophie and I were spending our time around the hospital, and generally being amazing and lovely all the time. </td>
       </tr>    </tbody>
       <tr>
@@ -219,23 +216,17 @@ layout: none
   <!-- Stay connected -->
   <div class="connect-strip">
     <h3>Follow along</h3>
-    <p>The best ways to keep up with where we are and what we're up to — tracking offshore, short updates in port.</p>
+    <p>The best ways to keep up with where we are and what we're up to — see all the options in our page on how to follow us if you're interested.</p>
     <div class="connect-buttons">
-      <a href="https://forecast.predictwind.com/tracking/display/SV-Zipper" target="_blank" class="btn-ice">📍 Live Tracker</a>
+<!--      <a href="{{ '/follow/' | relative_url }}" target="_blank" class="btn-ice"> Follow Zipper </a>
+-->
+      <a href="{{ '/follow/' | relative_url }}" class="btn-ice"> Follow Zipper </a>
     </div>
   </div>
 
 </div>
 
-<footer>
-  <div style="margin-bottom:0.8rem;">
-    <a href="https://forecast.predictwind.com/tracking/display/SV-Zipper" target="_blank">PredictWind Tracker</a>
-    &nbsp;·&nbsp; <a href="{{ '/voyage-log/' | relative_url }}">Voyage Log</a>
-    &nbsp;·&nbsp; <a href="{{ '/crew/' | relative_url }}">The Crew</a>
-    &nbsp;·&nbsp; <a href="{{ '/supporters/' | relative_url }}">Supporters</a>
-  </div>
-  © Reid's Unzipped — Reid family cruising the world's oceans on Zipper
-</footer>
+{% include footer.html %}
 
 <script>
   window.closeMenu = function() {

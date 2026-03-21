@@ -230,10 +230,7 @@ permalink: /follow/
     .btn-channel-outline { margin-left: 0; margin-top: 0.5rem; }
   }
 
-  /* ── Footer ── */
-  footer { background: var(--navy); color: var(--muted); padding: 2rem; text-align: center; border-top: 1px solid rgba(184,212,232,0.15); font-family: 'Raleway', sans-serif; font-size: 0.82rem; letter-spacing: 0.04em; }
-  footer a { color: var(--ice); text-decoration: none; }
-  footer a:hover { color: white; }
+  {% include footer-styles.html %}
 </style>
 </head>
 <body>{% include masthead.html %}
@@ -259,7 +256,7 @@ permalink: /follow/
         <div class="channel-label">Real-time position</div>
         <div class="channel-title">PredictWind Tracker</div>
         <p class="channel-desc">See exactly where Zipper is right now. The tracker shows our position updated every 15 mins when we're underway, along with how fast we're going, in which direction and the current wind conditions. We try and post short updates of life onboard each day when we're on passage, and photos of our anchorage when we arrive. You can trace the track back to see everywhere we've been.</p>
-        <div class="channel-best-for"><strong>Best for:</strong> Finding out where we are now · Map of where we've been </div>
+        <div class="channel-best-for"><strong>Best for:</strong> Where we are · Where we've been </div>
         <a href="https://forecast.predictwind.com/tracking/display/SV-Zipper" target="_blank" rel="noopener" class="btn-channel">📍 Open Tracker</a>
       </div>
     </div>
@@ -284,8 +281,8 @@ permalink: /follow/
         <div class="channel-label">Video · YouTube playlist</div>
         <div class="channel-title">Video Highlights</div>
         <p class="channel-desc">We've been putting together video highlights from passages, anchorages and adventures along the way. The playlist collects everything in one place, from the Atlantic crossing to the Pacific islands and beyond.</p>
-        <div class="channel-best-for"><strong>Best for:</strong> Watching some of our highlights · Checking if you still recognise us </div>
-        <a href="https://www.youtube.com/playlist?list=PLz8fOLkM7BZv1mgPl7UieR7eBcL09XtLE" target="_blank" rel="noopener" class="btn-channel">▶ Watch on YouTube</a>
+        <div class="channel-best-for"><strong>Best for:</strong> Watching highlights · Checking if you still recognise us </div>
+        <a href="https://www.youtube.com/playlist?list=PLz8fOLkM7BZv1mgPl7UieR7eBcL09XtLE" target="_blank" rel="noopener" class="btn-channel">▶ YouTube playlist - "Zipper"</a>
       </div>
     </div>
 
@@ -296,7 +293,7 @@ permalink: /follow/
         <div class="channel-label">Sailors</div>
         <div class="channel-title">Connect</div>
         <p class="channel-desc">Are you out here too? Look us up on NoForeignLand or come over in the dinghy and give us a shout. </p>
-        <div class="channel-best-for"><strong>Best for:</strong> Connecting </div>
+        <div class="channel-best-for"><strong>Best for:</strong> Connecting on the water </div>
         <a href="https://www.noforeignland.com/map/boat/5136031227576320" target="_blank" rel="noopener" class="btn-channel">📍 Open NoForeignLand</a>        
       </div>
     </div>
@@ -309,8 +306,8 @@ permalink: /follow/
         <div class="channel-title">Get in Touch</div>
         <p class="channel-desc">We love hearing from people — whether you've done a similar passage, have local knowledge for somewhere we're heading, or just saying hello from home. </p>
         <div class="channel-best-for"><strong>Best for:</strong> Saying hello </div>
-        <a href="{{ '/follow/#contact' | relative_url }}" class="btn-channel" onclick="document.getElementById('contact-note').style.display='block'; return false;">Contact us</a>
-        <p id="contact-note" style="display:none; margin-top:0.8rem; font-size:0.82rem; color:var(--muted); font-family:'Raleway',sans-serif;">Leave a comment on one of our blog posts and we'll get back to you, find us on NoForeignLand, or look us up on Facebook. </p>
+        <a href="#" class="btn-channel" onclick="revealEmails(); return false;">Contact us</a>
+        <div id="contact-emails" style="display:none; margin-top:0.8rem; font-size:0.85rem; font-family:'Raleway',sans-serif; line-height:1.9;"></div>
       </div>
     </div>
 
@@ -405,17 +402,22 @@ permalink: /follow/
 
 </div><!-- /page-container -->
 
-<footer>
-  <div style="margin-bottom:0.8rem;">
-    <a href="https://forecast.predictwind.com/tracking/display/SV-Zipper" target="_blank">PredictWind Tracker</a>
-    &nbsp;·&nbsp; <a href="{{ '/voyage-log/' | relative_url }}">Voyage Log</a>
-    &nbsp;·&nbsp; <a href="{{ '/crew/' | relative_url }}">The Crew</a>
-    &nbsp;·&nbsp; <a href="{{ '/supporters/' | relative_url }}">Supporters</a>
-  </div>
-  © Reid's Unzipped — Reid family cruising the world's oceans on Zipper
-</footer>
+{% include footer.html %}
 
 <script>
+  function revealEmails() {
+    const el = document.getElementById('contact-emails');
+    if (el.style.display === 'none') {
+      // Addresses assembled at click time — not present as plain text in source
+      const j = 'jnbreid' + '@' + 'gmail' + '.' + 'com';
+      const s = 'sophiereid84' + '@' + 'gmail' + '.' + 'com';
+      el.innerHTML =
+        'Jamie: <a href="mailto:' + j + '" style="color:var(--ice);">' + j + '</a><br>' +
+        'Sophie: <a href="mailto:' + s + '" style="color:var(--ice);">' + s + '</a>';
+      el.style.display = 'block';
+    }
+  }
+
   window.closeMenu = function() {
     document.getElementById('nav-dropdown').classList.remove('open');
     document.getElementById('hamburger').classList.remove('open');

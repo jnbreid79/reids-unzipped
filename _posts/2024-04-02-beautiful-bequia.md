@@ -30,7 +30,7 @@ Port Elizabeth is a beautiful, colourful Caribbean town with a warm, friendly at
 
 We met fellow OCC members Stuart and Anne Letton in their Outremer 51, Time Bandit. They have spent several years cruising and welcomed us warmly and with amazing things to occupy the children — a Happy Horses sticker book and Geosticks. The children loved the Geosticks so much that Ann kindly lent them to us for the remainder of our stay. And when Stuart and Ann came for a drink on Zipper later that day, the children were still playing with them. Having seen the children enjoying them so much, Stuart and Ann very generously gave the children the Geosticks to keep, and they've been playing with them ever since!
 
-![Time Bandit alongside]({{ site.baseurl }}/assets/images/posts/img_7523.webp)
+![Geosticks kindly gifted by Time Bandit]({{ site.baseurl }}/assets/images/posts/img_7523.webp)
 
 ![Children playing with Geosticks]({{ site.baseurl }}/assets/images/posts/img_7524.webp)
 

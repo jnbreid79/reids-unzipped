@@ -20,11 +20,11 @@ After a slightly damp start the clouds dispersed and we had a perfect downwind s
 
 After taking up the buoy, we put the dinghy in the water and headed ashore to say hello to Gaston and Valentine. They gave us a warm welcome and invited us to look around — they have lots of animals and the children were particularly taken with the little piglets that came running up as we approached the pig pen.
 
-![The farm]({{ site.baseurl }}/assets/images/posts/img_7613.webp)
-![Piglets!]({{ site.baseurl }}/assets/images/posts/img_7616.webp)
-![Valentine's place]({{ site.baseurl }}/assets/images/posts/jr1_4409.webp)
+![Piglets to keep the locals fed]({{ site.baseurl }}/assets/images/posts/img_7613.webp)
+![Parrotfish]({{ site.baseurl }}/assets/images/posts/img_7616.webp)
+![The moorings]({{ site.baseurl }}/assets/images/posts/jr1_4409.webp)
 ![Around the lagoon]({{ site.baseurl }}/assets/images/posts/jr1_4412.webp)
-![Sunset colours]({{ site.baseurl }}/assets/images/posts/jr1_4420.webp)
+![Zipper on mooring]({{ site.baseurl }}/assets/images/posts/jr1_4420.webp)
 
 Valentine speaks wonderful English and told us where to snorkel and dive. We went back the following day and ordered cooked lobster — it was the same price whether Gaston cooked it or not, so we decided to have him cook it on his BBQ. A great decision; the lobster was fantastic!
 
@@ -44,4 +44,4 @@ Because of the limited mooring balls and the communal area created by Valentine 
 We really enjoyed our time here and highly recommend it to anyone in the Tuamotus.
 
 ![Aerial view of Anse Amyot]({{ site.baseurl }}/assets/images/posts/dji_0058-still-2.webp)
-![Zipper at anchor]({{ site.baseurl }}/assets/images/posts/dji_0058-still.webp)
+![Zipper and view of Toau's fringing reef]({{ site.baseurl }}/assets/images/posts/dji_0058-still.webp)

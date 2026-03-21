@@ -24,7 +24,7 @@ We were kindly invited by family friends (thanks David, Alice and Olly!) to thei
 
 The lifeguards here have not been quite so accommodating. Our first encounter with them was off Holetown, we were anchored near where the tourist boats (catamarans larger than ours) come in every morning, and had anchored there with Olly onboard — he has worked on the boats for years and knows very well where we are and aren't allowed to be anchored. Anyway, the lifeguards told us we had to move in the morning as we were in the marine park. They gave us a leaflet and suggested we study it before choosing where to re-anchor, either to the North or South. They then watched us move and re-anchor, before coming up to us again after we had settled and telling us we were still in the wrong place. I'm not sure what we had done to upset them, but this was when it became clear they just didn't want us there for some reason — we were clearly outside the GPS coordinates of the park (as defined on their leaflet, we were well above the North of Zone 1), and he was making up new visual references as he was talking to us. Without much choice we begrudgingly moved again, this time the other side of an anchored yellow paddleboard which apparently now had some sort of significance in this arbitrary marine part boundary. This just made it a really long dinghy ride to get back to the beach in Holetown.
 
-![Anchored in Barbados]({{ site.baseurl }}/assets/images/posts/img_5859.webp)
+![Confusing anchor zones in Barbados]({{ site.baseurl }}/assets/images/posts/img_5859.webp)
 
 The second frustration was paddleboarding into the park and picking up a buoy to tie to whilst we snorkelled. The lifeguards ashore whistled us and made it clear we were not to stay there. Unsure why this was I decided to go closer and try to have a chat with them. Clearly trying to get their attention this was obviously a chat they didn't want to have as they walked away and generally tried to completely ignore me; so, I decided to land on the beach and go and find them. The beach itself was red-flagged, as there was quite a swell. Anyway I finally got to speak to them, only after I climbed up the steps to their hut to join them up there — still trying to ignore me! I was told there wasn't much to see anyway as the swell was disturbing the sand, however the real reason was that they didn't want us there when they weren't letting people out from the beach under the red flags. Fair enough I suppose, although quite frustrating for those of us self-sufficient coming from the waterside. To be honest the swell has been a bit of a nuisance, since we've been here it's been a bit rocky at anchor most days, and landing on the beach has been impossible with the dinghy most days. Unfortunately this has meant we haven't had a chance to snorkel in the Folkestone marine park.
 
@@ -44,13 +44,13 @@ The engine was flooding, I diagnosed that much. And YouTube persuaded me the onl
 
 YouTube videos are all well and good, but they are largely all made on new kit, or by people who have just practiced it first (bit like avoiding a live software demo, as we know how they can catch you out). What this means is that the videos don't have any of the real life scenarios that make these jobs hard to do; in my case the 7-year old probably-never-been-taken-off fuel hoses were all locked solid onto their fittings. And without undoing a couple of fuel hoses (doesn't really matter which end, but one end of each needs to come off) the carburettor isn't coming out of the engine. Anyway, I decided I would just pull harder as it wasn't working anyway, and yes of course one of the fuel hoses did just break. Fortunately I was lucky, a 1cm shorter fuel hose is just about still long enough (I have a lot of spare hoses onboard, but of course not this one — something to add to the shopping list when the next opportunity arises).
 
-![Outboard carburettor disassembled]({{ site.baseurl }}/assets/images/posts/img_5860-4.webp)
+![Outboard about to be disassembled]({{ site.baseurl }}/assets/images/posts/img_5860-4.webp)
 
-![Carburettor float and jets]({{ site.baseurl }}/assets/images/posts/img_5882-4.webp)
+![Carburettor coming out]({{ site.baseurl }}/assets/images/posts/img_5882-4.webp)
 
-![Carburettor reassembly]({{ site.baseurl }}/assets/images/posts/img_5887.webp)
+![Carburettor float and jets]({{ site.baseurl }}/assets/images/posts/img_5887.webp)
 
-![Outboard engine back together]({{ site.baseurl }}/assets/images/posts/img_5890.webp)
+![The reassembly]({{ site.baseurl }}/assets/images/posts/img_5890.webp)
 
 So I did get to the inside of our carburettor. The float came off, the jets came out, and I looked at them all for a while whilst thinking nothing looked obviously amiss. So I prodded around with some thin wires and looked at them for a while longer, before concluding there wasn't much more I could do so had better start putting it back together before I forgot what went where; I also learned in Tenerife that relying on the photos is an option to avoid if possible.
 

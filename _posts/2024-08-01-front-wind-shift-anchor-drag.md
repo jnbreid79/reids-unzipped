@@ -14,7 +14,7 @@ We've seen quite a deep low pressure developing in the forecasts for the last we
 
 We arrived and found our anchor spot in plenty of time, with the gribs suggesting we might see gusts of 25kts as the front came through, probably with a lot of rain:
 
-![Weather forecast chart]({{ site.baseurl }}/assets/images/posts/forecast-fakarava-front.webp)
+![Weather forecast, wind strength (colour) and direction (arrows)]({{ site.baseurl }}/assets/images/posts/forecast-fakarava-front.webp)
 
 The biggest island in this weather map is Tahiti (towards the bottom left), the island group top right is the Marquesas. We are at the green marker. Nastier colours of red and bigger arrows mean more wind, with the arrows indicating direction — we were expecting a big shift very quickly from the North all the way round to South, through the West.
 

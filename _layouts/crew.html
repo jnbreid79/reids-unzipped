@@ -64,75 +64,172 @@ permalink: /crew/
   .section-label { font-family: 'Raleway', sans-serif; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.28em; color: var(--muted); margin-bottom: 2rem; display: flex; align-items: center; gap: 1rem; }
   .section-label::after { content: ''; flex: 1; height: 1px; background: rgba(184,212,232,0.4); }
 
-  /* ── Crew grid ── */
-  .crew-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2.5rem; margin-bottom: 4rem; }
-  @media (min-width: 780px) { .crew-grid { grid-template-columns: repeat(4, 1fr); } }
+  /* -- Crew grid -- */
+  .crew-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+  }
+  @media (max-width: 600px) {
+    .crew-grid { grid-template-columns: 1fr; }
+  }
 
-  .crew-card { display: flex; flex-direction: column; }
+  /* Each card: ice-blue background, horizontal layout */
+  .crew-card {
+    background: var(--ice-light);
+    border: 1px solid rgba(184,212,232,0.6);
+    border-radius: 3px;
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    overflow: hidden;
+  }
+
+  /* Left pane — name/role above square photo */
+  .crew-photo-col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-shrink: 0;
+    width: 170px;
+    margin: 1.2rem 0 1.2rem 1.2rem;
+    gap: 0.5rem;
+  }
 
   .crew-photo-wrap {
-    aspect-ratio: 3/4;
-    border-radius: 3px;
-    overflow: hidden;
-    margin-bottom: 1.2rem;
-    box-shadow: 0 4px 20px rgba(26,58,92,0.18);
+    width: 170px;
+    height: 170px;
+    flex-shrink: 0;
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    overflow: hidden;
+    border-radius: 2px;
   }
   .crew-card:nth-child(1) .crew-photo-wrap { background: linear-gradient(160deg, #1a4060, #0d2030); }
   .crew-card:nth-child(2) .crew-photo-wrap { background: linear-gradient(160deg, #1a3a5c, #122840); }
   .crew-card:nth-child(3) .crew-photo-wrap { background: linear-gradient(160deg, #1f4a70, #162035); }
   .crew-card:nth-child(4) .crew-photo-wrap { background: linear-gradient(160deg, #1a3050, #0e1e2e); }
 
-  .crew-photo-wrap img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
-
-  .crew-initials {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 200;
-    font-size: 4rem;
-    color: rgba(184,212,232,0.25);
-    letter-spacing: 0.05em;
-    user-select: none;
-    position: relative;
-    z-index: 1;
+  .crew-photo-wrap img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    display: block;
   }
 
-  .crew-photo-wrap::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 45%; background: linear-gradient(to top, rgba(10,25,40,0.85), transparent); pointer-events: none; z-index: 2; }
+  /* Text pane */
+  .crew-card-body {
+    padding: 1.2rem 1.3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex: 1;
+    min-width: 0;
+  }
 
-  .crew-name-badge { position: absolute; bottom: 0.8rem; left: 0.9rem; right: 0.9rem; z-index: 3; }
-  .crew-name-badge .name { display: block; font-family: 'Raleway', sans-serif; font-weight: 400; font-size: 1.15rem; color: white; line-height: 1.2; }
-  .crew-name-badge .role { font-family: 'Raleway', sans-serif; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.14em; color: var(--ice); font-weight: 300; }
+  .crew-name-role .name {
+    display: block;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--navy);
+    line-height: 1.2;
+  }
+  .crew-name-role .role {
+    display: block;
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--muted);
+    font-weight: 300;
+    margin-top: 0.15rem;
+  }
 
-  .crew-bio-title { font-family: 'Raleway', sans-serif; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.14em; color: var(--navy); font-weight: 400; margin-bottom: 0.4rem; }
-  .crew-bio { font-size: 0.87rem; line-height: 1.75; color: #3a5a70; margin-bottom: 1rem; }
-  .crew-quote { border-left: 2px solid var(--ice); padding: 0.5rem 0.8rem; margin-top: 0.5rem; }
-  .crew-quote p { font-style: italic; font-size: 0.83rem; color: var(--muted); line-height: 1.6; margin-bottom: 0.2rem; }
-  .crew-quote cite { font-family: 'Raleway', sans-serif; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); opacity: 0.7; font-style: normal; }
+  .crew-bio-title { font-family: 'Raleway', sans-serif; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.14em; color: var(--navy); font-weight: 400; margin-bottom: 0.3rem; }
+  .crew-bio { font-size: 0.84rem; line-height: 1.7; color: #3a5a70; margin-bottom: 0.8rem; }
+  .crew-quote { border-left: 2px solid var(--ice); padding: 0.4rem 0.7rem; }
+  .crew-quote p { font-style: italic; font-size: 0.8rem; color: var(--muted); line-height: 1.55; margin-bottom: 0.2rem; }
+  .crew-quote cite { font-family: 'Raleway', sans-serif; font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); opacity: 0.7; font-style: normal; }
 
-  /* ── Bumpy ── */
-  .bumpy-section { background: var(--navy); border-radius: 3px; padding: 2rem 2.5rem; display: flex; gap: 2rem; align-items: center; flex-wrap: wrap; margin-bottom: 2rem; box-shadow: 0 4px 20px rgba(26,58,92,0.15); }
-  .bumpy-avatar { width: 110px; height: 110px; border-radius: 50%; flex-shrink: 0; background: linear-gradient(135deg, #1f4a70, #0d2030); display: flex; align-items: center; justify-content: center; font-size: 3rem; border: 3px solid rgba(184,212,232,0.25); overflow: hidden; }
-  .bumpy-avatar img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
-  .bumpy-text h3 { font-family: 'Raleway', sans-serif; font-weight: 300; font-size: 1.1rem; color: white; margin-bottom: 0.2rem; letter-spacing: 0.06em; }
-  .bumpy-role { font-family: 'Raleway', sans-serif; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.14em; color: var(--ice); margin-bottom: 0.8rem; display: block; }
-  .bumpy-text p { font-size: 0.88rem; color: var(--ice-light); line-height: 1.75; }
+  @media (max-width: 600px) {
+    .crew-card { flex-direction: column; }
+    .crew-photo-col { width: 100%; margin: 0; flex-direction: row; align-items: center; gap: 1rem; padding: 1rem 1rem 0; }
+    .crew-photo-wrap { width: 72px; height: 72px; border-radius: 50%; flex-shrink: 0; }
+  }
 
-  /* ── Guests ── */
-  .guests-strip { border: 1px solid rgba(184,212,232,0.3); border-radius: 3px; padding: 2rem 2.5rem; }
-  .guests-strip h3 { font-family: 'Raleway', sans-serif; font-weight: 300; font-size: 1rem; color: var(--navy); letter-spacing: 0.08em; margin-bottom: 0.6rem; }
-  .guests-strip p { font-size: 0.88rem; color: var(--muted); line-height: 1.7; }
-  .guests-table { width: 100%; border-collapse: collapse; margin-top: 1.2rem; font-size: 0.88rem; }
-  .guests-table th { font-family: 'Raleway', sans-serif; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted); border-bottom: 2px solid rgba(184,212,232,0.35); padding: 0.5rem 0.8rem; text-align: left; }
-  .guests-table td { padding: 0.7rem 0.8rem; border-bottom: 1px solid rgba(184,212,232,0.15); vertical-align: top; color: var(--text); line-height: 1.6; }
-  .guests-table tr:last-child td { border-bottom: none; }
-  .guests-table td:first-child { font-family: 'Raleway', sans-serif; font-weight: 400; color: var(--navy); white-space: nowrap; }
+  /* -- Guest cards -- */
+  .guest-cards { display: flex; flex-direction: column; gap: 1rem; }
 
-  /* ── Footer ── */
-  footer { background: var(--navy); color: var(--muted); padding: 2rem; text-align: center; border-top: 1px solid rgba(184,212,232,0.15); font-family: 'Raleway', sans-serif; font-size: 0.82rem; letter-spacing: 0.04em; }
-  footer a { color: var(--ice); text-decoration: none; }
-  footer a:hover { color: white; }
+  .guest-card {
+    background: var(--ice-light);
+    border: 1px solid rgba(184,212,232,0.6);
+    border-radius: 3px;
+    padding: 1.2rem 1.5rem;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  .guest-avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    background: linear-gradient(135deg, var(--navy-mid), var(--navy));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border: 2px solid rgba(184,212,232,0.5);
+  }
+  .guest-avatar img { width: 100%; height: 100%; object-fit: cover; object-position: top; border-radius: 50%; }
+  .guest-initials {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+    font-size: 1.3rem;
+    color: var(--ice);
+    letter-spacing: 0.05em;
+    user-select: none;
+  }
+
+  .guest-body { flex: 1; min-width: 0; }
+
+  .guest-header {
+    display: flex;
+    align-items: baseline;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.3rem;
+  }
+  .guest-name {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--navy);
+  }
+  .guest-passage {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+  }
+  .guest-note {
+    font-size: 0.86rem;
+    line-height: 1.7;
+    color: #3a5a70;
+    margin: 0;
+  }
+
+  @media (max-width: 500px) {
+    .guest-card { flex-direction: column; align-items: flex-start; }
+  }
+
+  {% include footer-styles.html %}
 </style>
 </head>
 <body>{% include masthead.html %}
@@ -154,69 +251,85 @@ permalink: /crew/
 
     <!-- Isla -->
     <div class="crew-card">
-      <div class="crew-photo-wrap">
-        <img src="{{ '/assets/images/crew/isla-chess.webp' | relative_url }}" alt="Isla" onerror="this.style.display='none'">
-        <div class="crew-name-badge">
+      <div class="crew-photo-col">
+        <div class="crew-name-role">
           <span class="name">Isla</span>
-          <span class="role">"First Mate"</span>
+          <span class="role">&ldquo;First Mate&rdquo;</span>
+        </div>
+        <div class="crew-photo-wrap">
+          <img src="{{ '/assets/images/crew/isla-chess.webp' | relative_url }}" alt="Isla" onerror="this.style.display='none'">
         </div>
       </div>
-      <div class="crew-bio-title">Built-in chess table</div>
-      <p class="crew-bio">Isla's best thing about Zipper is that she has a built-in chess board on the cockpit table. She would be an "Otter" if she was at school in Itchen Abbas this year — appropriately enough she has chosen to be an otter for boat-school.</p>
-      <div class="crew-quote">
-        <p>"I've never lost at chess to Daddy"</p>
-        <cite>— Isla Reid</cite>
+      <div class="crew-card-body">
+        <div class="crew-bio-title">Built-in chess table</div>
+        <p class="crew-bio">Isla's best thing about Zipper is that she has a built-in chess board on the cockpit table. She would be an &ldquo;Otter&rdquo; if she was at school in Itchen Abbas this year &mdash; appropriately enough she has chosen to be an otter for boat-school.</p>
+        <div class="crew-quote">
+          <p>&ldquo;I've never lost at chess to Daddy&rdquo;</p>
+          <cite>&mdash; Isla</cite>
+        </div>
       </div>
     </div>
 
     <!-- Angus -->
     <div class="crew-card">
-      <div class="crew-photo-wrap">
-        <img src="{{ '/assets/images/crew/angus hiding.webp' | relative_url }}" alt="Angus" onerror="this.style.display='none'">
-        <div class="crew-name-badge">
+      <div class="crew-photo-col">
+        <div class="crew-name-role">
           <span class="name">Angus</span>
-          <span class="role">"Captain"</span>
+          <span class="role">&ldquo;Captain&rdquo;</span>
+        </div>
+        <div class="crew-photo-wrap">
+          <img src="{{ '/assets/images/crew/angus hiding.webp' | relative_url }}" alt="Angus" onerror="this.style.display='none'">
         </div>
       </div>
-      <div class="crew-bio-title">Hide-and-seek</div>
-      <p class="crew-bio">Angus' best thing about Zipper is that she's great for hide-and-seek — there are so many places to hide. He completed his reception year at school before we set sail, and for boat-school has chosen to be a "sea turtle".</p>
-      <div class="crew-quote">
-        <p>"My superpower is Lego"</p>
-        <cite>— Angus Reid</cite>
+      <div class="crew-card-body">
+        <div class="crew-bio-title">Hide-and-seek</div>
+        <p class="crew-bio">Angus' best thing about Zipper is that she's great for hide-and-seek &mdash; there are so many places to hide. He completed his reception year at school before we set sail, and for boat-school has chosen to be a &ldquo;sea turtle&rdquo;.</p>
+        <div class="crew-quote">
+          <p>&ldquo;My superpower is Lego&rdquo;</p>
+          <cite>&mdash; Angus</cite>
+        </div>
       </div>
     </div>
 
     <!-- Sophie -->
     <div class="crew-card">
-      <div class="crew-photo-wrap">
-        <img src="{{ '/assets/images/crew/JR1_3751.webp' | relative_url }}" alt="Sophie" onerror="this.style.display='none'">
-        <div class="crew-name-badge">
+      <div class="crew-photo-col">
+        <div class="crew-name-role">
           <span class="name">Sophie</span>
-          <span class="role">"Ship's Cook"</span>
+          <span class="role">&ldquo;Ship's Cook&rdquo;</span>
+        </div>
+        <div class="crew-photo-wrap">
+          <img src="{{ '/assets/images/crew/JR1_3751.webp' | relative_url }}" alt="Sophie" onerror="this.style.display='none'">
         </div>
       </div>
-      <div class="crew-bio-title">I can see!</div>
-      <p class="crew-bio">Sophie's favourite thing about Zipper is that she can see when she's helming — at 5'3" this is something she's not used to on other boats. Headmistress, chief medic and head chef, she's in charge of everything that keeps the team alive.</p>
-      <div class="crew-quote">
-        <p>"Doctors spend 7 years training, I did it in 4 days"</p>
-        <cite>— Sophie Reid, to Dr. Nigel Reid</cite>
+      <div class="crew-card-body">
+        <div class="crew-bio-title">I can see!</div>
+        <p class="crew-bio">Sophie's favourite thing about Zipper is that she can see when she's helming &mdash; at 5'3&rdquo; this is something she's not used to on other boats. Headmistress, chief medic and head chef, Sophie's in charge of everything that keeps the crew alive.</p>
+        <div class="crew-quote">
+          <p>&ldquo;Doctors spend 7 years training, I did it in 4 days&rdquo;</p>
+          <cite>&mdash; Sophie, to Dr. Nigel Reid</cite>
+        </div>
       </div>
     </div>
 
     <!-- Jamie -->
     <div class="crew-card">
-      <div class="crew-photo-wrap">
-        <img src="{{ '/assets/images/crew/IMG_4841.webp' | relative_url }}" alt="Jamie" onerror="this.style.display='none'">
-        <div class="crew-name-badge">
+      <div class="crew-photo-col">
+        <div class="crew-name-role">
           <span class="name">Jamie</span>
-          <span class="role">"Cabin Boy"</span>
+          <span class="role">&ldquo;Cabin Boy&rdquo;</span>
+        </div>
+        <div class="crew-photo-wrap">
+          <img src="{{ '/assets/images/crew/IMG_4841.webp' | relative_url }}" alt="Jamie" onerror="this.style.display='none'">
         </div>
       </div>
-      <div class="crew-bio-title">2-in-1</div>
-      <p class="crew-bio">Jamie's favourite thing about Zipper is that she is a catamaran; two-boats-in-one, the port hull for the children and starboard for us. The engineer keeping the mechanical and electrical systems running, he also leads the sailing programme.</p>
-      <div class="crew-quote">
-        <p>"This will be easy, it's going to be downwind warm weather sailing"</p>
-        <cite>— Jamie Reid (before leaving Northern France, reefed down into a headwind, wearing every item of clothing aboard)</cite>
+      <div class="crew-card-body">
+        <div class="crew-bio-title">2-in-1</div>
+        <p class="crew-bio">Jamie's favourite thing about Zipper is that she is a catamaran; two-boats-in-one, port hull for the children and starboard for us. The engineer keeping the mechanical and electrical systems running, Jamie leads the sailing programme.</p>
+        <div class="crew-quote">
+          <p>&ldquo;This will be easy, downwind warm weather sailing&rdquo;</p>
+          <cite>&mdash; Jamie (English Channel upwind in November, anyone?)</cite>
+        </div>
       </div>
     </div>
 
@@ -225,45 +338,170 @@ permalink: /crew/
   <!-- Guest appearances -->
   <div class="section-label">Guest appearances</div>
 
-  <!-- Bumpy — sits ABOVE the table, outside it entirely -->
-  <div class="bumpy-section">
-    <div class="bumpy-avatar">
-      <img src="{{ '/assets/images/crew/bumpy.jpg' | relative_url }}" alt="Bumpy" onerror="this.style.display='none'; this.parentNode.textContent='🐾';">
-    </div>
-    <div class="bumpy-text">
-      <h3>Bumpy</h3>
-      <span class="bumpy-role">Guest crew · Morale officer</span>
-      <p>Bumpy joined us for our very first passage on Zipper — Cherbourg to St Malo, anchoring off Sark overnight on the way. A natural sailor, and the inspiration behind the name of this blog.</p>
-    </div>
-  </div>
+  <h2 style="font-family: 'Raleway', sans-serif; font-weight: 300; font-size: 1.1rem; color: var(--navy); letter-spacing: 0.06em; margin-bottom: 0.8rem;">Friends, family &amp; hitchhikers who&rsquo;ve joined along the way</h2>
+  <p style="font-size: 0.88rem; color: var(--muted); line-height: 1.7; margin-bottom: 1.8rem;">On our way round we are welcoming family and friends aboard at various times — both to come and say hi, and to help with the sailing, particularly on longer passages.</p>
 
-  <div class="guests-strip">
-    <h3>Friends, family &amp; hitchhikers who've joined along the way</h3>
-    <p>On our way round we are welcoming family and friends aboard at various times — both to come and say hi, and to help with the sailing, particularly on longer passages.</p>
-    <table class="guests-table">
-      <thead>
-        <tr><th>Passage</th><th>Guest</th><th>Notes</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Cherbourg → St Malo</td><td>Bumpy</td><td>Helped us learn to sail Zipper on our very first passage.</td></tr>
-        <tr><td>Roscoff → Lanzarote</td><td>Tom</td><td>MVP for the Hill Climb game on his phone — Angus is still obsessed.</td></tr>
-        <tr><td>Roscoff → Lanzarote</td><td>Neal</td><td>Closely fought but second place with Wordscape. Another winner on the phone!</td></tr>
-        <tr><td>Mindelo, Cape Verde</td><td>Rob &amp; Julia</td><td>Kept the children occupied while the autopilot was in pieces. Supplied pizza and beer to the repair crew on a Saturday night.</td></tr>
-      </tbody>
-    </table>
-  </div>
+  <div class="guest-cards">
+
+    <div class="guest-card">
+      <div class="guest-avatar">
+        <img src="{{ '/assets/images/crew/bumpy.jpg' | relative_url }}" alt="Bumpy (Nigel)" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+        <span class="guest-initials" style="display:none">B</span>
+      </div>
+      <div class="guest-body">
+        <div class="guest-header">
+          <span class="guest-name">Bumpy (Nigel)</span>
+          <span class="guest-passage">Shakedown: Cherbourg → St Malo</span>
+        </div>
+        <p class="guest-note">Bumpy joined us for our very first passage on Zipper, helping us learn how to sail Zipper for the first time. We anchored off Sark overnight on the way.</p>
+      </div>
+    </div>
+
+    <div class="guest-card">
+      <div class="guest-avatar">
+        <img src="{{ '/assets/images/crew/tom.jpg' | relative_url }}" alt="Tom" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+        <span class="guest-initials" style="display:none">T</span>
+      </div>
+      <div class="guest-body">
+        <div class="guest-header">
+          <span class="guest-name">Tom</span>
+          <span class="guest-passage">Bay of Biscay: Roscoff → Lanzarote</span>
+        </div>
+        <p class="guest-note">We needed someone experienced onboard! Tom was MVP on this passage, for the Hill Climb game on his phone — months of playtime prepared!</p>
+      </div>
+    </div>
+
+    <div class="guest-card">
+      <div class="guest-avatar">
+        <img src="{{ '/assets/images/crew/neal.jpg' | relative_url }}" alt="Neal" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+        <span class="guest-initials" style="display:none">N</span>
+      </div>
+      <div class="guest-body">
+        <div class="guest-header">
+          <span class="guest-name">Neal</span>
+          <span class="guest-passage">Bay of Biscay: Roscoff → Lanzarote</span>
+        </div>
+        <p class="guest-note">Building experience for <a href="https://www.youtube.com/@waverider-33" target="_blank" rel="noopener">Wind Rider</a>  and a planned circumnavigation. Closely fought for MVP with Tom, but second place with Wordscape. Another winner on the phone games though.</p>
+      </div>
+    </div>
+
+    <div class="guest-card">
+      <div class="guest-avatar">
+        <img src="{{ '/assets/images/crew/dottie2.jpeg' | relative_url }}" alt="Dottie (Julia)" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+        <span class="guest-initials" style="display:none">J</span>
+      </div>
+      <div class="guest-body">
+        <div class="guest-header">
+          <span class="guest-name">Dottie (Julia)</span>
+          <span class="guest-passage">Atlantic crossing: Tenerife → Mindelo → Barbados</span>
+        </div>
+        <p class="guest-note">Treasure hunt organiser, keeping the children on their toes every other day for prizes hidden around the boat.</p>
+      </div>
+    </div>
+
+    <div class="guest-card">
+      <div class="guest-avatar">
+        <img src="{{ '/assets/images/crew/grumpy2.jpeg' | relative_url }}" alt="Grumpy (Rob)" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+        <span class="guest-initials" style="display:none">R</span>
+      </div>
+      <div class="guest-body">
+        <div class="guest-header">
+          <span class="guest-name">Grumpy (Rob)</span>
+          <span class="guest-passage">Atlantic crossing: Tenerife → Mindelo → Barbados</span>
+        </div>
+        <p class="guest-note">Daily sunset optimist (Rob "the clouds are definitely going to light up this evening" Mackay) and welcome icecream supplier.</p>
+      </div>
+    </div>
+
+    <div class="guest-card">
+      <div class="guest-avatar">
+        <img src="{{ '/assets/images/crew/paul1.jpg' | relative_url }}" alt="Paul" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+        <span class="guest-initials" style="display:none">P</span>
+      </div>
+      <div class="guest-body">
+        <div class="guest-header">
+          <span class="guest-name">Paul</span>
+          <span class="guest-passage">Panama canal: Shelter Bay → Panama City</span>
+        </div>
+        <p class="guest-note">Star long-distance line handler flying in from Massachusetts, ticking one more adventure off his bucket list .</p>
+      </div>
+    </div>
+
+    <div class="guest-card">
+      <div class="guest-avatar">
+        <img src="{{ '/assets/images/crew/bumpy2.jpg' | relative_url }}" alt="Bumpy (Nigel, take 2)" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+        <span class="guest-initials" style="display:none">N</span>
+      </div>
+      <div class="guest-body">
+        <div class="guest-header">
+          <span class="guest-name">Bumpy (Nigel, aka Neptune)</span>
+          <span class="guest-passage">Pacific crossing: Panama (inc. canal) → Galapagos → Marquesas</span>
+        </div>
+        <p class="guest-note">Stand-in King Neptune, team photographer, music composer ("The good ship Zipper") and remarkably energy-efficient space-saving automatic dishwasher.</p>
+      </div>
+    </div>
+
+    <div class="guest-card">
+      <div class="guest-avatar">
+        <img src="{{ '/assets/images/crew/paul2.jpg' | relative_url }}" alt="Paul (the return)" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+        <span class="guest-initials" style="display:none">P</span>
+      </div>
+      <div class="guest-body">
+        <div class="guest-header">
+          <span class="guest-name">Paul (the return)</span>
+          <span class="guest-passage">South Pacific: Tonga → New Zealand</span>
+        </div>
+        <p class="guest-note">Answering an SOS for additional crew having missed our planned passage with Hamish due to inclement weather, Paul 'popped over' at short notice. Not sure this ugly passage was on his bucket list, but Paul was the perfect addition to the crew nevertheless!</p>
+      </div>
+    </div>
+
+    <div class="guest-card">
+      <div class="guest-avatar">
+        <img src="{{ '/assets/images/crew/marc.jpeg' | relative_url }}" alt="Marc" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+        <span class="guest-initials" style="display:none">M</span>
+      </div>
+      <div class="guest-body">
+        <div class="guest-header">
+          <span class="guest-name">Marc</span>
+          <span class="guest-passage">Hitchhiker: 29&deg;22'S 174&deg;14'E (near John's corner) → New Zealand</span>
+        </div>
+        <p class="guest-note">Co-skipper of the good ship Agápē, may she rest in peace, we met Marc, Leticia and Deane in what became <a href="https://www.coolchange.nz/post/adrift-no-more-the-final-chapter-of-sv-ag%C3%A1p%C4%93#:~:text=RIP%20Agape%3A%20The%20Final%20Leg" target="_blank" rel="noopener">Agápē's final hours</a>. After sharing some airtime in rough seas and near-gale conditions approaching NZ, trying to reef the jib on the trampolenes, Jamie and Marc did some serious bonding!</p>
+      </div>
+    </div>
+
+    <div class="guest-card">
+      <div class="guest-avatar">
+        <img src="{{ '/assets/images/crew/leticia.jpg' | relative_url }}" alt="Leticia" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+        <span class="guest-initials" style="display:none">L</span>
+      </div>
+      <div class="guest-body">
+        <div class="guest-header">
+          <span class="guest-name">Leticia</span>
+          <span class="guest-passage">Hitchhiker: John's corner to New Zealand</span>
+        </div>
+        <p class="guest-note">Co-skipper of Agápē, in Leticia we have made another great friend. We are just delighted we were able to bring the crew home safely.</p>
+      </div>
+    </div>
+
+    <div class="guest-card">
+      <div class="guest-avatar">
+        <img src="{{ '/assets/images/crew/Deane.jpg' | relative_url }}" alt="Deane" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+        <span class="guest-initials" style="display:none">D</span>
+      </div>
+      <div class="guest-body">
+        <div class="guest-header">
+          <span class="guest-name">Deane</span>
+          <span class="guest-passage">Hitchhiker: John's corner to New Zealand</span>
+        </div>
+        <p class="guest-note">Crew for his great buddies on Agápē, Deane was testing his own appetite for the long distance passages. Not sure anyone anticipated his experience would involve a few days on a 45ft catamaran, but he provided great company through the night watches and we were delighted to have him onboard!</p>
+      </div>
+    </div>
+
+  </div><!-- /guest-cards -->
 
 </div><!-- /page-container -->
 
-<footer>
-  <div style="margin-bottom:0.8rem;">
-    <a href="https://forecast.predictwind.com/tracking/display/SV-Zipper" target="_blank">PredictWind Tracker</a>
-    &nbsp;·&nbsp; <a href="{{ '/voyage-log/' | relative_url }}">Voyage Log</a>
-    &nbsp;·&nbsp; <a href="{{ '/crew/' | relative_url }}">The Crew</a>
-    &nbsp;·&nbsp; <a href="{{ '/supporters/' | relative_url }}">Supporters</a>
-  </div>
-  © Reid's Unzipped — Reid family cruising the world's oceans on Zipper
-</footer>
+{% include footer.html %}
 
 <script>
   window.closeMenu = function() {

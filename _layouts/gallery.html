@@ -57,32 +57,192 @@ permalink: /gallery/
   .page-hero h1 { font-family: 'Raleway', sans-serif; font-weight: 200; font-size: clamp(1.8rem, 5vw, 3rem); letter-spacing: 0.12em; text-transform: uppercase; color: white; margin-bottom: 1rem; border-bottom: 2px solid rgba(184,212,232,0.4); padding-bottom: 1rem; display: inline-block; }
   .page-hero-desc { font-family: 'Merriweather', serif; font-style: italic; font-weight: 300; font-size: 0.95rem; color: var(--ice-light); line-height: 1.8; max-width: 540px; margin: 0 auto; }
 
-  /* ── Filter bar (consistent with voyage-log.html) ── */
-  .filter-bar {
+  /* -- Filter panel -- */
+  .filter-panel {
     background: var(--navy);
     border-bottom: 1px solid rgba(184,212,232,0.12);
-    padding: 0.75rem 1.5rem;
+    padding: 0.9rem 1.5rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    min-width: 180px;
+  }
+
+  .filter-group-label {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--muted);
+    padding-bottom: 0.2rem;
+    border-bottom: 1px solid rgba(184,212,232,0.15);
+    margin-bottom: 0.2rem;
+  }
+
+  /* Location tree */
+  .loc-tree { list-style: none; padding: 0; margin: 0; }
+  .loc-tree ul { list-style: none; padding: 0; margin: 0 0 0 1rem; }
+
+  .loc-node {
     display: flex;
     align-items: center;
-    gap: 0.6rem;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    position: sticky;
-    top: 64px;
-    z-index: 100;
+    gap: 0.3rem;
+    padding: 0.15rem 0;
+    cursor: pointer;
+    white-space: nowrap;
   }
-  .filter-bar::-webkit-scrollbar { display: none; }
-  .filter-label { font-family: 'Raleway', sans-serif; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.18em; color: var(--muted); white-space: nowrap; padding-right: 0.4rem; flex-shrink: 0; }
-  .filter-btn { font-family: 'Raleway', sans-serif; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ice); background: none; border: 1px solid rgba(184,212,232,0.25); border-radius: 2px; padding: 0.3rem 0.8rem; cursor: pointer; white-space: nowrap; flex-shrink: 0; transition: all 0.18s; }
-  .filter-btn:hover { background: rgba(184,212,232,0.12); border-color: rgba(184,212,232,0.5); color: white; }
-  .filter-btn.active { background: var(--ice); color: var(--navy); border-color: var(--ice); font-weight: 500; }
-  /* "All" button gets a subtler inactive style since it's a clear-all, not a real filter */
-  .filter-btn[data-tag="all"] { color: var(--muted); border-color: rgba(184,212,232,0.15); }
-  .filter-btn[data-tag="all"].active { background: none; color: var(--muted); border-color: rgba(184,212,232,0.15); font-weight: 400; }
-  .filter-btn[data-tag="all"]:hover { background: rgba(184,212,232,0.06); color: var(--ice); }
 
-  /* ── Gallery counter ── */
+  .loc-toggle {
+    width: 14px;
+    height: 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.6rem;
+    color: var(--muted);
+    flex-shrink: 0;
+    transition: transform 0.15s;
+    user-select: none;
+  }
+  .loc-toggle.open { transform: rotate(90deg); }
+  .loc-toggle.leaf { opacity: 0; pointer-events: none; }
+
+  .loc-label {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    color: var(--ice);
+    transition: color 0.15s;
+    text-transform: capitalize;
+  }
+  .loc-label:hover { color: white; }
+  .loc-label.active {
+    color: var(--navy);
+    background: var(--ice);
+    padding: 0.1rem 0.4rem;
+    border-radius: 2px;
+  }
+
+  /* Subject checkboxes */
+  .subject-list { display: flex; flex-direction: column; gap: 0.2rem; }
+  .subject-item {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    cursor: pointer;
+  }
+  .subject-item input[type="checkbox"] {
+    accent-color: var(--ice);
+    width: 12px;
+    height: 12px;
+    cursor: pointer;
+  }
+  .subject-item label {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    color: var(--ice);
+    cursor: pointer;
+    text-transform: capitalize;
+  }
+  .subject-item label:hover { color: white; }
+
+  /* Date tree — same structure as loc-tree */
+  .date-tree { list-style: none; padding: 0; margin: 0; }
+  .date-tree ul { list-style: none; padding: 0; margin: 0 0 0 1rem; display: none; }
+  .date-node {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.15rem 0;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .date-toggle {
+    width: 14px;
+    height: 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.6rem;
+    color: var(--muted);
+    flex-shrink: 0;
+    transition: transform 0.15s;
+    user-select: none;
+  }
+  .date-toggle.open { transform: rotate(90deg); }
+  .date-toggle.leaf { opacity: 0; pointer-events: none; }
+  .date-label {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    color: var(--ice);
+    transition: color 0.15s;
+  }
+  .date-label:hover { color: white; }
+  .date-label.active {
+    color: var(--navy);
+    background: var(--ice);
+    padding: 0.1rem 0.4rem;
+    border-radius: 2px;
+  }
+
+  /* Active filter chips */
+  .active-filters {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+    padding: 0.5rem 1.5rem;
+    background: var(--navy);
+    border-bottom: 1px solid rgba(184,212,232,0.1);
+    min-height: 2.2rem;
+  }
+  .active-filters:empty { display: none; }
+  .filter-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    background: rgba(184,212,232,0.15);
+    border: 1px solid rgba(184,212,232,0.35);
+    color: var(--ice);
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    padding: 0.2rem 0.5rem 0.2rem 0.7rem;
+    border-radius: 2px;
+  }
+  .chip-remove {
+    cursor: pointer;
+    opacity: 0.6;
+    font-size: 0.75rem;
+    line-height: 1;
+    transition: opacity 0.15s;
+  }
+  .chip-remove:hover { opacity: 1; }
+  .clear-all-btn {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.2rem 0.4rem;
+    margin-left: auto;
+    transition: color 0.15s;
+  }
+  .clear-all-btn:hover { color: var(--ice); }
+
+    /* ── Gallery counter ── */
   .gallery-meta {
     max-width: 1200px;
     margin: 0 auto;
@@ -133,7 +293,10 @@ permalink: /gallery/
 
   .gallery-item img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    object-position: center;
     display: block;
     transition: transform 0.35s ease, opacity 0.25s ease;
     /* lazy loading handled by loading="lazy" attribute */
@@ -353,10 +516,7 @@ permalink: /gallery/
     .lightbox-nav { display: none; }
   }
 
-  /* ── Footer ── */
-  footer { background: var(--navy); color: var(--muted); padding: 2rem; text-align: center; border-top: 1px solid rgba(184,212,232,0.15); font-family: 'Raleway', sans-serif; font-size: 0.82rem; letter-spacing: 0.04em; }
-  footer a { color: var(--ice); text-decoration: none; }
-  footer a:hover { color: white; }
+  {% include footer-styles.html %}
 </style>
 </head>
 <body>{% include masthead.html %}
@@ -366,22 +526,35 @@ permalink: /gallery/
   <div class="page-hero-content">
     <div class="page-hero-eyebrow">Reid's Unzipped</div>
     <h1>Gallery</h1>
-    <p class="page-hero-desc">Light, sea and sky — photographs from the voyage.</p>
+    <p class="page-hero-desc">Sea and sky, life and land — photographs from the voyage.</p>
   </div>
 </div>
 
-<!-- FILTER BAR — tags are read from _data/gallery.yml at build time -->
-<div class="filter-bar" id="filter-bar">
-  <span class="filter-label">Filter:</span>
-  <button class="filter-btn" data-tag="all" onclick="filterGallery('all', this)">All</button>
-  {% assign all_tags = site.data.gallery | map: "tags" | join: "," | split: "," | uniq | sort %}
-  {% for tag in all_tags %}
-    {% assign t = tag | strip %}
-    {% if t != "" %}
-      <button class="filter-btn" data-tag="{{ t }}" onclick="filterGallery('{{ t }}', this)">{{ t }}</button>
-    {% endif %}
-  {% endfor %}
+<!-- FILTER PANEL — built from loc/ and subject/ tags in gallery.yml -->
+<div class="filter-panel" id="filter-panel">
+
+  <!-- Location tree — populated by JS from data-tags on gallery items -->
+  <div class="filter-group">
+    <div class="filter-group-label">Location</div>
+    <ul class="loc-tree" id="loc-tree"></ul>
+  </div>
+
+  <!-- Subject checkboxes — populated by JS -->
+  <div class="filter-group">
+    <div class="filter-group-label">Subject</div>
+    <div class="subject-list" id="subject-list"></div>
+  </div>
+
+  <!-- Date tree — populated by JS from date fields -->
+  <div class="filter-group">
+    <div class="filter-group-label">Date</div>
+    <ul class="date-tree" id="date-tree"></ul>
+  </div>
+
 </div>
+
+<!-- ACTIVE FILTER CHIPS -->
+<div class="active-filters" id="active-filters"></div>
 
 <!-- GALLERY COUNT -->
 <div class="gallery-meta">
@@ -435,18 +608,7 @@ permalink: /gallery/
   <div class="gallery-empty" id="gallery-empty">No photographs found for this filter.</div>
 </div>
 
-<!-- FOOTER -->
-<footer>
-  <div style="margin-bottom:0.8rem;">
-    <a href="https://forecast.predictwind.com/tracking/display/SV-Zipper" target="_blank">PredictWind Tracker</a>
-    &nbsp;·&nbsp; <a href="{{ '/voyage-log/' | relative_url }}">Voyage Log</a>
-    &nbsp;·&nbsp; <a href="{{ '/crew/' | relative_url }}">The Crew</a>
-    &nbsp;·&nbsp; <a href="{{ '/gallery/' | relative_url }}">Gallery</a>
-    &nbsp;·&nbsp; <a href="{{ '/supporters/' | relative_url }}">Supporters</a>
-    &nbsp;·&nbsp; <a href="https://www.youtube.com/playlist?list=PLz8fOLkM7BZv1mgPl7UieR7eBcL09XtLE" target="_blank" rel="noopener">YouTube</a>
-  </div>
-  © Reid's Unzipped — Reid family cruising the world's oceans on Zipper
-</footer>
+{% include footer.html %}
 
 <!-- LIGHTBOX -->
 <div class="lightbox" id="lightbox" onclick="closeLightbox()">
@@ -464,7 +626,7 @@ permalink: /gallery/
 </div>
 
 <script>
-  // ── Hamburger nav ──────────────────────────────────────────────────────
+  // -- Hamburger nav --
   window.closeMenu = function() {
     document.getElementById('nav-dropdown').classList.remove('open');
     document.getElementById('hamburger').classList.remove('open');
@@ -476,93 +638,486 @@ permalink: /gallery/
     else { menu.classList.add('open'); document.getElementById('hamburger').classList.add('open'); document.getElementById('overlay').classList.add('open'); }
   };
 
-  // ── Gallery data — built from DOM so it's always in sync ──────────────
-  // Each item's data attributes carry everything we need.
+  // ============================================================
+  // Gallery filter — tree-based loc/ + subject/ tag system
+  // ============================================================
+
   const allItems = Array.from(document.querySelectorAll('.gallery-item'));
-  let visibleItems = [...allItems]; // current filtered set
-  let currentLightboxIndex = 0;    // index into visibleItems
 
-  // ── Initialise count and All button state ────────────────────────────
-  function updateCount() {
-    document.getElementById('count-shown').textContent = visibleItems.length;
-    document.getElementById('count-total').textContent  = allItems.length;
-  }
-  updateCount();
-  document.querySelector('.filter-btn[data-tag="all"]').classList.add('active');
+  // ── Parse all tags from gallery items ──────────────────────
+  // Build loc tree and subject set from data-tags attributes
+  function parseAllTags() {
+    const locTree = {};   // nested object: { pacific: { 'new-zealand': { ... } } }
+    const subjects = new Set();
 
-  // ── Multi-tag filter ──────────────────────────────────────────────────
-  let activeTags = new Set();
-
-  function applyFilter() {
-    visibleItems = allItems.filter(item => {
-      if (activeTags.size === 0) return true;
-      const photoTags = (item.dataset.tags || '').split(' ');
-      return [...activeTags].every(t => photoTags.includes(t));
-    });
-
-    allItems.forEach(item => { item.style.display = 'none'; });
-    visibleItems.forEach(item => { item.style.display = 'block'; });
-
-    const empty = document.getElementById('gallery-empty');
-    empty.style.display = visibleItems.length === 0 ? 'block' : 'none';
-
-    // Update "All" button state — active (dimly) when nothing else is
-    const allBtn = document.querySelector('.filter-btn[data-tag="all"]');
-    if (activeTags.size === 0) {
-      allBtn.classList.add('active');
-    } else {
-      allBtn.classList.remove('active');
-    }
-
-    // Update URL — comma-separated tags for shareability
-    if (activeTags.size > 0) {
-      history.replaceState(null, '', window.location.pathname + '?tags=' +
-        [...activeTags].map(encodeURIComponent).join(','));
-    } else {
-      history.replaceState(null, '', window.location.pathname);
-    }
-
-    updateCount();
-  }
-
-  window.filterGallery = function(tag, btn) {
-    if (tag === 'all') {
-      // Clear all active tags
-      activeTags.clear();
-      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-    } else {
-      // Toggle this tag on/off
-      if (activeTags.has(tag)) {
-        activeTags.delete(tag);
-        btn.classList.remove('active');
-      } else {
-        activeTags.add(tag);
-        btn.classList.add('active');
-      }
-    }
-    applyFilter();
-  };
-
-  // ── Restore filter from URL on load ──────────────────────────────────
-  (function() {
-    const params = new URLSearchParams(window.location.search);
-    const tags = params.get('tags');
-    if (tags) {
-      tags.split(',').forEach(t => {
-        const tag = decodeURIComponent(t).trim();
-        const btn = document.querySelector(`.filter-btn[data-tag="${tag}"]`);
-        if (btn) {
-          activeTags.add(tag);
-          btn.classList.add('active');
+    allItems.forEach(item => {
+      const tags = (item.dataset.tags || '').split(' ').filter(Boolean);
+      tags.forEach(tag => {
+        if (tag.startsWith('loc/')) {
+          const parts = tag.slice(4).split('/');
+          let node = locTree;
+          parts.forEach(p => {
+            if (!node[p]) node[p] = {};
+            node = node[p];
+          });
+        } else if (tag.startsWith('subject/')) {
+          subjects.add(tag.slice(8));
         }
       });
-      applyFilter();
+    });
+
+    return { locTree, subjects: [...subjects].sort() };
+  }
+
+  // ── Build location tree HTML ────────────────────────────────
+  function buildLocTree(node, path, depth) {
+    const ul = document.createElement('ul');
+    ul.className = 'loc-tree';
+    if (depth > 0) {
+      ul.style.display = 'none'; // collapsed by default beyond root
     }
+
+    Object.keys(node).sort().forEach(key => {
+      const li = document.createElement('li');
+      const fullPath = path ? path + '/' + key : key;
+      const hasChildren = Object.keys(node[key]).length > 0;
+
+      const nodeDiv = document.createElement('div');
+      nodeDiv.className = 'loc-node';
+
+      const toggle = document.createElement('span');
+      toggle.className = 'loc-toggle' + (hasChildren ? '' : ' leaf');
+      toggle.textContent = '›';
+
+      const label = document.createElement('span');
+      label.className = 'loc-label';
+      label.textContent = key.replace(/-/g, ' ');
+      label.dataset.locPath = fullPath;
+
+      label.addEventListener('click', (e) => {
+        e.stopPropagation();
+        toggleLocFilter(fullPath, label);
+      });
+
+      nodeDiv.appendChild(toggle);
+      nodeDiv.appendChild(label);
+      li.appendChild(nodeDiv);
+
+      if (hasChildren) {
+        const childUl = buildLocTree(node[key], fullPath, depth + 1);
+        li.appendChild(childUl);
+
+        toggle.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const isOpen = childUl.style.display !== 'none';
+          childUl.style.display = isOpen ? 'none' : 'block';
+          toggle.classList.toggle('open', !isOpen);
+        });
+      }
+
+      ul.appendChild(li);
+    });
+
+    return ul;
+  }
+
+  // ── Build subject checkboxes ────────────────────────────────
+  function buildSubjectList(subjects) {
+    const container = document.getElementById('subject-list');
+    subjects.forEach(subject => {
+      const item = document.createElement('div');
+      item.className = 'subject-item';
+
+      const cb = document.createElement('input');
+      cb.type = 'checkbox';
+      cb.id = 'subj-' + subject;
+      cb.value = subject;
+      cb.addEventListener('change', () => {
+        if (cb.checked) {
+          activeSubjects.add(subject);
+        } else {
+          activeSubjects.delete(subject);
+        }
+        applyFilters();
+      });
+
+      const lbl = document.createElement('label');
+      lbl.htmlFor = 'subj-' + subject;
+      lbl.textContent = subject.replace(/-/g, ' ');
+
+      item.appendChild(cb);
+      item.appendChild(lbl);
+      container.appendChild(item);
+    });
+  }
+
+  // ── Active filter state ─────────────────────────────────────
+  let activeLocPath = null;   // single loc path string or null
+  let activeSubjects = new Set();
+  let activeDateYear  = null;
+  let activeDateMonth = null;
+
+  function toggleLocFilter(path, labelEl) {
+    if (activeLocPath === path) {
+      // Deselect
+      activeLocPath = null;
+      labelEl.classList.remove('active');
+    } else {
+      // Deselect previous
+      document.querySelectorAll('.loc-label.active').forEach(el =>
+        el.classList.remove('active'));
+      activeLocPath = path;
+      labelEl.classList.add('active');
+    }
+    applyFilters();
+  }
+
+  // -- Build date tree --
+  const MONTH_ORDER = [
+    'Jan','Feb','Mar','Apr','May','Jun',
+    'Jul','Aug','Sep','Oct','Nov','Dec'
+  ];
+
+  function parseAllDates() {
+    const yearMap = {};
+    allItems.forEach(item => {
+      const d = (item.dataset.date || '').trim();
+      if (!d) return;
+      const parts = d.split(' ');
+      if (parts.length === 2) {
+        const [mon, yr] = parts;
+        if (!yearMap[yr]) yearMap[yr] = new Set();
+        yearMap[yr].add(mon);
+      }
+    });
+    return yearMap;
+  }
+
+  function buildDateTree(yearMap) {
+    const ul = document.getElementById('date-tree');
+    const years = Object.keys(yearMap).sort((a, b) => b - a);
+
+    years.forEach(year => {
+      const li = document.createElement('li');
+      const nodeDiv = document.createElement('div');
+      nodeDiv.className = 'date-node';
+
+      const toggle = document.createElement('span');
+      toggle.className = 'date-toggle';
+      toggle.textContent = '›';
+
+      const label = document.createElement('span');
+      label.className = 'date-label';
+      label.textContent = year;
+      label.dataset.dateYear = year;
+      label.addEventListener('click', e => {
+        e.stopPropagation();
+        toggleDateFilter(year, null, label);
+      });
+
+      nodeDiv.appendChild(toggle);
+      nodeDiv.appendChild(label);
+      li.appendChild(nodeDiv);
+
+      const months = [...yearMap[year]].sort((a, b) =>
+        MONTH_ORDER.indexOf(b) - MONTH_ORDER.indexOf(a));
+
+      const childUl = document.createElement('ul');
+      months.forEach(mon => {
+        const mLi = document.createElement('li');
+        const mDiv = document.createElement('div');
+        mDiv.className = 'date-node';
+
+        const mToggle = document.createElement('span');
+        mToggle.className = 'date-toggle leaf';
+        mToggle.textContent = '›';
+
+        const mLabel = document.createElement('span');
+        mLabel.className = 'date-label';
+        mLabel.textContent = mon + ' ' + year;
+        mLabel.dataset.dateYear = year;
+        mLabel.dataset.dateMonth = mon;
+        mLabel.addEventListener('click', e => {
+          e.stopPropagation();
+          toggleDateFilter(year, mon, mLabel);
+        });
+
+        mDiv.appendChild(mToggle);
+        mDiv.appendChild(mLabel);
+        mLi.appendChild(mDiv);
+        childUl.appendChild(mLi);
+      });
+
+      li.appendChild(childUl);
+
+      toggle.addEventListener('click', e => {
+        e.stopPropagation();
+        const isOpen = childUl.style.display !== 'none';
+        childUl.style.display = isOpen ? 'none' : 'block';
+        toggle.classList.toggle('open', !isOpen);
+      });
+
+      ul.appendChild(li);
+    });
+  }
+
+  function toggleDateFilter(year, month, labelEl) {
+    const sameYear  = activeDateYear  === year;
+    const sameMonth = activeDateMonth === month;
+    if (sameYear && sameMonth) {
+      activeDateYear  = null;
+      activeDateMonth = null;
+      labelEl.classList.remove('active');
+    } else {
+      document.querySelectorAll('.date-label.active').forEach(el =>
+        el.classList.remove('active'));
+      activeDateYear  = year;
+      activeDateMonth = month;
+      labelEl.classList.add('active');
+    }
+    applyFilters();
+  }
+
+  // ── Apply filters ───────────────────────────────────────────
+  function applyFilters() {
+    let visible = allItems;
+
+    // Location: item must have a loc/ tag that starts with activeLocPath
+    if (activeDateYear) {
+      const label = activeDateMonth
+        ? activeDateMonth + ' ' + activeDateYear
+        : activeDateYear;
+      const chip = makeChip(label, () => {
+        activeDateYear  = null;
+        activeDateMonth = null;
+        document.querySelectorAll('.date-label.active').forEach(el =>
+          el.classList.remove('active'));
+        applyFilters();
+      });
+      bar.appendChild(chip);
+    }
+
+    if (activeLocPath) {
+      visible = visible.filter(item => {
+        const tags = (item.dataset.tags || '').split(' ');
+        return tags.some(t =>
+          t === 'loc/' + activeLocPath ||
+          t.startsWith('loc/' + activeLocPath + '/')
+        );
+      });
+    }
+
+    // Date: item must match active year (and month if set)
+    if (activeDateYear) {
+      visible = visible.filter(item => {
+        const d = (item.dataset.date || '').trim();
+        const parts = d.split(' ');
+        if (parts.length !== 2) return false;
+        const [mon, yr] = parts;
+        if (yr !== activeDateYear) return false;
+        if (activeDateMonth && mon !== activeDateMonth) return false;
+        return true;
+      });
+    }
+
+    // Subject: item must have ALL active subjects
+    if (activeSubjects.size > 0) {
+      visible = visible.filter(item => {
+        const tags = (item.dataset.tags || '').split(' ');
+        return [...activeSubjects].every(s => tags.includes('subject/' + s));
+      });
+    }
+
+    // Show/hide
+    allItems.forEach(item => { item.style.display = 'none'; });
+    visible.forEach(item => { item.style.display = 'block'; });
+
+    visibleItems = visible;
+
+    // Empty state
+    const empty = document.getElementById('gallery-empty');
+    empty.style.display = visible.length === 0 ? 'block' : 'none';
+
+    // Count
+    document.getElementById('count-shown').textContent = visible.length;
+    document.getElementById('count-total').textContent  = allItems.length;
+
+    renderChips();
+    updateUrl();
+  }
+
+  // ── Active filter chips ─────────────────────────────────────
+  function renderChips() {
+    const bar = document.getElementById('active-filters');
+    bar.innerHTML = '';
+
+    if (!activeLocPath && activeSubjects.size === 0) return;
+
+    if (activeDateYear) {
+      const label = activeDateMonth
+        ? activeDateMonth + ' ' + activeDateYear
+        : activeDateYear;
+      const chip = makeChip(label, () => {
+        activeDateYear  = null;
+        activeDateMonth = null;
+        document.querySelectorAll('.date-label.active').forEach(el =>
+          el.classList.remove('active'));
+        applyFilters();
+      });
+      bar.appendChild(chip);
+    }
+
+    if (activeLocPath) {
+      const chip = makeChip(
+        activeLocPath.split('/').map(p => p.replace(/-/g, ' ')).join(' › '),
+        () => {
+          activeLocPath = null;
+          document.querySelectorAll('.loc-label.active').forEach(el =>
+            el.classList.remove('active'));
+          applyFilters();
+        }
+      );
+      bar.appendChild(chip);
+    }
+
+    activeSubjects.forEach(s => {
+      const chip = makeChip(s.replace(/-/g, ' '), () => {
+        activeSubjects.delete(s);
+        const cb = document.getElementById('subj-' + s);
+        if (cb) cb.checked = false;
+        applyFilters();
+      });
+      bar.appendChild(chip);
+    });
+
+    if (activeLocPath || activeSubjects.size > 0) {
+      const btn = document.createElement('button');
+      btn.className = 'clear-all-btn';
+      btn.textContent = 'Clear all';
+      btn.addEventListener('click', clearAllFilters);
+      bar.appendChild(btn);
+    }
+  }
+
+  function makeChip(text, onRemove) {
+    const chip = document.createElement('span');
+    chip.className = 'filter-chip';
+    chip.innerHTML = text + ' <span class="chip-remove">✕</span>';
+    chip.querySelector('.chip-remove').addEventListener('click', onRemove);
+    return chip;
+  }
+
+  function clearAllFilters() {
+    activeLocPath = null;
+    activeSubjects.clear();
+    document.querySelectorAll('.loc-label.active').forEach(el =>
+      el.classList.remove('active'));
+    document.querySelectorAll('.date-label.active').forEach(el =>
+      el.classList.remove('active'));
+    activeDateYear  = null;
+    activeDateMonth = null;
+    document.querySelectorAll('.subject-item input').forEach(cb =>
+      cb.checked = false);
+    applyFilters();
+  }
+
+  // ── URL state ───────────────────────────────────────────────
+  function updateUrl() {
+    const params = new URLSearchParams();
+    if (activeLocPath) params.set('loc', activeLocPath);
+    if (activeSubjects.size > 0)
+      params.set('subjects', [...activeSubjects].join(','));
+    if (activeDateYear) {
+      params.set('date', activeDateMonth
+        ? activeDateMonth + '-' + activeDateYear
+        : activeDateYear);
+    }
+    const qs = params.toString();
+    history.replaceState(null, '',
+      window.location.pathname + (qs ? '?' + qs : ''));
+  }
+
+  function restoreFromUrl() {
+    const params = new URLSearchParams(window.location.search);
+    const loc = params.get('loc');
+    const subjs = params.get('subjects');
+
+    if (loc) {
+      activeLocPath = loc;
+      // Mark the label active after tree is built
+      setTimeout(() => {
+        const el = document.querySelector(
+          `.loc-label[data-loc-path="${loc}"]`);
+        if (el) {
+          el.classList.add('active');
+          // Expand ancestors
+          let parent = el.closest('ul');
+          while (parent && parent.classList.contains('loc-tree')) {
+            parent.style.display = 'block';
+            const toggle = parent.previousElementSibling?.querySelector('.loc-toggle');
+            if (toggle) toggle.classList.add('open');
+            parent = parent.parentElement?.closest('ul');
+          }
+        }
+      }, 0);
+    }
+
+    if (subjs) {
+      subjs.split(',').forEach(s => {
+        activeSubjects.add(s);
+        const cb = document.getElementById('subj-' + s);
+        if (cb) cb.checked = true;
+      });
+    }
+
+    const dateParam = params.get('date');
+    if (dateParam) {
+      const dp = dateParam.split('-');
+      if (dp.length === 2) {
+        activeDateMonth = dp[0];
+        activeDateYear  = dp[1];
+      } else {
+        activeDateYear = dp[0];
+      }
+      setTimeout(() => {
+        const sel = activeDateMonth
+          ? `.date-label[data-date-year="${activeDateYear}"][data-date-month="${activeDateMonth}"]`
+          : `.date-label[data-date-year="${activeDateYear}"]:not([data-date-month])`;
+        const el = document.querySelector(sel);
+        if (el) el.classList.add('active');
+      }, 0);
+    }
+
+    if (loc || subjs || dateParam) applyFilters();
+  }
+
+  // ── Initialise ──────────────────────────────────────────────
+  let visibleItems = [...allItems];
+
+  (function init() {
+    const { locTree, subjects } = parseAllTags();
+
+    const treeContainer = document.getElementById('loc-tree');
+    const builtTree = buildLocTree(locTree, '', 0);
+    // Move children of built tree into treeContainer
+    while (builtTree.firstChild) {
+      treeContainer.appendChild(builtTree.firstChild);
+    }
+
+    buildSubjectList(subjects);
+
+    const yearMap = parseAllDates();
+    buildDateTree(yearMap);
+
+    // Initialise counts
+    document.getElementById('count-shown').textContent = allItems.length;
+    document.getElementById('count-total').textContent  = allItems.length;
+
+    restoreFromUrl();
   })();
 
-  // ── Lightbox ──────────────────────────────────────────────────────────
+  // ── Lightbox ────────────────────────────────────────────────
   window.openLightbox = function(globalIndex) {
-    // Find position in visibleItems
     const item = allItems[globalIndex];
     const idx = visibleItems.indexOf(item);
     if (idx === -1) return;
@@ -578,19 +1133,18 @@ permalink: /gallery/
   };
 
   window.navigateLightbox = function(dir) {
-    currentLightboxIndex = (currentLightboxIndex + dir + visibleItems.length) % visibleItems.length;
+    currentLightboxIndex =
+      (currentLightboxIndex + dir + visibleItems.length) % visibleItems.length;
     const img = document.getElementById('lightbox-img');
     img.classList.add('fading');
-    setTimeout(() => {
-      renderLightbox();
-      img.classList.remove('fading');
-    }, 160);
+    setTimeout(() => { renderLightbox(); img.classList.remove('fading'); }, 160);
   };
+
+  let currentLightboxIndex = 0;
 
   function renderLightbox() {
     const item = visibleItems[currentLightboxIndex];
     if (!item) return;
-
     const src       = item.dataset.src;
     const title     = item.dataset.title || '';
     const date      = item.dataset.date || '';
@@ -607,20 +1161,17 @@ permalink: /gallery/
     if (tagsStr) metaHTML += `<span>${tagsStr}</span>`;
     if (postUrl) metaHTML += `<a href="${postUrl}">From: ${postTitle || 'Read post'} →</a>`;
     document.getElementById('lightbox-meta').innerHTML = metaHTML;
-
     document.getElementById('lightbox-progress').textContent =
       `${currentLightboxIndex + 1} / ${visibleItems.length}`;
   }
 
-  // Keyboard navigation
   document.addEventListener('keydown', e => {
     if (!document.getElementById('lightbox').classList.contains('open')) return;
-    if (e.key === 'Escape')      closeLightbox();
-    if (e.key === 'ArrowRight')  navigateLightbox(1);
-    if (e.key === 'ArrowLeft')   navigateLightbox(-1);
+    if (e.key === 'Escape')     closeLightbox();
+    if (e.key === 'ArrowRight') navigateLightbox(1);
+    if (e.key === 'ArrowLeft')  navigateLightbox(-1);
   });
 
-  // Touch/swipe support for mobile
   let touchStartX = 0;
   document.getElementById('lightbox').addEventListener('touchstart', e => {
     touchStartX = e.changedTouches[0].clientX;
@@ -629,6 +1180,7 @@ permalink: /gallery/
     const dx = e.changedTouches[0].clientX - touchStartX;
     if (Math.abs(dx) > 50) navigateLightbox(dx < 0 ? 1 : -1);
   }, { passive: true });
+
 </script>
 </body>
 </html>

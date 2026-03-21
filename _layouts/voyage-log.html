@@ -458,6 +458,15 @@ layout: none
   }
   .btn-youtube:hover { background: var(--ice-light); transform: translateY(-1px); box-shadow: 0 4px 16px rgba(184,212,232,0.25); }
 
+  .btn-row {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 0.4rem;
+  }
+  .btn-row .btn-youtube { margin-top: 0; }
+
   /* =====================================================================
      VIEW TABS  (Grid / Archive switcher)
      ===================================================================== */
@@ -752,21 +761,8 @@ layout: none
     letter-spacing: 0.1em;
   }
 
-  /* =====================================================================
-     FOOTER  (identical to other pages)
-     ===================================================================== */
-  footer {
-    background: var(--navy);
-    color: var(--muted);
-    padding: 2rem;
-    text-align: center;
-    border-top: 1px solid rgba(184,212,232,0.15);
-    font-family: 'Raleway', sans-serif;
-    font-size: 0.82rem;
-    letter-spacing: 0.04em;
-  }
-  footer a { color: var(--ice); text-decoration: none; }
-  footer a:hover { color: white; }
+  /* ===================================================================== */
+  {% include footer-styles.html %}
 
   /* =====================================================================
      RESPONSIVE
@@ -834,12 +830,18 @@ layout: none
       </svg>
     </div>
     -->
-	<h3>Video Highlights</h3>
-    <p>Watch our videos from the Atlantic crossing, Pacific passages and everywhere in between — all in one place.</p>
-    <a href="https://www.youtube.com/playlist?list=PLz8fOLkM7BZv1mgPl7UieR7eBcL09XtLE" class="btn-youtube" target="_blank" rel="noopener">
-      <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#1a3a5c" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8z"/><polygon fill="#b8d4e8" points="9.75,15.02 15.5,12 9.75,8.98"/></svg>
-      YouTube playlist - "Zipper"
-    </a>
+    <h3>Highlights</h3>
+    <p>See some highlights of the photos and videos we've taken along the way.</p>
+    <div class="btn-row">
+      <a href="{{ '/gallery/' | relative_url }}" class="btn-youtube">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#1a3a5c" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5" fill="#1a3a5c" stroke="none"/><polyline points="21 15 16 10 5 21"/></svg>
+        Photo gallery
+      </a>
+      <a href="https://www.youtube.com/playlist?list=PLz8fOLkM7BZv1mgPl7UieR7eBcL09XtLE" class="btn-youtube" target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#1a3a5c" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8z"/><polygon fill="#b8d4e8" points="9.75,15.02 15.5,12 9.75,8.98"/></svg>
+        YouTube playlist - "Zipper"
+      </a>
+    </div>
   </div>
 </div>
 
@@ -981,21 +983,7 @@ layout: none
 
 
 
-<!-- FOOTER -->
-<footer>
-  <div style="margin-bottom:0.8rem;">
-    <a href="https://forecast.predictwind.com/tracking/display/SV-Zipper" target="_blank">PredictWind Tracker</a>
-    &nbsp;·&nbsp;
-    <a href="{{ '/voyage-log/' | relative_url }}">Voyage Log</a>
-    &nbsp;·&nbsp;
-    <a href="{{ '/crew/' | relative_url }}">The Crew</a>
-    &nbsp;·&nbsp;
-    <a href="{{ '/supporters/' | relative_url }}">Supporters</a>
-    &nbsp;·&nbsp;
-    <a href="https://www.youtube.com/playlist?list=PLz8fOLkM7BZv1mgPl7UieR7eBcL09XtLE" target="_blank" rel="noopener">YouTube</a>
-  </div>
-  © Reid's Unzipped — Reid family cruising the world's oceans on Zipper
-</footer>
+{% include footer.html %}
 
 <script>
   // ── Hamburger nav ───────────────────────────────────────────────────

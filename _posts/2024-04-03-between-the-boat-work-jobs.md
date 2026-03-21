@@ -14,7 +14,7 @@ Fun in Martinique, including a video of our underwater exploits
 
 I might be better at writing up the problems and boat work jobs, but don't worry — it's not all hard work!
 
-![Underwater fish in Martinique]({{ site.baseurl }}/assets/images/posts/little-fishes-still.webp)
+![Amazing soft corals and reef fish in Martinique]({{ site.baseurl }}/assets/images/posts/little-fishes-still.webp)
 
 We had plenty of time to really enjoy Martinique. Our [tracker](https://forecast.predictwind.com/tracking/display/SV-Zipper) shows I don't know how many trips in and out of Marin, as well as two visits to the West coast including one all the way up to St. Pierre.
 
@@ -47,7 +47,7 @@ This video shows some of what we found under the surface in Martinique — the m
 
 Marin and St. Anne are busy, so many yachts travel through! Amongst the hundreds of boats here we have met up with and been onboard 3 other Outremer 45 Danson designs — our sister ships. It's amazing how these boats are all so different in their internal layout and cockpit design. Loic, Anne-Sophie and family on Nawaks have been instrumental in us getting setup at all (see our supporters page) so it was a pleasure to finally meet them and have supper on board. Having now sailed all the way round the world they had just recently "crossed their track" in the southern Caribbean. We also met up with Sebastien and Valentine on Im'possible (also recently crossed their track) and Bryce, Astrid and family on Lady Blue. All were amazingly welcoming and keen to show us their boats and explore ours. We learned a lot from each of them and thoroughly enjoyed meeting up!
 
-![Outremer sister ship in Martinique]({{ site.baseurl }}/assets/images/posts/img_5915-1.webp)
+![Nawaks, one of our sister ships in Martinique]({{ site.baseurl }}/assets/images/posts/img_5915-1.webp)
 
 Finally, Angus and Sophie enjoyed birthdays whilst we were in Martinique — Angus' was when we were ashore for a few days, and Sophie's 40th present was the mast going back up. Fortunately for me she *does* know how lucky she is 😉
 

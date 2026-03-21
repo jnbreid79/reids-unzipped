@@ -1,0 +1,64 @@
+  footer {
+    background: var(--navy);
+    color: var(--muted);
+    padding: 2rem;
+    text-align: center;
+    border-top: 1px solid rgba(184,212,232,0.15);
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.82rem;
+    letter-spacing: 0.04em;
+  }
+  footer a { color: var(--ice); text-decoration: none; }
+
+  .footer-follow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.8rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+  }
+  .footer-follow a {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    color: var(--ice);
+    opacity: 0.75;
+    transition: opacity 0.2s;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  .footer-follow a:hover { opacity: 1; color: white; }
+  .footer-follow .f-icon {
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 1rem;
+    line-height: 1;
+  }
+  .footer-follow .f-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+  }
+  .footer-follow a:hover .f-icon img { opacity: 1; }
+  .footer-follow .f-icon svg {
+    color: var(--ice);
+    opacity: 0.7;
+    transition: opacity 0.2s;
+  }
+  .footer-follow a:hover .f-icon svg { opacity: 1; }
+  .footer-ext::after {
+    content: '↗';
+    font-size: 0.6rem;
+    opacity: 0.5;
+    margin-left: 0.1rem;
+    vertical-align: super;
+  }
