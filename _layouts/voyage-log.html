@@ -138,18 +138,17 @@ layout: none
   /* =====================================================================
      FILTERS / TAG BAR
      ===================================================================== */
+  /* -- Filter dropdown -- */
   .filter-bar {
     background: var(--navy);
     border-bottom: 1px solid rgba(184,212,232,0.12);
-    padding: 0.75rem 1.5rem;
+    padding: 0.65rem 1.5rem;
     display: flex;
     align-items: center;
-    gap: 0.6rem;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
+    gap: 0.8rem;
+    position: relative;
+    z-index: 50;
   }
-  .filter-bar::-webkit-scrollbar { display: none; }
 
   .filter-label {
     font-family: 'Raleway', sans-serif;
@@ -158,31 +157,174 @@ layout: none
     letter-spacing: 0.18em;
     color: var(--muted);
     white-space: nowrap;
-    padding-right: 0.4rem;
     flex-shrink: 0;
   }
 
-  .filter-btn {
+  /* The trigger button */
+  .filter-trigger {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
     font-family: 'Raleway', sans-serif;
     font-size: 0.72rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     color: var(--ice);
     background: none;
-    border: 1px solid rgba(184,212,232,0.25);
+    border: 1px solid rgba(184,212,232,0.3);
     border-radius: 2px;
     padding: 0.3rem 0.8rem;
     cursor: pointer;
     white-space: nowrap;
-    flex-shrink: 0;
     transition: all 0.18s;
+    flex-shrink: 0;
   }
-  .filter-btn:hover,
+  .filter-trigger:hover,
+  .filter-trigger.open {
+    border-color: var(--ice);
+    color: white;
+  }
+  .filter-trigger-arrow {
+    font-size: 0.6rem;
+    transition: transform 0.2s;
+    opacity: 0.7;
+  }
+  .filter-trigger.open .filter-trigger-arrow {
+    transform: rotate(180deg);
+  }
+
+  /* Active tag chips on the trigger button */
+  .filter-active-chips {
+    display: flex;
+    gap: 0.3rem;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    max-width: 400px;
+  }
+  .filter-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    background: var(--ice);
+    color: var(--navy);
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 0.15rem 0.4rem 0.15rem 0.5rem;
+    border-radius: 2px;
+    white-space: nowrap;
+  }
+  .filter-chip-remove {
+    cursor: pointer;
+    opacity: 0.6;
+    font-size: 0.7rem;
+    line-height: 1;
+    transition: opacity 0.15s;
+  }
+  .filter-chip-remove:hover { opacity: 1; }
+  .filter-chip-overflow {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.65rem;
+    color: var(--ice);
+    opacity: 0.7;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  /* Clear all link */
+  .filter-clear-all {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: color 0.15s;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .filter-clear-all:hover { color: var(--ice); }
+
+  /* Dropdown panel */
+  .filter-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--navy);
+    border-bottom: 2px solid var(--ice);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    padding: 1rem 1.5rem 1.2rem;
+    z-index: 49;
+  }
+  .filter-dropdown.open { display: block; }
+
+  /* Search inside dropdown */
+  .filter-dropdown-search {
+    background: rgba(255,255,255,0.06);
+    border: none;
+    border-bottom: 1px solid rgba(184,212,232,0.25);
+    color: var(--ice);
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+    padding: 0.3rem 0.2rem;
+    outline: none;
+    width: 200px;
+    transition: border-color 0.15s;
+    margin-bottom: 0.8rem;
+    display: block;
+  }
+  .filter-dropdown-search::placeholder {
+    color: rgba(184,212,232,0.35);
+    font-style: italic;
+  }
+  .filter-dropdown-search:focus { border-bottom-color: var(--ice); }
+
+  /* Tag buttons inside dropdown */
+  .filter-tag-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+  .filter-btn {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--ice);
+    background: none;
+    border: 1px solid rgba(184,212,232,0.25);
+    border-radius: 2px;
+    padding: 0.25rem 0.7rem;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.15s;
+  }
+  .filter-btn:hover { border-color: rgba(184,212,232,0.6); color: white; }
   .filter-btn.active {
     background: var(--ice);
     color: var(--navy);
     border-color: var(--ice);
   }
+  .filter-btn.hidden { display: none; }
+
+  /* No-match message */
+  .filter-no-match {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+    font-style: italic;
+    display: none;
+    padding: 0.3rem 0;
+  }
+
 
   /* =====================================================================
      MAIN GRID
@@ -817,14 +959,38 @@ layout: none
 {% assign all_tags = site.posts | map: "tags" | join: "," | split: "," | uniq | sort %}
 <div class="filter-bar" id="filter-bar">
   <span class="filter-label">Filter:</span>
-  <button class="filter-btn active" data-tag="all" onclick="filterPosts('all', this)">All</button>
-  {% for tag in all_tags %}
-    {% assign t = tag | strip %}
-    {% if t != "" %}
-      <button class="filter-btn" data-tag="{{ t }}" onclick="filterPosts('{{ t }}', this)">{{ t }}</button>
-    {% endif %}
-  {% endfor %}
+
+  <!-- Trigger button -->
+  <button class="filter-trigger" id="filter-trigger" onclick="toggleFilterDropdown()">
+    Tags
+    <span class="filter-trigger-arrow">▼</span>
+  </button>
+
+  <!-- Active chips + clear -->
+  <div class="filter-active-chips" id="filter-active-chips"></div>
+  <span class="filter-chip-overflow" id="filter-chip-overflow" style="display:none"></span>
+  <button class="filter-clear-all" id="filter-clear-all" style="display:none" onclick="clearAllTags()">Clear all</button>
+
+  <!-- Dropdown panel -->
+  <div class="filter-dropdown" id="filter-dropdown">
+    <input type="text" class="filter-dropdown-search" id="tag-search"
+           placeholder="Search tags…" autocomplete="off">
+    <div class="filter-tag-grid" id="filter-tag-grid">
+      {% for tag in all_tags %}
+        {% assign t = tag | strip %}
+        {% if t != "" %}
+          <button class="filter-btn" data-tag="{{ t }}"
+                  onclick="toggleTag('{{ t }}', this)">{{ t }}</button>
+        {% endif %}
+      {% endfor %}
+      <span class="filter-no-match" id="filter-no-match">No matching tags</span>
+    </div>
+  </div>
 </div>
+
+<!-- Click-outside overlay to close dropdown -->
+<div id="filter-overlay" onclick="closeFilterDropdown()"
+     style="display:none; position:fixed; inset:0; z-index:48;"></div>
 
 
 <!-- YOUTUBE STRIP -->
@@ -1058,8 +1224,10 @@ layout: none
 
   function getFilteredCards() {
     return Array.from(document.querySelectorAll('#posts-grid .post-card')).filter(card => {
-      if (currentTag === 'all') return true;
-      return (card.dataset.tags || '').split(' ').includes(currentTag);
+      if (currentTag === 'all' || activeTags.size === 0) return true;
+      const cardTags = (card.dataset.tags || '').split(' ');
+      // Multi-select: card must match ANY of the active tags
+      return [...activeTags].some(t => cardTags.includes(t));
     });
   }
 
@@ -1137,30 +1305,137 @@ layout: none
   }
 
   // ── Tag filter (updated to work with pagination) ────────────────────
+  // ── Filter dropdown — multi-select tags ─────────────────────────────────
+
+  let activeTags = new Set();
+
+  function toggleFilterDropdown() {
+    const dropdown = document.getElementById('filter-dropdown');
+    const trigger  = document.getElementById('filter-trigger');
+    const overlay  = document.getElementById('filter-overlay');
+    const isOpen   = dropdown.classList.contains('open');
+    if (isOpen) {
+      closeFilterDropdown();
+    } else {
+      dropdown.classList.add('open');
+      trigger.classList.add('open');
+      overlay.style.display = 'block';
+      // Focus search input
+      setTimeout(() => {
+        const s = document.getElementById('tag-search');
+        if (s) s.focus();
+      }, 50);
+    }
+  }
+
+  function closeFilterDropdown() {
+    document.getElementById('filter-dropdown').classList.remove('open');
+    document.getElementById('filter-trigger').classList.remove('open');
+    document.getElementById('filter-overlay').style.display = 'none';
+  }
+
+  function toggleTag(tag, btn) {
+    if (activeTags.has(tag)) {
+      activeTags.delete(tag);
+      btn.classList.remove('active');
+    } else {
+      activeTags.add(tag);
+      btn.classList.add('active');
+    }
+    currentTag = activeTags.size > 0 ? [...activeTags] : 'all';
+    showPage(1);
+    renderActiveChips();
+  }
+
+  function clearAllTags() {
+    activeTags.clear();
+    document.querySelectorAll('#filter-tag-grid .filter-btn').forEach(b =>
+      b.classList.remove('active'));
+    currentTag = 'all';
+    showPage(1);
+    renderActiveChips();
+  }
+
+  function renderActiveChips() {
+    const chipsEl    = document.getElementById('filter-active-chips');
+    const overflowEl = document.getElementById('filter-chip-overflow');
+    const clearBtn   = document.getElementById('filter-clear-all');
+    const triggerBtn = document.getElementById('filter-trigger');
+
+    chipsEl.innerHTML = '';
+    overflowEl.style.display = 'none';
+
+    if (activeTags.size === 0) {
+      clearBtn.style.display = 'none';
+      triggerBtn.firstChild.textContent = 'Tags ';
+      return;
+    }
+
+    clearBtn.style.display = '';
+
+    // Update trigger label
+    triggerBtn.firstChild.textContent = `Tags (${activeTags.size}) `;
+
+    // Show up to 3 chips, then "+N more"
+    const tags = [...activeTags];
+    const MAX_CHIPS = 3;
+    tags.slice(0, MAX_CHIPS).forEach(tag => {
+      const chip = document.createElement('span');
+      chip.className = 'filter-chip';
+      chip.innerHTML = tag.replace(/-/g, ' ') +
+        ` <span class="filter-chip-remove" data-tag="${tag}">✕</span>`;
+      chip.querySelector('.filter-chip-remove').addEventListener('click', e => {
+        e.stopPropagation();
+        activeTags.delete(tag);
+        const btn = document.querySelector(
+          `#filter-tag-grid .filter-btn[data-tag="${tag}"]`);
+        if (btn) btn.classList.remove('active');
+        currentTag = activeTags.size > 0 ? [...activeTags] : 'all';
+        showPage(1);
+        renderActiveChips();
+      });
+      chipsEl.appendChild(chip);
+    });
+
+    if (tags.length > MAX_CHIPS) {
+      overflowEl.textContent = `+${tags.length - MAX_CHIPS} more`;
+      overflowEl.style.display = '';
+    }
+  }
+
+  // Tag search within dropdown
+  (function initTagSearch() {
+    const input   = document.getElementById('tag-search');
+    const noMatch = document.getElementById('filter-no-match');
+    if (!input) return;
+    input.addEventListener('input', () => {
+      const query = input.value.trim().toLowerCase().replace(/-/g, ' ');
+      const btns  = Array.from(
+        document.querySelectorAll('#filter-tag-grid .filter-btn'));
+      let anyVisible = false;
+      btns.forEach(btn => {
+        const label = btn.dataset.tag.replace(/-/g, ' ').toLowerCase();
+        const show  = !query || label.includes(query);
+        btn.classList.toggle('hidden', !show);
+        if (show) anyVisible = true;
+      });
+      if (noMatch)
+        noMatch.style.display = (!query || anyVisible) ? 'none' : 'block';
+    });
+  })();
+
+  // ── Pagination — updated to support multi-select ──────────────────────
+
   window.filterPosts = function(tag, btn) {
-    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    // Legacy single-tag path — kept for compatibility but not used in dropdown
+    document.querySelectorAll('.filter-btn').forEach(b =>
+      b.classList.remove('active'));
     btn.classList.add('active');
     currentTag = tag;
     showPage(1);
-
-    // No-results message
-    const filtered = getFilteredCards();
-    let noResult = document.getElementById('no-posts-msg');
-    if (filtered.length === 0) {
-      if (!noResult) {
-        noResult = document.createElement('div');
-        noResult.id = 'no-posts-msg';
-        noResult.className = 'no-posts';
-        noResult.textContent = 'No posts found for this filter.';
-        document.getElementById('posts-grid').appendChild(noResult);
-      }
-      noResult.style.display = '';
-    } else if (noResult) {
-      noResult.style.display = 'none';
-    }
   };
 
-  // Initialise pagination on load
+  // ── Initialise pagination on load  // Initialise pagination on load
   showPage(1);
 
 </script>
