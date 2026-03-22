@@ -29,6 +29,8 @@ permalink: /follow/
   /* ── Hero ── */
   .page-hero {
     background: linear-gradient(160deg, #0d2438 0%, #1a3a5c 50%, #1f4a73 100%);
+    background-size: cover;
+    background-position: center 40%;
     padding: 4rem 1.5rem 3.5rem;
     text-align: center;
     position: relative;
@@ -38,9 +40,11 @@ permalink: /follow/
     content: '';
     position: absolute;
     inset: 0;
-    background-image:
-      radial-gradient(ellipse at 20% 80%, rgba(45,106,159,0.35) 0%, transparent 50%),
-      radial-gradient(ellipse at 80% 20%, rgba(31,74,115,0.4) 0%, transparent 50%);
+    background: linear-gradient(
+      to bottom,
+      rgba(10, 25, 40, 0.50) 0%,
+      rgba(10, 25, 40, 0.75) 100%
+    );
     pointer-events: none;
   }
   .page-hero-content { position: relative; z-index: 2; max-width: 700px; margin: 0 auto; }
@@ -235,7 +239,7 @@ permalink: /follow/
 </head>
 <body>{% include masthead.html %}
 
-<div class="page-hero">
+<div class="page-hero" style="background-image: url('{{ '/assets/images/posts/image.webp' | relative_url }}');">
   <div class="page-hero-content">
     <div class="page-hero-eyebrow">Reid's Unzipped</div>
     <h1>Follow Zipper</h1>

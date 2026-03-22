@@ -7,14 +7,6 @@ layout: none
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{{ page.title }} — Reid's Unzipped</title>
-<meta name="description" content="{{ page.excerpt | strip_html | strip | truncate: 155 }}">
-<link rel="canonical" href="{{ page.url | absolute_url }}">
-<meta property="og:title" content="{{ page.title }}">
-<meta property="og:description" content="{{ page.excerpt | strip_html | strip | truncate: 155 }}">
-<meta property="og:image" content="{{ page.header.teaser | absolute_url }}">
-<meta property="og:url" content="{{ page.url | absolute_url }}">
-<meta property="og:type" content="article">
-<meta property="og:site_name" content="Reid's Unzipped">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500&family=Merriweather:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
 <style>
@@ -241,123 +233,69 @@ layout: none
   }
   .post-body img:hover { opacity: 0.92; }
 
-  /* Gallery grid — JS will wrap consecutive images in .gallery */
+  /* =====================================================================
+     GALLERY — CSS grid, natural image proportions, left-to-right order
+     Consecutive images in a post are wrapped in .gallery by JS.
+     Images display at their natural aspect ratio — no forced crop.
+     Grid fills across then down (row by row), matching markdown order.
+     Clicking opens the full image in the lightbox.
+     ===================================================================== */
+
+  /* CSS columns — items fill top-to-bottom within each column,
+     cascading any uneven space to the bottom rather than leaving
+     gaps mid-grid. JS reorders items so the visual reading order
+     is left-to-right (across then down) matching markdown order. */
   .gallery {
-    display: grid;
-    gap: 6px;
-    margin: 2rem -1.5rem;
+    columns: 3;
+    column-gap: 6px;
+    margin: 1.5rem 0;
   }
-  .gallery.count-1 { grid-template-columns: 1fr; margin: 2rem 0; }
-  .gallery.count-2 { grid-template-columns: 1fr 1fr; }
-  .gallery.count-3 { grid-template-columns: 1fr 1fr 1fr; }
-  .gallery.count-4 { grid-template-columns: 1fr 1fr; }
-  .gallery.count-5 { grid-template-columns: 1fr 1fr 1fr; }
-  .gallery.count-6 { grid-template-columns: 1fr 1fr 1fr; }
+
+  /* Single image — full width */
+  .gallery.count-1 { columns: 1; }
+
+  /* Two images — side by side */
+  .gallery.count-2 { columns: 2; }
+
+  @media (max-width: 700px) {
+    .gallery         { columns: 2; }
+    .gallery.count-1 { columns: 1; }
+  }
+  @media (max-width: 400px) {
+    .gallery { columns: 1; }
+  }
 
   .gallery-item {
+    break-inside: avoid;
+    margin-bottom: 6px;
     overflow: hidden;
     border-radius: 2px;
     cursor: zoom-in;
     position: relative;
     background: var(--navy-mid);
-  }
-  .gallery-item img {
-    width: 100%; height: 100%;
-    object-fit: cover;
-    margin: 0;
-    aspect-ratio: 4/3;
-    transition: transform 0.3s ease, opacity 0.2s;
-  }
-  .gallery-item:hover img { transform: scale(1.03); opacity: 1; }
-
-  /* For count-3 galleries, make first image span full width */
-  .gallery.count-3 .gallery-item:first-child {
-    grid-column: 1 / -1;
-  }
-  .gallery.count-3 .gallery-item:first-child img {
-    aspect-ratio: 16/7;
-  }
-
-  @media (max-width: 600px) {
-    .gallery.count-3,
-    .gallery.count-5,
-    .gallery.count-6 { grid-template-columns: 1fr 1fr; }
-    .gallery.count-3 .gallery-item:first-child { grid-column: 1 / -1; }
-  }
-
-  /* =====================================================================
-     VIDEO EMBED
-     Wider than the text column (up to 900px) and centred using the
-     classic negative-margin trick so it breaks out of the 700px .post-body.
-     The iframe uses the padding-bottom aspect-ratio hack for universal
-     browser compatibility.
-     ===================================================================== */
-  .video-embed {
-    /* Break out wider than the 700px text column */
-    width: min(900px, calc(100vw - 2rem));
-    margin: 2.5rem auto;
-    /* Pull the box to centre relative to the viewport, not the text column */
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    border-radius: 3px;
-    overflow: hidden;
-    box-shadow: 0 4px 24px rgba(26,58,92,0.18);
-  }
-
-  .video-embed-header {
-    background: var(--navy);
-    padding: 0.65rem 1.1rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 2px solid var(--ice);
-  }
-
-  .video-embed-label {
-    display: flex;
-    align-items: center;
-    gap: 0.55rem;
-    font-family: 'Raleway', sans-serif;
-    font-size: 0.68rem;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    color: var(--ice);
-  }
-  .video-embed-label svg { flex-shrink: 0; }
-
-  .video-embed-yt-link {
-    font-family: 'Raleway', sans-serif;
-    font-size: 0.65rem;
-    text-transform: uppercase;
-    letter-spacing: 0.14em;
-    color: var(--muted);
-    text-decoration: none;
-    transition: color 0.15s;
-  }
-  .video-embed-yt-link:hover { color: var(--ice); }
-
-  /* Bulletproof 16:9 iframe container — padding-bottom hack */
-  .video-embed-frame {
-    position: relative;
-    width: 100%;
-    height: 0;
-    padding-bottom: 56.25%; /* 9/16 = 0.5625 */
-    background: #0d1f33;
-    overflow: hidden;
-  }
-
-  .video-embed-frame iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
     display: block;
   }
 
-  /* =====================================================================
+  .gallery-item img {
+    width: 100%;
+    height: auto;        /* natural proportions — no crop */
+    display: block;
+    margin: 0;
+    transition: transform 0.3s ease, opacity 0.2s;
+  }
+  .gallery-item:hover img { transform: scale(1.02); opacity: 0.92; }
+
+  /* Single image outside a gallery (standalone) */
+  .post-body > img {
+    width: 100%;
+    height: auto;
+    border-radius: 2px;
+    display: block;
+    margin: 1.5rem 0;
+    cursor: zoom-in;
+  }
+
+    /* =====================================================================
      LIGHTBOX
      ===================================================================== */
   .lightbox {
@@ -690,43 +628,86 @@ layout: none
   };
 
   // ── Gallery builder ────────────────────────────────────────────────────
-  // Finds consecutive <img> tags in the post body and wraps them in a .gallery grid
+  // Gallery builder — groups images for display.
+  //
+  // Jekyll rendering rules:
+  //   - Images on consecutive lines (no blank line) → all inside ONE <p> tag
+  //   - Images separated by blank lines → each in its OWN <p> tag
+  //
+  // Our grouping rule:
+  //   - Multiple images inside one <p> = one group (consecutive lines, no blank)
+  //   - Consecutive image-only <p> tags = one group (blank lines between each)
+  //   - Any <p> with real text content, or any non-<p> element = group break
+  //
   (function() {
     const body = document.querySelector('.post-body');
     if (!body) return;
 
-    // Collect all images that are direct children of p tags or the body
-    const imgs = Array.from(body.querySelectorAll('p img, img'));
-    // Unwrap images from their p tags first
-    imgs.forEach(img => {
-      const p = img.parentElement;
-      if (p && p.tagName === 'P' && p.children.length === 1) {
-        p.replaceWith(img);
+    // Check if a <p> element contains only images (and whitespace)
+    function isImageOnlyP(el) {
+      if (el.tagName !== 'P') return false;
+      return [...el.childNodes].every(n =>
+        (n.nodeType === 3 && n.textContent.trim() === '') ||
+        (n.nodeType === 1 && n.tagName === 'IMG')
+      );
+    }
+
+    // Walk direct children, collecting runs of image-only <p> elements
+    const groups = [];   // each group: array of <p> elements
+    let current = [];
+
+    Array.from(body.children).forEach(el => {
+      if (isImageOnlyP(el)) {
+        current.push(el);
+      } else {
+        if (current.length) { groups.push([...current]); current = []; }
       }
     });
+    if (current.length) groups.push(current);
 
-    // Now find runs of consecutive sibling images
-    const allImgs = Array.from(body.querySelectorAll('img'));
-    let i = 0;
-    while (i < allImgs.length) {
-      const run = [allImgs[i]];
-      let next = allImgs[i].nextElementSibling;
-      while (next && next.tagName === 'IMG') {
-        run.push(next);
-        next = next.nextElementSibling;
-      }
-      // Wrap run in gallery
+    // Build a gallery for each group
+    groups.forEach(group => {
+      // Collect all imgs from all <p> elements in this group
+      const imgs = group.flatMap(p => Array.from(p.querySelectorAll('img')));
+      if (!imgs.length) return;
+
+      const n = imgs.length;
       const gallery = document.createElement('div');
-      gallery.className = `gallery count-${Math.min(run.length, 6)}`;
-      run[0].parentNode.insertBefore(gallery, run[0]);
-      run.forEach(img => {
+      gallery.className = n <= 2 ? `gallery count-${n}` : 'gallery';
+
+      group[0].parentNode.insertBefore(gallery, group[0]);
+
+      // CSS columns fills top-to-bottom within each column, so the natural
+      // display order is: col1-item1, col1-item2, col2-item1, col2-item2 …
+      // We want left-to-right reading order (row by row), so we reorder
+      // the items to distribute them column-by-column before inserting.
+      //
+      // Example: 7 items, 3 columns → rows are [1,2,3], [4,5,6], [7]
+      // Column 0 gets items at row-indices: 0,3,6  → imgs[0], imgs[3], imgs[6]
+      // Column 1 gets items at row-indices: 1,4    → imgs[1], imgs[4]
+      // Column 2 gets items at row-indices: 2,5    → imgs[2], imgs[5]
+      // Inserting in that order makes CSS columns display them left-to-right.
+
+      const cols = n <= 2 ? n : 3;
+      const rows = Math.ceil(n / cols);
+      const reordered = [];
+      for (let col = 0; col < cols; col++) {
+        for (let row = 0; row < rows; row++) {
+          const idx = row * cols + col;
+          if (idx < n) reordered.push(imgs[idx]);
+        }
+      }
+
+      reordered.forEach(img => {
         const item = document.createElement('div');
         item.className = 'gallery-item';
         gallery.appendChild(item);
         item.appendChild(img);
       });
-      i += run.length;
-    }
+
+      // Remove the now-empty <p> wrappers
+      group.forEach(p => p.remove());
+    });
   })();
 
   // ── Lightbox ───────────────────────────────────────────────────────────

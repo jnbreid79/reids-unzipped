@@ -926,7 +926,7 @@ layout: none
 <body>{% include masthead.html %}
 
 <!-- PAGE HERO -->
-<div class="page-hero" style="background-image: url('{{ '/assets/images/posts/image.webp' | relative_url }}');">
+<div class="page-hero" style="background-image: url('{{ '/assets/images/NZ arrival.jpg' | relative_url }}');">
   <div class="page-hero-content">
     <div class="page-hero-eyebrow">Reid's Unzipped</div>
     <h1>Voyage Log</h1>
@@ -980,7 +980,7 @@ layout: none
         {% assign t = tag | strip %}
         {% if t != "" %}
           <button class="filter-btn" data-tag="{{ t }}"
-                  onclick="toggleTag('{{ t }}', this)">{{ t }}</button>
+                  onclick="toggleTag('{{ t }}', this)">{{ t | replace: '-', ' ' }}</button>
         {% endif %}
       {% endfor %}
       <span class="filter-no-match" id="filter-no-match">No matching tags</span>
@@ -1082,7 +1082,7 @@ layout: none
           <div class="post-card-footer">
             <div class="post-card-tags">
               {% for tag in post.tags limit:3 %}
-              <span class="post-card-tag">{{ tag }}</span>
+              <span class="post-card-tag">{{ tag | replace: '-', ' ' }}</span>
               {% endfor %}
             </div>
             <span class="post-card-readmore">Read →</span>

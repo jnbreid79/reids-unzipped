@@ -38,18 +38,29 @@ Our arrival into New Zealand was one we couldn't possibly have imagined. We left
 
 We sailed down the Northland coastline on a beautiful morning with a glorious wind for our Code 0. There was no evidence, other than in our exhausted emotions, of the rough seas and frontal winds from the previous couple of days. This was sailing at its best (although a bit cold for us — we're not in the tropics anymore)!
 
-![Sailing down the Northland coast, approaching Whangarei Heads]({{ site.baseurl }}/assets/images/posts/img_8256.webp)
+![Land ahoy - celebration - we've made it halfway round the world!!]({{ site.baseurl }}/assets/images/posts/img_8256.webp)
+-----------------------------
+![The (original) crew for this leg]({{ site.baseurl }}/assets/images/posts/img_8257.webp)
 
-![The whole crew, well, all those who were onboard at the start of the passage]({{ site.baseurl }}/assets/images/posts/img_8257.webp)
+![Our new friends we picked up on the way; Deane, Leticia and Marc]({{ site.baseurl }}/assets/images/posts/20241101_094748.webp)
 
-![Northland, New Zealand]({{ site.baseurl }}/assets/images/posts/img_8262.webp)
+![Finally... we can relax]({{ site.baseurl }}/assets/images/posts/20241101_095021.webp)
+
+![Wonderful sailing under Code 0, if only it was all like this!]({{ site.baseurl }}/assets/images/posts/img-20241101-wa0002.webp)
+
+![Beautiful morning sailing down the Northland coastline]({{ site.baseurl }}/assets/images/posts/20241101_062446.webp)
+
 
 ## Whangarei
 
 We're now moored in the Town Basin marina in Whangarei surrounded by a plethora of amazing cafes, bars, restaurants and supermarkets. This is taking us some getting used to after being so remote for so long — shopping in a supermarket feels overwhelming to say the least. How do you possibly choose what to buy when literally everything is available?!
 
-![Town Basin marina, Whangarei]({{ site.baseurl }}/assets/images/posts/img_8292.webp)
+![Safely moored in Whangarei]({{ site.baseurl }}/assets/images/posts/img_8292.webp)
 
 ![Town Basin marina, Whangarei]({{ site.baseurl }}/assets/images/posts/img_8301.webp)
+
+![Town Basin marina, Whangarei]({{ site.baseurl }}/assets/images/posts/img_8305.webp)
+
+![Moored under the Hundertwasser]({{ site.baseurl }}/assets/images/posts/img_8303.webp)
 
 We have a few more days to relax and unwind as we prepare for getting back into the routines of work and school. For now, Zipper is staying put — we won't be adding to the mileage for at least a few months…

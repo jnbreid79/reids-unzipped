@@ -26,7 +26,11 @@ Today, 27th November, is a date we'll always remember. One year ago today I had 
 
 The service to get me from the street into a CT scanner and the care of a specialist stroke consultant within an hour was outstanding. There are not many places in the world where that would happen, so although I might be a little aggrieved to have had a stroke, I was seriously lucky that we had just arrived here. I can't imagine what it would have been like at sea. Fortunately, my symptoms resolved themselves naturally whilst I was in the scanner; by the time I was back on the ward I was able to talk properly again, and my limbs were behaving when asked to move. This was a relief, to say the least!
 
-![Recovering on the stroke unit in Whangarei hospital]({{ site.baseurl }}/assets/images/posts/img_8382.webp)
+![Obligatory selfie]({{ site.baseurl }}/assets/images/posts/img_8382.webp)
+
+![Recovering under a lot of monitoring]({{ site.baseurl }}/assets/images/posts/img_8381.webp)
+
+![The stroke unit in Whangarei hospital]({{ site.baseurl }}/assets/images/posts/img_9371.webp)
 
 After some recovery and a few tests it was confirmed I needed a heart op, which I had in Auckland in April. The hardest part for me had been getting my head around why and how this had happened when I was about as fit and healthy as I've ever been.
 
@@ -40,18 +44,22 @@ The most frustrating thing is that this was a mole Sophie had had for years — 
 
 But anyway, it's off now, Sophie has pretty much rebuilt her muscle movement and is working on improving her sensation further. She has one more trip to the surgeon in Auckland before her "nose job" is complete. A lesson for us all though — if you're not already, you should learn to be a smiler. Sophie's smile creases have been perfect for hiding her scars!
 
-![Sophie 3 months post-mohs surgery]({{ site.baseurl }}/assets/images/posts/img_9898.webp)
-
+![Sophie 1 week post-mohs surgery]({{ site.baseurl }}/assets/images/posts/img_9898.webp)
+![The 'phantom of the opera' look]({{ site.baseurl }}/assets/images/posts/img_9417.webp)
+![Recovery under way and bruising starting to go down]({{ site.baseurl }}/assets/images/posts/img_0035.webp)
+![Sophie 3 months post-surgery]({{ site.baseurl }}/assets/images/posts/img_0040.webp)
 ## Angus Joins the Club
 
 And then, just as we thought we'd tested the New Zealand health service enough, Angus wanted in — breaking his arm at the first cricket practice of the year. Although it was obviously pretty painful at the time, it was fortunately a greenstick and not a bad fracture, so we're still hoping our plan for a pre-Christmas departure from Whangarei is on. His cast came off this week!
 
-![Angus with arm cast]({{ site.baseurl }}/assets/images/posts/img_0897.webp)
-
+![Angus' initial full-arm cast]({{ site.baseurl }}/assets/images/posts/image-202511.webp)
+![Angus with lower arm cast]({{ site.baseurl }}/assets/images/posts/img_0897.webp)
+![Cast being cut off]({{ site.baseurl }}/assets/images/posts/image2.webp)
 ## And Isla
 
 Finally, just in case she gets any ideas, we're considering locking Isla in her cabin until we get out of New Zealand waters. But it wouldn't be fair if we didn't put her in here too — the girl keeping the whole show on the road, who turned 10 last week!
 
 ![Isla, keeping the show on the road]({{ site.baseurl }}/assets/images/posts/img_0855.webp)
+![Isla, keeping us all as happy as she is colourful]({{ site.baseurl }}/assets/images/posts/img_0924.webp)
 
 So there you have it — a bit of a tumultuous year that we will be pleased to put behind us. But it hasn't all been bad; we have made some incredible friends and have really enjoyed our stay in Whangarei. It's time to get back to what we love and start sailing and exploring again.

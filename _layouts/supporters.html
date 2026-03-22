@@ -34,8 +34,8 @@ layout: none
     {% include masthead-styles.html %}
 
   /* ── Hero ── */
-  .page-hero { background: linear-gradient(160deg, #0d2438 0%, #1a3a5c 50%, #1f4a73 100%); padding: 4rem 1.5rem 3.5rem; text-align: center; position: relative; overflow: hidden; }
-  .page-hero::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(ellipse at 20% 80%, rgba(45,106,159,0.35) 0%, transparent 50%), radial-gradient(ellipse at 80% 20%, rgba(31,74,115,0.4) 0%, transparent 50%); pointer-events: none; }
+  .page-hero { background: linear-gradient(160deg, #0d2438 0%, #1a3a5c 50%, #1f4a73 100%); background-size: cover; background-position: center 40%; padding: 4rem 1.5rem 3.5rem; text-align: center; position: relative; overflow: hidden; }
+  .page-hero::before { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(10,25,40,0.50) 0%, rgba(10,25,40,0.75) 100%); pointer-events: none; }
   .page-hero-content { position: relative; z-index: 2; max-width: 700px; margin: 0 auto; }
   .page-hero-eyebrow { font-family: 'Raleway', sans-serif; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.3em; color: var(--ice); opacity: 0.7; margin-bottom: 1rem; }
   .page-hero h1 { font-family: 'Raleway', sans-serif; font-weight: 200; font-size: clamp(1.8rem, 5vw, 3rem); letter-spacing: 0.12em; text-transform: uppercase; color: white; margin-bottom: 1rem; border-bottom: 2px solid rgba(184,212,232,0.4); padding-bottom: 1rem; display: inline-block; }
@@ -102,7 +102,7 @@ layout: none
 </head>
 <body>{% include masthead.html %}
 
-<div class="page-hero">
+<div class="page-hero" style="background-image: url('{{ '/assets/images/loading.jpg' | relative_url }}');">
   <div class="page-hero-content">
     <div class="page-hero-eyebrow">Reid's Unzipped</div>
     <h1>Supporters</h1>
@@ -190,23 +190,23 @@ layout: none
       </tr>
       <tr>
         <td>Rob McElwee, Lena Rae</td>
-        <td>Rob didn't just have a quick look, he spent several days in the engine room with me trying to work out our charging problem in Tonga, before lending us his spare regulator to get us to NZ. Legend and absolute top bloke.</td>
+        <td>Rob didn't just have a quick look, he spent several days in the engine room with Jamie trying to work out our charging problem in Tonga, before lending us his spare regulator to get us to NZ. Legend and absolute top bloke.</td>
       </tr>    </tbody>
       <tr>
         <td>Josh Dolan, Maatkare</td>
-        <td>For introducing us to Rob and also giving Zipper's engine room a huge amount of love.</td>
+        <td>For introducing us to Rob and giving Zipper's engine room a huge amount of love too. Josh also took on the role of chess coach during happy hour, a natural teacher.</td>
       </tr>    </tbody>
       <tr>
-        <td>Hugh and Barb, Eleuthera</td>
-        <td>For (probably feeling sorry for us on the other side of the world from our families) basically taking us under their wing and keeping a kind eye out to ensure we're OK</td>
+        <td>Hew and Barb, Eleuthera</td>
+        <td>For (probably feeling sorry for us on the other side of the world from our families) basically taking us under their wing and keeping a kind eye out to ensure we're OK and hosting us for Christmas.</td>
       </tr>    </tbody>
       <tr>
-        <td>All three generations of the Abbot family, Exit Only</td>
+        <td>All three generations of the Abbott family, Exit Only</td>
         <td>For holding the fort (boat and kids) for us on the pontoon whilst Sophie and I were spending our time around the hospital, and generally being amazing and lovely all the time. </td>
       </tr>    </tbody>
       <tr>
-        <td>Sharan and Kara at Whangarei marina</td>
-        <td>Sharan and Kara both had us house and cat sit for them in the depths of Whangarei winter. Ok, it's not really that cold in Whangarei even in winter, but it is cold for living on a boat, and wet. Lovely cats, mostly...</td>
+        <td>Sharron and Kara at Whangarei Marina</td>
+        <td>Sharron and Kara both had us house and cat sit for them in the depths of Whangarei winter. Ok, it's not really that cold in Whangarei even in winter, but it is cold for living on a boat, and wet. Lovely cats, mostly...</td>
       </tr>    </tbody>
       <tr>
         <td>Jane & Lianne</td>
@@ -218,7 +218,7 @@ layout: none
       </tr>    </tbody>
       <tr>
         <td>The NZ Reids</td>
-        <td>Keeping us warm, dry, fed and entertained, thanks guys! Amazing time with the cousins together, and a luxury to jump off the boat and spend a few days in the house when it turned out NZ South-island summer is colder, wetter and windier than we had hoped after our arrival in Lyttelton!</td>
+        <td>Keeping us warm, dry, fed and entertained, thanks guys! Amazing time with the cousins together, and a luxury to jump off the boat and spend a few days in the house when it turned out NZ South Island summer is colder, wetter and windier than we had hoped after our arrival in Lyttelton!</td>
       </tr>    </tbody>  </table>
 
   <!-- Stay connected -->
