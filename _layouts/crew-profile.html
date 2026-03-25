@@ -1,0 +1,715 @@
+---
+layout: none
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ page.crew_name }} — Reid's Unzipped</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500&family=Merriweather:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy:      #1a3a5c;
+    --navy-mid:  #1f4a73;
+    --blue:      #2d6a9f;
+    --ice:       #b8d4e8;
+    --ice-light: #deedf7;
+    --white:     #f8fbfd;
+    --text:      #1a2a38;
+    --muted:     #5a7a96;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Merriweather', Georgia, serif;
+    background: var(--white);
+    color: var(--text);
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  {% include masthead-styles.html %}
+
+  /* =====================================================================
+     HERO — full-bleed photo, name badge at bottom-left
+     ===================================================================== */
+  .profile-hero {
+    position: relative;
+    width: 100%;
+    min-height: 72vh;
+    background-color: var(--navy);
+    background-image: url('{{ page.hero_image | relative_url }}');
+    background-size: cover;
+    background-position: {{ page.hero_position | default: "center 25%" }};
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+  }
+
+  .profile-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(13,36,56,0.20) 0%,
+      rgba(13,36,56,0.05) 35%,
+      rgba(13,36,56,0.65) 70%,
+      rgba(13,36,56,0.95) 100%
+    );
+    pointer-events: none;
+  }
+
+  .hero-text {
+    position: relative;
+    z-index: 2;
+    padding: 0 2.5rem 3.5rem;
+    width: 100%;
+    max-width: 900px;
+  }
+
+  .hero-eyebrow {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.32em;
+    color: var(--ice);
+    opacity: 0.75;
+    margin-bottom: 0.7rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+  .hero-eyebrow::before {
+    content: '';
+    display: inline-block;
+    width: 28px;
+    height: 1px;
+    background: var(--ice);
+    opacity: 0.5;
+    flex-shrink: 0;
+  }
+
+  .hero-name {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+    font-size: clamp(3.5rem, 10vw, 6rem);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: white;
+    line-height: 0.92;
+    margin-bottom: 0.9rem;
+  }
+
+  .hero-role {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.28em;
+    color: var(--ice);
+    margin-bottom: 1.4rem;
+  }
+
+  .hero-quote {
+    font-family: 'Merriweather', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: clamp(1rem, 2vw, 1.15rem);
+    color: var(--ice-light);
+    max-width: 480px;
+    line-height: 1.7;
+    opacity: 0.9;
+  }
+
+  /* =====================================================================
+     PAGE CONTAINER
+     ===================================================================== */
+  .page-body {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  .section-label {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    color: var(--muted);
+    margin-bottom: 2.2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 4.5rem;
+  }
+  .section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: rgba(184,212,232,0.35);
+  }
+
+  /* =====================================================================
+     INTRO — large pull-quote left, paragraphs right
+     ===================================================================== */
+  .intro-split {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 4.5rem;
+    align-items: start;
+    margin-bottom: 5rem;
+  }
+  @media (max-width: 760px) {
+    .intro-split { grid-template-columns: 1fr; gap: 2.5rem; }
+  }
+
+  .intro-left {
+    position: sticky;
+    top: 88px;
+  }
+
+  .big-quote {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+    font-size: clamp(1.9rem, 3.2vw, 2.6rem);
+    line-height: 1.25;
+    color: var(--navy);
+    letter-spacing: 0.01em;
+    margin-bottom: 1.6rem;
+  }
+  .big-quote em {
+    font-style: normal;
+    color: var(--blue);
+  }
+
+  .quote-rule {
+    width: 40px;
+    height: 2px;
+    background: var(--ice);
+    margin-bottom: 1rem;
+  }
+  .quote-attr {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--muted);
+  }
+
+  .intro-right p {
+    font-size: 1rem;
+    line-height: 1.9;
+    color: var(--text);
+    margin-bottom: 1.5rem;
+  }
+  .intro-right p:last-child { margin-bottom: 0; }
+
+  .intro-right p:first-child::first-letter {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+    font-size: 4rem;
+    line-height: 0.8;
+    float: left;
+    margin: 0.1rem 0.18rem -0.1rem 0;
+    color: var(--navy);
+  }
+
+  /* =====================================================================
+     FEATURE ROWS — photo + text, alternating L/R
+     ===================================================================== */
+  .feature-row {
+    display: grid;
+    gap: 3.5rem;
+    align-items: center;
+    margin-bottom: 5rem;
+  }
+  .feature-row.img-left  { grid-template-columns: 1.05fr 1fr; }
+  .feature-row.img-right { grid-template-columns: 1fr 1.05fr; }
+
+  @media (max-width: 760px) {
+    .feature-row.img-left,
+    .feature-row.img-right { grid-template-columns: 1fr; }
+    .feature-row.img-right .feature-img { order: -1; }
+  }
+
+  .feature-img {
+    position: relative;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 6px 28px rgba(26,58,92,0.18);
+  }
+  .feature-img img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+  }
+  .feature-img:hover img { transform: scale(1.03); }
+
+  .feature-img::before {
+    content: '';
+    position: absolute;
+    top: -5px; left: -5px;
+    width: 28px; height: 28px;
+    border-top: 2px solid var(--ice);
+    border-left: 2px solid var(--ice);
+    z-index: 2; pointer-events: none;
+  }
+  .feature-row.img-right .feature-img::before {
+    left: auto; right: -5px;
+    border-left: none;
+    border-right: 2px solid var(--ice);
+  }
+
+  .feature-txt h2 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.68rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.28em;
+    color: var(--blue);
+    padding-bottom: 0.6rem;
+    border-bottom: 2px solid var(--ice);
+    display: inline-block;
+    margin-bottom: 1.1rem;
+  }
+  .feature-txt h3 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    font-size: clamp(1.3rem, 2.5vw, 1.75rem);
+    color: var(--navy);
+    line-height: 1.3;
+    margin-bottom: 1.1rem;
+  }
+  .feature-txt p {
+    font-size: 0.95rem;
+    line-height: 1.9;
+    color: var(--text);
+    margin-bottom: 1.1rem;
+  }
+  .feature-txt p:last-child { margin-bottom: 0; }
+
+  .inline-quote {
+    border-left: 3px solid var(--ice);
+    background: rgba(184,212,232,0.07);
+    padding: 0.9rem 1.2rem;
+    margin: 1.4rem 0;
+  }
+  .inline-quote p {
+    font-style: italic;
+    color: var(--navy-mid) !important;
+    margin: 0 !important;
+  }
+
+  /* =====================================================================
+     PHOTO GALLERY REEL
+     ===================================================================== */
+  .gallery-section { margin-bottom: 5rem; }
+
+  .photo-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 220px 180px;
+    gap: 6px;
+    margin: 0 -1.5rem;
+  }
+
+  .pg-item {
+    overflow: hidden;
+    border-radius: 2px;
+    cursor: zoom-in;
+    background: var(--navy-mid);
+  }
+  .pg-item img {
+    width: 100%; height: 100%;
+    object-fit: cover; display: block;
+    transition: transform 0.4s ease, opacity 0.25s;
+  }
+  .pg-item:hover img { transform: scale(1.04); opacity: 0.88; }
+
+  /*
+   * 7-photo layout:
+   *
+   *  Row 1 (220px):  [ A — feature landscape 6col ] [ B portrait 3col ] [ C portrait 3col ]
+   *  Row 2 (180px):  [ D landscape 3col ] [ E landscape 3col ] [ F landscape 3col ] [ G landscape 3col ]
+   *
+   * A spans both rows so portrait pair sits flush alongside it at full height.
+   */
+  .pg-item.a       { grid-column: 1 / 7;  grid-row: 1 / 3; }  /* large feature, 2 rows */
+  .pg-item.portrait-1 { grid-column: 7 / 10; grid-row: 1 / 3; }  /* portrait, 2 rows */
+  .pg-item.portrait-2 { grid-column: 10 / 13; grid-row: 1 / 3; } /* portrait, 2 rows */
+  .pg-item.d       { grid-column: 1 / 4;  grid-row: 3 / 4; }
+  .pg-item.e       { grid-column: 4 / 7;  grid-row: 3 / 4; }
+  .pg-item.f       { grid-column: 7 / 10; grid-row: 3 / 4; }
+  .pg-item.g       { grid-column: 10 / 13; grid-row: 3 / 4; }
+
+  /* Third row for the four landscape thumbnails */
+  .photo-grid {
+    grid-template-rows: 220px 220px 180px;
+  }
+
+  @media (max-width: 860px) {
+    .photo-grid {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
+      margin: 0;
+    }
+    .pg-item.a,
+    .pg-item.portrait-1,
+    .pg-item.portrait-2,
+    .pg-item.d,
+    .pg-item.e,
+    .pg-item.f,
+    .pg-item.g {
+      grid-column: span 1;
+      grid-row: span 1;
+    }
+    /* Feature still leads on mobile */
+    .pg-item.a { grid-column: span 2; }
+    /* Portraits keep their natural ratio on mobile */
+    .pg-item.portrait-1 img,
+    .pg-item.portrait-2 img { aspect-ratio: 3/4; height: auto; }
+    .pg-item img { aspect-ratio: 4/3; height: auto; }
+  }
+
+  .gallery-note {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--muted);
+    text-align: center;
+    margin-top: 1.1rem;
+    padding: 0 1.5rem;
+  }
+
+  /* =====================================================================
+     PLACES + ANIMALS — side-by-side banner
+     If only one is defined it expands to fill the full width.
+     ===================================================================== */
+  .facts-banner {
+    background: var(--navy);
+    margin: 0 -1.5rem 5rem;
+    display: flex;
+    align-items: stretch;
+  }
+
+  /* Each half */
+  .facts-panel {
+    flex: 1;
+    padding: 3.5rem 3rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Divider between the two panels — only shows when both exist */
+  .facts-panel + .facts-panel {
+    border-left: 1px solid rgba(184,212,232,0.12);
+  }
+
+  .facts-panel h3 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    color: var(--muted);
+    margin-bottom: 2rem;
+  }
+
+  .facts-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    justify-content: center;
+    max-width: 560px;
+  }
+
+  .place-tag,
+  .animal-tag {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.78rem;
+    letter-spacing: 0.1em;
+    color: var(--ice-light);
+    border: 1px solid rgba(184,212,232,0.28);
+    padding: 0.4rem 1rem;
+    border-radius: 2px;
+    transition: all 0.18s;
+  }
+  .place-tag:hover,
+  .animal-tag:hover {
+    background: rgba(184,212,232,0.1);
+    border-color: rgba(184,212,232,0.6);
+    color: white;
+  }
+  .place-tag.highlight,
+  .animal-tag.highlight {
+    background: rgba(184,212,232,0.12);
+    border-color: rgba(184,212,232,0.5);
+    color: var(--ice);
+  }
+
+  @media (max-width: 640px) {
+    .facts-banner { flex-direction: column; }
+    .facts-panel + .facts-panel {
+      border-left: none;
+      border-top: 1px solid rgba(184,212,232,0.12);
+    }
+    .facts-panel { padding: 2.5rem 1.8rem; }
+  }
+
+  /* =====================================================================
+     OTHER CREW NAV
+     ===================================================================== */
+  .crew-nav {
+    padding: 3.5rem 0 5rem;
+    border-top: 1px solid rgba(184,212,232,0.22);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  .crew-nav-back a {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--blue);
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+  .crew-nav-back a:hover { color: var(--navy); }
+
+  .other-crew { display: flex; gap: 1.2rem; flex-wrap: wrap; }
+
+  .crew-chip {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    text-decoration: none;
+    padding: 0.5rem 1rem 0.5rem 0.5rem;
+    border: 1px solid rgba(184,212,232,0.25);
+    border-radius: 40px;
+    transition: all 0.18s;
+  }
+  .crew-chip:hover {
+    border-color: rgba(184,212,232,0.6);
+    background: rgba(184,212,232,0.06);
+  }
+  .crew-chip-avatar {
+    width: 32px; height: 32px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: var(--navy-mid);
+    flex-shrink: 0;
+  }
+  .crew-chip-avatar img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+  .crew-chip-name {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+  }
+  .crew-chip:hover .crew-chip-name { color: var(--navy); }
+
+  {% include footer-styles.html %}
+
+  /* =====================================================================
+     LIGHTBOX
+     ===================================================================== */
+  .lightbox { display:none; position:fixed; inset:0; background:rgba(8,18,30,.97); z-index:99999; align-items:center; justify-content:center; cursor:zoom-out; }
+  .lightbox.open { display:flex; }
+  .lightbox-inner { max-width:92vw; max-height:88vh; }
+  #lb-img { max-width:90vw; max-height:86vh; object-fit:contain; display:block; border-radius:2px; cursor:default; }
+  .lb-close { position:fixed; top:1.2rem; right:1.5rem; color:var(--ice); font-size:2rem; font-weight:200; cursor:pointer; background:none; border:none; opacity:.6; transition:opacity .2s; }
+  .lb-close:hover { opacity:1; }
+  .lb-nav { position:fixed; top:50%; transform:translateY(-50%); background:none; border:none; color:var(--ice); font-size:2.5rem; font-weight:200; cursor:pointer; padding:1rem 1.5rem; opacity:.4; transition:opacity .2s; }
+  .lb-nav:hover { opacity:1; }
+  .lb-prev { left:0; } .lb-next { right:0; }
+  .lb-caption { position:fixed; bottom:1.4rem; left:50%; transform:translateX(-50%); color:var(--ice); font-family:'Raleway',sans-serif; font-size:.7rem; letter-spacing:.12em; opacity:.5; }
+</style>
+</head>
+<body>
+
+{% include masthead.html %}
+
+<!-- ── HERO ── -->
+<div class="profile-hero">
+  <div class="hero-text">
+    <div class="hero-eyebrow">The Crew · {{ page.crew_role }}</div>
+    <h1 class="hero-name">{{ page.crew_name }}</h1>
+    <div class="hero-role">{{ page.crew_subtitle }}</div>
+    <p class="hero-quote">{{ page.crew_quote }}</p>
+  </div>
+</div>
+
+<!-- ── PAGE BODY ── -->
+<div class="page-body">
+
+  <!-- INTRO -->
+  <div class="section-label">About {{ page.crew_name }}</div>
+
+  <div class="intro-split">
+    <div class="intro-left">
+      <div class="big-quote">{{ page.intro_pull_quote }}</div>
+      <div class="quote-rule"></div>
+      <div class="quote-attr">{{ page.intro_pull_attr }}</div>
+    </div>
+    <div class="intro-right">
+      {{ page.intro_text }}
+    </div>
+  </div>
+
+  <!-- FEATURE ROWS — rendered from page.features array -->
+  {% for feature in page.features %}
+  <div class="section-label">{{ feature.section_label }}</div>
+  <div class="feature-row {% if feature.image_side == 'right' %}img-right{% else %}img-left{% endif %}">
+    {% if feature.image_side == 'right' %}
+      <div class="feature-txt">
+        <h2>{{ feature.eyebrow }}</h2>
+        <h3>{{ feature.heading }}</h3>
+        {{ feature.text }}
+      </div>
+      <div class="feature-img">
+        <img src="{{ feature.image | relative_url }}" alt="{{ feature.image_alt }}">
+      </div>
+    {% else %}
+      <div class="feature-img">
+        <img src="{{ feature.image | relative_url }}" alt="{{ feature.image_alt }}">
+      </div>
+      <div class="feature-txt">
+        <h2>{{ feature.eyebrow }}</h2>
+        <h3>{{ feature.heading }}</h3>
+        {{ feature.text }}
+      </div>
+    {% endif %}
+  </div>
+  {% endfor %}
+
+  <!-- PHOTO GALLERY -->
+  <div class="gallery-section">
+    <div class="section-label">{{ page.gallery_label | default: "Some favourite moments" }}</div>
+    <div class="photo-grid" id="photo-grid">
+      {% for photo in page.gallery_photos %}
+      <div class="pg-item {{ photo.size }}" data-idx="{{ forloop.index0 }}">
+        <img src="{{ photo.src | relative_url }}" alt="{{ photo.alt }}">
+      </div>
+      {% endfor %}
+    </div>
+    {% if page.gallery_caption %}
+    <p class="gallery-note">{{ page.gallery_caption }}</p>
+    {% endif %}
+  </div>
+
+  <!-- PLACES + ANIMALS — side-by-side banner; each panel only renders if data exists -->
+  {% if page.places or page.animals %}
+  <div class="facts-banner">
+
+    {% if page.places %}
+    <div class="facts-panel">
+      <h3>Favourite places visited</h3>
+      <div class="facts-tags">
+        {% for place in page.places %}
+        <span class="place-tag{% if place.highlight %} highlight{% endif %}">{{ place.name }}</span>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
+    {% if page.animals %}
+    <div class="facts-panel">
+      <h3>Favourite animals encountered</h3>
+      <div class="facts-tags">
+        {% for animal in page.animals %}
+        <span class="animal-tag{% if animal.highlight %} highlight{% endif %}">{{ animal.name }}</span>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
+  </div>
+  {% endif %}
+
+  <!-- OTHER CREW NAV -->
+  <div class="crew-nav">
+    <div class="crew-nav-back">
+      <a href="{{ '/crew/' | relative_url }}">← Back to the crew</a>
+    </div>
+    <div class="other-crew">
+      {% for member in page.other_crew %}
+      <a href="{{ member.url | relative_url }}" class="crew-chip">
+        <div class="crew-chip-avatar">
+          <img src="{{ member.photo | relative_url }}" alt="{{ member.name }}">
+        </div>
+        <span class="crew-chip-name">{{ member.name }}</span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+
+</div><!-- /page-body -->
+
+{% include footer.html %}
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLb()">
+  <button class="lb-close" onclick="closeLb()">✕</button>
+  <button class="lb-nav lb-prev" onclick="event.stopPropagation(); navLb(-1)">‹</button>
+  <div class="lightbox-inner" onclick="event.stopPropagation()">
+    <img id="lb-img" src="" alt="">
+  </div>
+  <button class="lb-nav lb-next" onclick="event.stopPropagation(); navLb(1)">›</button>
+  <div class="lb-caption" id="lb-caption"></div>
+</div>
+
+<script>
+  window.closeMenu = function() {
+    document.getElementById('nav-dropdown').classList.remove('open');
+    document.getElementById('hamburger').classList.remove('open');
+    document.getElementById('overlay').classList.remove('open');
+  };
+  window.toggleMenu = function() {
+    const m = document.getElementById('nav-dropdown');
+    if (m.classList.contains('open')) { window.closeMenu(); }
+    else { m.classList.add('open'); document.getElementById('hamburger').classList.add('open'); document.getElementById('overlay').classList.add('open'); }
+  };
+
+  const pgItems = Array.from(document.querySelectorAll('.pg-item'));
+  let lbIdx = 0;
+  pgItems.forEach((item, i) => {
+    item.addEventListener('click', () => { lbIdx = i; openLb(); });
+  });
+  function openLb() {
+    const img = pgItems[lbIdx].querySelector('img');
+    document.getElementById('lb-img').src = img.src;
+    document.getElementById('lb-img').alt = img.alt;
+    document.getElementById('lb-caption').textContent = img.alt;
+    document.getElementById('lightbox').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  window.closeLb = function() {
+    document.getElementById('lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+  };
+  window.navLb = function(dir) {
+    lbIdx = (lbIdx + dir + pgItems.length) % pgItems.length;
+    openLb();
+  };
+  document.addEventListener('keydown', e => {
+    if (!document.getElementById('lightbox').classList.contains('open')) return;
+    if (e.key === 'Escape') closeLb();
+    if (e.key === 'ArrowRight') navLb(1);
+    if (e.key === 'ArrowLeft') navLb(-1);
+  });
+</script>
+</body>
+</html>
