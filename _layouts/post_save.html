@@ -125,76 +125,7 @@ layout: none
 
 
   /* =====================================================================
-     FLOATING ACTION BUTTONS
-     Both FABs appear together once the hero scrolls out of view.
-     ← Voyage Log: bottom-left     Share: bottom-right
-     ===================================================================== */
-  .post-fab {
-    position: fixed;
-    bottom: 1.8rem;
-    z-index: 500;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    background: var(--navy);
-    color: var(--ice);
-    border: 1.5px solid rgba(184,212,232,0.5);
-    border-radius: 2px;
-    padding: 0.55rem 1.1rem 0.55rem 0.8rem;
-    font-family: 'Raleway', sans-serif;
-    font-size: 0.72rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.14em;
-    cursor: pointer;
-    text-decoration: none;
-    box-shadow: 0 4px 20px rgba(13,36,56,0.35);
-    transition: background 0.2s, color 0.2s, border-color 0.2s, opacity 0.3s, transform 0.3s;
-    opacity: 0;
-    transform: translateY(8px);
-    pointer-events: none;
-  }
-  .post-fab.visible {
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: auto;
-  }
-  .post-fab:hover { background: var(--navy-mid); color: white; border-color: var(--ice); }
-  .post-fab svg { flex-shrink: 0; }
-
-  /* Voyage Log FAB — left side, arrow before text */
-  .fab-voyage-log {
-    left: 1.5rem;
-    padding: 0.55rem 1.1rem 0.55rem 0.75rem; /* tighter left for the arrow */
-  }
-
-  /* Share FAB — right side */
-  .fab-share { right: 1.5rem; }
-
-  /* "Link copied" tooltip above Share FAB */
-  .share-fab-tip {
-    position: fixed;
-    bottom: 5rem;
-    right: 1.5rem;
-    z-index: 501;
-    background: var(--navy);
-    color: var(--ice);
-    border: 1px solid rgba(184,212,232,0.4);
-    border-radius: 2px;
-    padding: 0.45rem 0.9rem;
-    font-family: 'Raleway', sans-serif;
-    font-size: 0.68rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    opacity: 0;
-    transform: translateY(4px);
-    transition: opacity 0.25s, transform 0.25s;
-    pointer-events: none;
-  }
-  .share-fab-tip.show { opacity: 1; transform: translateY(0); }
-
-  /* =====================================================================
-     POST FOOTER NAV — reworked with stacked prev/next and smart return
+     POST FOOTER NAV — restyled to match hero nav
      ===================================================================== */
 
   /* =====================================================================
@@ -474,61 +405,49 @@ layout: none
   }
 
   .post-footer {
-    background: var(--ice-light);
-    border-top: 2px solid var(--ice);
-    border-bottom: 2px solid var(--ice);
+    background: var(--navy);
+    padding: 1.6rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .post-footer a,
+  .post-footer button {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--ice);
+    text-decoration: none;
+    opacity: 0.6;
+    transition: opacity 0.2s;
+    background: none;
+    border: none;
+    cursor: pointer;
     padding: 0;
   }
-
-  /* Prev / Next stacked in two columns — Voyage Log is the FAB */
+  .post-footer a:hover,
+  .post-footer button:hover { opacity: 1; }
+  .post-footer .footer-back {
+    font-weight: 500;
+    opacity: 0.85;
+  }
   .post-footer-prev-next {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    gap: 2rem;
   }
   .footer-nav-prev,
   .footer-nav-next {
-    display: flex;
-    flex-direction: column;
-    gap: 0.3rem;
-    padding: 1.2rem 1.5rem;
-    text-decoration: none;
-    transition: background 0.2s;
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
-  .footer-nav-prev { border-right: 1px solid rgba(26,58,92,0.12); }
-  .footer-nav-prev:hover,
-  .footer-nav-next:hover { background: rgba(26,58,92,0.06); }
-  .footer-nav-next { text-align: right; }
-
-  .nav-direction {
-    font-family: 'Raleway', sans-serif;
-    font-size: 0.62rem;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    color: var(--muted);
-    display: flex;
-    align-items: center;
-    gap: 0.3rem;
-  }
-  .footer-nav-next .nav-direction { justify-content: flex-end; }
-
-  .nav-title {
-    font-family: 'Raleway', sans-serif;
-    font-size: 0.88rem;
-    font-weight: 400;
-    color: var(--navy);
-    line-height: 1.35;
-  }
-
-  /* Empty slot when there's no prev or next */
-  .footer-nav-empty {
-    padding: 1.2rem 1.5rem;
-  }
-
-  @media (max-width: 500px) {
-    .post-footer-prev-next { grid-template-columns: 1fr; }
-    .footer-nav-prev { border-right: none; border-bottom: 1px solid rgba(26,58,92,0.12); }
-    .footer-nav-next { text-align: left; }
-    .footer-nav-next .nav-direction { justify-content: flex-start; }
+  @media (max-width: 600px) {
+    .footer-nav-prev .nav-title,
+    .footer-nav-next .nav-title { display: none; }
   }
 
   /* ===================================================================== */
@@ -551,33 +470,16 @@ layout: none
     {% if page.excerpt %}
     <p class="post-excerpt">{{ page.excerpt }}</p>
     {% endif %}
-<!--    {% if page.tags %}
+    {% if page.tags %}
     <div class="post-tags">
       {% for tag in page.tags %}
       <span class="post-tag">{{ tag }}</span>
       {% endfor %}
     </div>
     {% endif %}
--->
 
   </div>
 </div>
-
-<!-- FLOATING BUTTONS — both appear once the hero scrolls out of view -->
-<!-- ← Voyage Log: bottom-left -->
-<a class="post-fab fab-voyage-log" id="fab-voyage-log" href="{{ '/voyage-log/' | relative_url }}" aria-label="Back to Voyage Log">
-  <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="10,3 5,8 10,13"/></svg>
-  Voyage Log
-</a>
-<!-- Share: bottom-right -->
-<button class="post-fab fab-share" id="share-fab" aria-label="Share this post">
-  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/>
-    <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
-  </svg>
-  Share
-</button>
-<div class="share-fab-tip" id="share-fab-tip">Link copied!</div>
 
 <!-- POST CONTENT -->
 <article class="post-body">
@@ -669,34 +571,15 @@ layout: none
 
 <!-- POST FOOTER -->
 <div class="post-footer">
-
-  <!-- Prev / Next post — full titles, stacked in two columns -->
+  <button class="footer-back" id="footer-back-btn">← Back</button>
   <div class="post-footer-prev-next">
     {% if page.previous.url %}
-    <a href="{{ page.previous.url | relative_url }}" class="footer-nav-prev">
-      <span class="nav-direction">
-        <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="10,3 5,8 10,13"/></svg>
-        Previous
-      </span>
-      <span class="nav-title">{{ page.previous.title }}</span>
-    </a>
-    {% else %}
-    <div class="footer-nav-empty"></div>
+    <a href="{{ page.previous.url | relative_url }}" class="footer-nav-prev">‹ <span class="nav-title">{{ page.previous.title }}</span></a>
     {% endif %}
-
     {% if page.next.url %}
-    <a href="{{ page.next.url | relative_url }}" class="footer-nav-next">
-      <span class="nav-direction">
-        Next
-        <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6,3 11,8 6,13"/></svg>
-      </span>
-      <span class="nav-title">{{ page.next.title }}</span>
-    </a>
-    {% else %}
-    <div class="footer-nav-empty"></div>
+    <a href="{{ page.next.url | relative_url }}" class="footer-nav-next"><span class="nav-title">{{ page.next.title }}</span> ›</a>
     {% endif %}
   </div>
-
 </div>
 
 {% include footer.html %}
@@ -713,69 +596,19 @@ layout: none
 </div>
 
 <script>
-  // ── Voyage Log FAB — smart return via sessionStorage ──────────────────
-  // Reads the view preference saved by voyage-log.html so Archive readers
-  // land back on the Archive tab rather than the default Grid.
+  // ── Back button — smart history-aware navigation ──────────────────────
   (function() {
-    const voyageLogBase = '{{ "/voyage-log/" | relative_url }}';
-    let returnUrl = voyageLogBase;
-    try {
-      const pref = sessionStorage.getItem('unzipped_view_pref');
-      if (pref && pref !== 'grid') {
-        returnUrl = voyageLogBase + '?view=' + encodeURIComponent(pref);
+    const fallback = '{{ "/voyage-log/" | relative_url }}';
+    function handleBack(e) {
+      e.preventDefault();
+      if (document.referrer && document.referrer.includes(window.location.hostname)) {
+        history.back();
+      } else {
+        window.location.href = fallback;
       }
-    } catch(e) {}
-    const el = document.getElementById('fab-voyage-log');
-    if (el) el.href = returnUrl;
-  })();
-
-  // ── Both FABs appear together once the hero scrolls out of view ────────
-  (function() {
-    const hero    = document.querySelector('.post-hero');
-    const fabVL   = document.getElementById('fab-voyage-log');
-    const fabSh   = document.getElementById('share-fab');
-    const tip     = document.getElementById('share-fab-tip');
-    if (!hero) return;
-
-    const observer = new IntersectionObserver(entries => {
-      const heroVisible = entries[0].isIntersecting;
-      if (fabVL) fabVL.classList.toggle('visible', !heroVisible);
-      if (fabSh) fabSh.classList.toggle('visible', !heroVisible);
-    }, { threshold: 0 });
-    observer.observe(hero);
-
-    // Share handler
-    if (fabSh) {
-      fabSh.addEventListener('click', async () => {
-        const shareData = {
-          title: document.title,
-          text:  '{{ page.excerpt | strip_html | strip | truncatewords: 20 | escape }}',
-          url:   window.location.href
-        };
-        try {
-          if (navigator.share) {
-            await navigator.share(shareData);
-          } else {
-            await navigator.clipboard.writeText(window.location.href);
-            showTip('Link copied!');
-          }
-        } catch(err) {
-          if (err.name !== 'AbortError') {
-            try {
-              await navigator.clipboard.writeText(window.location.href);
-              showTip('Link copied!');
-            } catch(e) {}
-          }
-        }
-      });
     }
-
-    function showTip(msg) {
-      if (!tip) return;
-      tip.textContent = msg;
-      tip.classList.add('show');
-      setTimeout(() => tip.classList.remove('show'), 2200);
-    }
+    const footerBtn = document.getElementById('footer-back-btn');
+    if (footerBtn) footerBtn.addEventListener('click', handleBack);
   })();
 
   // ── Hamburger nav ──────────────────────────────────────────────────────
