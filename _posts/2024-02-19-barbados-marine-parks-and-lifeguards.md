@@ -4,10 +4,14 @@ date: 2024-02-19
 layout: post
 author: Jamie Reid
 location: Barbados, Caribbean
-tags: [barbados, carburettor, cruising, dinghy, marine-park, sailing, turtles]
 excerpt: "Snorkelling with turtles straight off the back of the boat, a run-in with some particularly unhelpful lifeguards, and an unexpected carburettor lesson in the chop behind the boat."
 header:
   teaser: "/assets/images/posts/p2190662_2.webp"
+tags:
+  - loc/atlantic/caribbean/barbados
+  - subject/wildlife
+  - subject/boat-work
+  - subject/boat-life
 ---
 
 Marine parks, turtles and carburettors.

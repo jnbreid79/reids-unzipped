@@ -4,10 +4,14 @@ date: 2024-08-07
 layout: post
 author: Jamie Reid
 location: Toau, French Polynesia
-tags: [toau, tuamotus, cruising, sailing, lobster]
 excerpt: "Our last atoll in the Tuamotus, and it did not disappoint. Lobster, spearfishing, diving, and the warmth of Gaston and Valentine's hospitality."
 header:
   teaser: "/assets/images/posts/dji_0058-still.webp"
+tags:
+  - loc/pacific/french-polynesia/tuamotus/toau
+  - subject/diving
+  - subject/snorkelling
+  - subject/fishing
 ---
 
 A couple of days in the false pass at Anse Amyot on the NW of Toau. This was our last atoll in the Tuamotus — and it did not disappoint.

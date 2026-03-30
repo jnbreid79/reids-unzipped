@@ -4,10 +4,12 @@ date: 2024-03-23
 layout: post
 author: Jamie Reid
 location: Marin, Martinique
-tags: [cruising, boat-work, rigging, martinique]
 excerpt: "We came in for a broken shroud and left with completely new standing rigging. If you're going to find a serious rig problem, at least do it at the best rigging yard around."
 header:
   teaser: "/assets/images/posts/image.webp"
+tags:
+  - loc/atlantic/caribbean/martinique
+  - subject/boat-work
 ---
 
 New standing rigging

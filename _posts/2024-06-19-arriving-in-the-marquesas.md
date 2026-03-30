@@ -4,10 +4,13 @@ date: 2024-06-19
 layout: post
 author: Jamie Reid
 location: Hiva Oa, Marquesas
-tags: [marquesas, hiva-oa, cruising, sailing, french-polynesia]
 excerpt: "Zipper's arrival into Hiva Oa — checking in to French Polynesia, the bureaucratic workaround everyone uses, and a drive around one of the world's most spectacular islands."
 header:
   teaser: "/assets/images/posts/p6173007-2.webp"
+tags:
+  - loc/pacific/french-polynesia/marquesas/hiva-oa
+  - subject/bureaucracy
+  - subject/landscapes
 ---
 
 <div class="video-embed">

@@ -4,10 +4,13 @@ date: 2024-04-06
 layout: post
 author: Jamie Reid
 location: Tobago Cays, Grenadines
-tags: [caribbean, rays, tobago-cays, turtle, zipper]
 excerpt: "Time and again people told us Tobago Cays was their favourite place in the Caribbean. It certainly didn't disappoint."
 header:
   teaser: "/assets/images/posts/turtle-feeding-2-still.webp"
+tags:
+  - loc/atlantic/caribbean/grenadines/tobago-cays
+  - subject/wildlife
+  - subject/snorkelling
 ---
 
 Wow!

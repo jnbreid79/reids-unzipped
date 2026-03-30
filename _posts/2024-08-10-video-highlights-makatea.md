@@ -4,10 +4,14 @@ date: 2024-08-10
 layout: post
 author: Jamie Reid
 location: Makatea, French Polynesia
-tags: [caves, makatea, zipper, video]
 excerpt: "Some highlights of our stay in Makatea, exploring the island with the irrepressible Tapu."
 header:
   teaser: "/assets/images/posts/dji_0069.webp"
+tags:
+  - loc/pacific/french-polynesia/tuamotus/makatea
+  - subject/landscapes
+  - subject/history
+  - subject/video
 ---
 
 Some highlights of our stay in Makatea — exploring the island with Tapu.

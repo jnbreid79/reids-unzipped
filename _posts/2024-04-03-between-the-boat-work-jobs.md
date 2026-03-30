@@ -4,10 +4,14 @@ date: 2024-04-03
 layout: post
 author: Jamie Reid
 location: Martinique, Caribbean
-tags: [cruising, martinique, snorkelling]
 excerpt: "It's not all spanners and epoxy — in between the jobs list we found time to snorkel, meet our sister ships, and celebrate a couple of very important birthdays."
 header:
   teaser: "/assets/images/posts/little-fishes-still.webp"
+tags:
+  - loc/atlantic/caribbean/martinique
+  - subject/boat-life
+  - subject/family
+  - subject/snorkelling
 ---
 
 Fun in Martinique, including a video of our underwater exploits

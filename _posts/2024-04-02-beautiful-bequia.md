@@ -4,10 +4,14 @@ date: 2024-04-02
 layout: post
 author: Jamie Reid
 location: Bequia, St. Vincent and the Grenadines
-tags: [sailing, cruising, bequia, snorkelling, caribbean]
 excerpt: "A brief but brilliant stop in Bequia — dolphin escort, a new speed record of 14.5 knots, turtles, and a chance meeting with fellow cruisers Stuart and Anne on Time Bandit."
 header:
   teaser: "/assets/images/posts/dinghy-ride-still.webp"
+tags:
+  - loc/atlantic/caribbean/grenadines/bequia
+  - subject/wildlife
+  - subject/passages
+  - subject/family
 ---
 
 A quick stop in Bequia, snorkel and meet up with Time Bandit

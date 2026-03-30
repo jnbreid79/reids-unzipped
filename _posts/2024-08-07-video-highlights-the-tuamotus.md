@@ -4,10 +4,13 @@ date: 2024-08-07
 layout: post
 author: Jamie Reid
 location: Tuamotus, French Polynesia
-tags: [tuamotus, video, cruising, sailing]
 excerpt: "What an amazing month in the most spectacular coral atolls in the middle of the Pacific."
 header:
   teaser: "/assets/images/posts/in-the-middle-of-shark-alley-still-1.webp"
+tags:
+  - loc/pacific/french-polynesia/tuamotus
+  - subject/video
+  - subject/snorkelling
 ---
 
 What an amazing month we've had in the most spectacular coral atolls — the Tuamotus, in the middle of the Pacific!

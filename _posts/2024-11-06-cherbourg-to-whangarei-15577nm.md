@@ -4,10 +4,13 @@ date: 2024-11-06
 layout: post
 author: Jamie Reid
 location: Whangarei, New Zealand
-tags: [cruising, new-zealand, passage, sailing, whangarei, zipper]
 excerpt: "15,577 miles since leaving France, we have arrived in New Zealand — and we brought three Kiwis home with us."
 header:
   teaser: "/assets/images/posts/img_8256.webp"
+tags:
+  - loc/pacific/new-zealand/whangarei
+  - subject/reflections
+  - subject/passages
 ---
 
 15,577 miles since leaving France we have arrived in New Zealand…

@@ -4,10 +4,13 @@ date: 2024-02-23
 layout: post
 author: Jamie Reid
 location: Martinique, Caribbean
-tags: [cruising, lobster-pots, martinique, sailing]
 excerpt: "We bought Zipper in Martinique, and now we've sailed her all the way back — though our arrival was rather more dramatic than we'd have liked, courtesy of a stray fishing line and a stalled engine."
 header:
   teaser: "/assets/images/posts/img_5905-edited.webp"
+tags:
+  - loc/atlantic/caribbean/martinique
+  - subject/passages
+  - subject/boat-work
 ---
 
 Slow passage and lobster pots

@@ -4,10 +4,13 @@ date: 2024-08-10
 layout: post
 author: Jamie Reid
 location: Makatea, French Polynesia
-tags: [makatea, history, cruising, sailing]
 excerpt: "A small island between Tahiti and the Tuamotus, Makatea is unlike anywhere else — pushed up from the ocean, mined for phosphate, and now quietly coming back to life."
 header:
   teaser: "/assets/images/posts/img_7656.webp"
+tags:
+  - loc/pacific/french-polynesia/makatea
+  - subject/history
+  - subject/landscapes
 ---
 
 Makatea is a unique world. A small island between Tahiti and the Tuamotus, it is only 4 miles across. The nearest Tuamotu, Rangiroa, lies 40 miles to the North.

@@ -4,10 +4,12 @@ date: 2024-02-09
 layout: post
 author: Jamie Reid
 location: Mindelo, Cape Verde
-tags: [autopilot, boatcv, cruising, hydraulics, mindelo, sailing]
 excerpt: "A grinding autopilot, a week of waiting, broken springs, misaligned rudders, and Gilson working through the weekend — Mindelo was never part of the plan, but we're very glad it was there."
 header:
   teaser: "/assets/images/posts/jr1_3844.webp"
+tags:
+  - loc/atlantic/cape-verde/sao-vicente/mindelo
+  - subject/boat-work
 ---
 
 Our autopilot developed a grinding noise in the days after leaving Tenerife. With nearly 2,500 miles still to sail we decided to stop in the Cape Verdes to get it looked at…

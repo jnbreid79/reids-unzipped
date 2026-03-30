@@ -3,9 +3,12 @@ title: "Boatlife – daily surprises"
 date: 2024-01-04
 layout: post
 author: Jamie Reid
-location: Lanzarote, Canary Islands
-tags: [cruising, boat-work, canary-islands, boatlife]
+location: Gran Canaria, Canary Islands
 excerpt: "One new boat problem per day, every day over Christmas — from a leaking epoxy hardener to a chart card that gave up the ghost. Boatlife keeps you humble."
+tags:
+  - loc/atlantic/europe/canary-islands/gran-canaria
+  - subject/boat-life
+  - subject/boat-work
 ---
 
 New jobs stopping us getting to the existing jobs list.

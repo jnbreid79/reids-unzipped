@@ -4,8 +4,10 @@ date: 2023-10-06
 layout: post
 author: Jamie Reid
 location: Passage, Atlantic
-tags: [sailing, cruising, family, liveaboard]
 excerpt: "To go, or not to go? The answer was always yes — the real question was when. Here's how we got to the starting line."
+tags:
+  - loc/atlantic
+  - subject/reflections
 ---
 
 To go, or not to go? That was our question.

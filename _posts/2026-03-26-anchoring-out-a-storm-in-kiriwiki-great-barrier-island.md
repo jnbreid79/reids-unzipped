@@ -4,11 +4,14 @@ date: 2026-03-26
 layout: post
 author: Jamie Reid
 location: Kiriwiki Bay, Great Barrier Island, New Zealand
-tags: [new-zealand, weather, boat-life]
 excerpt: "Midnight in Kiriwiki Bay, sheltering from 40–50 knots tearing down the coast. 
 To (try to) sleep or not to sleep? That is the question?"
 header:
   teaser: "/assets/images/posts/anchor-alarm-kiriwiki.webp"
+tags:
+  - loc/pacific/new-zealand/great-barrier-island
+  - subject/anchoring
+  - subject/weather
 ---
 
 I'm writing this at midnight, anchored in Kiriwiki Bay on Great Barrier Island, with a storm raging outside.

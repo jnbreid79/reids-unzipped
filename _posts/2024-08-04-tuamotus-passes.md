@@ -4,10 +4,13 @@ date: 2024-08-04
 layout: post
 author: Jamie Reid
 location: Tuamotus, French Polynesia
-tags: [cruising, passes, tuamotus, sailing]
 excerpt: "Coming out of the North pass at Fakarava, it felt like time to write down our experience of the various atoll passes before we forget. Some were textbook, some were anything but."
 header:
   teaser: "/assets/images/posts/img_7546-1.webp"
+tags:
+  - loc/pacific/french-polynesia/tuamotus
+  - subject/passages
+  - subject/boat-life
 ---
 
 Coming out of the North pass at Fakarava this morning, it felt like time to write down our experience of the various atoll passes before we forget! This one was textbook. Some of our others were far from that — but actually they were all very manageable, at no stage were we at all concerned.

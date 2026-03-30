@@ -4,10 +4,14 @@ date: 2024-07-13
 layout: post
 author: Jamie Reid
 location: Raroia, French Polynesia
-tags: [cruising, octopus, paddle-boarding, raroia, sailing, tuamotus]
 excerpt: "Our first atoll, and what an introduction. Octopus, paddle boarding firsts, the Kon Tiki monument, and an unofficial yacht club on the beach."
 header:
   teaser: "/assets/images/posts/gptempdownload-2-1.webp"
+tags:
+  - loc/pacific/french-polynesia/tuamotus/raroia
+  - subject/wildlife
+  - subject/family
+  - subject/boat-life
 ---
 
 I (Jamie) had visited Raroia as our first atoll when I sailed to the Tuamotus 12 years ago on Mystic. I have been trying to come up with a different route this time — after all there are loads of atolls, surely we can see different ones?! But after lots of umm'ing and ahh'ing, landfall in Raroia just makes sense. Heading to an atoll further West was not attractive: we'd have fewer options afterwards without sailing back upwind, and generally the Western atolls are more visited and a little less remote.

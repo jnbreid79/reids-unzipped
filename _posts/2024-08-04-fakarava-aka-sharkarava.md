@@ -4,10 +4,14 @@ date: 2024-08-04
 layout: post
 author: Jamie Reid
 location: Fakarava, French Polynesia
-tags: [cruising, diving, fakarava, sailing, shark, sharks, zipper]
 excerpt: "Sharks, sharks and more sharks. Fakarava's South Pass is one of the great dive sites in the world — and we had over 500 of them right in front of us."
 header:
   teaser: "/assets/images/posts/sharks-from-in-the-cave-still.webp"
+tags:
+  - loc/pacific/french-polynesia/tuamotus/fakarava
+  - subject/diving
+  - subject/snorkelling
+  - subject/wildlife
 ---
 
 Zipper in Fakarava, including the South Pass — sharks, sharks and more sharks!

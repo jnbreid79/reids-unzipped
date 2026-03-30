@@ -4,8 +4,10 @@ date: 2023-10-06
 layout: post
 author: Jamie Reid
 location: En route to Martinique
-tags: [sailing, cruising, family, liveaboard, outremer]
 excerpt: "Written on the plane to Martinique to take ownership of Zipper — excited, anxious, and about to find out exactly how naïve we are."
+tags:
+  - subject/reflections
+  - subject/boat-life
 ---
 
 Advice and decisions; if we don't try we will regret it
