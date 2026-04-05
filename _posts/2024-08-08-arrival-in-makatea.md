@@ -8,7 +8,7 @@ excerpt: "We were just starting to feel a bit sad as we left the Tuamotus behind
 header:
   teaser: "/assets/images/posts/jr1_4470.webp"
 tags:
-  - loc/pacific/french-polynesia/makatea
+  - loc/pacific/french-polynesia/tuamotus/makatea
   - subject/landscapes
   - subject/anchorages
 ---

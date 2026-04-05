@@ -458,6 +458,7 @@ permalink: /gallery/
     display: flex;
     gap: 0.3rem;
     flex-wrap: wrap;
+    align-items: center;
   }
   .caption-tag {
     font-family: 'Raleway', sans-serif;
@@ -468,6 +469,22 @@ permalink: /gallery/
     border: 1px solid rgba(184,212,232,0.35);
     padding: 0.1rem 0.45rem;
     border-radius: 2px;
+  }
+  .caption-tag-subject {
+    border-style: dashed;
+    opacity: 0.85;
+  }
+  .caption-tag-loc {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+  .caption-tag-loc-sep {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.55rem;
+    color: var(--muted);
+    opacity: 0.7;
+    line-height: 1;
   }
 
   /* Post link on caption */
@@ -498,6 +515,60 @@ permalink: /gallery/
     grid-column: 1 / -1;
   }
 
+  /* ── Pagination ── */
+  .gallery-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    padding: 2rem 1.5rem 3rem;
+    flex-wrap: wrap;
+  }
+  .gallery-pagination.hidden { display: none; }
+
+  .page-btn {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--ice);
+    background: none;
+    border: 1px solid rgba(184,212,232,0.3);
+    border-radius: 2px;
+    padding: 0.45rem 0.9rem;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .page-btn:hover:not(:disabled) {
+    background: rgba(184,212,232,0.1);
+    border-color: rgba(184,212,232,0.6);
+    color: white;
+  }
+  .page-btn:disabled {
+    opacity: 0.25;
+    cursor: default;
+  }
+  .page-btn.active {
+    background: var(--ice);
+    color: var(--navy);
+    border-color: var(--ice);
+    font-weight: 500;
+  }
+  .page-ellipsis {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.72rem;
+    color: var(--muted);
+    padding: 0 0.2rem;
+  }
+  .page-info {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--muted);
+    margin: 0 0.5rem;
+  }
+
   /* ── Lightbox ── */
   .lightbox {
     display: none;
@@ -514,7 +585,7 @@ permalink: /gallery/
   .lightbox-inner {
     position: relative;
     max-width: 92vw;
-    max-height: 88vh;
+    max-height: 92vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -522,7 +593,7 @@ permalink: /gallery/
 
   .lightbox-inner img {
     max-width: 90vw;
-    max-height: 80vh;
+    max-height: 72vh;
     object-fit: contain;
     border-radius: 2px;
     display: block;
@@ -532,6 +603,41 @@ permalink: /gallery/
     transition: opacity 0.18s ease;
   }
   .lightbox-inner img.fading { opacity: 0; }
+
+  /* ── Fullscreen mode ── */
+  .lightbox.fullscreen .lightbox-inner {
+    max-width: 100vw;
+    max-height: 100vh;
+  }
+  .lightbox.fullscreen .lightbox-inner img {
+    max-width: 98vw;
+    max-height: 95vh;
+    border-radius: 0;
+  }
+  /* UI elements fade out in fullscreen by default */
+  .lightbox.fullscreen .lightbox-caption-strip,
+  .lightbox.fullscreen .lightbox-progress,
+  .lightbox.fullscreen .lightbox-nav,
+  .lightbox.fullscreen .lightbox-close,
+  .lightbox.fullscreen .lightbox-fullscreen {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  /* Reveal on hover */
+  .lightbox.fullscreen.fs-ui-visible .lightbox-caption-strip,
+  .lightbox.fullscreen.fs-ui-visible .lightbox-progress,
+  .lightbox.fullscreen.fs-ui-visible .lightbox-nav,
+  .lightbox.fullscreen.fs-ui-visible .lightbox-close,
+  .lightbox.fullscreen.fs-ui-visible .lightbox-fullscreen {
+    opacity: 1;
+    transition: opacity 0.2s ease;
+  }
+  /* Override individual element opacities in fullscreen reveal so they show at full strength */
+  .lightbox.fullscreen.fs-ui-visible .lightbox-close  { opacity: 0.6; }
+  .lightbox.fullscreen.fs-ui-visible .lightbox-fullscreen { opacity: 0.5; }
+  .lightbox.fullscreen.fs-ui-visible .lightbox-nav    { opacity: 0.4; }
+  /* Hide cursor when UI is hidden in fullscreen */
+  .lightbox.fullscreen:not(.fs-ui-visible) { cursor: none; }
 
   .lightbox-close {
     position: fixed;
@@ -549,6 +655,24 @@ permalink: /gallery/
     z-index: 2;
   }
   .lightbox-close:hover { opacity: 1; }
+
+  .lightbox-fullscreen {
+    position: fixed;
+    top: 1.2rem;
+    right: 4rem;
+    color: var(--ice);
+    font-size: 1.1rem;
+    font-family: 'Raleway', sans-serif;
+    cursor: pointer;
+    line-height: 1;
+    opacity: 0.5;
+    transition: opacity 0.2s;
+    background: none;
+    border: none;
+    z-index: 2;
+    padding: 0.2rem 0.4rem;
+  }
+  .lightbox-fullscreen:hover { opacity: 1; }
 
   .lightbox-nav {
     position: fixed;
@@ -573,8 +697,11 @@ permalink: /gallery/
   .lightbox-caption-strip {
     width: 100%;
     max-width: 700px;
-    padding: 1rem 0.5rem 0;
+    padding: 1rem 0.5rem 2.5rem;
     text-align: center;
+    cursor: default;
+    position: relative;
+    z-index: 3;
   }
   .lightbox-caption-title {
     font-family: 'Raleway', sans-serif;
@@ -605,6 +732,34 @@ permalink: /gallery/
     transition: opacity 0.15s;
   }
   .lightbox-caption-meta a:hover { opacity: 1; border-color: var(--ice); }
+  .lightbox-tag {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.62rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--ice);
+    border: 1px solid rgba(184,212,232,0.35);
+    padding: 0.12rem 0.45rem;
+    border-radius: 2px;
+    opacity: 1;
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s;
+  }
+  .lightbox-tag:hover {
+    background: rgba(184,212,232,0.15);
+    border-color: rgba(184,212,232,0.7);
+  }
+  .lightbox-tag-subject { border-style: dashed; opacity: 0.85; }
+  .lightbox-tag-loc {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+  .lightbox-tag-loc-sep {
+    font-size: 0.55rem;
+    color: var(--muted);
+    opacity: 0.7;
+  }
 
   /* Progress indicator */
   .lightbox-progress {
@@ -704,14 +859,18 @@ permalink: /gallery/
 <div class="gallery-container">
   <div class="gallery-grid" id="gallery-grid">
 
-    {% for photo in site.data.gallery %}
+    {% assign sorted_gallery = site.data.gallery | sort: "date_taken" | reverse %}
+    {% for photo in sorted_gallery %}
     <div class="gallery-item"
          data-tags="{{ photo.tags | join: ' ' }}"
          data-index="{{ forloop.index0 }}"
          data-src="{{ photo.src | relative_url }}"
          data-title="{{ photo.title }}"
          data-date="{{ photo.date }}"
-         data-tags-list="{{ photo.tags | join: ', ' }}"
+         data-date-taken="{{ photo.date_taken }}"
+         {% assign loc_tags = '' %}{% assign subj_tags = '' %}{% for tag in photo.tags %}{% if tag contains 'loc/' %}{% assign loc_tags = loc_tags | append: tag | append: '|' %}{% elsif tag contains 'subject/' %}{% assign subj_tags = subj_tags | append: tag | append: '|' %}{% endif %}{% endfor %}
+         data-loc-tags="{{ loc_tags | remove_last: '|' }}"
+         data-subj-tags="{{ subj_tags | remove_last: '|' }}"
          {% if photo.post_url %}data-post-url="{{ photo.post_url | relative_url }}"{% endif %}
          {% if photo.post_title %}data-post-title="{{ photo.post_title }}"{% endif %}
          onclick="openLightbox({{ forloop.index0 }})">
@@ -727,11 +886,21 @@ permalink: /gallery/
           {% if photo.date %}
           <span class="caption-date">{{ photo.date }}</span>
           {% endif %}
-          {% if photo.tags %}
+          {% assign cap_loc_tags = '' %}{% assign cap_subj_tags = '' %}{% for tag in photo.tags %}{% if tag contains 'loc/' %}{% assign cap_loc_tags = cap_loc_tags | append: tag | append: '|' %}{% elsif tag contains 'subject/' %}{% assign cap_subj_tags = cap_subj_tags | append: tag | append: '|' %}{% endif %}{% endfor %}
+          {% if cap_loc_tags != '' or cap_subj_tags != '' %}
           <div class="caption-tags">
-            {% for tag in photo.tags limit:2 %}
-            <span class="caption-tag">{{ tag }}</span>
-            {% endfor %}
+            {% if cap_loc_tags != '' %}
+              {% assign loc_tag_list = cap_loc_tags | remove_last: '|' | split: '|' %}
+              {% assign first_loc = loc_tag_list | first %}
+              {% assign loc_parts = first_loc | remove_first: 'loc/' | split: '/' %}
+              <span class="caption-tag-loc">{% for part in loc_parts %}{% if forloop.index > 1 %}<span class="caption-tag-loc-sep">›</span>{% endif %}<span class="caption-tag">{{ part | replace: '-', ' ' | capitalize }}</span>{% endfor %}</span>
+            {% endif %}
+            {% if cap_subj_tags != '' %}
+              {% assign subj_tag_list = cap_subj_tags | remove_last: '|' | split: '|' %}
+              {% for stag in subj_tag_list limit:2 %}
+              <span class="caption-tag caption-tag-subject">{{ stag | remove_first: 'subject/' | replace: '-', ' ' | capitalize }}</span>
+              {% endfor %}
+            {% endif %}
           </div>
           {% endif %}
           {% if photo.post_url %}
@@ -747,11 +916,18 @@ permalink: /gallery/
   <div class="gallery-empty" id="gallery-empty">No photographs found for this filter.</div>
 </div>
 
+<!-- PAGINATION -->
+<div class="gallery-pagination" id="gallery-pagination"></div>
+
 {% include footer.html %}
 
 <!-- LIGHTBOX -->
 <div class="lightbox" id="lightbox" onclick="closeLightbox()">
   <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+  <button class="lightbox-fullscreen" id="lightbox-fullscreen-btn" onclick="event.stopPropagation(); toggleFullscreen()" title="Toggle fullscreen">
+    <svg id="fs-icon-expand" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg>
+    <svg id="fs-icon-shrink" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><polyline points="4 14 10 14 10 20"/><polyline points="20 10 14 10 14 4"/><line x1="10" y1="14" x2="3" y2="21"/><line x1="21" y1="3" x2="14" y2="10"/></svg>
+  </button>
   <button class="lightbox-nav lightbox-prev" onclick="event.stopPropagation(); navigateLightbox(-1)">‹</button>
   <div class="lightbox-inner" onclick="event.stopPropagation()">
     <img id="lightbox-img" src="" alt="">
@@ -782,6 +958,26 @@ permalink: /gallery/
   // ============================================================
 
   const allItems = Array.from(document.querySelectorAll('.gallery-item'));
+
+  // ── Row-first masonry reorder ───────────────────────────────
+  // CSS columns fill top-to-bottom, so to get row-first reading order
+  // (newest 3 across the top row, then next 3, etc.) we reorder the
+  // DOM elements column-by-column before the browser lays them out.
+  (function reorderForRowFirst() {
+    const grid = document.getElementById('gallery-grid');
+    const items = [...allItems]; // sorted newest-first by Liquid
+    const COLS = 3; // matches .gallery-grid { columns: 3 }
+    const n = items.length;
+    const rows = Math.ceil(n / COLS);
+    const reordered = [];
+    for (let col = 0; col < COLS; col++) {
+      for (let row = 0; row < rows; row++) {
+        const idx = row * COLS + col;
+        if (idx < n) reordered.push(items[idx]);
+      }
+    }
+    reordered.forEach(item => grid.appendChild(item));
+  })();
 
   // ── Parse all tags from gallery items ──────────────────────
   // Build loc tree and subject set from data-tags attributes
@@ -1146,24 +1342,109 @@ permalink: /gallery/
     applyFilters();
   }
 
+  // ── Pagination ──────────────────────────────────────────────
+  const PAGE_SIZE = 100;
+  let currentPage = 1;
+
+  function applyPage(filtered) {
+    const totalPages = Math.ceil(filtered.length / PAGE_SIZE);
+    if (currentPage > totalPages) currentPage = Math.max(1, totalPages);
+
+    const start = (currentPage - 1) * PAGE_SIZE;
+    const end   = start + PAGE_SIZE;
+
+    allItems.forEach(item => { item.style.display = 'none'; });
+    filtered.slice(start, end).forEach(item => { item.style.display = 'block'; });
+
+    visibleItems = filtered; // lightbox navigates full filtered set
+
+    // Empty state
+    document.getElementById('gallery-empty').style.display =
+      filtered.length === 0 ? 'block' : 'none';
+
+    // Count — show range or total
+    const showing = Math.min(end, filtered.length) - start;
+    document.getElementById('count-shown').textContent =
+      filtered.length <= PAGE_SIZE
+        ? filtered.length
+        : `${start + 1}–${Math.min(end, filtered.length)} of ${filtered.length}`;
+    document.getElementById('count-total').textContent = allItems.length;
+
+    renderPagination(filtered.length, totalPages);
+  }
+
+  function renderPagination(total, totalPages) {
+    const container = document.getElementById('gallery-pagination');
+    container.innerHTML = '';
+
+    if (totalPages <= 1) {
+      container.classList.add('hidden');
+      return;
+    }
+    container.classList.remove('hidden');
+
+    // Prev button
+    const prev = document.createElement('button');
+    prev.className = 'page-btn';
+    prev.textContent = '← Prev';
+    prev.disabled = currentPage === 1;
+    prev.addEventListener('click', () => { currentPage--; applyFiltersAndPage(); scrollToGallery(); });
+    container.appendChild(prev);
+
+    // Page number buttons with ellipsis
+    const pageNums = pageRange(currentPage, totalPages);
+    let lastNum = null;
+    pageNums.forEach(n => {
+      if (n === '…') {
+        const ell = document.createElement('span');
+        ell.className = 'page-ellipsis';
+        ell.textContent = '…';
+        container.appendChild(ell);
+      } else {
+        const btn = document.createElement('button');
+        btn.className = 'page-btn' + (n === currentPage ? ' active' : '');
+        btn.textContent = n;
+        btn.addEventListener('click', () => { currentPage = n; applyFiltersAndPage(); scrollToGallery(); });
+        container.appendChild(btn);
+      }
+      lastNum = n;
+    });
+
+    // Next button
+    const next = document.createElement('button');
+    next.className = 'page-btn';
+    next.textContent = 'Next →';
+    next.disabled = currentPage === totalPages;
+    next.addEventListener('click', () => { currentPage++; applyFiltersAndPage(); scrollToGallery(); });
+    container.appendChild(next);
+  }
+
+  function pageRange(current, total) {
+    // Always show first, last, current ±1, with ellipsis gaps
+    const pages = new Set([1, total, current, current - 1, current + 1]
+      .filter(n => n >= 1 && n <= total));
+    const sorted = [...pages].sort((a, b) => a - b);
+    const result = [];
+    sorted.forEach((n, i) => {
+      if (i > 0 && n - sorted[i - 1] > 1) result.push('…');
+      result.push(n);
+    });
+    return result;
+  }
+
+  function scrollToGallery() {
+    document.getElementById('gallery-grid')
+      .scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
   // ── Apply filters ───────────────────────────────────────────
   function applyFilters() {
-    let visible = allItems;
+    currentPage = 1; // reset to first page on any filter change
+    applyFiltersAndPage();
+  }
 
-    // Location: item must have a loc/ tag that starts with activeLocPath
-    if (activeDateYear) {
-      const label = activeDateMonth
-        ? activeDateMonth + ' ' + activeDateYear
-        : activeDateYear;
-      const chip = makeChip(label, () => {
-        activeDateYear  = null;
-        activeDateMonth = null;
-        document.querySelectorAll('.date-label.active').forEach(el =>
-          el.classList.remove('active'));
-        applyFilters();
-      });
-      bar.appendChild(chip);
-    }
+  function applyFiltersAndPage() {
+    let visible = allItems;
 
     if (activeLocPath) {
       visible = visible.filter(item => {
@@ -1196,20 +1477,7 @@ permalink: /gallery/
       });
     }
 
-    // Show/hide
-    allItems.forEach(item => { item.style.display = 'none'; });
-    visible.forEach(item => { item.style.display = 'block'; });
-
-    visibleItems = visible;
-
-    // Empty state
-    const empty = document.getElementById('gallery-empty');
-    empty.style.display = visible.length === 0 ? 'block' : 'none';
-
-    // Count
-    document.getElementById('count-shown').textContent = visible.length;
-    document.getElementById('count-total').textContent  = allItems.length;
-
+    applyPage(visible);
     renderChips();
     updateUrl();
     updateFilterSummaries();
@@ -1220,7 +1488,8 @@ permalink: /gallery/
     const bar = document.getElementById('active-filters');
     bar.innerHTML = '';
 
-    if (!activeLocPath && activeSubjects.size === 0) return;
+    const hasAny = activeDateYear || activeLocPath || activeSubjects.size > 0;
+    if (!hasAny) return;
 
     if (activeDateYear) {
       const label = activeDateMonth
@@ -1259,13 +1528,11 @@ permalink: /gallery/
       bar.appendChild(chip);
     });
 
-    if (activeLocPath || activeSubjects.size > 0) {
-      const btn = document.createElement('button');
-      btn.className = 'clear-all-btn';
-      btn.textContent = 'Clear all';
-      btn.addEventListener('click', clearAllFilters);
-      bar.appendChild(btn);
-    }
+    const btn = document.createElement('button');
+    btn.className = 'clear-all-btn';
+    btn.textContent = 'Clear all';
+    btn.addEventListener('click', clearAllFilters);
+    bar.appendChild(btn);
   }
 
   function makeChip(text, onRemove) {
@@ -1423,9 +1690,8 @@ permalink: /gallery/
 
     initLocSearch();
 
-    // Initialise counts
-    document.getElementById('count-shown').textContent = allItems.length;
-    document.getElementById('count-total').textContent  = allItems.length;
+    // Initialise — run through filters/pagination to set initial display
+    applyFiltersAndPage();
 
     restoreFromUrl();
   })();
@@ -1442,9 +1708,50 @@ permalink: /gallery/
   };
 
   window.closeLightbox = function() {
+    if (document.fullscreenElement) document.exitFullscreen();
     document.getElementById('lightbox').classList.remove('open');
     document.body.style.overflow = '';
   };
+
+  window.toggleFullscreen = function() {
+    const lb = document.getElementById('lightbox');
+    if (!document.fullscreenElement) {
+      lb.requestFullscreen().catch(() => {});
+    } else {
+      document.exitFullscreen();
+    }
+  };
+
+  let fsHideTimer = null;
+
+  function fsShowUI() {
+    const lb = document.getElementById('lightbox');
+    lb.classList.add('fs-ui-visible');
+    clearTimeout(fsHideTimer);
+    fsHideTimer = setTimeout(() => lb.classList.remove('fs-ui-visible'), 2500);
+  }
+
+  document.addEventListener('fullscreenchange', function() {
+    const lb     = document.getElementById('lightbox');
+    const expand = document.getElementById('fs-icon-expand');
+    const shrink = document.getElementById('fs-icon-shrink');
+    if (document.fullscreenElement) {
+      lb.classList.add('fullscreen');
+      expand.style.display = 'none';
+      shrink.style.display = '';
+      // Show UI briefly on entry so user knows controls exist
+      fsShowUI();
+    } else {
+      lb.classList.remove('fullscreen', 'fs-ui-visible');
+      clearTimeout(fsHideTimer);
+      expand.style.display = '';
+      shrink.style.display = 'none';
+    }
+  });
+
+  document.getElementById('lightbox').addEventListener('mousemove', function() {
+    if (document.fullscreenElement) fsShowUI();
+  });
 
   window.navigateLightbox = function(dir) {
     currentLightboxIndex =
@@ -1462,7 +1769,8 @@ permalink: /gallery/
     const src       = item.dataset.src;
     const title     = item.dataset.title || '';
     const date      = item.dataset.date || '';
-    const tagsStr   = item.dataset.tagsList || '';
+    const locTags   = item.dataset.locTags || '';
+    const subjTags  = item.dataset.subjTags || '';
     const postUrl   = item.dataset.postUrl || '';
     const postTitle = item.dataset.postTitle || '';
 
@@ -1470,11 +1778,93 @@ permalink: /gallery/
     document.getElementById('lightbox-img').alt = title;
     document.getElementById('lightbox-title').textContent = title;
 
-    let metaHTML = '';
-    if (date)    metaHTML += `<span>${date}</span>`;
-    if (tagsStr) metaHTML += `<span>${tagsStr}</span>`;
-    if (postUrl) metaHTML += `<a href="${postUrl}">From: ${postTitle || 'Read post'} →</a>`;
-    document.getElementById('lightbox-meta').innerHTML = metaHTML;
+    const meta = document.getElementById('lightbox-meta');
+    meta.innerHTML = '';
+
+    if (date) {
+      const s = document.createElement('span');
+      s.textContent = date;
+      meta.appendChild(s);
+    }
+
+    // Location: first loc tag rendered as breadcrumb pills with › separators
+    // Each level is clickable — closes lightbox and applies loc filter
+    if (locTags) {
+      const firstLoc = locTags.split('|')[0].replace(/^loc\//, '');
+      const parts = firstLoc.split('/');
+      const locSpan = document.createElement('span');
+      locSpan.className = 'lightbox-tag-loc';
+      parts.forEach((part, i) => {
+        if (i > 0) {
+          const sep = document.createElement('span');
+          sep.className = 'lightbox-tag-loc-sep';
+          sep.textContent = '›';
+          locSpan.appendChild(sep);
+        }
+        const locPath = parts.slice(0, i + 1).join('/');
+        const pill = document.createElement('span');
+        pill.className = 'lightbox-tag';
+        pill.textContent = part.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+        pill.title = 'Filter by ' + locPath.replace(/-/g, ' ');
+        pill.addEventListener('click', e => {
+          e.stopPropagation();
+          closeLightbox();
+          // Clear other filters, set loc filter
+          activeSubjects.clear();
+          document.querySelectorAll('.tag-pill.active').forEach(p => p.classList.remove('active'));
+          document.querySelectorAll('.loc-label.active').forEach(p => p.classList.remove('active'));
+          activeDateYear = null; activeDateMonth = null;
+          document.querySelectorAll('.date-label.active').forEach(p => p.classList.remove('active'));
+          activeLocPath = locPath;
+          setTimeout(() => {
+            const el = document.querySelector(`.loc-label[data-loc-path="${locPath}"]`);
+            if (el) el.classList.add('active');
+          }, 0);
+          applyFilters();
+          scrollToGallery();
+        });
+        locSpan.appendChild(pill);
+      });
+      meta.appendChild(locSpan);
+    }
+
+    // Subjects: each as a dashed pill, clickable to filter
+    if (subjTags) {
+      subjTags.split('|').filter(Boolean).forEach(tag => {
+        const subject = tag.replace(/^subject\//, '');
+        const label = subject.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+        const pill = document.createElement('span');
+        pill.className = 'lightbox-tag lightbox-tag-subject';
+        pill.textContent = label;
+        pill.title = 'Filter by ' + label;
+        pill.addEventListener('click', e => {
+          e.stopPropagation();
+          closeLightbox();
+          // Clear other filters, set this subject only
+          activeLocPath = null;
+          activeDateYear = null; activeDateMonth = null;
+          document.querySelectorAll('.loc-label.active, .date-label.active, .tag-pill.active')
+            .forEach(p => p.classList.remove('active'));
+          activeSubjects.clear();
+          activeSubjects.add(subject);
+          setTimeout(() => {
+            const el = document.querySelector(`.tag-pill[data-subject="${subject}"]`);
+            if (el) el.classList.add('active');
+          }, 0);
+          applyFilters();
+          scrollToGallery();
+        });
+        meta.appendChild(pill);
+      });
+    }
+
+    if (postUrl) {
+      const a = document.createElement('a');
+      a.href = postUrl;
+      a.textContent = 'From: ' + (postTitle || 'Read post') + ' →';
+      meta.appendChild(a);
+    }
+
     document.getElementById('lightbox-progress').textContent =
       `${currentLightboxIndex + 1} / ${visibleItems.length}`;
   }

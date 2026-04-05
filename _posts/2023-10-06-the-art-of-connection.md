@@ -6,7 +6,6 @@ author: Jamie Reid
 location: Passage, Atlantic
 excerpt: "To go, or not to go? The answer was always yes — the real question was when. Here's how we got to the starting line."
 tags:
-  - loc/atlantic
   - subject/reflections
 ---
 

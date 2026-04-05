@@ -9,7 +9,7 @@ header:
   teaser: "/assets/images/posts/fakarava-anchor-drag-annotated.webp"
 tags:
   - loc/pacific/french-polynesia/tuamotus/fakarava
-  - subject/anchoring
+  - subject/anchorages
   - subject/weather
 ---
 

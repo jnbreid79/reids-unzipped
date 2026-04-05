@@ -1,9 +1,573 @@
 # gallery.yml — managed by gallery_import.py
 # Add new entries via the import tool; most recent first.
-# Tag convention:
-#   loc/<ocean>/<country>/<region>/<anchorage>  (1-4 levels as needed)
-#   subject/<topic>
 
+- src: /assets/images/gallery/2024-09/arutanga-marina-in-aitutaki-cook-islands.webp
+  title: Arutanga 'marina' in Aitutaki, Cook Islands
+  date: Sep 2024
+  tags:
+  - loc/pacific/cook-islands/aitutaki/arutanga
+  - subject/anchorages
+  width: 1600
+  height: 1200
+  date_taken: '2024-09-13'
+- src: /assets/images/gallery/2024-08/zipper-in-anse-amyot-from-drone.webp
+  title: Zipper in Anse Amyot from drone
+  date: Aug 2024
+  tags:
+  - loc/pacific/french-polynesia/tuamotus/toau/anse-amyot
+  - subject/anchorages
+  width: 1600
+  height: 1200
+  date_taken: '2024-08-07'
+- src: /assets/images/gallery/2024-10/big-mamas-at-tongatapu.webp
+  title: Big Mama's at Tongatapu
+  date: Oct 2024
+  tags:
+  - loc/pacific/tonga/tongatapu/pangaimotu
+  - subject/anchorages
+  width: 1600
+  height: 1200
+  date_taken: '2024-10-10'
+- src: /assets/images/gallery/2026-01/bay-of-islands-parekura.webp
+  title: Bay of Islands, Parekura
+  date: Jan 2026
+  tags:
+  - loc/pacific/new-zealand/bay-of-islands/parekura
+  - subject/anchorages
+  width: 1600
+  height: 1200
+  date_taken: '2026-01-05'
+- src: /assets/images/gallery/2024-04/zipper-on-a-buoy-in-bonaire.webp
+  title: Zipper on a buoy in Bonaire
+  date: Apr 2024
+  tags:
+  - loc/atlantic/abc-islands/bonaire
+  - subject/anchorages
+  width: 1600
+  height: 1200
+  date_taken: '2024-04-10'
+- src: /assets/images/gallery/2024-09/bora-bora.webp
+  title: Bora Bora
+  date: Sep 2024
+  tags:
+  - loc/pacific/french-polynesia/society-islands/bora-bora
+  - subject/anchorages
+  width: 1600
+  height: 1067
+  date_taken: '2024-09-03'
+- src: /assets/images/gallery/2026-02/zipper-at-anchor-in-camp-bay.webp
+  title: Zipper at anchor in Camp Bay
+  date: Feb 2026
+  tags:
+  - loc/pacific/new-zealand/marlborough-sounds/pelorus-sound
+  - subject/anchorages
+  width: 1600
+  height: 1200
+  date_taken: '2026-02-11'
+- src: /assets/images/gallery/2024-06/hanavave-anchorage.webp
+  title: Hanavave anchorage
+  date: Jun 2024
+  tags:
+  - loc/pacific/french-polynesia/marquesas/fatu-hiva/hanavave
+  - subject/anchorages
+  width: 1600
+  height: 1200
+  date_taken: '2024-06-20'
+- src: /assets/images/gallery/2024-06/spectacular-hanavave.webp
+  title: Spectacular Hanavave
+  date: Jun 2024
+  tags:
+  - loc/pacific/french-polynesia/marquesas/fatu-hiva/hanavave
+  - subject/anchorages
+  width: 1600
+  height: 900
+  date_taken: '2024-06-20'
+- src: /assets/images/gallery/2024-06/big-swell-running-into-omoa-fatu-hiva.webp
+  title: Big swell running into Omoa, Fatu Hiva
+  date: Jun 2024
+  tags:
+  - loc/pacific/french-polynesia/marquesas/fatu-hiva/omoa
+  - subject/anchorages
+  width: 1600
+  height: 1200
+  date_taken: '2024-06-21'
+- src: /assets/images/gallery/2024-06/fatu-hiva-omoa2.webp
+  title: Fatu Hiva Omoa2
+  date: Jun 2024
+  tags:
+  - loc/pacific/french-polynesia/marquesas/fatu-hiva/omoa
+  - subject/anchorages
+  width: 1600
+  height: 900
+  date_taken: '2024-06-21'
+- src: /assets/images/gallery/2023-12/untenable-swell-running-into-gran-tarajal-marina.webp
+  title: Untenable swell running into Gran Tarajal marina
+  date: Dec 2023
+  tags:
+  - loc/atlantic/canary-islands/fuerteventura/gran-tarajal
+  - subject/anchorages
+  width: 1600
+  height: 900
+  date_taken: '2023-12-16'
+- src: /assets/images/gallery/2024-07/stunning-backdrop-to-zipper-in-hatiheu-marquesas.webp
+  title: Stunning backdrop to Zipper in Hatiheu, Marquesas
+  date: Jul 2024
+  tags:
+  - loc/pacific/french-polynesia/marquesas/nuku-hiva/hatiheu
+  - subject/anchorages
+  width: 1600
+  height: 1200
+  date_taken: '2024-07-02'
+- src: /assets/images/gallery/2024-06/hatiheu-anchorage.webp
+  title: Hatiheu anchorage
+  date: Jun 2024
+  tags:
+  - loc/pacific/french-polynesia/marquesas/nuku-hiva/hatiheu
+  - subject/anchorages
+  width: 1600
+  height: 561
+  date_taken: '2024-06-30'
+- src: /assets/images/gallery/2024-06/hatiheu3.webp
+  title: Hatiheu3
+  date: Jun 2024
+  tags:
+  - loc/pacific/french-polynesia/marquesas/nuku-hiva/hatiheu
+  - subject/anchorages
+  width: 1200
+  height: 1600
+  date_taken: '2024-06-30'
+- src: /assets/images/gallery/2024-06/atuona-anchorage.webp
+  title: Atuona anchorage
+  date: Jun 2024
+  tags:
+  - loc/pacific/french-polynesia/marquesas/hiva-oa/atuona
+  - subject/anchorages
+  width: 1200
+  height: 1600
+  date_taken: '2024-06-15'
+- src: /assets/images/gallery/2024-06/atuona-anchorage-from-the-walk-into-town-to-check-.webp
+  title: Atuona anchorage from the walk into town to check into the Marquesas
+  date: Jun 2024
+  tags:
+  - loc/pacific/french-polynesia/marquesas/hiva-oa/atuona
+  - subject/anchorages
+  width: 1600
+  height: 1200
+  date_taken: '2024-06-15'
+- src: /assets/images/gallery/2024-08/huahine-turquoise-water.webp
+  title: Huahine Turquoise Water
+  date: Aug 2024
+  tags:
+  - loc/pacific/french-polynesia/society-islands/huahine
+  - subject/anchorages
+  width: 1600
+  height: 1200
+  date_taken: '2024-08-27'
+- src: /assets/images/gallery/2024-06/isabella.webp
+  title: Isabella
+  date: Jun 2024
+  tags:
+  - loc/pacific/galapagos/isabella
+  - subject/anchorages
+  width: 1600
+  height: 1200
+  date_taken: '2024-06-12'
+- src: /assets/images/gallery/2026-02/kate-bay-where-we-caught-blue-code.webp
+  title: Kate Bay where we caught blue code
+  date: Feb 2026
+  tags:
+  - loc/pacific/new-zealand/marlborough-sounds/forsyth-island/kate-bay
+  - subject/anchorages
+  width: 1600
+  height: 1200
+  date_taken: '2026-02-18'
+- src: /assets/images/gallery/2024-07/kauehi.webp
+  title: Kauehi
+  date: Jul 2024
+  tags:
+  - loc/pacific/french-polynesia/tuamotus/kauehi/tearavero
+  - subject/anchorages
+  width: 1600
+  height: 1200
+  date_taken: '2024-07-24'
+- src: /assets/images/gallery/2026-02/walk-around-kumatoto-bay.webp
+  title: Walk around Kumatoto bay
+  date: Feb 2026
+  tags:
+  - loc/pacific/new-zealand/marlborough-sounds/queen-charlotte-sound/kumatoto-bay
+  - subject/anchorages
+  width: 1600
+  height: 1067
+  date_taken: '2026-02-20'
+- src: /assets/images/gallery/2023-12/lanzarote.webp
+  title: Lanzarote
+  date: Dec 2023
+  tags:
+  - loc/atlantic/canary-islands/lanzarote/rubicon
+  - subject/anchorages
+  width: 1600
+  height: 1200
+  date_taken: '2023-12-10'
+- src: /assets/images/gallery/2024-08/makatea-anchorage-on-buoys-outside-the-reef-old-ha.webp
+  title: Makatea anchorage on buoys outside the reef; old harbour in foreground
+  date: Aug 2024
+  tags:
+  - loc/pacific/french-polynesia/tuamotus/makatea
+  - subject/anchorages
+  width: 1600
+  height: 1067
+  date_taken: '2024-08-09'
+- src: /assets/images/gallery/2024-08/on-a-buoy-off-makatea-uncomfortably-close-to-the-r.webp
+  title: On a buoy off Makatea, uncomfortably close to the reef!
+  date: Aug 2024
+  tags:
+  - loc/pacific/french-polynesia/tuamotus/makatea
+  - subject/anchorages
+  width: 1600
+  height: 1200
+  date_taken: '2024-08-08'
+- src: /assets/images/gallery/2024-08/spectacular-cliffs-of-makatea-island.webp
+  title: Spectacular cliffs of Makatea island
+  date: Aug 2024
+  tags:
+  - loc/pacific/french-polynesia/tuamotus/makatea
+  - subject/anchorages
+  width: 1600
+  height: 1067
+  date_taken: '2024-08-09'
+- src: /assets/images/gallery/2024-03/martinique.webp
+  title: Martinique
+  date: Mar 2024
+  tags:
+  - loc/atlantic/caribbean/martinique/anse-meurnier
+  - subject/anchorages
+  width: 1600
+  height: 1200
+  date_taken: '2024-03-27'
+- src: /assets/images/gallery/2024-09/anchorage-in-maupihaa-from-the-drone.webp
+  title: Anchorage in Maupihaa from the drone
+  date: Sep 2024
+  tags:
+  - loc/pacific/french-polynesia/society-islands/maupihaa
+  - subject/anchorages
+  width: 1600
+  height: 904
+  date_taken: '2024-09-07'
+- src: /assets/images/gallery/2024-09/looking-over-the-reef-in-maupihaa.webp
+  title: Looking over the reef in Maupihaa
+  date: Sep 2024
+  tags:
+  - loc/pacific/french-polynesia/society-islands/maupihaa
+  - subject/anchorages
+  width: 1600
+  height: 1200
+  date_taken: '2024-09-07'
+- src: /assets/images/gallery/2024-09/maupihaa-from-the-drone.webp
+  title: Maupihaa from the drone
+  date: Sep 2024
+  tags:
+  - loc/pacific/french-polynesia/society-islands/maupihaa
+  - subject/anchorages
+  width: 1600
+  height: 1200
+  date_taken: '2024-09-07'
+- src: /assets/images/gallery/2024-01/mindelo-marina.webp
+  title: Mindelo marina
+  date: Jan 2024
+  tags:
+  - loc/atlantic/cape-verde/sao-vicente/mindelo
+  - subject/anchorages
+  width: 1600
+  height: 1200
+  date_taken: '2024-01-17'
+- src: /assets/images/gallery/2024-01/all-long-distance-yachts-in-mindelo-marina.webp
+  title: All long distance yachts in Mindelo marina
+  date: Jan 2024
+  tags:
+  - loc/atlantic/cape-verde/sao-vicente/mindelo
+  - subject/anchorages
+  width: 1600
+  height: 1200
+  date_taken: '2024-01-17'
+- src: /assets/images/gallery/2024-01/local-fishing-in-the-marina-at-mindelo.webp
+  title: Local fishing in the marina at Mindelo
+  date: Jan 2024
+  tags:
+  - loc/atlantic/cape-verde/sao-vicente/mindelo
+  - subject/anchorages
+  width: 1600
+  height: 1200
+  date_taken: '2024-01-18'
+- src: /assets/images/gallery/2024-08/yachts-sharing-the-anchorage-in-moorea.webp
+  title: Yachts sharing the anchorage in Moorea
+  date: Aug 2024
+  tags:
+  - loc/pacific/french-polynesia/society-islands/moorea/cooks-bay
+  - subject/anchorages
+  width: 1600
+  height: 1067
+  date_taken: '2024-08-20'
+- src: /assets/images/gallery/2024-08/spectacular-skyline-in-moorea.webp
+  title: Spectacular skyline in Moorea
+  date: Aug 2024
+  tags:
+  - loc/pacific/french-polynesia/society-islands/moorea/cooks-bay
+  - subject/anchorages
+  width: 1600
+  height: 1067
+  date_taken: '2024-08-21'
+- src: /assets/images/gallery/2024-08/cooks-bay-in-moorea.webp
+  title: Cooks bay in Moorea
+  date: Aug 2024
+  tags:
+  - loc/pacific/french-polynesia/society-islands/moorea/cooks-bay
+  - subject/anchorages
+  width: 1600
+  height: 1067
+  date_taken: '2024-08-21'
+- src: /assets/images/gallery/2026-02/anchorage-in-the-tidal-estuary-in-nelson.webp
+  title: Anchorage in the tidal estuary in Nelson
+  date: Feb 2026
+  tags:
+  - loc/pacific/new-zealand/nelson
+  - subject/anchorages
+  width: 1600
+  height: 1067
+  date_taken: '2026-02-03'
+- src: /assets/images/gallery/2026-02/nelson-estuary.webp
+  title: Nelson estuary
+  date: Feb 2026
+  tags:
+  - loc/pacific/new-zealand/nelson
+  - subject/anchorages
+  width: 1600
+  height: 1067
+  date_taken: '2026-02-03'
+- src: /assets/images/gallery/2026-02/nelson3.webp
+  title: Nelson3
+  date: Feb 2026
+  tags:
+  - loc/pacific/new-zealand/nelson
+  - subject/anchorages
+  width: 1600
+  height: 1067
+  date_taken: '2026-02-03'
+- src: /assets/images/gallery/2026-02/zipper-in-ngawhakawhiti-tennyson-inlet-from-the-ny.webp
+  title: Zipper in Ngawhakawhiti, Tennyson Inlet, from the Nydia Track
+  date: Feb 2026
+  tags:
+  - loc/pacific/new-zealand/marlborough-sounds/pelorus-sound/tennyson-inlet/ngawhakawhiti
+  - subject/anchorages
+  width: 1600
+  height: 1067
+  date_taken: '2026-02-12'
+- src: /assets/images/gallery/2024-05/skyline-of-panama-city-from-the-anchorage.webp
+  title: Skyline of Panama City from the anchorage
+  date: May 2024
+  tags:
+  - loc/pacific/panama/panama-city
+  - subject/anchorages
+  width: 1600
+  height: 1200
+  date_taken: '2024-05-01'
+- src: /assets/images/gallery/2024-04/playa-blanca-where-we-cleaned-the-hull-before-pana.webp
+  title: Playa Blanca where we cleaned the hull before Panama
+  date: Apr 2024
+  tags:
+  - loc/atlantic/panama/playa-blanca
+  - subject/anchorages
+  width: 1600
+  height: 1200
+  date_taken: '2024-04-21'
+- src: /assets/images/gallery/2023-12/playa-de-antiquera-tenerife.webp
+  title: Playa De Antiquera Tenerife
+  date: Dec 2023
+  tags:
+  - loc/atlantic/canary-islands/tenerife/playa-de-antiquera
+  - subject/anchorages
+  width: 1200
+  height: 1600
+  date_taken: '2023-12-30'
+- src: /assets/images/gallery/2024-02/port-st-charles-first-port-after-crossing-the-atla.webp
+  title: Port St Charles, first port after crossing the Atlantic
+  date: Feb 2024
+  tags:
+  - loc/atlantic/caribbean/barbados/port-st-charles
+  - subject/anchorages
+  width: 1600
+  height: 1200
+  date_taken: '2024-02-09'
+- src: /assets/images/gallery/2024-05/puerto-ayora.webp
+  title: Puerto Ayora
+  date: May 2024
+  tags:
+  - loc/pacific/galapagos/santa-cruz/puerto-ayora
+  - subject/anchorages
+  width: 1600
+  height: 1200
+  date_taken: '2024-05-10'
+- src: /assets/images/gallery/2023-12/puerto-de-sardina-before-crossing-from-gran-canari.webp
+  title: Puerto De Sardina before crossing from Gran Canaria to Tenerife
+  date: Dec 2023
+  tags:
+  - loc/atlantic/canary-islands/gran-canaria/puerto-de-sardina
+  - subject/anchorages
+  width: 1600
+  height: 1200
+  date_taken: '2023-12-29'
+- src: /assets/images/gallery/2024-05/san-cristobal-the-home-of-the-sea-lion.webp
+  title: San Cristobal, the home of the sea lion
+  date: May 2024
+  tags:
+  - loc/pacific/galapagos/san-cristobal/puerto-baquerizo-moreno
+  - subject/anchorages
+  width: 1600
+  height: 1200
+  date_taken: '2024-05-25'
+- src: /assets/images/gallery/2024-01/marina-in-santa-cruz-tenerife-for-new-year.webp
+  title: Marina in Santa Cruz, Tenerife, for New Year
+  date: Jan 2024
+  tags:
+  - loc/atlantic/canary-islands/tenerife/santa-cruz
+  - subject/anchorages
+  width: 1600
+  height: 1200
+  date_taken: '2024-01-03'
+- src: /assets/images/gallery/2024-03/largest-anchorage-weve-been-to-anywhere-in-st-anne.webp
+  title: Largest anchorage we've been to anywhere in St. Anne?
+  date: Mar 2024
+  tags:
+  - loc/atlantic/caribbean/martinique/st-anne
+  - subject/anchorages
+  width: 1600
+  height: 1200
+  date_taken: '2024-03-27'
+- src: /assets/images/gallery/2024-02/looking-into-le-marin-again.webp
+  title: Looking into Le Marin (again!)
+  date: Feb 2024
+  tags:
+  - loc/atlantic/caribbean/martinique/st-anne
+  - subject/anchorages
+  width: 1600
+  height: 1200
+  date_taken: '2024-02-23'
+- src: /assets/images/gallery/2024-08/taking-a-buoy-off-a-pearl-farm-in-tahaa.webp
+  title: Taking a buoy off a pearl farm in Taha'a
+  date: Aug 2024
+  tags:
+  - loc/pacific/french-polynesia/society-islands/tahaa
+  - subject/anchorages
+  width: 1600
+  height: 1067
+  date_taken: '2024-08-29'
+- src: /assets/images/gallery/2024-07/7-anchorage-in-tahanea-fom-the-drone.webp
+  title: '''7'' anchorage in Tahanea fom the drone'
+  date: Jul 2024
+  tags:
+  - loc/pacific/french-polynesia/tuamotus/tahanea
+  - subject/anchorages
+  width: 1600
+  height: 1200
+  date_taken: '2024-07-19'
+- src: /assets/images/gallery/2024-07/7-anchorage-in-tahanea-from-the-drone.webp
+  title: '''7'' anchorage in Tahanea from the drone'
+  date: Jul 2024
+  tags:
+  - loc/pacific/french-polynesia/tuamotus/tahanea
+  - subject/anchorages
+  width: 1600
+  height: 1200
+  date_taken: '2024-07-19'
+- src: /assets/images/gallery/2024-07/anchorage-near-the-north-passes-in-tahanea.webp
+  title: Anchorage near the North passes in Tahanea
+  date: Jul 2024
+  tags:
+  - loc/pacific/french-polynesia/tuamotus/tahanea
+  - subject/anchorages
+  width: 1600
+  height: 1200
+  date_taken: '2024-07-19'
+- src: /assets/images/gallery/2024-07/anchorage-near-the-north-passes-in-tahanea-1.webp
+  title: Anchorage near the North passes in Tahanea
+  date: Jul 2024
+  tags:
+  - loc/pacific/french-polynesia/tuamotus/tahanea
+  - subject/anchorages
+  width: 1600
+  height: 1200
+  date_taken: '2024-07-17'
+- src: /assets/images/gallery/2024-07/zipper-from-the-drone.webp
+  title: Zipper from the drone
+  date: Jul 2024
+  tags:
+  - loc/pacific/french-polynesia/tuamotus/tahanea
+  - subject/anchorages
+  width: 1600
+  height: 1200
+  date_taken: '2024-07-17'
+- src: /assets/images/gallery/2024-06/tahuata.webp
+  title: Tahuata
+  date: Jun 2024
+  tags:
+  - loc/pacific/french-polynesia/marquesas/tahuata
+  - subject/anchorages
+  width: 1600
+  height: 1200
+  date_taken: '2024-06-24'
+- src: /assets/images/gallery/2026-02/tinui-island.webp
+  title: Tinui Island
+  date: Feb 2026
+  tags:
+  - loc/pacific/new-zealand/marlborough-sounds/durville/tinui-island
+  - subject/anchorages
+  width: 1600
+  height: 1067
+  date_taken: '2026-02-09'
+- src: /assets/images/gallery/2024-04/tobago-cays.webp
+  title: Tobago Cays
+  date: Apr 2024
+  tags:
+  - loc/atlantic/caribbean/st-vincent-the-granadines/tobago-cays
+  - subject/anchorages
+  width: 1600
+  height: 900
+  date_taken: '2024-04-03'
+- src: /assets/images/gallery/2024-04/union-island-anchorage-from-the-bar.webp
+  title: Union Island anchorage from the bar
+  date: Apr 2024
+  tags:
+  - loc/atlantic/caribbean/st-vincent-the-granadines/union-island
+  - subject/anchorages
+  width: 1600
+  height: 1200
+  date_taken: '2024-04-04'
+- src: /assets/images/gallery/2024-10/on-a-buoy-in-neiafu.webp
+  title: On a buoy in Neiafu
+  date: Oct 2024
+  tags:
+  - loc/pacific/tonga/vavau/neiafu
+  - subject/anchorages
+  width: 1200
+  height: 1600
+  date_taken: '2024-10-08'
+- src: /assets/images/gallery/2026-01/waiwhapuku-from-the-shore.webp
+  title: Waiwhapuku from the shore
+  date: Jan 2026
+  tags:
+  - loc/pacific/new-zealand/bay-of-islands/waiwhapuku
+  - subject/anchorages
+  width: 1600
+  height: 1200
+  date_taken: '2026-01-03'
+- src: /assets/images/gallery/2025-12/whangaumu.webp
+  title: Whangaumu
+  date: Dec 2025
+  tags:
+  - loc/pacific/new-zealand/whangaumu
+  - subject/anchorages
+  width: 1600
+  height: 1200
+  date_taken: '2025-12-27'
 - src: /assets/images/gallery/2026-02/resolution-bay.webp
   title: Resolution Bay
   date: Feb 2026
@@ -12,6 +576,7 @@
   - subject/anchorages
   width: 1600
   height: 1067
+  date_taken: '2026-02-18'
 - src: /assets/images/gallery/2026-02/on-the-queen-charlotte-track.webp
   title: On the Queen Charlotte Track
   date: Feb 2026
@@ -20,6 +585,7 @@
   - subject/family
   width: 1600
   height: 1067
+  date_taken: '2026-02-18'
 - src: /assets/images/gallery/2026-02/resolution-bay-view-from-queen-charlotte-track.webp
   title: Resolution Bay view from Queen Charlotte Track
   date: Feb 2026
@@ -28,6 +594,7 @@
   - subject/landscapes
   width: 1600
   height: 1067
+  date_taken: '2026-02-18'
 - src: /assets/images/gallery/2026-02/queen-charlotte-sound-view.webp
   title: Queen Charlotte Sound view
   date: Feb 2026
@@ -36,6 +603,7 @@
   - subject/landscapes
   width: 1600
   height: 1067
+  date_taken: '2026-02-18'
 - src: /assets/images/gallery/2026-02/queen-charlotte-sound-view-1.webp
   title: Queen Charlotte Sound view
   date: Feb 2026
@@ -44,6 +612,7 @@
   - subject/landscapes
   width: 1600
   height: 1067
+  date_taken: '2026-02-18'
 - src: /assets/images/gallery/2026-02/overlooking-motuara-island.webp
   title: Overlooking Motuara Island
   date: Feb 2026
@@ -53,6 +622,7 @@
   - subject/landscapes
   width: 1600
   height: 1067
+  date_taken: '2026-02-18'
 - src: /assets/images/gallery/2026-02/mistletoe-bay.webp
   title: Mistletoe Bay
   date: Feb 2026
@@ -61,6 +631,7 @@
   - subject/anchorages
   width: 1600
   height: 1067
+  date_taken: '2026-02-22'
 - src: /assets/images/gallery/2026-02/onahau-lookout.webp
   title: Onahau Lookout
   date: Feb 2026
@@ -69,6 +640,7 @@
   - subject/landscapes
   width: 1600
   height: 1067
+  date_taken: '2026-02-22'
 - src: /assets/images/gallery/2026-02/queen-charlotte-track-view-into-pelorus-sound.webp
   title: Queen Charlotte track view into Pelorus Sound
   date: Feb 2026
@@ -77,3 +649,4 @@
   - subject/landscapes
   width: 1600
   height: 1067
+  date_taken: '2026-02-22'

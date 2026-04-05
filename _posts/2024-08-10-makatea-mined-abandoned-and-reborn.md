@@ -8,7 +8,7 @@ excerpt: "A small island between Tahiti and the Tuamotus, Makatea is unlike anyw
 header:
   teaser: "/assets/images/posts/img_7656.webp"
 tags:
-  - loc/pacific/french-polynesia/makatea
+  - loc/pacific/french-polynesia/tuamotus/makatea
   - subject/history
   - subject/landscapes
 ---

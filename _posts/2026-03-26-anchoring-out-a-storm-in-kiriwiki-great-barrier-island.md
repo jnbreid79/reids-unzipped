@@ -5,18 +5,18 @@ layout: post
 author: Jamie Reid
 location: Kiriwiki Bay, Great Barrier Island, New Zealand
 excerpt: "Midnight in Kiriwiki Bay, sheltering from 40–50 knots tearing down the coast. 
-To (try to) sleep or not to sleep? That is the question?"
+To (try to) sleep or not to sleep? That is the question."
 header:
   teaser: "/assets/images/posts/anchor-alarm-kiriwiki.webp"
 tags:
   - loc/pacific/new-zealand/great-barrier-island
-  - subject/anchoring
+  - subject/anchorages
   - subject/weather
 ---
 
 I'm writing this at midnight, anchored in Kiriwiki Bay on Great Barrier Island, with a storm raging outside.
 
-In front of me I have the nav station, primarily telling me the current wind strength and direction and our depth; an iPad with our iSailor app fully zoomed into the anchor alarm circle that marks the perimeter of our swing, showing me exactly where we are by GPS (importantly, relative to the track of where we've been since we anchored here a couple of days ago - see the lower screenshot); and an iPhone showing PredictWind reports of conditions nearby — primarily from other boats in the anchorage but also weather stations up and down the coast. These are the ones I'm looking at:
+In front of me I have the nav station, primarily telling me the current wind strength and direction and our depth; an iPad with our iSailor app fully zoomed into the anchor alarm circle that marks the perimeter of our swing, showing me exactly where we are by GPS (importantly, relative to the track of where we've been since we anchored here a couple of days ago - see the lower screenshot); and an iPhone showing PredictWind reports of conditions nearby — primarily from other boats in the anchorage but also weather stations up and down the coast (Mokohinau to our North, and Channel Island to the South). These are the ones I'm looking at:
 
 ![PredictWind boats data showing conditions in the anchorage]({{ site.baseurl }}/assets/images/posts/pwdata-kiriwiki.webp)
 
