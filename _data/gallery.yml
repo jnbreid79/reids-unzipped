@@ -1,6 +1,483 @@
 # gallery.yml — managed by gallery_import.py
 # Add new entries via the import tool; most recent first.
 
+- src: /assets/images/gallery/2024-01/dolphin-catching-us-up.webp
+  title: Dolphin catching us up
+  date: Jan 2024
+  date_taken: '2024-01-08'
+  tags:
+  - loc/atlantic
+  - subject/wildlife
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2024-03/sand-crab.webp
+  title: Sand crab
+  date: Mar 2024
+  date_taken: '2024-03-27'
+  tags:
+  - loc/atlantic/caribbean/martinique/anse-meunier
+  - subject/wildlife
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-03/booby.webp
+  title: Booby
+  date: Mar 2024
+  date_taken: '2024-03-28'
+  tags:
+  - loc/atlantic/caribbean/st-lucia
+  - subject/wildlife
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2024-04/turtle-feeding.webp
+  title: Turtle feeding
+  date: Apr 2024
+  date_taken: '2024-04-03'
+  tags:
+  - loc/atlantic/caribbean/st-vincent-the-granadines/tobago-cays
+  - subject/wildlife
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2024-05/eagle-rays-swimming-around-zipper.webp
+  title: Eagle Rays swimming around Zipper
+  date: May 2024
+  date_taken: '2024-05-11'
+  tags:
+  - loc/pacific/galapagos/santa-cruz/puerto-ayora
+  - subject/wildlife
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-05/marine-iguana2.webp
+  title: Marine Iguana2
+  date: May 2024
+  date_taken: '2024-05-12'
+  tags:
+  - loc/pacific/galapagos/santa-cruz/tortuga-bay
+  - subject/wildlife
+  width: 1600
+  height: 1066
+- src: /assets/images/gallery/2024-05/marine-iguanas.webp
+  title: Marine Iguanas
+  date: May 2024
+  date_taken: '2024-05-12'
+  tags:
+  - loc/pacific/galapagos/santa-cruz/tortuga-bay
+  - subject/wildlife
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-05/baby-hammerhead-shark-swimming-around-our-ankles.webp
+  title: Baby hammerhead shark swimming around our ankles
+  date: May 2024
+  date_taken: '2024-05-13'
+  tags:
+  - loc/pacific/galapagos/santa-cruz/tortuga-bay
+  - subject/wildlife
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2024-05/giant-tortoise.webp
+  title: Giant tortoise
+  date: May 2024
+  date_taken: '2024-05-13'
+  tags:
+  - loc/pacific/galapagos/santa-cruz
+  - subject/wildlife
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-05/sea-lion-playing-like-a-labrador-puppy.webp
+  title: Sea lion playing like a labrador puppy
+  date: May 2024
+  date_taken: '2024-05-17'
+  tags:
+  - loc/pacific/galapagos/isabella
+  - subject/wildlife
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2024-05/booby-flying-low.webp
+  title: Booby flying low
+  date: May 2024
+  date_taken: '2024-05-19'
+  tags:
+  - loc/pacific/galapagos/isabella
+  - subject/wildlife
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2024-05/sea-lions-chilling-out-by-our-paddleboards.webp
+  title: Sea lions chilling out by our paddleboards
+  date: May 2024
+  date_taken: '2024-05-25'
+  tags:
+  - loc/pacific/galapagos/san-cristobal
+  - subject/wildlife
+  width: 1200
+  height: 1600
+- src: /assets/images/gallery/2024-06/sally-lightfoot-crab.webp
+  title: Sally lightfoot crab
+  date: Jun 2024
+  date_taken: '2024-06-13'
+  tags:
+  - loc/pacific/galapagos/san-cristobal
+  - subject/wildlife
+  width: 1600
+  height: 1195
+- src: /assets/images/gallery/2024-04/turtle-swimming-past.webp
+  title: Turtle swimming past
+  date: Apr 2024
+  date_taken: '2024-04-03'
+  tags:
+  - loc/atlantic/caribbean/st-vincent-the-granadines/tobago-cays
+  - subject/wildlife
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2024-07/black-tip-reef-shark.webp
+  title: Black tip reef shark
+  date: Jul 2024
+  date_taken: '2024-07-12'
+  tags:
+  - loc/pacific/french-polynesia/tuamotus/raroia
+  - subject/wildlife
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2024-08/humpback-whale-swam-around-zipper-at-anchor-inside.webp
+  title: Humpback whale swam around Zipper at anchor inside the reef
+  date: Aug 2024
+  date_taken: '2024-08-26'
+  tags:
+  - loc/pacific/french-polynesia/society-islands/huahine
+  - subject/wildlife
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2024-08/shark-alley-in-the-south-pass.webp
+  title: Shark alley in the South pass
+  date: Aug 2024
+  date_taken: '2024-08-01'
+  tags:
+  - loc/pacific/french-polynesia/tuamotus/fakarava
+  - subject/wildlife
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2024-09/sea-star.webp
+  title: Sea star
+  date: Sep 2024
+  date_taken: '2024-09-17'
+  tags:
+  - loc/pacific/cook-islands/aitutaki
+  - subject/wildlife
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-06/manta-ray-in-the-anchorage.webp
+  title: Manta ray in the anchorage
+  date: Jun 2024
+  date_taken: '2024-06-22'
+  tags:
+  - loc/pacific/french-polynesia/marquesas/fatu-hiva/hanavave
+  - subject/wildlife
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2024-06/manta-ray-silhouette.webp
+  title: Manta ray silhouette
+  date: Jun 2024
+  date_taken: '2024-06-22'
+  tags:
+  - loc/pacific/french-polynesia/marquesas/fatu-hiva/hanavave
+  - subject/wildlife
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2024-06/manta-ray-from-below.webp
+  title: Manta ray from below
+  date: Jun 2024
+  date_taken: '2024-06-30'
+  tags:
+  - loc/pacific/french-polynesia/marquesas/nuku-hiva/hatiheu
+  - subject/wildlife
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2024-09/sting-rays-in-the-shallows.webp
+  title: Sting rays in the shallows
+  date: Sep 2024
+  date_taken: '2024-09-03'
+  tags:
+  - loc/pacific/french-polynesia/society-islands/bora-bora
+  - subject/wildlife
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2024-02/spectacular-coral-gardens.webp
+  title: Spectacular coral gardens
+  date: Feb 2024
+  date_taken: '2024-02-27'
+  tags:
+  - loc/atlantic/caribbean/martinique/le-grande-anse
+  - subject/wildlife
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2026-02/seal-swimming-around-zipper.webp
+  title: Seal swimming around Zipper
+  date: Feb 2026
+  date_taken: '2026-02-09'
+  tags:
+  - loc/pacific/new-zealand/marlborough-sounds/durville/tinui-island
+  - subject/wildlife
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2026-02/seal-relaxing.webp
+  title: Seal relaxing
+  date: Feb 2026
+  date_taken: '2026-02-09'
+  tags:
+  - loc/pacific/new-zealand/marlborough-sounds/durville/tinui-island
+  - subject/wildlife
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2024-05/booby-taking-off.webp
+  title: Booby taking off
+  date: May 2024
+  date_taken: '2024-05-23'
+  tags:
+  - loc/pacific/galapagos
+  - subject/wildlife
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-05/flamingos.webp
+  title: Flamingos
+  date: May 2024
+  date_taken: '2024-05-17'
+  tags:
+  - loc/pacific/galapagos/isabella
+  - subject/wildlife
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-06/schools-of-flying-fish.webp
+  title: Schools of flying fish
+  date: Jun 2024
+  date_taken: '2024-06-12'
+  tags:
+  - loc/pacific
+  - subject/wildlife
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-05/frigate-bird.webp
+  title: Frigate Bird
+  date: May 2024
+  date_taken: '2024-05-26'
+  tags:
+  - loc/pacific/galapagos/san-cristobal/puerto-baquerizo-moreno
+  - subject/wildlife
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-05/marine-iguana.webp
+  title: Marine iguana
+  date: May 2024
+  date_taken: '2024-05-12'
+  tags:
+  - loc/pacific/galapagos/santa-cruz/tortuga-bay
+  - subject/wildlife
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-05/nasca-booby.webp
+  title: Nasca booby
+  date: May 2024
+  date_taken: '2024-05-24'
+  tags:
+  - loc/pacific/galapagos
+  - subject/wildlife
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-05/oyster-catcher.webp
+  title: Oyster Catcher
+  date: May 2024
+  date_taken: '2024-05-12'
+  tags:
+  - loc/pacific/galapagos/santa-cruz/tortuga-bay
+  - subject/wildlife
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-05/pelican.webp
+  title: Pelican
+  date: May 2024
+  date_taken: '2024-05-12'
+  tags:
+  - loc/pacific/galapagos/santa-cruz/tortuga-bay
+  - subject/wildlife
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-05/penguins.webp
+  title: Penguins
+  date: May 2024
+  date_taken: '2024-05-18'
+  tags:
+  - loc/pacific/galapagos/isabella
+  - subject/wildlife
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-03/sea-lion-relaxing-on-zippers-steps.webp
+  title: Sea lion relaxing on Zipper's steps
+  date: Mar 2026
+  date_taken: '2026-03-07'
+  tags:
+  - loc/pacific/galapagos/san-cristobal/puerto-baquerizo-moreno
+  - subject/wildlife
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-05/tropic-bird.webp
+  title: Tropic bird
+  date: May 2024
+  date_taken: '2024-05-25'
+  tags:
+  - loc/pacific/galapagos/san-cristobal
+  - subject/wildlife
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-03/albatross.webp
+  title: Albatross
+  date: Mar 2026
+  date_taken: '2026-03-10'
+  tags:
+  - loc/pacific/new-zealand
+  - subject/wildlife
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2024-08/manta-ray-swimming-underneath.webp
+  title: Manta ray swimming underneath
+  date: Aug 2024
+  date_taken: '2024-08-29'
+  tags:
+  - loc/pacific/french-polynesia/society-islands/tahaa
+  - subject/wildlife
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2024-09/humpbacks-underwater.webp
+  title: Humpbacks underwater
+  date: Sep 2024
+  date_taken: '2024-09-27'
+  tags:
+  - loc/pacific/tonga/vavau
+  - subject/wildlife
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2026-09/humpback-underwater.webp
+  title: Humpback Underwater
+  date: Sep 2026
+  date_taken: '2026-09-30'
+  tags:
+  - loc/pacific/tonga/vavau
+  - subject/wildlife
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2024-05/blue-footed-boobies.webp
+  title: Blue footed boobies
+  date: May 2024
+  date_taken: '2024-05-18'
+  tags:
+  - loc/pacific/galapagos/isabella
+  - subject/wildlife
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-05/dolphin.webp
+  title: Dolphin
+  date: May 2024
+  date_taken: '2024-05-05'
+  tags:
+  - loc/pacific
+  - subject/wildlife
+  width: 1029
+  height: 579
+- src: /assets/images/gallery/2024-01/tenerife-fruit-market.webp
+  title: Tenerife fruit market
+  date: Jan 2024
+  date_taken: '2024-01-03'
+  tags:
+  - loc/atlantic/canary-islands/tenerife/santa-cruz
+  - subject/provisioning
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-01/fruit-veg-cleaning-in-tenerife.webp
+  title: Fruit & veg cleaning in Tenerife
+  date: Jan 2024
+  date_taken: '2024-01-05'
+  tags:
+  - loc/atlantic/canary-islands/tenerife/santa-cruz
+  - subject/provisioning
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-03/loaded-dinghy-in-martinique.webp
+  title: Loaded dinghy in Martinique
+  date: Mar 2024
+  date_taken: '2024-03-15'
+  tags:
+  - loc/atlantic/caribbean/martinique/le-marin
+  - subject/provisioning
+  width: 1200
+  height: 1600
+- src: /assets/images/gallery/2024-04/drinks-for-stowing-in-panama.webp
+  title: Drinks for stowing in Panama
+  date: Apr 2024
+  date_taken: '2024-04-25'
+  tags:
+  - loc/atlantic/panama/shelter-bay
+  - subject/provisioning
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-04/empty-boxes-after-a-big-shop.webp
+  title: Empty boxes after a big shop
+  date: Apr 2024
+  date_taken: '2024-04-25'
+  tags:
+  - loc/atlantic/panama/shelter-bay
+  - subject/provisioning
+  width: 1200
+  height: 1600
+- src: /assets/images/gallery/2024-04/some-stowing-to-be-done-in-panama.webp
+  title: Some stowing to be done in Panama
+  date: Apr 2024
+  date_taken: '2024-04-25'
+  tags:
+  - loc/atlantic/panama/shelter-bay
+  - subject/provisioning
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-04/waiting-for-the-supermarket-to-drive-us-back-to-th.webp
+  title: Waiting for the supermarket to drive us back to the marina in Panama
+  date: Apr 2024
+  date_taken: '2024-04-25'
+  tags:
+  - loc/atlantic/panama/shelter-bay
+  - subject/provisioning
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-04/sophie-taking-stock-of-our-provisions-in-panama.webp
+  title: Sophie taking stock of our provisions in Panama
+  date: Apr 2024
+  date_taken: '2024-04-25'
+  tags:
+  - loc/atlantic/panama/shelter-bay
+  - subject/provisioning
+  width: 1200
+  height: 1600
+- src: /assets/images/gallery/2024-04/panama-provisions-for-stowing.webp
+  title: Panama provisions for stowing
+  date: Apr 2024
+  date_taken: '2024-04-25'
+  tags:
+  - loc/atlantic/panama/shelter-bay
+  - subject/provisioning
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-04/provisioning-receipt-in-panama.webp
+  title: Provisioning receipt in Panama
+  date: Apr 2024
+  date_taken: '2024-04-26'
+  tags:
+  - loc/atlantic/panama/shelter-bay
+  - subject/provisioning
+  width: 1600
+  height: 2133
+- src: /assets/images/gallery/2024-10/fruit-market-in-tonga.webp
+  title: Fruit market in Tonga
+  date: Oct 2024
+  date_taken: '2024-10-22'
+  tags:
+  - loc/pacific/tonga/vavau
+  - subject/provisioning
+  width: 1200
+  height: 1600
 - src: /assets/images/gallery/2024-01/leaving-tenerife.webp
   title: Leaving Tenerife
   date: Jan 2024
