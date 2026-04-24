@@ -1,6 +1,313 @@
 # gallery.yml — managed by gallery_import.py
 # Add new entries via the import tool; most recent first.
 
+- src: /assets/images/gallery/2023-12/gran-canaria-sand-dunes.webp
+  title: Gran Canaria Sand Dunes
+  date: Dec 2023
+  date_taken: '2023-12-22'
+  tags:
+  - loc/atlantic/canary-islands/gran-canaria
+  - subject/landscapes
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2023-12/west-coast-of-gran-canaria-on-our-hire-car-tour.webp
+  title: West coast of Gran Canaria on our hire car tour
+  date: Dec 2023
+  date_taken: '2023-12-24'
+  tags:
+  - loc/atlantic/canary-islands/gran-canaria/puerto-de-agaete
+  - subject/landscapes
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2023-12/barren-landscape-with-massive-coverings-over-banan.webp
+  title: Barren landscape with massive coverings over banana plantations
+  date: Dec 2023
+  date_taken: '2023-12-29'
+  tags:
+  - loc/atlantic/canary-islands/gran-canaria
+  - subject/landscapes
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2023-12/approaching-tenerife.webp
+  title: Approaching Tenerife
+  date: Dec 2023
+  date_taken: '2023-12-30'
+  tags:
+  - loc/atlantic/canary-islands/tenerife/playa-de-antiquera
+  - subject/landscapes
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2023-12/el-teide-in-the-distance-some-3700m-tall.webp
+  title: El Teide in the distance, some 3,700m tall
+  date: Dec 2023
+  date_taken: '2023-12-31'
+  tags:
+  - loc/atlantic/canary-islands/tenerife/santa-cruz
+  - subject/landscapes
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2023-12/santa-cruz-capital-of-tenerife.webp
+  title: Santa Cruz, capital of Tenerife
+  date: Dec 2023
+  date_taken: '2023-12-31'
+  tags:
+  - loc/atlantic/canary-islands/tenerife/santa-cruz
+  - subject/landscapes
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2023-12/tenerife-coastline.webp
+  title: Tenerife coastline
+  date: Dec 2023
+  date_taken: '2023-12-31'
+  tags:
+  - loc/atlantic/canary-islands/tenerife/santa-cruz
+  - subject/landscapes
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2024-01/sailing-into-mindelo.webp
+  title: Sailing into Mindelo
+  date: Jan 2024
+  date_taken: '2024-01-12'
+  tags:
+  - loc/atlantic/cape-verde/sao-vicente/mindelo
+  - subject/landscapes
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2024-01/sao-vicente-coastline.webp
+  title: Sao Vicente coastline
+  date: Jan 2024
+  date_taken: '2024-01-12'
+  tags:
+  - loc/atlantic/cape-verde/sao-vicente/mindelo
+  - subject/landscapes
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2024-02/pelee-volcano-in-the-north-or-martinique-which-bur.webp
+  title: Pelee volcano in the North or Martinique, which buried St Pierre in 1902
+  date: Feb 2024
+  date_taken: '2024-02-28'
+  tags:
+  - loc/atlantic/caribbean/martinique/st-pierre
+  - subject/landscapes
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2024-03/piton-1.webp
+  title: 'Piton #1'
+  date: Mar 2024
+  date_taken: '2024-03-29'
+  tags:
+  - loc/atlantic/caribbean/st-lucia/the-pitons
+  - subject/landscapes
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2024-03/piton-2.webp
+  title: 'Piton #2'
+  date: Mar 2024
+  date_taken: '2024-03-30'
+  tags:
+  - loc/atlantic/caribbean/st-lucia/the-pitons
+  - subject/landscapes
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2024-04/panama-city.webp
+  title: Panama City
+  date: Apr 2024
+  date_taken: '2024-04-30'
+  tags:
+  - loc/pacific/panama/panama-city
+  - subject/landscapes
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-05/floreana-island.webp
+  title: Floreana island
+  date: May 2024
+  date_taken: '2024-05-20'
+  tags:
+  - loc/pacific/galapagos/floreana/puerto-velasco-ibarra
+  - subject/landscapes
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-06/fatu-hiva-coastline.webp
+  title: Fatu Hiva coastline
+  date: Jun 2024
+  date_taken: '2024-06-21'
+  tags:
+  - loc/pacific/french-polynesia/marquesas/fatu-hiva/hanavave
+  - subject/landscapes
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-06/fatu-hiva-near-omoa.webp
+  title: Fatu Hiva near Omoa
+  date: Jun 2024
+  date_taken: '2024-06-21'
+  tags:
+  - loc/pacific/french-polynesia/marquesas/fatu-hiva/omoa
+  - subject/landscapes
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-07/fresh-air-on-nuku-hiva.webp
+  title: Fresh air on Nuku Hiva
+  date: Jul 2024
+  date_taken: '2024-07-04'
+  tags:
+  - loc/pacific/french-polynesia/marquesas/nuku-hiva
+  - subject/landscapes
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-08/makatea-cliffs.webp
+  title: Makatea Cliffs
+  date: Aug 2024
+  date_taken: '2024-08-09'
+  tags:
+  - loc/pacific/french-polynesia/tuamotus/makatea
+  - subject/landscapes
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2024-08/papeete.webp
+  title: Papeete
+  date: Aug 2024
+  date_taken: '2024-08-11'
+  tags:
+  - loc/pacific/french-polynesia/society-islands/tahiti
+  - subject/landscapes
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-08/tahiti.webp
+  title: Tahiti
+  date: Aug 2024
+  date_taken: '2024-08-11'
+  tags:
+  - loc/pacific/french-polynesia/society-islands/tahiti
+  - subject/landscapes
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2024-08/fringing-reef-on-the-north-or-moorea.webp
+  title: Fringing reef on the North or Moorea
+  date: Aug 2024
+  date_taken: '2024-08-20'
+  tags:
+  - loc/pacific/french-polynesia/society-islands/moorea/cooks-bay
+  - subject/landscapes
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2024-08/opunohu-bay.webp
+  title: Opunohu bay
+  date: Aug 2024
+  date_taken: '2024-08-20'
+  tags:
+  - loc/pacific/french-polynesia/society-islands/moorea/opunohu-bay
+  - subject/landscapes
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2024-08/bora-bora-seen-from-tahaa.webp
+  title: Bora Bora seen from Taha'a
+  date: Aug 2024
+  date_taken: '2024-08-30'
+  tags:
+  - loc/pacific/french-polynesia/society-islands/bora-bora
+  - subject/landscapes
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2024-08/sailing-around-the-reef-to-find-the-entrance-into-.webp
+  title: Sailing around the reef to find the entrance into Bora Bora
+  date: Aug 2024
+  date_taken: '2024-08-31'
+  tags:
+  - loc/pacific/french-polynesia/society-islands/bora-bora
+  - subject/landscapes
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2024-09/honeymoon-island.webp
+  title: Honeymoon Island
+  date: Sep 2024
+  date_taken: '2024-09-17'
+  tags:
+  - loc/pacific/cook-islands/aitutaki/honeymoon-island
+  - subject/landscapes
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-01/pohutukawa-tree-in-bloom-in-the-bay-of-islands.webp
+  title: Pohutukawa tree in bloom in the Bay of Islands
+  date: Jan 2026
+  date_taken: '2026-01-03'
+  tags:
+  - loc/pacific/new-zealand/bay-of-islands/waiwhapuku
+  - subject/landscapes
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2026-02/sailing-around-the-top-of-durville.webp
+  title: Sailing around the top of D'Urville
+  date: Feb 2026
+  date_taken: '2026-02-09'
+  tags:
+  - loc/pacific/new-zealand/marlborough-sounds/durville
+  - subject/landscapes
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-02/view-of-greville-harbour-on-durville.webp
+  title: View of Greville harbour on D'Urville
+  date: Feb 2026
+  date_taken: '2026-02-09'
+  tags:
+  - loc/pacific/new-zealand/marlborough-sounds/durville
+  - subject/landscapes
+  width: 1600
+  height: 598
+- src: /assets/images/gallery/2026-02/view-from-walking-on-the-nydia-track.webp
+  title: View from walking on the Nydia Track
+  date: Feb 2026
+  date_taken: '2026-02-12'
+  tags:
+  - loc/pacific/new-zealand/marlborough-sounds/pelorus-sound/tennyson-inlet/ngawhakawhiti
+  - subject/landscapes
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2026-02/kenepuru-sound-seen-from-the-queen-charlotte-track.webp
+  title: Kenepuru sound seen from the Queen Charlotte track
+  date: Feb 2026
+  date_taken: '2026-02-22'
+  tags:
+  - loc/pacific/new-zealand/marlborough-sounds/pelorus-sound/kenepuru
+  - subject/landscapes
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2026-02/onahau-point-lookout-into-both-pelorus-kenepuru-an.webp
+  title: Onahau point lookout into both Pelorus (Kenepuru) and Queen Charlotte sounds
+  date: Feb 2026
+  date_taken: '2026-02-22'
+  tags:
+  - loc/pacific/new-zealand/marlborough-sounds/queen-charlotte-sound/mistletoe-bay
+  - subject/landscapes
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2026-02/onahau-point-lookout-into-pelorus-sound.webp
+  title: Onahau point lookout into Pelorus sound
+  date: Feb 2026
+  date_taken: '2026-02-22'
+  tags:
+  - loc/pacific/new-zealand/marlborough-sounds/queen-charlotte-sound/mistletoe-bay
+  - subject/landscapes
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2026-02/onahau-point-lookout-into-queen-charlotte-sound.webp
+  title: Onahau point lookout into Queen Charlotte sound
+  date: Feb 2026
+  date_taken: '2026-02-22'
+  tags:
+  - loc/pacific/new-zealand/marlborough-sounds/queen-charlotte-sound/mistletoe-bay
+  - subject/landscapes
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2026-02/sunrise-in-the-tory-channel.webp
+  title: Sunrise in the Tory Channel
+  date: Feb 2026
+  date_taken: '2026-02-25'
+  tags:
+  - loc/pacific/new-zealand/marlborough-sounds/queen-charlotte-sound/tory-channel
+  - subject/landscapes
+  - subject/sunsets
+  width: 1600
+  height: 1200
 - src: /assets/images/gallery/2024-01/reeling-in.webp
   title: Reeling In
   date: Jan 2024
