@@ -1,6 +1,1357 @@
 # gallery.yml — managed by gallery_import.py
 # Add new entries via the import tool; most recent first.
 
+- src: /assets/images/gallery/2024-01/reeling-in.webp
+  title: Reeling In
+  date: Jan 2024
+  date_taken: '2024-01-06'
+  tags:
+  - loc/atlantic/canary-islands/tenerife
+  - subject/fishing
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-01/tuna-in-bucket.webp
+  title: Tuna in bucket
+  date: Jan 2024
+  date_taken: '2024-01-06'
+  tags:
+  - loc/atlantic
+  - subject/fishing
+  width: 1536
+  height: 2048
+- src: /assets/images/gallery/2024-01/dorado-for-filleting.webp
+  title: Dorado For Filleting
+  date: Jan 2024
+  date_taken: '2024-01-22'
+  tags:
+  - loc/atlantic
+  - subject/fishing
+  width: 1536
+  height: 2048
+- src: /assets/images/gallery/2024-01/sophie-reeling-in.webp
+  title: Sophie reeling in
+  date: Jan 2024
+  date_taken: '2024-01-25'
+  tags:
+  - loc/atlantic
+  - subject/fishing
+  width: 1536
+  height: 2048
+- src: /assets/images/gallery/2024-01/dorado-filleted.webp
+  title: Dorado filleted
+  date: Jan 2024
+  date_taken: '2024-01-26'
+  tags:
+  - loc/atlantic
+  - subject/fishing
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-01/dorado-hooked.webp
+  title: Dorado hooked
+  date: Jan 2024
+  date_taken: '2024-01-26'
+  tags:
+  - loc/atlantic
+  - subject/fishing
+  width: 1536
+  height: 2048
+- src: /assets/images/gallery/2024-02/bucket-catch-technique.webp
+  title: Bucket catch technique
+  date: Feb 2024
+  date_taken: '2024-02-04'
+  tags:
+  - loc/atlantic
+  - subject/fishing
+  width: 1536
+  height: 2048
+- src: /assets/images/gallery/2024-02/isla-with-a-filleted-dorado.webp
+  title: Isla with a filleted dorado
+  date: Feb 2024
+  date_taken: '2024-02-04'
+  tags:
+  - loc/atlantic
+  - subject/fishing
+  width: 1536
+  height: 2048
+- src: /assets/images/gallery/2024-02/isla-checking-on-a-dorado.webp
+  title: Isla checking on a dorado
+  date: Feb 2024
+  date_taken: '2024-02-04'
+  tags:
+  - loc/atlantic
+  - subject/fishing
+  width: 1536
+  height: 2048
+- src: /assets/images/gallery/2024-02/dorado-up-close.webp
+  title: Dorado up close
+  date: Feb 2024
+  date_taken: '2024-02-04'
+  tags:
+  - loc/atlantic
+  - subject/fishing
+  width: 1536
+  height: 2048
+- src: /assets/images/gallery/2024-02/dorado-up-close-1.webp
+  title: Dorado up close
+  date: Feb 2024
+  date_taken: '2024-02-04'
+  tags:
+  - loc/atlantic
+  - subject/fishing
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2024-03/tuna.webp
+  title: Tuna
+  date: Mar 2024
+  date_taken: '2024-03-28'
+  tags:
+  - loc/atlantic/caribbean
+  - subject/fishing
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-03/jamie-reeling-in.webp
+  title: Jamie reeling in
+  date: Mar 2024
+  date_taken: '2024-03-28'
+  tags:
+  - loc/atlantic/caribbean
+  - subject/fishing
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-04/small-tuna.webp
+  title: Small tuna
+  date: Apr 2024
+  date_taken: '2024-04-17'
+  tags:
+  - loc/atlantic/caribbean
+  - subject/fishing
+  width: 1200
+  height: 1600
+- src: /assets/images/gallery/2024-05/another-tuna.webp
+  title: Another tuna
+  date: May 2024
+  date_taken: '2024-05-08'
+  tags:
+  - loc/pacific
+  - subject/fishing
+  width: 1200
+  height: 1600
+- src: /assets/images/gallery/2024-05/sophie-landing-a-tuna.webp
+  title: Sophie landing a tuna
+  date: May 2024
+  date_taken: '2024-05-08'
+  tags:
+  - loc/pacific
+  - subject/fishing
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2024-06/team-with-a-big-dorado.webp
+  title: Team with a big dorado
+  date: Jun 2024
+  date_taken: '2024-06-18'
+  tags:
+  - loc/pacific
+  - subject/fishing
+  width: 1600
+  height: 2133
+- src: /assets/images/gallery/2024-10/rainbow-runner.webp
+  title: Rainbow Runner
+  date: Oct 2024
+  date_taken: '2024-10-15'
+  tags:
+  - loc/pacific/tonga
+  - subject/fishing
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-10/unidentified-fish.webp
+  title: Unidentified fish
+  date: Oct 2024
+  date_taken: '2024-10-15'
+  tags:
+  - loc/pacific/tonga
+  - subject/fishing
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2025-12/new-years-eve-fishing.webp
+  title: New year's eve fishing
+  date: Dec 2025
+  date_taken: '2025-12-31'
+  tags:
+  - loc/pacific/new-zealand/bay-of-islands/parekura
+  - subject/fishing
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2025-12/new-years-eve-fishing-for-bait.webp
+  title: New Year's Eve fishing for bait
+  date: Dec 2025
+  date_taken: '2025-12-31'
+  tags:
+  - loc/pacific/new-zealand/bay-of-islands/parekura
+  - subject/fishing
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-01/isla-with-a-kahawai.webp
+  title: Isla with a kahawai
+  date: Jan 2026
+  date_taken: '2026-01-07'
+  tags:
+  - loc/pacific/new-zealand
+  - subject/fishing
+  width: 1200
+  height: 1600
+- src: /assets/images/gallery/2026-01/isla-with-a-couple-of-blue-cod.webp
+  title: Isla with a couple of blue cod
+  date: Jan 2026
+  date_taken: '2026-01-19'
+  tags:
+  - loc/pacific/new-zealand/abel-tasman/tonga-roadstead
+  - subject/fishing
+  width: 1200
+  height: 1600
+- src: /assets/images/gallery/2026-01/jamie-with-a-couple-of-snapper.webp
+  title: Jamie with a couple of snapper
+  date: Jan 2026
+  date_taken: '2026-01-25'
+  tags:
+  - loc/pacific/new-zealand/abel-tasman/tonga-roadstead
+  - subject/fishing
+  width: 1200
+  height: 1600
+- src: /assets/images/gallery/2026-01/angus-fishing-from-the-dinghy.webp
+  title: Angus fishing from the dinghy
+  date: Jan 2026
+  date_taken: '2026-01-26'
+  tags:
+  - loc/pacific/new-zealand/abel-tasman/bark-bay
+  - subject/fishing
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-01/fishing-from-the-dinghy.webp
+  title: Fishing from the dinghy
+  date: Jan 2026
+  date_taken: '2026-01-29'
+  tags:
+  - loc/pacific/new-zealand/abel-tasman/bark-bay
+  - subject/fishing
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-01/jamie-with-a-wahoo-in-the-dark.webp
+  title: Jamie with a wahoo in the dark
+  date: Jan 2026
+  date_taken: '2026-01-29'
+  tags:
+  - loc/pacific/new-zealand/abel-tasman/bark-bay
+  - subject/fishing
+  width: 1200
+  height: 1600
+- src: /assets/images/gallery/2026-02/jamie-with-2-kahawai.webp
+  title: Jamie with 2 kahawai
+  date: Feb 2026
+  date_taken: '2026-02-01'
+  tags:
+  - loc/pacific/new-zealand/nelson
+  - subject/fishing
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-02/kahawai-in-the-bucket.webp
+  title: Kahawai in the bucket
+  date: Feb 2026
+  date_taken: '2026-02-01'
+  tags:
+  - loc/pacific/new-zealand/nelson
+  - subject/fishing
+  width: 1200
+  height: 1600
+- src: /assets/images/gallery/2026-02/angus-with-blue-cod.webp
+  title: Angus with blue cod
+  date: Feb 2026
+  date_taken: '2026-02-10'
+  tags:
+  - loc/pacific/new-zealand/marlborough-sounds/durville/tinui-island
+  - subject/fishing
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-01/angus-holding-a-blue-cod.webp
+  title: Angus holding a blue cod
+  date: Jan 2026
+  date_taken: '2026-01-26'
+  tags:
+  - loc/pacific/new-zealand/abel-tasman/bark-bay
+  - subject/fishing
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-01/filleting-on-the-back-steps.webp
+  title: Filleting on the back steps
+  date: Jan 2026
+  date_taken: '2026-01-29'
+  tags:
+  - loc/pacific/new-zealand/abel-tasman/adele-island
+  - subject/fishing
+  width: 1600
+  height: 2133
+- src: /assets/images/gallery/2025-12/fish-tv-on-new-years-eve.webp
+  title: Fish TV on New Year's Eve
+  date: Dec 2025
+  date_taken: '2025-12-31'
+  tags:
+  - loc/pacific/new-zealand/bay-of-islands/parekura
+  - subject/fishing
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-02/snapper-and-a-blue-cod.webp
+  title: Snapper and a blue cod
+  date: Feb 2026
+  date_taken: '2026-02-16'
+  tags:
+  - loc/pacific/new-zealand/marlborough-sounds/durville/mill-arm
+  - subject/fishing
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-01/wrasse.webp
+  title: Wrasse
+  date: Jan 2026
+  date_taken: '2026-01-31'
+  tags:
+  - loc/pacific/new-zealand/abel-tasman/adele-island
+  - subject/fishing
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2023-12/in-the-dinghy-outside-marina-rubicon.webp
+  title: In the dinghy outside Marina Rubicon
+  date: Dec 2023
+  date_taken: '2023-12-10'
+  tags:
+  - loc/atlantic/canary-islands/lanzarote
+  - subject/family
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-01/in-the-cockpit-on-passage.webp
+  title: In the cockpit on passage
+  date: Jan 2024
+  date_taken: '2024-01-11'
+  tags:
+  - loc/atlantic
+  - subject/family
+  - subject/passages
+  width: 534
+  height: 323
+- src: /assets/images/gallery/2024-01/celebration-after-fixing-the-autopilot.webp
+  title: Celebration after fixing the autopilot
+  date: Jan 2024
+  date_taken: '2024-01-21'
+  tags:
+  - loc/atlantic/cape-verde/sao-vicente/mindelo
+  - subject/family
+  width: 1600
+  height: 1210
+- src: /assets/images/gallery/2024-02/heading-ashore-in-barbados.webp
+  title: Heading ashore in Barbados
+  date: Feb 2024
+  date_taken: '2024-02-06'
+  tags:
+  - loc/atlantic/caribbean/barbados/port-st-charles
+  - subject/family
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-03/racing-the-rain-back-to-the-boat-after-exploring-a.webp
+  title: Racing the rain back to the boat after exploring ashore
+  date: Mar 2024
+  date_taken: '2024-03-01'
+  tags:
+  - loc/atlantic/caribbean/martinique/les-trois-islets
+  - subject/family
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-03/sophies-40th.webp
+  title: Sophie's 40th
+  date: Mar 2024
+  date_taken: '2024-03-19'
+  tags:
+  - loc/atlantic/caribbean/martinique/le-marin
+  - subject/family
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-03/40th-birthday-cake.webp
+  title: 40th birthday cake
+  date: Mar 2024
+  date_taken: '2024-03-19'
+  tags:
+  - loc/atlantic/caribbean/martinique/le-marin
+  - subject/family
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-03/finally-leaving-lemarin-after-all-the-boatwork.webp
+  title: Finally leaving Le-Marin after all the boatwork
+  date: Mar 2024
+  date_taken: '2024-03-28'
+  tags:
+  - loc/atlantic/caribbean/martinique/le-marin
+  - subject/family
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-03/boys-in-the-mud-baths.webp
+  title: Boys in the mud baths
+  date: Mar 2024
+  date_taken: '2024-03-30'
+  tags:
+  - loc/atlantic/caribbean/st-lucia/soufriere
+  - subject/family
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-03/girls-in-the-mud-baths.webp
+  title: Girls in the mud baths
+  date: Mar 2024
+  date_taken: '2024-03-30'
+  tags:
+  - loc/atlantic/caribbean/st-lucia/soufriere
+  - subject/family
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-04/celebratory-drink-at-the-bar-in-union-island-befor.webp
+  title: Celebratory drink at the bar in Union Island before leaving for the ABCs
+  date: Apr 2024
+  date_taken: '2024-04-04'
+  tags:
+  - loc/atlantic/caribbean/st-vincent-the-granadines/union-island
+  - subject/family
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-05/hanging-out-with-darwin.webp
+  title: Hanging out with Darwin
+  date: May 2024
+  date_taken: '2024-05-10'
+  tags:
+  - loc/pacific/galapagos/santa-cruz
+  - subject/family
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-05/waiting-for-the-locals.webp
+  title: Waiting for the locals
+  date: May 2024
+  date_taken: '2024-05-12'
+  tags:
+  - loc/pacific/galapagos/santa-cruz
+  - subject/family
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-05/angus-tortoise.webp
+  title: Angus tortoise
+  date: May 2024
+  date_taken: '2024-05-13'
+  tags:
+  - loc/pacific/galapagos/santa-cruz
+  - subject/family
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-05/isla-tortoise.webp
+  title: Isla tortoise
+  date: May 2024
+  date_taken: '2024-05-13'
+  tags:
+  - loc/pacific/galapagos/santa-cruz
+  - subject/family
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-05/jamie-tortoise.webp
+  title: Jamie tortoise
+  date: May 2024
+  date_taken: '2024-05-13'
+  tags:
+  - loc/pacific/galapagos/santa-cruz
+  - subject/family
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-05/exploring-the-lava-tunnels.webp
+  title: Exploring the lava tunnels
+  date: May 2024
+  date_taken: '2024-05-13'
+  tags:
+  - loc/pacific/galapagos/santa-cruz
+  - subject/family
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-05/mandatory-tortoise-shot-with-a-big-fella.webp
+  title: Mandatory tortoise shot with a big fella
+  date: May 2024
+  date_taken: '2024-05-13'
+  tags:
+  - loc/pacific/galapagos/santa-cruz
+  - subject/family
+  width: 1200
+  height: 1600
+- src: /assets/images/gallery/2024-05/at-the-tortoise-sanctuary.webp
+  title: At the tortoise sanctuary
+  date: May 2024
+  date_taken: '2024-05-14'
+  tags:
+  - loc/pacific/galapagos/santa-cruz
+  - subject/family
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-06/jamie-sophie-in-fatu-hiva.webp
+  title: Jamie & Sophie in Fatu Hiva
+  date: Jun 2024
+  date_taken: '2024-06-20'
+  tags:
+  - loc/pacific/french-polynesia/marquesas/fatu-hiva
+  - subject/family
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-07/going-for-a-walk.webp
+  title: Going for a walk
+  date: Jul 2024
+  date_taken: '2024-07-02'
+  tags:
+  - loc/pacific/french-polynesia/marquesas/nuku-hiva/hatiheu
+  - subject/family
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-08/exploring-tahiti-on-a-day-out-by-car.webp
+  title: Exploring Tahiti on a day out by car
+  date: Aug 2024
+  date_taken: '2024-08-16'
+  tags:
+  - loc/pacific/french-polynesia/society-islands/tahiti
+  - subject/family
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2024-08/learning-about-vanilla.webp
+  title: Learning about vanilla
+  date: Aug 2024
+  date_taken: '2024-08-28'
+  tags:
+  - loc/pacific/french-polynesia/society-islands/tahaa
+  - subject/family
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-09/day-out-by-moped-in-aitutaki.webp
+  title: Day out by moped in Aitutaki
+  date: Sep 2024
+  date_taken: '2024-09-18'
+  tags:
+  - loc/pacific/cook-islands/aitutaki
+  - subject/family
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-10/tonga-departure-crew.webp
+  title: Tonga departure crew
+  date: Oct 2024
+  date_taken: '2024-10-23'
+  tags:
+  - loc/pacific/tonga/vavau
+  - subject/family
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-02/sophie-enjoying-a-cup-of-tea-on-our-way-out-of-ton.webp
+  title: Sophie enjoying a cup of tea on our way out of Tonga
+  date: Feb 2026
+  date_taken: '2026-02-09'
+  tags:
+  - loc/pacific
+  - subject/family
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-02/going-for-a-walk-in-the-forests-of-the-sounds.webp
+  title: Going for a walk in the forests of the sounds
+  date: Feb 2026
+  date_taken: '2026-02-22'
+  tags:
+  - loc/pacific/new-zealand/marlborough-sounds/queen-charlotte-sound/mistletoe-bay
+  - subject/family
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2026-02/walking-up-on-the-queen-charlotte-track.webp
+  title: Walking up on the Queen Charlotte track
+  date: Feb 2026
+  date_taken: '2026-02-22'
+  tags:
+  - loc/pacific/new-zealand/marlborough-sounds/queen-charlotte-sound
+  - subject/family
+  width: 1067
+  height: 1600
+- src: /assets/images/gallery/2024-01/isla-as-were-leaving-mindelo.webp
+  title: Isla as we're leaving Mindelo
+  date: Jan 2024
+  date_taken: '2024-01-22'
+  tags:
+  - loc/atlantic/cape-verde/sao-vicente/mindelo
+  - subject/family
+  width: 1076
+  height: 1435
+- src: /assets/images/gallery/2024-06/lovely-family-offering-us-fruit-from-their-garden-.webp
+  title: Lovely family offering us fruit from their garden in Fatu Hiva
+  date: Jun 2024
+  date_taken: '2024-06-22'
+  tags:
+  - loc/pacific/french-polynesia/marquesas/fatu-hiva/omoa
+  - subject/family
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2023-11/taking-the-shower-room-apart-searching-for-the-lea.webp
+  title: Taking the shower room apart searching for the leak
+  date: Nov 2023
+  date_taken: '2023-11-12'
+  tags:
+  - loc/atlantic/france/st-malo
+  - subject/boat-work
+  width: 1200
+  height: 1600
+- src: /assets/images/gallery/2023-12/fixing-the-broken-beam-weld.webp
+  title: Fixing the broken beam weld
+  date: Dec 2023
+  date_taken: '2023-12-13'
+  tags:
+  - loc/atlantic/canary-islands/lanzarote/rubicon
+  - subject/boat-work
+  width: 1200
+  height: 1600
+- src: /assets/images/gallery/2024-01/gilson-bleeding-the-hydraulic-system.webp
+  title: Gilson bleeding the hydraulic system
+  date: Jan 2024
+  date_taken: '2024-01-20'
+  tags:
+  - loc/atlantic/cape-verde/mindelo
+  - subject/boat-work
+  width: 1536
+  height: 2048
+- src: /assets/images/gallery/2024-01/temporary-hydraulic-fluid-header-tanks-for-manual-.webp
+  title: Temporary hydraulic fluid header tanks for manual bleeding
+  date: Jan 2024
+  date_taken: '2024-01-20'
+  tags:
+  - loc/atlantic/cape-verde/mindelo
+  - subject/boat-work
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-03/taking-the-mast-out.webp
+  title: Taking the mast out
+  date: Mar 2024
+  date_taken: '2024-03-08'
+  tags:
+  - loc/atlantic/caribbean/martinique/le-marin
+  - subject/boat-work
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-03/lifting-zipper-out-in-martinique.webp
+  title: Lifting Zipper out in Martinique
+  date: Mar 2024
+  date_taken: '2024-03-11'
+  tags:
+  - loc/atlantic/caribbean/martinique/le-marin
+  - subject/boat-work
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-03/raising-the-waterline.webp
+  title: Raising the waterline
+  date: Mar 2024
+  date_taken: '2024-03-12'
+  tags:
+  - loc/atlantic/caribbean/martinique/le-marin
+  - subject/boat-work
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-03/replacing-the-escape-hatch.webp
+  title: Replacing the escape hatch
+  date: Mar 2024
+  date_taken: '2024-03-13'
+  tags:
+  - loc/atlantic/caribbean/martinique/le-marin
+  - subject/boat-work
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-03/replacing-the-saildrive-boot.webp
+  title: Replacing the saildrive boot
+  date: Mar 2024
+  date_taken: '2024-03-14'
+  tags:
+  - loc/atlantic/caribbean/martinique/le-marin
+  - subject/boat-work
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-03/replacing-saildrive-seal.webp
+  title: Replacing saildrive seal
+  date: Mar 2024
+  date_taken: '2024-03-14'
+  tags:
+  - loc/atlantic/caribbean/martinique/le-marin
+  - subject/boat-work
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-03/zipper-in-the-crane.webp
+  title: Zipper in the crane
+  date: Mar 2024
+  date_taken: '2024-03-15'
+  tags:
+  - loc/atlantic/caribbean/martinique/le-marin
+  - subject/boat-work
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-03/on-the-riggers-pontoon.webp
+  title: On the riggers pontoon
+  date: Mar 2024
+  date_taken: '2024-03-20'
+  tags:
+  - loc/atlantic/caribbean/martinique/le-marin
+  - subject/boat-work
+  width: 1200
+  height: 1600
+- src: /assets/images/gallery/2024-03/diesel-bug.webp
+  title: Diesel bug
+  date: Mar 2024
+  date_taken: '2024-03-23'
+  tags:
+  - loc/atlantic/caribbean/martinique/le-marin
+  - subject/boat-work
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-03/pristine-diesel-tank-after-cleaning.webp
+  title: Pristine diesel tank after cleaning
+  date: Mar 2024
+  date_taken: '2024-03-25'
+  tags:
+  - loc/atlantic/caribbean/martinique/le-marin
+  - subject/boat-work
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-03/diy-spanner-for-replacing-broken-tap-hoses.webp
+  title: DIY spanner for replacing broken tap hoses
+  date: Mar 2024
+  date_taken: '2024-03-27'
+  tags:
+  - loc/atlantic/caribbean/martinique/le-marin
+  - subject/boat-work
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-01/servicing-winches.webp
+  title: Servicing winches
+  date: Jan 2024
+  date_taken: '2024-01-01'
+  tags:
+  - loc/atlantic/caribbean/martinique/le-marin
+  - subject/boat-work
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2023-12/angus-and-sophie-helming-to-tunes.webp
+  title: Angus and Sophie helming to tunes
+  date: Dec 2023
+  date_taken: '2023-12-30'
+  tags:
+  - loc/atlantic/canary-islands/gran-canaria
+  - subject/boat-life
+  width: 1067
+  height: 1600
+- src: /assets/images/gallery/2023-12/bodyboard-tow.webp
+  title: Bodyboard tow
+  date: Dec 2023
+  date_taken: '2023-12-31'
+  tags:
+  - loc/atlantic/canary-islands/tenerife
+  - subject/boat-life
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2023-12/bodyboard-swim.webp
+  title: Bodyboard swim
+  date: Dec 2023
+  date_taken: '2023-12-31'
+  tags:
+  - loc/atlantic/canary-islands/tenerife
+  - subject/boat-life
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2023-12/sophie-and-isla-on-the-foredeck.webp
+  title: Sophie and Isla on the foredeck
+  date: Dec 2023
+  date_taken: '2023-12-31'
+  tags:
+  - loc/atlantic/canary-islands/tenerife
+  - subject/boat-life
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2024-01/isla-and-angus-in-the-hammock.webp
+  title: Isla and Angus in the hammock
+  date: Jan 2024
+  date_taken: '2024-01-13'
+  tags:
+  - loc/atlantic/cape-verde/mindelo
+  - subject/boat-life
+  width: 360
+  height: 480
+- src: /assets/images/gallery/2024-01/isla-and-angus-kneading.webp
+  title: Isla and Angus kneading
+  date: Jan 2024
+  date_taken: '2024-01-13'
+  tags:
+  - loc/atlantic/cape-verde/mindelo
+  - subject/boat-life
+  width: 359
+  height: 480
+- src: /assets/images/gallery/2024-01/hairdresser.webp
+  title: Hairdresser
+  date: Jan 2024
+  date_taken: '2024-01-14'
+  tags:
+  - loc/atlantic/cape-verde/mindelo
+  - subject/boat-life
+  width: 1536
+  height: 2048
+- src: /assets/images/gallery/2024-01/angus-and-jamie-playing-draughts.webp
+  title: Angus and Jamie playing draughts
+  date: Jan 2024
+  date_taken: '2024-01-18'
+  tags:
+  - loc/atlantic/cape-verde/mindelo
+  - subject/boat-life
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-01/rob-refuelling.webp
+  title: Rob refuelling
+  date: Jan 2024
+  date_taken: '2024-01-20'
+  tags:
+  - loc/atlantic/cape-verde/mindelo
+  - subject/boat-life
+  width: 1536
+  height: 2048
+- src: /assets/images/gallery/2024-01/i-a-crafting.webp
+  title: I A Crafting
+  date: Jan 2024
+  date_taken: '2024-01-25'
+  tags:
+  - loc/atlantic
+  - subject/boat-life
+  width: 1536
+  height: 2048
+- src: /assets/images/gallery/2024-01/relaxing-on-passage.webp
+  title: Relaxing on passage
+  date: Jan 2024
+  date_taken: '2024-01-27'
+  tags:
+  - loc/atlantic
+  - subject/boat-life
+  width: 1536
+  height: 2048
+- src: /assets/images/gallery/2024-02/team-kneading-the-bread.webp
+  title: Team kneading the bread
+  date: Feb 2024
+  date_taken: '2024-02-03'
+  tags:
+  - loc/atlantic
+  - subject/boat-life
+  width: 1536
+  height: 2048
+- src: /assets/images/gallery/2024-02/predinner-snacks-and-drinks.webp
+  title: Pre-dinner snacks and drinks
+  date: Feb 2024
+  date_taken: '2024-02-11'
+  tags:
+  - loc/atlantic/caribbean/barbados
+  - subject/boat-life
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-03/pondering-life-on-the-back-steps.webp
+  title: Pondering life on the back steps
+  date: Mar 2024
+  date_taken: '2024-03-11'
+  tags:
+  - loc/atlantic/caribbean/martinique
+  - subject/boat-life
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-03/ceviche-for-lunch.webp
+  title: Ceviche for lunch
+  date: Mar 2024
+  date_taken: '2024-03-29'
+  tags:
+  - loc/atlantic/caribbean/martinique
+  - subject/boat-life
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-04/in-the-bosuns-chair.webp
+  title: In the bosun's chair
+  date: Apr 2024
+  date_taken: '2024-04-21'
+  tags:
+  - loc/atlantic/panama/shelter-bay
+  - subject/boat-life
+  width: 1200
+  height: 1600
+- src: /assets/images/gallery/2024-04/angus-up-the-mast.webp
+  title: Angus up the mast
+  date: Apr 2024
+  date_taken: '2024-04-21'
+  tags:
+  - loc/atlantic/panama/shelter-bay
+  - subject/boat-life
+  width: 1200
+  height: 1600
+- src: /assets/images/gallery/2024-04/isla-in-the-bosuns-chair.webp
+  title: Isla in the bosun's chair
+  date: Apr 2024
+  date_taken: '2024-04-21'
+  tags:
+  - loc/atlantic/panama/shelter-bay
+  - subject/boat-life
+  width: 1200
+  height: 1600
+- src: /assets/images/gallery/2024-05/fish-preparation.webp
+  title: Fish preparation
+  date: May 2024
+  date_taken: '2024-05-03'
+  tags:
+  - loc/pacific
+  - subject/boat-life
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-05/squid-on-deck.webp
+  title: Squid on deck
+  date: May 2024
+  date_taken: '2024-05-06'
+  tags:
+  - loc/pacific
+  - subject/boat-life
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-05/sleeping-on-passage.webp
+  title: Sleeping on passage
+  date: May 2024
+  date_taken: '2024-05-08'
+  tags:
+  - loc/pacific
+  - subject/boat-life
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-05/reading-hideout.webp
+  title: Reading hideout
+  date: May 2024
+  date_taken: '2024-05-08'
+  tags:
+  - loc/pacific
+  - subject/boat-life
+  width: 1600
+  height: 2133
+- src: /assets/images/gallery/2024-05/isla-and-angus-at-the-nav-station.webp
+  title: Isla and Angus at the nav station
+  date: May 2024
+  date_taken: '2024-05-09'
+  tags:
+  - loc/pacific
+  - subject/boat-life
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-05/passage-hideouts.webp
+  title: Passage hideouts
+  date: May 2024
+  date_taken: '2024-05-09'
+  tags:
+  - loc/pacific
+  - subject/boat-life
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-05/eagle-ray-spotting-on-the-bow.webp
+  title: Eagle ray spotting on the bow
+  date: May 2024
+  date_taken: '2024-05-10'
+  tags:
+  - loc/pacific/galapagos/santa-cruz
+  - subject/boat-life
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2024-05/zipper-school.webp
+  title: Zipper School
+  date: May 2024
+  date_taken: '2024-05-11'
+  tags:
+  - loc/pacific/galapagos/santa-cruz
+  - subject/boat-life
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-05/navigating.webp
+  title: Navigating
+  date: May 2024
+  date_taken: '2024-05-13'
+  tags:
+  - loc/pacific/galapagos
+  - subject/boat-life
+  width: 1600
+  height: 2133
+- src: /assets/images/gallery/2024-05/seal-attempting-to-board-zipper.webp
+  title: Seal attempting to board Zipper
+  date: May 2024
+  date_taken: '2024-05-27'
+  tags:
+  - loc/pacific/galapagos/san-cristobal
+  - subject/boat-life
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-06/flying-fish-in-the-cockpit-at-night.webp
+  title: Flying fish in the cockpit at night
+  date: Jun 2024
+  date_taken: '2024-06-06'
+  tags:
+  - loc/pacific
+  - subject/boat-life
+  width: 1200
+  height: 1600
+- src: /assets/images/gallery/2024-06/passage-pizza.webp
+  title: Passage pizza
+  date: Jun 2024
+  date_taken: '2024-06-09'
+  tags:
+  - loc/pacific
+  - subject/boat-life
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-06/storytime-on-passage.webp
+  title: Storytime on passage
+  date: Jun 2024
+  date_taken: '2024-06-13'
+  tags:
+  - loc/pacific
+  - subject/boat-life
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-06/boys-trampolene-rest.webp
+  title: Boys trampolene rest
+  date: Jun 2024
+  date_taken: '2024-06-18'
+  tags:
+  - loc/pacific/french-polynesia/marquesas
+  - subject/boat-life
+  width: 1200
+  height: 1600
+- src: /assets/images/gallery/2024-07/isla-in-the-dinghy.webp
+  title: Isla in the dinghy
+  date: Jul 2024
+  date_taken: '2024-07-11'
+  tags:
+  - loc/pacific/french-polynesia/tuamotus/raroia
+  - subject/boat-life
+  width: 1600
+  height: 902
+- src: /assets/images/gallery/2024-07/jamie-and-angus-in-the-dinghy.webp
+  title: Jamie and Angus in the dinghy
+  date: Jul 2024
+  date_taken: '2024-07-11'
+  tags:
+  - loc/pacific/french-polynesia/tuamotus/raroia
+  - subject/boat-life
+  width: 1600
+  height: 902
+- src: /assets/images/gallery/2024-07/raroia-dinghy-exploration.webp
+  title: Raroia dinghy exploration
+  date: Jul 2024
+  date_taken: '2024-07-11'
+  tags:
+  - loc/pacific/french-polynesia/tuamotus/raroia
+  - subject/boat-life
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-07/sophie-driving-the-dinghy.webp
+  title: Sophie driving the dinghy
+  date: Jul 2024
+  date_taken: '2024-07-11'
+  tags:
+  - loc/pacific/french-polynesia/tuamotus/raroia
+  - subject/boat-life
+  width: 1600
+  height: 902
+- src: /assets/images/gallery/2024-07/isla-and-angus-paddleboarding.webp
+  title: Isla and Angus paddleboarding
+  date: Jul 2024
+  date_taken: '2024-07-12'
+  tags:
+  - loc/pacific/french-polynesia/tuamotus/raroia
+  - subject/boat-life
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-07/spotting-bommies-from-the-roof.webp
+  title: Spotting bommies from the roof
+  date: Jul 2024
+  date_taken: '2024-07-24'
+  tags:
+  - loc/pacific/french-polynesia/tuamotus/kauehi
+  - subject/boat-life
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-08/isla-and-angus-in-the-hammock.webp
+  title: Isla and Angus in the hammock
+  date: Aug 2024
+  date_taken: '2024-08-19'
+  tags:
+  - loc/pacific/french-polynesia/society-islands/moorea
+  - subject/boat-life
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-08/enjoying-the-view.webp
+  title: Enjoying the view
+  date: Aug 2024
+  date_taken: '2024-08-23'
+  tags:
+  - loc/pacific/french-polynesia/society-islands/moorea
+  - subject/boat-life
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-08/angus-in-charge-of-the-dinghy.webp
+  title: Angus in charge of the dinghy
+  date: Aug 2024
+  date_taken: '2024-08-27'
+  tags:
+  - loc/pacific/french-polynesia/society-islands/tahaa
+  - subject/boat-life
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-08/local-hitchhiker-commuting-home.webp
+  title: Local hitch-hiker commuting home
+  date: Aug 2024
+  date_taken: '2024-08-29'
+  tags:
+  - loc/pacific/french-polynesia/society-islands/tahaa
+  - subject/boat-life
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2024-09/zipper-school-in-the-cockpit.webp
+  title: Zipper school in the cockpit
+  date: Sep 2024
+  date_taken: '2024-09-16'
+  tags:
+  - loc/pacific/cook-islands/aitutaki
+  - subject/boat-life
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-09/lego-with-skylark-boys.webp
+  title: Lego with Skylark boys
+  date: Sep 2024
+  date_taken: '2024-09-29'
+  tags:
+  - loc/pacific/tonga/vavau
+  - subject/boat-life
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2024-10/watermelon-smiles.webp
+  title: Watermelon smiles
+  date: Oct 2024
+  date_taken: '2024-10-01'
+  tags:
+  - loc/pacific/tonga/vavau
+  - subject/boat-life
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-10/local-birthday-party-on-big-mamas.webp
+  title: Local birthday party on Big Mama's
+  date: Oct 2024
+  date_taken: '2024-10-11'
+  tags:
+  - loc/pacific/tonga/tongatapu/big-mamas
+  - subject/boat-life
+  width: 1200
+  height: 1600
+- src: /assets/images/gallery/2024-10/passage-reading.webp
+  title: Passage reading
+  date: Oct 2024
+  date_taken: '2024-10-26'
+  tags:
+  - loc/pacific
+  - subject/boat-life
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-10/baking-on-passage.webp
+  title: Baking on passage
+  date: Oct 2024
+  date_taken: '2024-10-27'
+  tags:
+  - loc/pacific
+  - subject/boat-life
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-10/pumpkin-preparation.webp
+  title: Pumpkin preparation
+  date: Oct 2024
+  date_taken: '2024-10-27'
+  tags:
+  - loc/pacific
+  - subject/boat-life
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-10/halloween-on-passage.webp
+  title: Halloween on passage
+  date: Oct 2024
+  date_taken: '2024-10-31'
+  tags:
+  - loc/pacific
+  - subject/boat-life
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2025-12/minicat-sailing.webp
+  title: Minicat sailing
+  date: Dec 2025
+  date_taken: '2025-12-24'
+  tags:
+  - loc/pacific/new-zealand/hauraki-gulf/kawau/bon-accord
+  - subject/boat-life
+  width: 1600
+  height: 2133
+- src: /assets/images/gallery/2026-01/paddleboard-ranchoring-with-the-briggss.webp
+  title: Paddleboard 'ranchoring' with the Briggs's
+  date: Jan 2026
+  date_taken: '2026-01-03'
+  tags:
+  - loc/pacific/new-zealand/bay-of-islands
+  - subject/boat-life
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-02/fishing-trip-in-the-dinghy.webp
+  title: Fishing trip in the dinghy
+  date: Feb 2026
+  date_taken: '2026-02-09'
+  tags:
+  - loc/pacific/new-zealand/marlborough-sounds/durville/tinui-island
+  - subject/boat-life
+  width: 1200
+  height: 1600
+- src: /assets/images/gallery/2026-02/sophie-enjoying-the-spectacular-coastline.webp
+  title: Sophie enjoying the spectacular coastline
+  date: Feb 2026
+  date_taken: '2026-02-09'
+  tags:
+  - loc/pacific/new-zealand/marlborough-sounds/durville
+  - subject/boat-life
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2024-02/barbados.webp
+  title: Barbados
+  date: Feb 2024
+  date_taken: '2024-02-13'
+  tags:
+  - loc/atlantic/caribbean/barbados
+  - subject/beaches
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-05/tortuga-bay.webp
+  title: Tortuga Bay
+  date: May 2024
+  date_taken: '2024-05-12'
+  tags:
+  - loc/pacific/galapagos/santa-cruz/tortuga-bay
+  - subject/beaches
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-05/tortuga-bay-1.webp
+  title: Tortuga Bay
+  date: May 2024
+  date_taken: '2024-05-12'
+  tags:
+  - loc/pacific/galapagos/santa-cruz/tortuga-bay
+  - subject/beaches
+  width: 1600
+  height: 704
+- src: /assets/images/gallery/2024-05/la-loberia.webp
+  title: La Loberia
+  date: May 2024
+  date_taken: '2024-05-26'
+  tags:
+  - loc/pacific/galapagos/san-cristobal/la-loberia
+  - subject/beaches
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-07/anaho-beach-from-shore.webp
+  title: Anaho beach from shore
+  date: Jul 2024
+  date_taken: '2024-07-04'
+  tags:
+  - loc/pacific/french-polynesia/marquesas/nuku-hiva/anaho
+  - subject/beaches
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-07/raroia-paddle-boards.webp
+  title: Raroia paddle boards
+  date: Jul 2024
+  date_taken: '2024-07-12'
+  tags:
+  - loc/pacific/french-polynesia/tuamotus/raroia
+  - subject/beaches
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-07/kauehi-beach-fire-evening.webp
+  title: Kauehi beach fire evening
+  date: Jul 2024
+  date_taken: '2024-07-25'
+  tags:
+  - loc/pacific/french-polynesia/tuamotus/kauehi
+  - subject/beaches
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-09/honeymoon-island-hammock.webp
+  title: Honeymoon island hammock
+  date: Sep 2024
+  date_taken: '2024-09-17'
+  tags:
+  - loc/pacific/cook-islands/aitutaki/honeymoon-island
+  - subject/beaches
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-09/honeymoon-island-children.webp
+  title: Honeymoon island children
+  date: Sep 2024
+  date_taken: '2024-09-17'
+  tags:
+  - loc/pacific/cook-islands/aitutaki/honeymoon-island
+  - subject/beaches
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2025-12/slip-island.webp
+  title: Slip island
+  date: Dec 2025
+  date_taken: '2025-12-20'
+  tags:
+  - loc/pacific/new-zealand/hauraki-gulf/kawau/slip-island
+  - subject/beaches
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-02/wharariki.webp
+  title: Wharariki
+  date: Feb 2026
+  date_taken: '2026-02-09'
+  tags:
+  - loc/pacific/new-zealand/marlborough-sounds/d-urville/wharariki
+  - subject/beaches
+  width: 1200
+  height: 1600
+- src: /assets/images/gallery/2024-07/anaho-beach-from-anchor.webp
+  title: Anaho beach from anchor
+  date: Jul 2024
+  date_taken: '2024-07-04'
+  tags:
+  - loc/pacific/french-polynesia/marquesas/nuku-hiva/anaho
+  - subject/beaches
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-05/san-cristobal.webp
+  title: San Cristobal
+  date: May 2024
+  date_taken: '2024-05-26'
+  tags:
+  - loc/pacific/galapagos/san-cristobal/puerto-baquerizo-moreno
+  - subject/beaches
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-06/tahuata-1.webp
+  title: Tahuata
+  date: Jun 2024
+  date_taken: '2024-06-24'
+  tags:
+  - loc/pacific/french-polynesia/marquesas/tahuata/bay-with-no-name
+  - subject/beaches
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-05/tortuga-bay-2.webp
+  title: Tortuga Bay
+  date: May 2024
+  date_taken: '2024-05-12'
+  tags:
+  - loc/pacific/galapagos/santa-cruz/tortuga-bay
+  - subject/beaches
+  width: 1600
+  height: 1200
 - src: /assets/images/gallery/2024-09/arutanga-marina-in-aitutaki-cook-islands.webp
   title: Arutanga 'marina' in Aitutaki, Cook Islands
   date: Sep 2024
@@ -451,11 +1802,11 @@
   width: 1600
   height: 1200
   date_taken: '2024-02-23'
-- src: /assets/images/gallery/2024-08/taking-a-buoy-off-a-pearl-farm-in-tahaa.webp
+- src: /assets/images/gallery/2024-08/taking-a-buoy-off-a-pearl-farm-in-taha'a.webp
   title: Taking a buoy off a pearl farm in Taha'a
   date: Aug 2024
   tags:
-  - loc/pacific/french-polynesia/society-islands/tahaa
+  - loc/pacific/french-polynesia/society-islands/taha'a
   - subject/anchorages
   width: 1600
   height: 1067
