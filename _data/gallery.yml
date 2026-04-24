@@ -1,6 +1,78 @@
 # gallery.yml — managed by gallery_import.py
 # Add new entries via the import tool; most recent first.
 
+- src: /assets/images/gallery/2024-01/leaving-tenerife.webp
+  title: Leaving Tenerife
+  date: Jan 2024
+  date_taken: '2024-01-06'
+  tags:
+  - loc/atlantic/canary-islands/tenerife
+  - subject/milestones
+  width: 1024
+  height: 768
+- src: /assets/images/gallery/2024-01/arriving-into-the-cape-verdes.webp
+  title: Arriving into the Cape Verdes
+  date: Jan 2024
+  date_taken: '2024-01-12'
+  tags:
+  - loc/atlantic/cape-verde
+  - subject/milestones
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2024-01/atlantic-halfway-disco.webp
+  title: Atlantic halfway disco
+  date: Jan 2024
+  date_taken: '2024-01-29'
+  tags:
+  - loc/atlantic
+  - subject/milestones
+  width: 1536
+  height: 2048
+- src: /assets/images/gallery/2024-01/atlantic-halfway-drinks.webp
+  title: Atlantic halfway drinks
+  date: Jan 2024
+  date_taken: '2024-01-29'
+  tags:
+  - loc/atlantic
+  - subject/milestones
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-04/bridge-of-the-americas-on-our-way-out-of-the-panam.webp
+  title: Bridge Of The America's on our way out of the Panama canal, into the Pacific
+  date: Apr 2024
+  date_taken: '2024-04-29'
+  tags:
+  - loc/pacific/panama/panama-city
+  - subject/milestones
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2024-05/visit-from-neptune-crossing-the-equator.webp
+  title: Visit from Neptune, crossing the equator
+  date: May 2024
+  date_taken: '2024-05-09'
+  tags:
+  - loc/pacific/equator
+  - subject/milestones
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-05/galapagos-national-park.webp
+  title: Galapagos national park
+  date: May 2024
+  date_taken: '2024-05-13'
+  tags:
+  - loc/pacific/galapagos/santa-cruz
+  - subject/milestones
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-11/arriving-into-new-zealand.webp
+  title: Arriving into New Zealand
+  date: Nov 2024
+  date_taken: '2024-11-01'
+  tags:
+  - loc/pacific/new-zealand
+  - subject/milestones
+  width: 1600
+  height: 1200
 - src: /assets/images/gallery/2023-12/gran-canaria-sand-dunes.webp
   title: Gran Canaria Sand Dunes
   date: Dec 2023
