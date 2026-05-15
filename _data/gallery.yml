@@ -1,6 +1,267 @@
 # gallery.yml — managed by gallery_import.py
 # Add new entries via the import tool; most recent first.
 
+- src: /assets/images/gallery/2023-11/first-real-sunset-on-zipper-in-the-biscay.webp
+  title: First real sunset on Zipper, in the Biscay
+  date: Nov 2023
+  date_taken: '2023-11-29'
+  tags:
+  - loc/atlantic/biscay
+  - subject/sunsets
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2023-11/another-sunset-in-the-biscay.webp
+  title: Another sunset in the Biscay
+  date: Nov 2023
+  date_taken: '2023-11-30'
+  tags:
+  - loc/atlantic/biscay
+  - subject/sunsets
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2023-12/sunset-sailing-down-the-east-coast-of-fuerteventur.webp
+  title: Sunset sailing down the East coast of Fuerteventura
+  date: Dec 2023
+  date_taken: '2023-12-15'
+  tags:
+  - loc/atlantic/canary-islands/fuerteventura
+  - subject/sunsets
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2023-12/sunset-looking-towards-tenerife.webp
+  title: Sunset looking towards Tenerife
+  date: Dec 2023
+  date_taken: '2023-12-29'
+  tags:
+  - loc/atlantic/canary-islands/gran-canaria/puerto-de-sardina
+  - subject/sunsets
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2023-12/sunset-in-tenerife.webp
+  title: Sunset in Tenerife
+  date: Dec 2023
+  date_taken: '2023-12-31'
+  tags:
+  - loc/atlantic/canary-islands/tenerife/playa-de-antiquera
+  - subject/sunsets
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2024-01/sunset-on-the-first-evening-leaving-tenerife.webp
+  title: Sunset on the first evening leaving Tenerife
+  date: Jan 2024
+  date_taken: '2024-01-06'
+  tags:
+  - loc/atlantic/canary-islands/tenerife
+  - subject/sunsets
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-01/sunset-under-the-genneker.webp
+  title: Sunset under the genneker
+  date: Jan 2024
+  date_taken: '2024-01-24'
+  tags:
+  - loc/atlantic
+  - subject/sunsets
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2024-02/chasing-the-sunset-in-the-west.webp
+  title: Chasing the sunset in the West
+  date: Feb 2024
+  date_taken: '2024-02-01'
+  tags:
+  - loc/atlantic
+  - subject/sunsets
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2024-02/midatlantic-sunset.webp
+  title: Mid-Atlantic sunset
+  date: Feb 2024
+  date_taken: '2024-02-01'
+  tags:
+  - loc/atlantic
+  - subject/sunsets
+  width: 1536
+  height: 2048
+- src: /assets/images/gallery/2024-02/sunset-looking-out-to-the-st-anne-anchorage.webp
+  title: Sunset looking out to the St Anne anchorage
+  date: Feb 2024
+  date_taken: '2024-02-24'
+  tags:
+  - loc/atlantic/caribbean/martinique/st-anne
+  - subject/sunsets
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-03/sunset-rays-from-st-lucia.webp
+  title: Sunset rays from St Lucia
+  date: Mar 2024
+  date_taken: '2024-03-30'
+  tags:
+  - loc/atlantic/caribbean/st-lucia/soufriere
+  - subject/sunsets
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2024-03/sunset-from-st-lucia.webp
+  title: Sunset from St. Lucia
+  date: Mar 2024
+  date_taken: '2024-03-30'
+  tags:
+  - loc/atlantic/caribbean/st-lucia/soufriere
+  - subject/sunsets
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-04/union-island-the-best-bar-weve-found.webp
+  title: Union Island, the best bar we've found?
+  date: Apr 2024
+  date_taken: '2024-04-04'
+  tags:
+  - loc/atlantic/caribbean/st-vincent-the-granadines/union-island
+  - subject/sunsets
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-04/sunset-sailing-past-the-abcs.webp
+  title: Sunset sailing past the ABCs
+  date: Apr 2024
+  date_taken: '2024-04-17'
+  tags:
+  - loc/atlantic/caribbean/abc-islands
+  - subject/sunsets
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-04/first-sunset-in-the-pacific-after-transiting-the-p.webp
+  title: First sunset in the Pacific after transiting the Panama Canal
+  date: Apr 2024
+  date_taken: '2024-04-29'
+  tags:
+  - loc/pacific/panama
+  - subject/sunsets
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-06/sunset-in-tahuata.webp
+  title: Sunset in Tahuata
+  date: Jun 2024
+  date_taken: '2024-06-28'
+  tags:
+  - loc/pacific/french-polynesia/marquesas/tahuata/hapatoni
+  - subject/sunsets
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-07/foreboding-evening-light-the-night-got-stormy.webp
+  title: Foreboding evening light; the night got stormy!
+  date: Jul 2024
+  date_taken: '2024-07-14'
+  tags:
+  - loc/pacific/french-polynesia/tuamotus/raroia
+  - subject/sunsets
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2024-07/family-beach-bbq-at-sunset.webp
+  title: Family beach BBQ at sunset
+  date: Jul 2024
+  date_taken: '2024-07-25'
+  tags:
+  - loc/pacific/french-polynesia/tuamotus/kauehi
+  - subject/sunsets
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-08/bora-bora-silhoutted-by-the-sunset-from-tahaa.webp
+  title: Bora Bora silhoutted by the sunset from Taha'a
+  date: Aug 2024
+  date_taken: '2024-08-29'
+  tags:
+  - loc/pacific/french-polynesia/society-islands/tahaa
+  - subject/sunsets
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2024-09/moon-rise-having-supper-out-on-our-last-night-in-a.webp
+  title: Moon rise having supper out on our last night in Aitutaki
+  date: Sep 2024
+  date_taken: '2024-09-18'
+  tags:
+  - loc/pacific/cook-islands/aitutaki
+  - subject/sunsets
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-10/south-pacific-evening-sky-lit-up.webp
+  title: South Pacific evening sky lit up
+  date: Oct 2024
+  date_taken: '2024-10-27'
+  tags:
+  - loc/pacific
+  - subject/sunsets
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2025-12/eleuthera-lit-up-on-christmas-day-at-kawau.webp
+  title: Eleuthera lit up on Christmas day at Kawau
+  date: Dec 2025
+  date_taken: '2025-12-25'
+  tags:
+  - loc/pacific/new-zealand/hauraki-gulf/kawau
+  - subject/sunsets
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-02/calm-evening-in-the-river-at-nelson.webp
+  title: Calm evening in the river at Nelson
+  date: Feb 2026
+  date_taken: '2026-02-03'
+  tags:
+  - loc/pacific/new-zealand/nelson
+  - subject/sunsets
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-02/sunset-on-great-barrier-island.webp
+  title: Sunset on great barrier island
+  date: Feb 2026
+  date_taken: '2026-02-05'
+  tags:
+  - loc/pacific/new-zealand/great-barrier-island/whangaparapara
+  - subject/sunsets
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-06/the-green-flash-caught-on-camera-off-fatu-hiva-gre.webp
+  title: The green flash caught on camera off Fatu Hiva (great job Bumpy!)
+  date: Jun 2024
+  date_taken: '2024-06-22'
+  tags:
+  - loc/pacific/french-polynesia/marquesas/fatu-hiva/hanavave
+  - subject/sunsets
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-05/floreana.webp
+  title: Floreana
+  date: May 2024
+  date_taken: '2024-05-20'
+  tags:
+  - loc/pacific/galapagos/floreana
+  - subject/sunsets
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-06/just-another-sunset-midpacific.webp
+  title: Just another sunset mid-Pacific
+  date: Jun 2024
+  date_taken: '2024-06-02'
+  tags:
+  - loc/pacific
+  - subject/sunsets
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-06/low-clouds-obscuring-the-sunset.webp
+  title: Low clouds obscuring the sunset
+  date: Jun 2024
+  date_taken: '2024-06-04'
+  tags:
+  - loc/pacific
+  - subject/sunsets
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-03/indulging-in-an-evening-smooch-and-why-not.webp
+  title: Indulging in an evening smooch, and why not?!
+  date: Mar 2026
+  date_taken: '2026-03-07'
+  tags:
+  - loc/pacific/french-polynesia/marquesas/tahuata
+  - subject/sunsets
+  width: 1600
+  height: 1200
 - src: /assets/images/gallery/2023-12/captain-angus.webp
   title: Captain Angus
   date: Dec 2023
