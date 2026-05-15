@@ -1,6 +1,267 @@
 # gallery.yml — managed by gallery_import.py
 # Add new entries via the import tool; most recent first.
 
+- src: /assets/images/gallery/2023-12/captain-angus.webp
+  title: Captain Angus
+  date: Dec 2023
+  date_taken: '2023-12-30'
+  tags:
+  - loc/atlantic/canary-islands/tenerife
+  - subject/sailing
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2023-12/sailing-under-code-0-on-route-to-tenerife.webp
+  title: Sailing under Code 0 on route to Tenerife
+  date: Dec 2023
+  date_taken: '2023-12-30'
+  tags:
+  - loc/atlantic/canary-islands/tenerife
+  - subject/sailing
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-01/the-boys-watching-dolphin-under-the-bow-through-th.webp
+  title: The boys watching dolphin under the bow through the trampoline
+  date: Jan 2024
+  date_taken: '2024-01-08'
+  tags:
+  - loc/atlantic
+  - subject/sailing
+  width: 1536
+  height: 2048
+- src: /assets/images/gallery/2024-01/the-girls-watching-dolphin-under-the-bow-through-t.webp
+  title: The girls watching dolphin under the bow through the trampoline
+  date: Jan 2024
+  date_taken: '2024-01-08'
+  tags:
+  - loc/atlantic
+  - subject/sailing
+  width: 1536
+  height: 2048
+- src: /assets/images/gallery/2024-01/dophin-playing-on-the-bow.webp
+  title: Dophin playing on the bow
+  date: Jan 2024
+  date_taken: '2024-01-08'
+  tags:
+  - loc/atlantic
+  - subject/sailing
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2024-01/lots-of-dolphin-on-the-bow.webp
+  title: Lots of dolphin on the bow
+  date: Jan 2024
+  date_taken: '2024-01-08'
+  tags:
+  - loc/atlantic
+  - subject/sailing
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2024-01/family-team-photo-leaving-mindelo.webp
+  title: Family team photo leaving Mindelo
+  date: Jan 2024
+  date_taken: '2024-01-22'
+  tags:
+  - loc/atlantic/cape-verde/sao-vicente/mindelo
+  - subject/sailing
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-01/sunset-sailing-downwind-with-the-genneker-on-the-p.webp
+  title: Sunset sailing downwind with the genneker on the port bow
+  date: Jan 2024
+  date_taken: '2024-01-24'
+  tags:
+  - loc/atlantic
+  - subject/sailing
+  width: 1200
+  height: 1600
+- src: /assets/images/gallery/2024-01/jamie-with-the-children-in-the-cockpit.webp
+  title: Jamie with the children in the cockpit
+  date: Jan 2024
+  date_taken: '2024-01-31'
+  tags:
+  - loc/atlantic
+  - subject/sailing
+  width: 1536
+  height: 2048
+- src: /assets/images/gallery/2024-02/angus-on-the-winch.webp
+  title: Angus on the winch
+  date: Feb 2024
+  date_taken: '2024-02-01'
+  tags:
+  - loc/atlantic
+  - subject/sailing
+  width: 1536
+  height: 2048
+- src: /assets/images/gallery/2024-02/isla-on-the-winch.webp
+  title: Isla on the winch
+  date: Feb 2024
+  date_taken: '2024-02-01'
+  tags:
+  - loc/atlantic
+  - subject/sailing
+  width: 1536
+  height: 2048
+- src: /assets/images/gallery/2024-02/calm-on-the-passage-from-barbados-to-martinique.webp
+  title: Calm on the passage from Barbados to Martinique
+  date: Feb 2024
+  date_taken: '2024-02-21'
+  tags:
+  - loc/atlantic/caribbean/barbados
+  - subject/sailing
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-02/sailing-up-the-west-coast-of-martinique.webp
+  title: Sailing up the West coast of Martinique
+  date: Feb 2024
+  date_taken: '2024-02-28'
+  tags:
+  - loc/atlantic/caribbean/martinique
+  - subject/sailing
+  width: 1600
+  height: 902
+- src: /assets/images/gallery/2024-02/heading-round-the-south-west-corner-of-martinique-.webp
+  title: Heading round the South West corner of Martinique, again
+  date: Feb 2024
+  date_taken: '2024-02-28'
+  tags:
+  - loc/atlantic/caribbean/martinique
+  - subject/sailing
+  width: 1200
+  height: 1600
+- src: /assets/images/gallery/2024-03/flying-the-code-0-on-route-to-st-lucia.webp
+  title: Flying the code 0 on route to St Lucia
+  date: Mar 2024
+  date_taken: '2024-03-28'
+  tags:
+  - loc/atlantic/caribbean/st-lucia
+  - subject/sailing
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-03/angus-helming-with-the-code-0.webp
+  title: Angus helming with the code 0
+  date: Mar 2024
+  date_taken: '2024-03-29'
+  tags:
+  - loc/atlantic/caribbean/st-lucia
+  - subject/sailing
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-03/flying-hte-code-0-to-the-pitons.webp
+  title: Flying hte code 0 to the Pitons
+  date: Mar 2024
+  date_taken: '2024-03-29'
+  tags:
+  - loc/atlantic/caribbean/st-lucia/soufriere
+  - subject/sailing
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-04/container-ships-under-the-genneker-as-we-approach-.webp
+  title: Container ships under the genneker as we approach Panama
+  date: Apr 2024
+  date_taken: '2024-04-22'
+  tags:
+  - loc/atlantic/panama
+  - subject/sailing
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-05/boobies-coming-for-the-ride-approaching-the-galapa.webp
+  title: Boobies coming for the ride approaching the Galapagos
+  date: May 2024
+  date_taken: '2024-05-07'
+  tags:
+  - loc/pacific/galapagos
+  - subject/sailing
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2023-12/leaving-gran-canaria.webp
+  title: Leaving Gran Canaria
+  date: Dec 2023
+  date_taken: '2023-12-29'
+  tags:
+  - loc/atlantic/canary-islands/gran-canaria
+  - subject/sailing
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-08/sophie-sailing-outside-the-reef-north-of-moorea.webp
+  title: Sophie sailing outside the reef North of Moorea
+  date: Aug 2024
+  date_taken: '2024-08-20'
+  tags:
+  - loc/pacific/french-polynesia/society-islands/moorea/cooks-bay
+  - subject/sailing
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2024-11/flying-the-code-0-down-northland-on-arrival-in-nz.webp
+  title: Flying the code 0 down Northland on arrival in NZ
+  date: Nov 2024
+  date_taken: '2024-11-01'
+  tags:
+  - loc/pacific/new-zealand/northland
+  - subject/sailing
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-11/approaching-whangarei-heads.webp
+  title: Approaching Whangarei Heads
+  date: Nov 2024
+  date_taken: '2024-11-01'
+  tags:
+  - loc/pacific/new-zealand/northland/whangarei
+  - subject/sailing
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-01/dolphin-on-bow.webp
+  title: Dolphin On Bow
+  date: Jan 2024
+  date_taken: '2024-01-08'
+  tags:
+  - loc/atlantic
+  - subject/sailing
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2026-02/tory-channel.webp
+  title: Tory Channel
+  date: Feb 2026
+  date_taken: '2026-02-24'
+  tags:
+  - loc/pacific/new-zealand/marlborough-sounds/queen-charlotte-sound/tory-channel
+  - subject/sailing
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2026-02/tory-channel-ferry.webp
+  title: Tory Channel Ferry
+  date: Feb 2026
+  date_taken: '2026-02-24'
+  tags:
+  - loc/pacific/new-zealand/marlborough-sounds/queen-charlotte-sound/tory-channel
+  - subject/sailing
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2024-09/mother-and-calf-humpbacks-when-lining-entry-to-the.webp
+  title: Mother and calf humpbacks when lining entry to the Maupihaa pass
+  date: Sep 2024
+  date_taken: '2024-09-06'
+  tags:
+  - loc/pacific/french-polynesia/society-islands/maupihaa
+  - subject/sailing
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2024-09/maupihaa-pass2.webp
+  title: Maupihaa Pass2
+  date: Sep 2024
+  date_taken: '2024-09-06'
+  tags:
+  - loc/pacific/french-polynesia/society-islands/maupihaa
+  - subject/sailing
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2025-12/zipper-sailing-around-kawau-from-short-white-cloud.webp
+  title: Zipper sailing around Kawau, from Short White Cloud
+  date: Dec 2025
+  date_taken: '2025-12-21'
+  tags:
+  - loc/pacific/new-zealand/hauraki-gulf/kawau
+  - subject/sailing
+  width: 667
+  height: 889
 - src: /assets/images/gallery/2024-01/dolphin-catching-us-up.webp
   title: Dolphin catching us up
   date: Jan 2024
