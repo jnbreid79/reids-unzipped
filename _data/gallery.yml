@@ -1,6 +1,102 @@
 # gallery.yml — managed by gallery_import.py
 # Add new entries via the import tool; most recent first.
 
+- src: /assets/images/gallery/2023-12/jumpslide-down-the-dunes.webp
+  title: Jump-slide down the dunes
+  date: Dec 2023
+  date_taken: '2023-12-22'
+  tags:
+  - loc/atlantic/canary-islands/gran-canaria/maspalomas
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2023-12/isla-and-angus-overlooking-the-sand-dunes.webp
+  title: Isla and Angus overlooking the sand dunes
+  date: Dec 2023
+  date_taken: '2023-12-22'
+  tags:
+  - loc/atlantic/canary-islands/gran-canaria/maspalomas
+  width: 1600
+  height: 2400
+- src: /assets/images/gallery/2023-12/isla-enjoying-the-space-and-freedom-of-the-dunes.webp
+  title: Isla enjoying the space and freedom of the dunes
+  date: Dec 2023
+  date_taken: '2023-12-22'
+  tags:
+  - loc/atlantic/canary-islands/gran-canaria/maspalomas
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2023-12/christmas-time-with-the-eagle-crew.webp
+  title: Christmas time with the Eagle Crew
+  date: Dec 2023
+  date_taken: '2023-12-29'
+  tags:
+  - loc/atlantic/canary-islands/gran-canaria/maspalomas
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2023-12/the-marina-at-santa-cruz.webp
+  title: The marina at Santa Cruz
+  date: Dec 2023
+  date_taken: '2023-12-31'
+  tags:
+  - loc/atlantic/canary-islands/tenerife/santa-cruz
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2023-12/the-marina-at-santa-cruz-1.webp
+  title: The marina at Santa Cruz
+  date: Dec 2023
+  date_taken: '2023-12-31'
+  tags:
+  - loc/atlantic/canary-islands/tenerife/santa-cruz
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-04/the-bar-out-on-the-reef-at-union-island.webp
+  title: The bar out on the reef at Union Island
+  date: Apr 2024
+  date_taken: '2024-04-04'
+  tags:
+  - loc/atlantic/caribbean/st-vincent-the-granadines/union-island
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-05/clouds-galapagos.webp
+  title: Clouds Galapagos
+  date: May 2024
+  date_taken: '2024-05-10'
+  tags:
+  - loc/pacific/galapagos/santa-cruz/puerto-ayora
+  width: 1200
+  height: 1600
+- src: /assets/images/gallery/2024-07/the-kontiki-memorial-plaque.webp
+  title: The Kontiki memorial plaque
+  date: Jul 2024
+  date_taken: '2024-07-11'
+  tags:
+  - loc/pacific/french-polynesia/tuamotus/raroia
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-04/passing-container-ships-in-the-canal.webp
+  title: Passing container ships in the canal
+  date: Apr 2024
+  date_taken: '2024-04-29'
+  tags:
+  - loc/atlantic/panama/gatun-lake
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-04/tanker-entering-the-lock-behind-us.webp
+  title: Tanker entering the lock behind us
+  date: Apr 2024
+  date_taken: '2024-04-29'
+  tags:
+  - loc/atlantic/panama
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-03/tied-to-our-buddyboat-zen-with-tanker-loaded-into-.webp
+  title: Tied to our buddy-boat Zen, with tanker loaded into the lock behind us
+  date: Mar 2026
+  date_taken: '2026-03-07'
+  tags:
+  - loc/atlantic/panama
+  width: 1600
+  height: 1200
 - src: /assets/images/gallery/2023-12/towing-through-the-anchorage.webp
   title: Towing through the anchorage
   date: Dec 2023
