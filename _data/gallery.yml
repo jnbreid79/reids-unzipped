@@ -1,6 +1,294 @@
 # gallery.yml — managed by gallery_import.py
 # Add new entries via the import tool; most recent first.
 
+- src: /assets/images/gallery/2023-12/towing-through-the-anchorage.webp
+  title: Towing through the anchorage
+  date: Dec 2023
+  date_taken: '2023-12-31'
+  tags:
+  - loc/atlantic/canary-islands/tenerife/playa-de-antiquera
+  - subject/the-water
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-04/snorkelling-with-turtles-and-rays-in-tobago-cays.webp
+  title: Snorkelling with turtles and rays in Tobago Cays
+  date: Apr 2024
+  date_taken: '2024-04-02'
+  tags:
+  - loc/atlantic/caribbean/st-vincent-the-granadines/tobago-cays
+  - subject/the-water
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2024-02/fabulous-coral-gardens.webp
+  title: Fabulous coral gardens
+  date: Feb 2024
+  date_taken: '2024-02-25'
+  tags:
+  - loc/atlantic/caribbean/martinique/le-grande-anse
+  - subject/the-water
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2024-04/coral-in-tobago-cays.webp
+  title: Coral in Tobago Cays
+  date: Apr 2024
+  date_taken: '2024-04-04'
+  tags:
+  - loc/atlantic/caribbean/st-vincent-the-granadines/tobago-cays
+  - subject/the-water
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2024-04/rays-lined-up-in-the-sand-in-tobago-cays.webp
+  title: Rays lined up in the sand in Tobago Cays
+  date: Apr 2024
+  date_taken: '2024-04-04'
+  tags:
+  - loc/atlantic/caribbean/st-vincent-the-granadines/tobago-cays
+  - subject/the-water
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2024-05/black-tip-reef-sharks-swimming-around-zipper-at-an.webp
+  title: Black tip reef sharks swimming around Zipper at anchor
+  date: May 2024
+  date_taken: '2024-05-11'
+  tags:
+  - loc/pacific/galapagos/santa-cruz/puerto-ayora
+  - subject/the-water
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2024-04/sophie-silhouetted-in-the-crystal-clear-waters-of-.webp
+  title: Sophie silhouetted in the crystal clear waters of Bonaire
+  date: Apr 2024
+  date_taken: '2024-04-13'
+  tags:
+  - loc/atlantic/abc-islands/bonaire
+  - subject/the-water
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2024-08/checking-out-the-sting-rays-in-tahaa.webp
+  title: Checking out the sting rays in Taha'a
+  date: Aug 2024
+  date_taken: '2024-08-30'
+  tags:
+  - loc/pacific/french-polynesia/society-islands/tahaa
+  - subject/the-water
+  width: 1600
+  height: 902
+- src: /assets/images/gallery/2024-08/isla-with-a-ray-in-tahaa.webp
+  title: Isla with a ray in Taha'a
+  date: Aug 2024
+  date_taken: '2024-08-31'
+  tags:
+  - loc/pacific/french-polynesia/society-islands/tahaa
+  - subject/the-water
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-07/angelfish-congregating-in-the-pass.webp
+  title: Angelfish congregating in the pass
+  date: Jul 2024
+  date_taken: '2024-07-18'
+  tags:
+  - loc/pacific/french-polynesia/tuamotus/tahanea
+  - subject/the-water
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2024-09/butterfly-fish-amongst-the-corals-in-the-pass.webp
+  title: Butterfly fish amongst the corals in the pass
+  date: Sep 2024
+  date_taken: '2024-09-02'
+  tags:
+  - loc/pacific/french-polynesia/tuamotus/tahanea
+  - subject/the-water
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2024-07/isla-tumbling-on-the-drift-out-of-the-pass.webp
+  title: Isla tumbling on the drift out of the pass
+  date: Jul 2024
+  date_taken: '2024-07-27'
+  tags:
+  - loc/pacific/french-polynesia/tuamotus/kauehi
+  - subject/the-water
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2024-07/drifting-out-of-the-pass.webp
+  title: Drifting out of the pass
+  date: Jul 2024
+  date_taken: '2024-07-27'
+  tags:
+  - loc/pacific/french-polynesia/tuamotus/kauehi
+  - subject/the-water
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2024-09/heading-out-of-the-long-channel-blasted-through-th.webp
+  title: Heading out of the long channel blasted through the coral at Aitutaki
+  date: Sep 2024
+  date_taken: '2024-09-19'
+  tags:
+  - loc/pacific/cook-islands/aitutaki
+  - subject/the-water
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-04/large-angelfish-in-bonaire.webp
+  title: Large angelfish in Bonaire
+  date: Apr 2024
+  date_taken: '2024-04-16'
+  tags:
+  - loc/atlantic/abc-islands/bonaire
+  - subject/the-water
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2024-04/lots-of-fish-on-the-wall-edge-in-bonaire-where-it-.webp
+  title: Lots of fish on the wall edge in Bonaire where it plunges into the depths
+  date: Apr 2024
+  date_taken: '2024-04-16'
+  tags:
+  - loc/atlantic/abc-islands/bonaire
+  - subject/the-water
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2024-04/sucker-fish-intent-on-one-of-us-becoming-its-host.webp
+  title: Sucker fish intent on one of us becoming its host
+  date: Apr 2024
+  date_taken: '2024-04-23'
+  tags:
+  - loc/atlantic/abc-islands/bonaire
+  - subject/the-water
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2024-04/coral-structures-in-bonaire.webp
+  title: Coral structures in Bonaire
+  date: Apr 2024
+  date_taken: '2024-04-13'
+  tags:
+  - loc/atlantic/abc-islands/bonaire
+  - subject/the-water
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2024-05/sea-lion-on-zipper-meets-its-match-in-sophie.webp
+  title: Sea Lion on Zipper meets its match in Sophie
+  date: May 2024
+  date_taken: '2024-05-27'
+  tags:
+  - loc/pacific/galapagos/san-cristobal/puerto-baquerizo-moreno
+  - subject/the-water
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-05/sea-lions-playing-around-zipper.webp
+  title: Sea Lions playing around Zipper
+  date: May 2024
+  date_taken: '2024-05-27'
+  tags:
+  - loc/pacific/galapagos/san-cristobal/puerto-baquerizo-moreno
+  - subject/the-water
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2024-08/isla-with-the-rays.webp
+  title: Isla with the rays
+  date: Aug 2024
+  date_taken: '2024-08-31'
+  tags:
+  - loc/pacific/french-polynesia/society-islands/tahaa
+  - subject/the-water
+  width: 1357
+  height: 1018
+- src: /assets/images/gallery/2024-07/jamie-kiting-in-the-tuamotus.webp
+  title: Jamie kiting in the Tuamotus
+  date: Jul 2024
+  date_taken: '2024-07-26'
+  tags:
+  - loc/pacific/french-polynesia/tuamotus/kauehi
+  - subject/the-water
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2024-08/dappled-sting-ray-in-the-shallows.webp
+  title: Dappled sting ray in the shallows
+  date: Aug 2024
+  date_taken: '2024-08-31'
+  tags:
+  - loc/pacific/french-polynesia/society-islands/tahaa
+  - subject/the-water
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2024-08/dappled-sting-ray-in-the-shallows-1.webp
+  title: Dappled sting ray in the shallows
+  date: Aug 2024
+  date_taken: '2024-08-31'
+  tags:
+  - loc/pacific/french-polynesia/society-islands/tahaa
+  - subject/the-water
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2024-07/suspended-animation-in-the-pass.webp
+  title: Suspended animation in the pass
+  date: Jul 2024
+  date_taken: '2024-07-19'
+  tags:
+  - loc/pacific/french-polynesia/tuamotus/tahanea
+  - subject/the-water
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2024-07/drifting-over-coral-in-the-pass.webp
+  title: Drifting over coral in the pass
+  date: Jul 2024
+  date_taken: '2024-07-19'
+  tags:
+  - loc/pacific/french-polynesia/tuamotus/tahanea
+  - subject/the-water
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2024-07/coral-garden-in-the-pass.webp
+  title: Coral garden in the pass
+  date: Jul 2024
+  date_taken: '2024-07-19'
+  tags:
+  - loc/pacific/french-polynesia/tuamotus/tahanea
+  - subject/the-water
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2024-07/coral-garden-in-the-pass-1.webp
+  title: Coral garden in the pass
+  date: Jul 2024
+  date_taken: '2024-07-19'
+  tags:
+  - loc/pacific/french-polynesia/tuamotus/tahanea
+  - subject/the-water
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2024-07/team-waving-from-the-surface-drifting-into-the-sou.webp
+  title: Team waving from the surface drifting into the South pass
+  date: Jul 2024
+  date_taken: '2024-07-19'
+  tags:
+  - loc/pacific/french-polynesia/tuamotus/fakarava
+  - subject/the-water
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2024-07/yellow-tails-under-the-platform-in-the-south-pass.webp
+  title: Yellow tails under the platform in the South pass
+  date: Jul 2024
+  date_taken: '2024-07-19'
+  tags:
+  - loc/pacific/french-polynesia/tuamotus/fakarava
+  - subject/the-water
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2024-07/parrot-and-butterfly-fish-hanging-out-in-the-pass.webp
+  title: Parrot and butterfly fish hanging out in the pass
+  date: Jul 2024
+  date_taken: '2024-07-19'
+  tags:
+  - loc/pacific/french-polynesia/tuamotus/tahanea
+  - subject/the-water
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2024-05/sea-lion-wanting-a-turn-on-islas-body-board.webp
+  title: Sea lion wanting a turn on Isla's body board
+  date: May 2024
+  date_taken: '2024-05-27'
+  tags:
+  - loc/pacific/galapagos/san-cristobal/puerto-baquerizo-moreno
+  - subject/the-water
+  width: 944
+  height: 531
 - src: /assets/images/gallery/2023-11/first-real-sunset-on-zipper-in-the-biscay.webp
   title: First real sunset on Zipper, in the Biscay
   date: Nov 2023
