@@ -1,6 +1,8 @@
 # Ignore specific folders
 gitignore/
-_posts/_drafts/
+playbook/
+assets/images/playbook/
+_posts/_draft/
 _site/
 .sass-cache/
 .jekyll-cache/
