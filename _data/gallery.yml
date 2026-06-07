@@ -1,6 +1,286 @@
 # gallery.yml — managed by gallery_import.py
 # Add new entries via the import tool; most recent first.
 
+- src: /assets/images/gallery/2026-03/magnificent-albatross-at-sunset-sailing-up-the-eas.webp
+  title: Magnificent albatross at sunset sailing up the East coast
+  date: Mar 2026
+  date_taken: '2026-03-10'
+  tags:
+  - loc/pacific/new-zealand/east-coast/gisborne
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2026-03/massive-logging-industry-in-gisborne.webp
+  title: Massive logging industry in Gisborne
+  date: Mar 2026
+  date_taken: '2026-03-13'
+  tags:
+  - loc/pacific/new-zealand/east-coast/gisborne
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-03/albatross-taking-off.webp
+  title: Albatross taking off
+  date: Mar 2026
+  date_taken: '2026-03-15'
+  tags:
+  - loc/pacific/new-zealand/east-coast/gisborne
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2026-03/bigeye-tuna-this-one-made-delicious-sushi.webp
+  title: Bigeye tuna, this one made delicious sushi!
+  date: Mar 2026
+  date_taken: '2026-03-15'
+  tags:
+  - loc/pacific/new-zealand/east-coast/gisborne
+  width: 1200
+  height: 1600
+- src: /assets/images/gallery/2026-03/white-island-continually-erupting.webp
+  title: White Island continually erupting
+  date: Mar 2026
+  date_taken: '2026-03-15'
+  tags:
+  - loc/pacific/new-zealand/bay-of-plenty/white-island
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2026-03/mount-maunganui-at-the-entrance-to-tauranga-harbou.webp
+  title: Mount Maunganui at the entrance to Tauranga harbour
+  date: Mar 2026
+  date_taken: '2026-03-16'
+  tags:
+  - loc/pacific/new-zealand/bay-of-plenty/tauranga
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-03/big-kanu-kayak-to-the-glow-worms-on-sophies-birthd.webp
+  title: Big Kanu Kayak to the glow worms on Sophie's birthday
+  date: Mar 2026
+  date_taken: '2026-03-19'
+  tags:
+  - loc/pacific/new-zealand/bay-of-plenty/tauranga
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2026-03/glow-worms.webp
+  title: Glow worms
+  date: Mar 2026
+  date_taken: '2026-03-19'
+  tags:
+  - loc/pacific/new-zealand/bay-of-plenty/tauranga
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-03/coromandel-coastline.webp
+  title: Coromandel coastline
+  date: Mar 2026
+  date_taken: '2026-03-22'
+  tags:
+  - loc/pacific/new-zealand/coromandel
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2026-03/gannet-feeding-frenzy.webp
+  title: Gannet feeding frenzy
+  date: Mar 2026
+  date_taken: '2026-03-23'
+  tags:
+  - loc/pacific/new-zealand/great-barrier-island
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2026-03/gannets-divebombing.webp
+  title: Gannets divebombing
+  date: Mar 2026
+  date_taken: '2026-03-23'
+  tags:
+  - loc/pacific/new-zealand/great-barrier-island
+  width: 1580
+  height: 1185
+- src: /assets/images/gallery/2026-03/calm-after-the-storm.webp
+  title: Calm after the storm
+  date: Mar 2026
+  date_taken: '2026-03-27'
+  tags:
+  - loc/pacific/new-zealand/great-barrier-island
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-03/foggy-and-beautiful-morning-in-smokehouse-bay.webp
+  title: Foggy and beautiful morning in Smokehouse bay
+  date: Mar 2026
+  date_taken: '2026-03-27'
+  tags:
+  - loc/pacific/new-zealand/great-barrier-island/smokehouse-bay
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2026-03/morning-in-smokehouse-bay.webp
+  title: Morning in Smokehouse bay
+  date: Mar 2026
+  date_taken: '2026-03-27'
+  tags:
+  - loc/pacific/new-zealand/great-barrier-island/smokehouse-bay
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2026-03/fog-lifting.webp
+  title: Fog lifting
+  date: Mar 2026
+  date_taken: '2026-03-28'
+  tags:
+  - loc/pacific/new-zealand/great-barrier-island/smokehouse-bay
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-03/sun-burning-through-the-fog.webp
+  title: Sun burning through the fog
+  date: Mar 2026
+  date_taken: '2026-03-28'
+  tags:
+  - loc/pacific/new-zealand/great-barrier-island/smokehouse-bay
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-03/view-from-the-top-of-the-glenfern-loop-track.webp
+  title: View from the top of the Glenfern loop track
+  date: Mar 2026
+  date_taken: '2026-03-29'
+  tags:
+  - loc/pacific/new-zealand/great-barrier-island/port-fitzroy
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2026-03/kauri-swing-bridge.webp
+  title: Kauri swing bridge
+  date: Mar 2026
+  date_taken: '2026-03-29'
+  tags:
+  - loc/pacific/new-zealand/great-barrier-island/port-fitzroy
+  width: 1067
+  height: 1600
+- src: /assets/images/gallery/2026-03/piwakawaka.webp
+  title: Piwakawaka
+  date: Mar 2026
+  date_taken: '2026-03-29'
+  tags:
+  - loc/pacific/new-zealand/great-barrier-island/port-fitzroy
+  - subject/wildlife
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2026-03/port-fitzroy.webp
+  title: Port Fitzroy
+  date: Mar 2026
+  date_taken: '2026-03-29'
+  tags:
+  - loc/pacific/new-zealand/great-barrier-island/port-fitzroy
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2026-04/bronze-sharks-interested-in-our-fish-filletting.webp
+  title: Bronze sharks interested in our fish filletting
+  date: Apr 2026
+  date_taken: '2026-04-02'
+  tags:
+  - loc/pacific/new-zealand/great-barrier-island/port-fitzroy
+  - subject/wildlife
+  width: 1600
+  height: 739
+- src: /assets/images/gallery/2026-04/little-barrier-island.webp
+  title: Little Barrier Island
+  date: Apr 2026
+  date_taken: '2026-04-02'
+  tags:
+  - loc/pacific/new-zealand/hauraki-gulf/little-barrier-island
+  - subject/sailing
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-04/cyclone-vaianu-incoming-at-the-boatyard-norsand.webp
+  title: Cyclone Vaianu incoming at the boatyard (Norsand)
+  date: Apr 2026
+  date_taken: '2026-04-14'
+  tags:
+  - loc/pacific/new-zealand/northland/whangarei/norsand
+  - subject/sunsets
+  - subject/weather
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-04/replacing-saildrive-bearings.webp
+  title: Replacing saildrive bearings
+  date: Apr 2026
+  date_taken: '2026-04-15'
+  tags:
+  - loc/pacific/new-zealand/northland/whangarei/norsand
+  - subject/boat-work
+  width: 1200
+  height: 1600
+- src: /assets/images/gallery/2026-04/new-semipermanent-saildrive-boots-hopefully-stay-o.webp
+  title: New semi-permanent saildrive boots, hopefully stay on this time
+  date: Apr 2026
+  date_taken: '2026-04-15'
+  tags:
+  - loc/pacific/new-zealand/northland/whangarei/norsand
+  - subject/boat-work
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-04/kevin-checking-the-trailer.webp
+  title: Kevin checking the trailer
+  date: Apr 2026
+  date_taken: '2026-04-20'
+  tags:
+  - loc/pacific/new-zealand/northland/whangarei/norsand
+  - subject/boat-work
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-04/norsand-lift-setup-very-heath-robinson.webp
+  title: Norsand lift setup, very Heath Robinson
+  date: Apr 2026
+  date_taken: '2026-04-20'
+  tags:
+  - loc/pacific/new-zealand/northland/whangarei/norsand
+  - subject/boat-work
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-04/norsand-trailer-arrangement.webp
+  title: Norsand trailer arrangement
+  date: Apr 2026
+  date_taken: '2026-04-20'
+  tags:
+  - loc/pacific/new-zealand/northland/whangarei/norsand
+  - subject/boat-work
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-04/painted-and-ready-to-splash.webp
+  title: Painted and ready to splash
+  date: Apr 2026
+  date_taken: '2026-04-20'
+  tags:
+  - loc/pacific/new-zealand/northland/whangarei/norsand
+  - subject/boat-work
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-04/smart-new-antifoul.webp
+  title: Smart new antifoul
+  date: Apr 2026
+  date_taken: '2026-04-20'
+  tags:
+  - loc/pacific/new-zealand/northland/whangarei/norsand
+  - subject/boat-work
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-03/kids-enjoying-smokehouse-bay.webp
+  title: Kids enjoying Smokehouse bay
+  date: Mar 2026
+  date_taken: '2026-03-28'
+  tags:
+  - loc/pacific/new-zealand/great-barrier-island/smokehouse-bay
+  - subject/boat-life
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-05/another-new-zealand-rainbow.webp
+  title: Another New Zealand rainbow
+  date: May 2026
+  date_taken: '2026-05-16'
+  tags:
+  - loc/pacific/new-zealand/northland/mimiwangata
+  - subject/anchorages
+  - subject/weather
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-03/thermal-river-and-waterfall-near-rotorua.webp
+  title: Thermal river and waterfall near Rotorua
+  date: Mar 2026
+  date_taken: '2026-03-19'
+  tags:
+  - loc/pacific/new-zealand/bay-of-plenty/rotorua
+  - subject/family
+  width: 1600
+  height: 900
 - src: /assets/images/gallery/2023-12/jumpslide-down-the-dunes.webp
   title: Jump-slide down the dunes
   date: Dec 2023
