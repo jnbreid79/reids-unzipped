@@ -1,6 +1,119 @@
 # gallery.yml — managed by gallery_import.py
 # Add new entries via the import tool; most recent first.
 
+- src: /assets/images/gallery/2026-06/fort-teremba-guillotine.webp
+  title: Fort Teremba guillotine
+  date: Jun 2026
+  date_taken: '2026-06-16'
+  tags:
+  - loc/pacific/new-caledonia/fort-teremba
+  - subject/history
+  width: 1200
+  height: 1600
+- src: /assets/images/gallery/2026-06/fort-teremba-tower.webp
+  title: Fort Teremba Tower
+  date: Jun 2026
+  date_taken: '2026-06-16'
+  tags:
+  - loc/pacific/new-caledonia/fort-teremba
+  - subject/history
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-06/new-cal-possy.webp
+  title: New Cal possy
+  date: Jun 2026
+  date_taken: '2026-06-18'
+  tags:
+  - loc/pacific/new-caledonia/noumea
+  width: 1200
+  height: 1600
+- src: /assets/images/gallery/2026-06/noumea-aquarium.webp
+  title: Noumea aquarium
+  date: Jun 2026
+  date_taken: '2026-06-19'
+  tags:
+  - loc/pacific/new-caledonia/noumea
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-06/noumea-music-festival-bandstand.webp
+  title: Noumea music festival bandstand
+  date: Jun 2026
+  date_taken: '2026-06-20'
+  tags:
+  - loc/pacific/new-caledonia/noumea
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-06/noumea-music-festival-main-stage.webp
+  title: Noumea music festival main stage
+  date: Jun 2026
+  date_taken: '2026-06-20'
+  tags:
+  - loc/pacific/new-caledonia/noumea
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-06/ilot-signal-anchorage.webp
+  title: Ilot Signal anchorage
+  date: Jun 2026
+  date_taken: '2026-06-22'
+  tags:
+  - loc/pacific/new-caledonia/ilot-signal
+  - subject/anchorages
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-06/ilot-signal-beach.webp
+  title: Ilot Signal beach
+  date: Jun 2026
+  date_taken: '2026-06-22'
+  tags:
+  - loc/pacific/new-caledonia/ilot-signal
+  - subject/beaches
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-06/ilot-signal-reef.webp
+  title: Ilot Signal reef
+  date: Jun 2026
+  date_taken: '2026-06-22'
+  tags:
+  - loc/pacific/new-caledonia/ilot-signal
+  - subject/landscapes
+  - subject/the-water
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-06/leaf-petals.webp
+  title: Leaf petals
+  date: Jun 2026
+  date_taken: '2026-06-22'
+  tags:
+  - loc/pacific/new-caledonia/ilot-signal
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-06/new-caledonia-lagoon.webp
+  title: New Caledonia lagoon
+  date: Jun 2026
+  date_taken: '2026-06-22'
+  tags:
+  - loc/pacific/new-caledonia/ilot-signal
+  - subject/beaches
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-06/osprey-nest.webp
+  title: Osprey nest
+  date: Jun 2026
+  date_taken: '2026-06-22'
+  tags:
+  - loc/pacific/new-caledonia/ilot-signal
+  - subject/wildlife
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-06/osprey-parent-standing-guard.webp
+  title: Osprey parent standing guard
+  date: Jun 2026
+  date_taken: '2026-06-22'
+  tags:
+  - loc/pacific/new-caledonia/ilot-signal
+  - subject/wildlife
+  width: 1600
+  height: 1200
 - src: /assets/images/gallery/2026-03/magnificent-albatross-at-sunset-sailing-up-the-eas.webp
   title: Magnificent albatross at sunset sailing up the East coast
   date: Mar 2026

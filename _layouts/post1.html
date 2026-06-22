@@ -54,7 +54,7 @@ layout: none
   .post-hero {
     background-image: url('{{ page.header.teaser | relative_url }}');
     background-size: cover;
-    background-position: {{ page.header.image_position | default: 'center' }};
+    background-position: center;
   }
   .post-hero::before {
     background: linear-gradient(to bottom, rgba(13,36,56,0.7), rgba(26,58,92,0.92));
@@ -192,7 +192,15 @@ layout: none
     cursor: pointer;
     text-decoration: none;
     box-shadow: 0 4px 20px rgba(13,36,56,0.35);
-    transition: background 0.2s, color 0.2s, border-color 0.2s;
+    transition: background 0.2s, color 0.2s, border-color 0.2s, opacity 0.3s, transform 0.3s;
+    opacity: 0;
+    transform: translateY(8px);
+    pointer-events: none;
+  }
+  .post-fab.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
   }
   .post-fab:hover { background: var(--navy-mid); color: white; border-color: var(--ice); }
   .post-fab svg { flex-shrink: 0; }
@@ -795,11 +803,22 @@ layout: none
     if (el) el.href = returnUrl;
   })();
 
-  // ── Share FAB handler ──────────────────────────────────────────────────
+  // ── Both FABs appear together once the hero scrolls out of view ────────
   (function() {
+    const hero    = document.querySelector('.post-hero');
+    const fabVL   = document.getElementById('fab-voyage-log');
     const fabSh   = document.getElementById('share-fab');
     const tip     = document.getElementById('share-fab-tip');
+    if (!hero) return;
 
+    const observer = new IntersectionObserver(entries => {
+      const heroVisible = entries[0].isIntersecting;
+      if (fabVL) fabVL.classList.toggle('visible', !heroVisible);
+      if (fabSh) fabSh.classList.toggle('visible', !heroVisible);
+    }, { threshold: 0 });
+    observer.observe(hero);
+
+    // Share handler
     if (fabSh) {
       fabSh.addEventListener('click', async () => {
         const shareData = {
