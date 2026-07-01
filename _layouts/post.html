@@ -310,6 +310,20 @@ layout: none
   .post-body blockquote p::before { content: '\201C'; }
   .post-body blockquote p::after  { content: '\201D'; }
 
+/* Quote attribution — second line in a blockquote, marked with {:.cite} */
+  .post-body blockquote p.cite {
+    margin-top: 0.6rem;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+  }
+  .post-body blockquote p.cite::before { content: '\2014\00A0'; }
+  .post-body blockquote p.cite::after  { content: none; }
+
   /* Section divider — use <hr> in markdown */
   .post-body hr {
     border: none;

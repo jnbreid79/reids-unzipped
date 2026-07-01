@@ -1,6 +1,76 @@
 # gallery.yml — managed by gallery_import.py
 # Add new entries via the import tool; most recent first.
 
+- src: /assets/images/gallery/2026-06/passage-stats.webp
+  title: Passage stats
+  date: Jun 2026
+  date_taken: '2026-06-14'
+  tags:
+  - loc/pacific
+  - subject/passages
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-06/completing-the-formalities-for-customs-when-checki.webp
+  title: Completing the formalities for Customs when checking out of New Zealand
+  date: Jun 2026
+  date_taken: '2026-06-09'
+  tags:
+  - loc/pacific
+  - subject/bureaucracy
+  - subject/passages
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-06/lego-on-one-of-the-calmer-days-on-passage.webp
+  title: Lego on one of the calmer days on passage
+  date: Jun 2026
+  date_taken: '2026-06-11'
+  tags:
+  - loc/pacific
+  - subject/boat-life
+  - subject/passages
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-06/steering-sensor-issue.webp
+  title: Steering sensor issue
+  date: Jun 2026
+  date_taken: '2026-06-17'
+  tags:
+  - loc/pacific
+  - subject/boat-work
+  - subject/passages
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-06/the-crew-for-the-passage-north.webp
+  title: The crew for the passage North
+  date: Jun 2026
+  date_taken: '2026-06-09'
+  tags:
+  - loc/pacific
+  - subject/passages
+  width: 1600
+  height: 1202
+- src: /assets/images/gallery/2026-06/sunset-on-first-night-of-the-passage.webp
+  title: Sunset on first night of the passage
+  date: Jun 2026
+  date_taken: '2026-06-09'
+  tags:
+  - loc/pacific
+  - subject/passages
+  - subject/sailing
+  - subject/sunsets
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-06/pretending-all-is-calm-despite-the-increasing-swel.webp
+  title: Pretending all is calm despite the increasing swell
+  date: Jun 2026
+  date_taken: '2026-06-25'
+  tags:
+  - loc/pacific
+  - subject/boat-life
+  - subject/passages
+  - subject/sailing
+  width: 1600
+  height: 1200
 - src: /assets/images/gallery/2026-06/fort-teremba-guillotine.webp
   title: Fort Teremba guillotine
   date: Jun 2026
