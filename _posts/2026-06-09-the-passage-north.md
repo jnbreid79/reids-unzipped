@@ -13,7 +13,7 @@ tags:
   - subject/sailing
 ---
 
-After so much waiting for the right weather window,and a lot of um'ing and ah'ing, we made the decision to set sail for New Caledonia instead of Fiji. We took a day to make sure this wasn't just a knee-jerk reaction and would be a decision we'd be happy with in the weeks to come, then got the boat and ourselves ready for the passage and set off on Tuesday 9th June.
+After so much waiting for the right weather window, and a lot of um'ing and ah'ing, we made the decision to set sail for New Caledonia instead of Fiji. We took a day to make sure this wasn't just a knee-jerk reaction and would be a decision we'd be happy with in the weeks to come, then got the boat and ourselves ready for the passage and set off on Tuesday 9th June.
 
 ![Completing the formalities for customs when checking out in Opua]({{ site.baseurl }}/assets/images/gallery/2026-06/completing-the-formalities-for-customs-when-checki.webp)
 ![The crew for the passage north]({{ site.baseurl }}/assets/images/gallery/2026-06/the-crew-for-the-passage-north.webp)
