@@ -1,6 +1,79 @@
 # gallery.yml — managed by gallery_import.py
 # Add new entries via the import tool; most recent first.
 
+- src: /assets/images/gallery/2026-07/blue-sea-star.webp
+  title: Blue sea star
+  date: Jul 2026
+  date_taken: '2026-07-25'
+  tags:
+  - loc/pacific/new-caledonia/mba-kouen
+  - subject/the-water
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2026-07/new-caledonia-lagoon-map.webp
+  title: New Caledonia Lagoon Map
+  date: Jul 2026
+  date_taken: '2026-07-27'
+  tags:
+  - loc/pacific/new-caledonia/mba-kouen
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2026-07/kiting-kouen.webp
+  title: Kiting Kouen
+  date: Jul 2026
+  date_taken: '2026-07-25'
+  tags:
+  - loc/pacific/new-caledonia/mba-kouen
+  - subject/boat-life
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2026-07/looking-out-on-the-mba-kouen-anchorage.webp
+  title: Looking out on the Mba Kouen anchorage
+  date: Jul 2026
+  date_taken: '2026-07-24'
+  tags:
+  - loc/pacific/new-caledonia/mba-kouen
+  - subject/anchorages
+  - subject/beaches
+  width: 1600
+  height: 902
+- src: /assets/images/gallery/2026-07/the-beach-on-mba-kouen.webp
+  title: The beach on Mba Kouen
+  date: Jul 2026
+  date_taken: '2026-07-24'
+  tags:
+  - loc/pacific/new-caledonia/mba-kouen
+  - subject/beaches
+  width: 1600
+  height: 902
+- src: /assets/images/gallery/2026-07/looking-for-shells-in-the-soft-sand.webp
+  title: Looking for shells in the soft sand
+  date: Jul 2026
+  date_taken: '2026-07-24'
+  tags:
+  - loc/pacific/new-caledonia/mba-kouen
+  - subject/beaches
+  width: 1600
+  height: 902
+- src: /assets/images/gallery/2026-07/lap-of-the-island-complete.webp
+  title: Lap of the island complete
+  date: Jul 2026
+  date_taken: '2026-07-24'
+  tags:
+  - loc/pacific/new-caledonia/mba-kouen
+  - subject/beaches
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-07/turtle-in-the-shallows.webp
+  title: Turtle in the shallows
+  date: Jul 2026
+  date_taken: '2026-07-24'
+  tags:
+  - loc/pacific/new-caledonia/mba-kouen
+  - subject/the-water
+  - subject/wildlife
+  width: 1600
+  height: 900
 - src: /assets/images/gallery/2026-06/passage-stats.webp
   title: Passage stats
   date: Jun 2026
@@ -63,7 +136,7 @@
 - src: /assets/images/gallery/2026-06/pretending-all-is-calm-despite-the-increasing-swel.webp
   title: Pretending all is calm despite the increasing swell
   date: Jun 2026
-  date_taken: '2026-06-25'
+  date_taken: '2026-06-13'
   tags:
   - loc/pacific
   - subject/boat-life

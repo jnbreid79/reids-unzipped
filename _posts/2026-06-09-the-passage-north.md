@@ -44,7 +44,7 @@ We had a very quiet night in the middle where the wind really did drop more than
 On our last night approaching New Caledonia we were very grateful for our easting. We were able to sail a very deep angle with the wind gusting into the 30s and generally feeling a bit on the edge. With three reefs in we were surfing down steep swells in the dark, regularly hitting 15 knots boat speed before skewing round at the end of each surf.
 
 ![Pretending all is calm despite the increasing swell]({{ site.baseurl }}/assets/images/gallery/2026-06/pretending-all-is-calm-despite-the-increasing-swel.webp)
-![Some passage statistics on the chart plotter]({{ site.baseurl }}/assets/images/gallery/2026-06/passage-stats.webp)
+![Some passage statistics on the chart plotter]({{ site.baseurl }}/assets/images/posts/passage-stats.webp)
 
 In hindsight we should have dropped the main completely, and on an equivalent forecast we will do so in future. When our biggest surf went over 20 knots — breaking our all-time speed record — and gust exceeded 35 we decided we needed to do something. Heading up in these conditions to drop the main would have been lively to say the least, so we opted instead to drop the jib. Although still very fast, this brought things back under control and dropped the anxiety levels to manageable for the rest of the night.
 
@@ -78,7 +78,7 @@ In looking back at the log we sailed 209 miles in the 24 hours up to the edge of
 
 Of course, no proper passage is complete without the compulsory engine or other failure just as you're coming into port, and this time was no different.
 
-![The steering sensor issue]({{ site.baseurl }}/assets/images/gallery/2026-06/steering-sensor-issue.webp)
+![The steering sensor issue]({{ site.baseurl }}/assets/images/posts/steering-sensor-issue.webp)
 
 The rudder sensor failed just as we dropped the main. Hand steering seemed to work, fortunately, but I jumped into the engine room nonetheless to see if I could spot anything obvious. The answer was yes: the sensor pin had simply fallen out of the sensor arm — a simple fix to just push it back in. However it then became apparent what had actually gone wrong. The steering cylinder had rotated such that the bleed nipples were now pointing up, and in this orientation the right-hand one was butting up against the sensor arm when steering to starboard. Easy enough to rotate the cylinder back down, but it was clear we'd been rather lucky not to suffer a much more catastrophic failure in the hydraulic system as a result. These things normally happen at the worst possible time, but here — with the autopilot having worked faultlessly for the previous five days — lady luck was shining down on us. I dread to think what would have happened if this had let go in the big weather on a high speed surf in the night!
 
