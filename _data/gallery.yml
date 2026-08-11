@@ -1,6 +1,451 @@
 # gallery.yml — managed by gallery_import.py
 # Add new entries via the import tool; most recent first.
 
+- src: /assets/images/gallery/2026-06/clown-fish-hiding-in-the-anemomies.webp
+  title: Clown fish hiding in the anemomies
+  date: Jun 2026
+  date_taken: '2026-06-28'
+  tags:
+  - loc/pacific/new-caledonia/loyalty-islands/mare
+  - subject/snorkelling
+  - subject/wildlife
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2026-06/amazing-variety-of-corals-on-the-north-coast-of-ma.webp
+  title: Amazing variety of corals on the north coast of Mare
+  date: Jun 2026
+  date_taken: '2026-06-28'
+  tags:
+  - loc/pacific/new-caledonia/loyalty-islands/mare
+  - subject/snorkelling
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2026-06/coral-gardens-under-the-cliffs.webp
+  title: Coral gardens under the cliffs
+  date: Jun 2026
+  date_taken: '2026-06-28'
+  tags:
+  - loc/pacific/new-caledonia/loyalty-islands/mare
+  - subject/snorkelling
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2026-06/moray-eel-looking-out.webp
+  title: Moray eel looking out
+  date: Jun 2026
+  date_taken: '2026-06-28'
+  tags:
+  - loc/pacific/new-caledonia/loyalty-islands/mare
+  - subject/snorkelling
+  - subject/wildlife
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2026-06/moray-eel-swimming.webp
+  title: Moray eel swimming
+  date: Jun 2026
+  date_taken: '2026-06-28'
+  tags:
+  - loc/pacific/new-caledonia/loyalty-islands/mare
+  - subject/snorkelling
+  - subject/the-water
+  - subject/wildlife
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2026-06/octopus-not-fussed-by-our-fascination.webp
+  title: Octopus not fussed by our fascination
+  date: Jun 2026
+  date_taken: '2026-06-28'
+  tags:
+  - loc/pacific/new-caledonia/loyalty-islands/mare
+  - subject/snorkelling
+  - subject/the-water
+  - subject/wildlife
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2026-06/corals-gardens-in-the-shallows.webp
+  title: Corals gardens in the shallows
+  date: Jun 2026
+  date_taken: '2026-06-28'
+  tags:
+  - loc/pacific/new-caledonia/loyalty-islands/mare
+  - subject/snorkelling
+  - subject/the-water
+  - subject/wildlife
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2026-08/clown-fish.webp
+  title: Clown Fish
+  date: Aug 2026
+  date_taken: '2026-08-11'
+  tags: []
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2026-08/coral-bommie.webp
+  title: Coral Bommie
+  date: Aug 2026
+  date_taken: '2026-08-11'
+  tags: []
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2026-08/coral-gardens.webp
+  title: Coral Gardens
+  date: Aug 2026
+  date_taken: '2026-08-11'
+  tags: []
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2026-08/moray-eel-looking-out.webp
+  title: Moray Eel Looking Out
+  date: Aug 2026
+  date_taken: '2026-08-11'
+  tags: []
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2026-08/moray-eel.webp
+  title: Moray Eel
+  date: Aug 2026
+  date_taken: '2026-08-11'
+  tags: []
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2026-08/octopus.webp
+  title: Octopus
+  date: Aug 2026
+  date_taken: '2026-08-11'
+  tags: []
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2026-08/still.webp
+  title: Still
+  date: Aug 2026
+  date_taken: '2026-08-11'
+  tags: []
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2026-06/working-out-how-to-secure-the-dinghy.webp
+  title: Working out how to secure the dinghy
+  date: Jun 2026
+  date_taken: '2026-06-27'
+  tags:
+  - loc/pacific/new-caledonia/mare/baye-de-waeko
+  - subject/boat-life
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-06/making-friends-outside-the-local-market.webp
+  title: Making friends outside the local market
+  date: Jun 2026
+  date_taken: '2026-06-27'
+  tags:
+  - loc/pacific/new-caledonia/mare/tenane
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-06/saturday-market-at-tenane-in-mare.webp
+  title: Saturday market at Tenane in Mare
+  date: Jun 2026
+  date_taken: '2026-06-27'
+  tags:
+  - loc/pacific/new-caledonia/mare/tenane
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-06/with-jadamama-at-the-local-market-restaurant.webp
+  title: With Jadamama at the local market 'restaurant'
+  date: Jun 2026
+  date_taken: '2026-06-27'
+  tags:
+  - loc/pacific/new-caledonia/mare/tenane
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-06/treating-ourselves-to-a-meal-out-at-the-local-mark.webp
+  title: Treating ourselves to a meal out at the local market
+  date: Jun 2026
+  date_taken: '2026-06-27'
+  tags:
+  - loc/pacific/new-caledonia/mare/tenane
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-06/joining-in-the-local-game-of-football.webp
+  title: Joining in the local game of football
+  date: Jun 2026
+  date_taken: '2026-06-27'
+  tags:
+  - loc/pacific/new-caledonia/mare/tenane
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-06/well-tended-gardens-on-the-walk-to-the-market.webp
+  title: Well tended gardens on the walk to the market
+  date: Jun 2026
+  date_taken: '2026-06-27'
+  tags:
+  - loc/pacific/new-caledonia/mare/tenane
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-06/well-tended-gardens-on-the-walk-to-the-market-1.webp
+  title: Well tended gardens on the walk to the market
+  date: Jun 2026
+  date_taken: '2026-06-27'
+  tags:
+  - loc/pacific/new-caledonia/mare/tenane
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-06/the-road-up-to-the-market.webp
+  title: The road up to the market
+  date: Jun 2026
+  date_taken: '2026-06-27'
+  tags:
+  - loc/pacific/new-caledonia/mare/tenane
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-06/well-tended-gardens-on-the-walk-to-the-market-2.webp
+  title: Well tended gardens on the walk to the market
+  date: Jun 2026
+  date_taken: '2026-06-27'
+  tags:
+  - loc/pacific/new-caledonia/mare/tenane
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-06/flowers-on-the-walk-to-the-market.webp
+  title: Flowers on the walk to the market
+  date: Jun 2026
+  date_taken: '2026-06-27'
+  tags:
+  - loc/pacific/new-caledonia/mare/tenane
+  width: 1200
+  height: 1600
+- src: /assets/images/gallery/2026-06/amazing-water-colour.webp
+  title: Amazing water colour
+  date: Jun 2026
+  date_taken: '2026-06-27'
+  tags:
+  - loc/pacific/new-caledonia/mare/baye-de-waeko
+  - subject/the-water
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-06/local-passionfruit-a-firm-favourite-from-now-on.webp
+  title: Local passionfruit, a firm favourite from now on!
+  date: Jun 2026
+  date_taken: '2026-06-28'
+  tags:
+  - loc/pacific/new-caledonia/mare/baye-de-waeko
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-06/anchored-in-a-small-coral-lagoon-by-cape-roussin.webp
+  title: Anchored in a small coral lagoon by Cape Roussin
+  date: Jun 2026
+  date_taken: '2026-06-29'
+  tags:
+  - loc/pacific/new-caledonia/mare/cape-roussin
+  - subject/anchorages
+  - subject/beaches
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-06/walking-through-to-the-west-side-of-cape-roussin.webp
+  title: Walking through to the West side of Cape Roussin
+  date: Jun 2026
+  date_taken: '2026-06-29'
+  tags:
+  - loc/pacific/new-caledonia/mare/cape-roussin
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-06/looking-out-over-the-reef-on-the-west-side-of-cape.webp
+  title: Looking out over the reef on the West side of Cape Roussin
+  date: Jun 2026
+  date_taken: '2026-06-29'
+  tags:
+  - loc/pacific/new-caledonia/mare/cape-roussin
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-06/moorings-off-amadee-lighthouse.webp
+  title: Moorings off Amadee lighthouse
+  date: Jun 2026
+  date_taken: '2026-06-23'
+  tags:
+  - loc/pacific/new-caledonia/amadee
+  - subject/anchorages
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2026-06/crystal-clear-water-in-the-lagoon-at-amadee.webp
+  title: Crystal clear water in the lagoon at Amadee
+  date: Jun 2026
+  date_taken: '2026-06-23'
+  tags:
+  - loc/pacific/new-caledonia/amadee
+  - subject/the-water
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-06/stunning-water-at-amadee-lighthouse.webp
+  title: Stunning water at Amadee lighthouse
+  date: Jun 2026
+  date_taken: '2026-06-23'
+  tags:
+  - loc/pacific/new-caledonia/amadee
+  - subject/anchorages
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-06/looking-out-over-the-moorings.webp
+  title: Looking out over the moorings
+  date: Jun 2026
+  date_taken: '2026-06-23'
+  tags:
+  - loc/pacific/new-caledonia/amadee
+  - subject/anchorages
+  - subject/the-water
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-06/red-sand-clay-and-rock-in-prony.webp
+  title: Red sand, clay and rock in Prony
+  date: Jun 2026
+  date_taken: '2026-06-25'
+  tags:
+  - loc/pacific/new-caledonia/prony
+  - subject/beaches
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-06/astonishing-landscape-from-the-lighthouse-above-pr.webp
+  title: Astonishing landscape from the lighthouse above Prony
+  date: Jun 2026
+  date_taken: '2026-06-25'
+  tags:
+  - loc/pacific/new-caledonia/prony
+  - subject/landscapes
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-06/views-from-the-lighthouse-above-prony-bay.webp
+  title: Views from the lighthouse above Prony bay
+  date: Jun 2026
+  date_taken: '2026-06-25'
+  tags:
+  - loc/pacific/new-caledonia/prony
+  - subject/landscapes
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-06/hiking-up-to-the-lighthouse-with-friends-on-jadama.webp
+  title: Hiking up to the lighthouse with friends on Jadamama
+  date: Jun 2026
+  date_taken: '2026-06-25'
+  tags:
+  - loc/pacific/new-caledonia/prony
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-06/views-from-the-lighthouse-above-prony-bay-1.webp
+  title: Views from the lighthouse above Prony bay
+  date: Jun 2026
+  date_taken: '2026-06-25'
+  tags:
+  - loc/pacific/new-caledonia/prony
+  - subject/landscapes
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-06/amadee-lighthouse-designed-and-built-in-paris-befo.webp
+  title: Amadee lighthouse, designed and built in Paris before deconstructing and
+    shipping to New Caledonia
+  date: Jun 2026
+  date_taken: '2026-06-23'
+  tags:
+  - loc/pacific/new-caledonia/amadee
+  width: 1067
+  height: 1600
+- src: /assets/images/gallery/2026-06/amadee-lighthouse.webp
+  title: Amadee lighthouse
+  date: Jun 2026
+  date_taken: '2026-06-23'
+  tags:
+  - loc/pacific/new-caledonia/amadee
+  width: 1067
+  height: 1600
+- src: /assets/images/gallery/2026-06/a-big-banyon-tree-at-amadee.webp
+  title: A big banyon tree at Amadee
+  date: Jun 2026
+  date_taken: '2026-06-23'
+  tags:
+  - loc/pacific/new-caledonia/amadee
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2026-06/views-over-anse-majic-mooring-field-tucked-up-in-p.webp
+  title: Views over Anse Majic mooring field tucked up in Prony bay
+  date: Jun 2026
+  date_taken: '2026-06-24'
+  tags:
+  - loc/pacific/new-caledonia/prony
+  - subject/anchorages
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2026-06/views-out-over-the-lagoon-from-the-lighthouse-at-p.webp
+  title: Views out over the lagoon from the lighthouse at Prony
+  date: Jun 2026
+  date_taken: '2026-06-24'
+  tags:
+  - loc/pacific/new-caledonia/prony
+  - subject/landscapes
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2026-06/the-lagoon-from-prony-lighthouse.webp
+  title: The lagoon from Prony lighthouse
+  date: Jun 2026
+  date_taken: '2026-06-24'
+  tags:
+  - loc/pacific/new-caledonia/prony
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2026-06/the-lagoon-from-prony-lighthouse-1.webp
+  title: The lagoon from Prony lighthouse
+  date: Jun 2026
+  date_taken: '2026-06-24'
+  tags:
+  - loc/pacific/new-caledonia/prony
+  - subject/landscapes
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2026-06/looking-back-over-the-entrance-to-prony.webp
+  title: Looking back over the entrance to Prony
+  date: Jun 2026
+  date_taken: '2026-06-24'
+  tags:
+  - loc/pacific/new-caledonia/prony
+  - subject/landscapes
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2026-06/pointing-out-the-sights.webp
+  title: Pointing out the sights
+  date: Jun 2026
+  date_taken: '2026-06-24'
+  tags:
+  - loc/pacific/new-caledonia/prony
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2026-06/looking-out-over-the-havanna-pass-from-the-prony-l.webp
+  title: Looking out over the Havanna pass from the Prony lighthouse
+  date: Jun 2026
+  date_taken: '2026-06-24'
+  tags:
+  - loc/pacific/new-caledonia/prony
+  - subject/landscapes
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2026-06/views-out-over-the-lagoon.webp
+  title: Views out over the lagoon
+  date: Jun 2026
+  date_taken: '2026-06-24'
+  tags:
+  - loc/pacific/new-caledonia/prony
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2026-06/sea-krate-looking-for-a-spot-to-warm-up-in-the-sun.webp
+  title: Sea krate looking for a spot to warm up in the sun
+  date: Jun 2026
+  date_taken: '2026-06-23'
+  tags:
+  - loc/pacific/new-caledonia/amadee
+  - subject/wildlife
+  width: 1600
+  height: 2400
+- src: /assets/images/gallery/2026-06/sea-krate-curled-up-for-some-afternoon-sun.webp
+  title: Sea krate curled up for some afternoon sun
+  date: Jun 2026
+  date_taken: '2026-06-23'
+  tags:
+  - loc/pacific/new-caledonia/amadee
+  - subject/wildlife
+  width: 1600
+  height: 1200
 - src: /assets/images/gallery/2026-07/blue-sea-star.webp
   title: Blue sea star
   date: Jul 2026
@@ -66,15 +511,6 @@
   - subject/wildlife
   width: 1600
   height: 900
-- src: /assets/images/gallery/2026-06/passage-stats.webp
-  title: Passage stats
-  date: Jun 2026
-  date_taken: '2026-06-14'
-  tags:
-  - loc/pacific
-  - subject/passages
-  width: 1600
-  height: 1200
 - src: /assets/images/gallery/2026-06/completing-the-formalities-for-customs-when-checki.webp
   title: Completing the formalities for Customs when checking out of New Zealand
   date: Jun 2026
@@ -92,16 +528,6 @@
   tags:
   - loc/pacific
   - subject/boat-life
-  - subject/passages
-  width: 1600
-  height: 1200
-- src: /assets/images/gallery/2026-06/steering-sensor-issue.webp
-  title: Steering sensor issue
-  date: Jun 2026
-  date_taken: '2026-06-17'
-  tags:
-  - loc/pacific
-  - subject/boat-work
   - subject/passages
   width: 1600
   height: 1200
