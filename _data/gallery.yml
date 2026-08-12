@@ -1,6 +1,284 @@
 # gallery.yml — managed by gallery_import.py
 # Add new entries via the import tool; most recent first.
 
+- src: /assets/images/gallery/2026-07/anchorage-at-drueulu-on-lifou-island.webp
+  title: Anchorage at Drueulu on Lifou island
+  date: Jul 2026
+  date_taken: '2026-07-02'
+  tags:
+  - loc/pacific/new-caledonia/loyalty-islands/lifou/drueulu
+  - subject/anchorages
+  - subject/beaches
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-07/traditional-house-in-the-loyalty-islands.webp
+  title: Traditional house in the Loyalty Islands
+  date: Jul 2026
+  date_taken: '2026-07-02'
+  tags:
+  - loc/pacific/new-caledonia/loyalty-islands/lifou/drueulu
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-07/scrambling-into-caves-under-the-coral-cliffs.webp
+  title: Scrambling into caves under the coral cliffs
+  date: Jul 2026
+  date_taken: '2026-07-02'
+  tags:
+  - loc/pacific/new-caledonia/loyalty-islands/lifou/drueulu
+  - subject/beaches
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-07/9-of-us-hitchhiking-into-town-all-in-the-back-of-a.webp
+  title: 9 of us hitchhiking into town, all in the back of a pick-up
+  date: Jul 2026
+  date_taken: '2026-07-03'
+  tags:
+  - loc/pacific/new-caledonia/loyalty-islands/lifou
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-07/impromptu-stop-for-the-driver-to-see-his-mates.webp
+  title: Impromptu stop for the driver to see his mates
+  date: Jul 2026
+  date_taken: '2026-07-03'
+  tags:
+  - loc/pacific/new-caledonia/loyalty-islands/lifou
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-07/cemetry-on-the-road-across-the-island.webp
+  title: Cemetry on the road across the island
+  date: Jul 2026
+  date_taken: '2026-07-03'
+  tags:
+  - loc/pacific/new-caledonia/loyalty-islands/lifou
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-07/walking-past-the-church-to-the-market-in-we.webp
+  title: Walking past the Church to the market in We
+  date: Jul 2026
+  date_taken: '2026-07-03'
+  tags:
+  - loc/pacific/new-caledonia/loyalty-islands/lifou/we
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-07/flowerbed-outside-the-church.webp
+  title: Flowerbed outside the Church
+  date: Jul 2026
+  date_taken: '2026-07-03'
+  tags:
+  - loc/pacific/new-caledonia/loyalty-islands/lifou/we
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-07/market-day-in-we.webp
+  title: Market day in We
+  date: Jul 2026
+  date_taken: '2026-07-03'
+  tags:
+  - loc/pacific/new-caledonia/loyalty-islands/lifou/we
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-07/market-day-in-we-1.webp
+  title: Market day in We
+  date: Jul 2026
+  date_taken: '2026-07-03'
+  tags:
+  - loc/pacific/new-caledonia/loyalty-islands/lifou/we
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-07/isla-and-angus-getting-the-hang-of-the-minicat.webp
+  title: Isla and Angus getting the hang of the minicat
+  date: Jul 2026
+  date_taken: '2026-07-04'
+  tags:
+  - loc/pacific/new-caledonia/loyalty-islands/lifou/drueulu
+  - subject/the-water
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2026-07/angus-and-rufus-sailing-jadamamas-dinghy.webp
+  title: Angus and Rufus sailing Jadamama's dinghy
+  date: Jul 2026
+  date_taken: '2026-07-05'
+  tags:
+  - loc/pacific/new-caledonia/loyalty-islands/lifou/drueulu
+  - subject/the-water
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2026-07/sailing-around-the-anchorage.webp
+  title: Sailing around the anchorage
+  date: Jul 2026
+  date_taken: '2026-07-05'
+  tags:
+  - loc/pacific/new-caledonia/loyalty-islands/lifou/drueulu
+  - subject/anchorages
+  - subject/the-water
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2026-07/isla-and-lily-sailing.webp
+  title: Isla and Lily sailing
+  date: Jul 2026
+  date_taken: '2026-07-05'
+  tags:
+  - loc/pacific/new-caledonia/loyalty-islands/lifou/drueulu
+  - subject/sailing
+  - subject/the-water
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2026-07/both-dinghies-out-on-the-water.webp
+  title: Both dinghies out on the water
+  date: Jul 2026
+  date_taken: '2026-07-05'
+  tags:
+  - loc/pacific/new-caledonia/loyalty-islands/lifou/drueulu
+  - subject/sailing
+  - subject/the-water
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2026-07/sunset-from-the-anchorage.webp
+  title: Sunset from the anchorage
+  date: Jul 2026
+  date_taken: '2026-07-05'
+  tags:
+  - loc/pacific/new-caledonia/loyalty-islands/lifou/drueulu
+  - subject/anchorages
+  - subject/sunsets
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2026-07/sun-setting-behind-zipper.webp
+  title: Sun setting behind Zipper
+  date: Jul 2026
+  date_taken: '2026-07-06'
+  tags:
+  - loc/pacific/new-caledonia/loyalty-islands/lifou/drueulu
+  - subject/anchorages
+  - subject/sunsets
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-07/another-spectacular-sunset.webp
+  title: Another spectacular sunset
+  date: Jul 2026
+  date_taken: '2026-07-06'
+  tags:
+  - loc/pacific/new-caledonia/loyalty-islands/lifou/drueulu
+  - subject/anchorages
+  - subject/sunsets
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-07/clown-fish-peeking-out.webp
+  title: Clown fish peeking out
+  date: Jul 2026
+  date_taken: '2026-07-06'
+  tags:
+  - loc/pacific/new-caledonia/loyalty-islands/lifou/drueulu
+  - subject/snorkelling
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2026-07/blue-clam.webp
+  title: Blue clam
+  date: Jul 2026
+  date_taken: '2026-07-06'
+  tags:
+  - loc/pacific/new-caledonia/loyalty-islands/lifou/drueulu
+  - subject/snorkelling
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2026-07/looking-along-the-wall-of-the-bommie.webp
+  title: Looking along the wall of the bommie
+  date: Jul 2026
+  date_taken: '2026-07-06'
+  tags:
+  - loc/pacific/new-caledonia/loyalty-islands/lifou/drueulu
+  - subject/snorkelling
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2026-07/clams-on-the-bommie.webp
+  title: Clams on the bommie
+  date: Jul 2026
+  date_taken: '2026-07-06'
+  tags:
+  - loc/pacific/new-caledonia/loyalty-islands/lifou/drueulu
+  - subject/snorkelling
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2026-07/clown-fish-in-an-anenomie.webp
+  title: Clown fish in an anenomie
+  date: Jul 2026
+  date_taken: '2026-07-06'
+  tags:
+  - loc/pacific/new-caledonia/loyalty-islands/lifou/drueulu
+  - subject/snorkelling
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2026-07/crown-of-thorns.webp
+  title: Crown of thorns
+  date: Jul 2026
+  date_taken: '2026-07-06'
+  tags:
+  - loc/pacific/new-caledonia/loyalty-islands/lifou/drueulu
+  - subject/snorkelling
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2026-07/dark-coloured-clown-fish.webp
+  title: Dark coloured clown fish
+  date: Jul 2026
+  date_taken: '2026-07-06'
+  tags:
+  - loc/pacific/new-caledonia/loyalty-islands/lifou/drueulu
+  - subject/snorkelling
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2026-07/fish-on-the-wall-of-the-bommie.webp
+  title: Fish on the wall of the bommie
+  date: Jul 2026
+  date_taken: '2026-07-06'
+  tags:
+  - loc/pacific/new-caledonia/loyalty-islands/lifou/drueulu
+  - subject/snorkelling
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2026-07/green-clam.webp
+  title: Green clam
+  date: Jul 2026
+  date_taken: '2026-07-06'
+  tags:
+  - loc/pacific/new-caledonia/loyalty-islands/lifou/drueulu
+  - subject/snorkelling
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2026-07/schools-of-fish-surrounding-the-bommie.webp
+  title: Schools of fish surrounding the bommie
+  date: Jul 2026
+  date_taken: '2026-07-06'
+  tags:
+  - loc/pacific/new-caledonia/loyalty-islands/lifou/drueulu
+  - subject/snorkelling
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2026-07/shallow-bommie-with-spectacular-variety-of-corals.webp
+  title: Shallow bommie with spectacular variety of corals
+  date: Jul 2026
+  date_taken: '2026-07-06'
+  tags:
+  - loc/pacific/new-caledonia/loyalty-islands/lifou/drueulu
+  - subject/snorkelling
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2026-07/sophie-getting-down-for-a-closer-look.webp
+  title: Sophie getting down for a closer look
+  date: Jul 2026
+  date_taken: '2026-07-06'
+  tags:
+  - loc/pacific/new-caledonia/loyalty-islands/lifou/drueulu
+  - subject/snorkelling
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2026-07/spiral-shell.webp
+  title: Spiral shell
+  date: Jul 2026
+  date_taken: '2026-07-06'
+  tags:
+  - loc/pacific/new-caledonia/loyalty-islands/lifou/drueulu
+  - subject/snorkelling
+  width: 1600
+  height: 900
 - src: /assets/images/gallery/2026-06/clown-fish-hiding-in-the-anemomies.webp
   title: Clown fish hiding in the anemomies
   date: Jun 2026

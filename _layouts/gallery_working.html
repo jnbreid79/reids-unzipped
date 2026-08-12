@@ -1122,24 +1122,24 @@ permalink: /gallery/
   }
 
   // ── Active filter state ─────────────────────────────────────
-  // Location and date each support multiple simultaneous selections,
-  // OR'd together (a photo matches if it has ANY of the active values for
-  // that facet). Subjects remain AND (a photo needs ALL active subjects).
-  let activeLocPaths = new Set();   // loc path strings
+  let activeLocPath = null;   // single loc path string or null
   let activeSubjects = new Set();
-  let activeDateKeys = new Set();   // "YYYY" or "YYYY|Mon"
-
-  function dateKeyFor(year, month) {
-    return month ? year + '|' + month : year;
-  }
+  let activeDateYear  = null;
+  let activeDateMonth = null;
 
   function toggleLocFilter(path, labelEl) {
-    if (activeLocPaths.has(path)) {
-      activeLocPaths.delete(path);
+    if (activeLocPath === path) {
+      // Deselect — collapse children back
+      activeLocPath = null;
       labelEl.classList.remove('active');
       collapseLocChildren(labelEl);
     } else {
-      activeLocPaths.add(path);
+      // Deselect previous
+      document.querySelectorAll('.loc-label.active').forEach(el => {
+        el.classList.remove('active');
+        collapseLocChildren(el);
+      });
+      activeLocPath = path;
       labelEl.classList.add('active');
       // Expand children so user can drill down further
       expandLocChildren(labelEl);
@@ -1373,12 +1373,17 @@ permalink: /gallery/
   }
 
   function toggleDateFilter(year, month, labelEl) {
-    const key = dateKeyFor(year, month);
-    if (activeDateKeys.has(key)) {
-      activeDateKeys.delete(key);
+    const sameYear  = activeDateYear  === year;
+    const sameMonth = activeDateMonth === month;
+    if (sameYear && sameMonth) {
+      activeDateYear  = null;
+      activeDateMonth = null;
       labelEl.classList.remove('active');
     } else {
-      activeDateKeys.add(key);
+      document.querySelectorAll('.date-label.active').forEach(el =>
+        el.classList.remove('active'));
+      activeDateYear  = year;
+      activeDateMonth = month;
       labelEl.classList.add('active');
     }
     applyFilters();
@@ -1486,9 +1491,40 @@ permalink: /gallery/
   }
 
   function applyFiltersAndPage() {
-    const visible = itemsMatchingCriteria({
-      locPaths: activeLocPaths, dateKeys: activeDateKeys, subjects: activeSubjects
-    });
+    let visible = allItems;
+
+    if (activeLocPath) {
+      visible = visible.filter(item => {
+        const tags = (item.dataset.tags || '').split(' ');
+        return tags.some(t =>
+          t === 'loc/' + activeLocPath ||
+          t.startsWith('loc/' + activeLocPath + '/')
+        );
+      });
+    }
+
+    // Date: item must match active year (and month if set)
+    if (activeDateYear) {
+      visible = visible.filter(item => {
+        const d = (item.dataset.date || '').trim();
+        const parts = d.split(' ');
+        if (parts.length !== 2) return false;
+        const [mon, yr] = parts;
+        if (yr !== activeDateYear) return false;
+        if (activeDateMonth && mon !== activeDateMonth) return false;
+        return true;
+      });
+    }
+
+    // Subject: item must have ALL active subjects (AND within facet — a
+    // photo can genuinely carry multiple subject tags at once, unlike
+    // loc/date which are single-valued per photo)
+    if (activeSubjects.size > 0) {
+      visible = visible.filter(item => {
+        const tags = (item.dataset.tags || '').split(' ');
+        return [...activeSubjects].every(s => tags.includes('subject/' + s));
+      });
+    }
 
     applyPage(visible);
     renderChips();
@@ -1503,29 +1539,23 @@ permalink: /gallery/
   // would return zero photos. Currently-active options are never marked
   // unavailable, so a selection can always be removed even if it's now a
   // dead end against the other active filters.
-  //
-  // Location and date are OR within their own facet (a photo needs ANY of
-  // the active values), AND across facets. Subject stays AND within facet.
-  function itemsMatchingCriteria({ locPaths, dateKeys, subjects }) {
+  function itemsMatchingCriteria({ loc, dateYear, dateMonth, subjects }) {
     return allItems.filter(item => {
       const tags = (item.dataset.tags || '').split(' ').filter(Boolean);
 
-      if (locPaths && locPaths.size > 0) {
-        const ok = [...locPaths].some(loc =>
-          tags.some(t => t === 'loc/' + loc || t.startsWith('loc/' + loc + '/')));
+      if (loc) {
+        const ok = tags.some(t =>
+          t === 'loc/' + loc || t.startsWith('loc/' + loc + '/'));
         if (!ok) return false;
       }
 
-      if (dateKeys && dateKeys.size > 0) {
+      if (dateYear) {
         const d = (item.dataset.date || '').trim();
         const parts = d.split(' ');
         if (parts.length !== 2) return false;
         const [mon, yr] = parts;
-        const ok = [...dateKeys].some(key => {
-          const [ky, km] = key.split('|');
-          return ky === yr && (!km || km === mon);
-        });
-        if (!ok) return false;
+        if (yr !== dateYear) return false;
+        if (dateMonth && mon !== dateMonth) return false;
       }
 
       if (subjects && subjects.size > 0) {
@@ -1546,7 +1576,7 @@ permalink: /gallery/
   function updateFacetAvailability() {
     // -- Location: exclude loc's own filter, keep date + subject --
     const locItems = itemsMatchingCriteria({
-      locPaths: null, dateKeys: activeDateKeys,
+      loc: null, dateYear: activeDateYear, dateMonth: activeDateMonth,
       subjects: activeSubjects
     });
     const locPathCounts = new Map();
@@ -1566,7 +1596,7 @@ permalink: /gallery/
         locPathCounts.set(path, (locPathCounts.get(path) || 0) + 1));
     });
     document.querySelectorAll('.loc-label').forEach(label => {
-      const isActive = activeLocPaths.has(label.dataset.locPath);
+      const isActive = label.classList.contains('active');
       const count = locPathCounts.get(label.dataset.locPath) || 0;
       label.classList.toggle('unavailable', count === 0 && !isActive);
       setCount(label, count);
@@ -1574,7 +1604,7 @@ permalink: /gallery/
 
     // -- Date: exclude date's own filter, keep loc + subject --
     const dateItems = itemsMatchingCriteria({
-      locPaths: activeLocPaths, dateKeys: null,
+      loc: activeLocPath, dateYear: null, dateMonth: null,
       subjects: activeSubjects
     });
     const yearCounts = new Map();
@@ -1591,7 +1621,7 @@ permalink: /gallery/
     document.querySelectorAll('.date-label').forEach(label => {
       const year  = label.dataset.dateYear;
       const month = label.dataset.dateMonth;
-      const isActive = activeDateKeys.has(dateKeyFor(year, month));
+      const isActive = label.classList.contains('active');
       const count = month
         ? (yearMonthCounts.get(year + '|' + month) || 0)
         : (yearCounts.get(year) || 0);
@@ -1602,7 +1632,7 @@ permalink: /gallery/
     // -- Subject: AND within facet, so a candidate's count/availability must
     // stack against already-active subjects too (loc + date + activeSubjects)
     const subjectItems = itemsMatchingCriteria({
-      locPaths: activeLocPaths, dateKeys: activeDateKeys,
+      loc: activeLocPath, dateYear: activeDateYear, dateMonth: activeDateMonth,
       subjects: activeSubjects
     });
     const subjectCounts = new Map();
@@ -1628,36 +1658,35 @@ permalink: /gallery/
     const bar = document.getElementById('active-filters');
     bar.innerHTML = '';
 
-    const hasAny = activeDateKeys.size > 0 || activeLocPaths.size > 0 || activeSubjects.size > 0;
+    const hasAny = activeDateYear || activeLocPath || activeSubjects.size > 0;
     if (!hasAny) return;
 
-    activeDateKeys.forEach(key => {
-      const [year, month] = key.split('|');
-      const label = month ? month + ' ' + year : year;
+    if (activeDateYear) {
+      const label = activeDateMonth
+        ? activeDateMonth + ' ' + activeDateYear
+        : activeDateYear;
       const chip = makeChip(label, () => {
-        activeDateKeys.delete(key);
-        const sel = month
-          ? `.date-label[data-date-year="${year}"][data-date-month="${month}"]`
-          : `.date-label[data-date-year="${year}"]:not([data-date-month])`;
-        const el = document.querySelector(sel);
-        if (el) el.classList.remove('active');
+        activeDateYear  = null;
+        activeDateMonth = null;
+        document.querySelectorAll('.date-label.active').forEach(el =>
+          el.classList.remove('active'));
         applyFilters();
       });
       bar.appendChild(chip);
-    });
+    }
 
-    activeLocPaths.forEach(path => {
+    if (activeLocPath) {
       const chip = makeChip(
-        path.split('/').map(p => p.replace(/-/g, ' ')).join(' › '),
+        activeLocPath.split('/').map(p => p.replace(/-/g, ' ')).join(' › '),
         () => {
-          activeLocPaths.delete(path);
-          const el = document.querySelector(`.loc-label[data-loc-path="${path}"]`);
-          if (el) el.classList.remove('active');
+          activeLocPath = null;
+          document.querySelectorAll('.loc-label.active').forEach(el =>
+            el.classList.remove('active'));
           applyFilters();
         }
       );
       bar.appendChild(chip);
-    });
+    }
 
     activeSubjects.forEach(s => {
       const chip = makeChip(s.replace(/-/g, ' '), () => {
@@ -1685,13 +1714,14 @@ permalink: /gallery/
   }
 
   function clearAllFilters() {
-    activeLocPaths.clear();
+    activeLocPath = null;
     activeSubjects.clear();
     document.querySelectorAll('.loc-label.active').forEach(el =>
       el.classList.remove('active'));
     document.querySelectorAll('.date-label.active').forEach(el =>
       el.classList.remove('active'));
-    activeDateKeys.clear();
+    activeDateYear  = null;
+    activeDateMonth = null;
     document.querySelectorAll('.tag-pill.active').forEach(p =>
       p.classList.remove('active'));
     applyFilters();
@@ -1700,15 +1730,13 @@ permalink: /gallery/
   // ── URL state ───────────────────────────────────────────────
   function updateUrl() {
     const params = new URLSearchParams();
-    if (activeLocPaths.size > 0)
-      params.set('loc', [...activeLocPaths].join(','));
+    if (activeLocPath) params.set('loc', activeLocPath);
     if (activeSubjects.size > 0)
       params.set('subjects', [...activeSubjects].join(','));
-    if (activeDateKeys.size > 0) {
-      params.set('date', [...activeDateKeys].map(key => {
-        const [year, month] = key.split('|');
-        return month ? month + '-' + year : year;
-      }).join(','));
+    if (activeDateYear) {
+      params.set('date', activeDateMonth
+        ? activeDateMonth + '-' + activeDateYear
+        : activeDateYear);
     }
     const qs = params.toString();
     history.replaceState(null, '',
@@ -1721,25 +1749,23 @@ permalink: /gallery/
     const subjs = params.get('subjects');
 
     if (loc) {
-      loc.split(',').forEach(path => {
-        activeLocPaths.add(path);
-        // Mark the label active after tree is built
-        setTimeout(() => {
-          const el = document.querySelector(
-            `.loc-label[data-loc-path="${path}"]`);
-          if (el) {
-            el.classList.add('active');
-            // Expand ancestors
-            let parent = el.closest('ul');
-            while (parent && parent.classList.contains('loc-tree')) {
-              parent.style.display = 'block';
-              const toggle = parent.previousElementSibling?.querySelector('.loc-toggle');
-              if (toggle) toggle.classList.add('open');
-              parent = parent.parentElement?.closest('ul');
-            }
+      activeLocPath = loc;
+      // Mark the label active after tree is built
+      setTimeout(() => {
+        const el = document.querySelector(
+          `.loc-label[data-loc-path="${loc}"]`);
+        if (el) {
+          el.classList.add('active');
+          // Expand ancestors
+          let parent = el.closest('ul');
+          while (parent && parent.classList.contains('loc-tree')) {
+            parent.style.display = 'block';
+            const toggle = parent.previousElementSibling?.querySelector('.loc-toggle');
+            if (toggle) toggle.classList.add('open');
+            parent = parent.parentElement?.closest('ul');
           }
-        }, 0);
-      });
+        }
+      }, 0);
     }
 
     if (subjs) {
@@ -1754,24 +1780,20 @@ permalink: /gallery/
 
     const dateParam = params.get('date');
     if (dateParam) {
-      dateParam.split(',').forEach(entry => {
-        const dp = entry.split('-');
-        let year, month;
-        if (dp.length === 2) {
-          month = dp[0];
-          year  = dp[1];
-        } else {
-          year = dp[0];
-        }
-        activeDateKeys.add(dateKeyFor(year, month));
-        setTimeout(() => {
-          const sel = month
-            ? `.date-label[data-date-year="${year}"][data-date-month="${month}"]`
-            : `.date-label[data-date-year="${year}"]:not([data-date-month])`;
-          const el = document.querySelector(sel);
-          if (el) el.classList.add('active');
-        }, 0);
-      });
+      const dp = dateParam.split('-');
+      if (dp.length === 2) {
+        activeDateMonth = dp[0];
+        activeDateYear  = dp[1];
+      } else {
+        activeDateYear = dp[0];
+      }
+      setTimeout(() => {
+        const sel = activeDateMonth
+          ? `.date-label[data-date-year="${activeDateYear}"][data-date-month="${activeDateMonth}"]`
+          : `.date-label[data-date-year="${activeDateYear}"]:not([data-date-month])`;
+        const el = document.querySelector(sel);
+        if (el) el.classList.add('active');
+      }, 0);
     }
 
     if (loc || subjs || dateParam) {
@@ -1802,20 +1824,15 @@ permalink: /gallery/
   function updateFilterSummaries() {
     const dateSummary = document.getElementById('fhs-date');
     const dateHeader  = document.getElementById('fhg-date');
-    if (activeDateKeys.size > 0) {
-      const labels = [...activeDateKeys].map(key => {
-        const [year, month] = key.split('|');
-        return month ? month + ' ' + year : year;
-      });
-      dateSummary.textContent = '· ' + (labels.length <= 2 ? labels.join(', ') : labels[0] + ' +' + (labels.length - 1));
+    if (activeDateYear) {
+      dateSummary.textContent = '· ' + (activeDateMonth ? activeDateMonth + ' ' + activeDateYear : activeDateYear);
       dateHeader.classList.add('active-filter');
     } else { dateSummary.textContent = ''; dateHeader.classList.remove('active-filter'); }
 
     const locSummary = document.getElementById('fhs-location');
     const locHeader  = document.getElementById('fhg-location');
-    if (activeLocPaths.size > 0) {
-      const labels = [...activeLocPaths].map(p => p.split('/').pop().replace(/-/g, ' '));
-      locSummary.textContent = '· ' + (labels.length <= 2 ? labels.join(', ') : labels[0] + ' +' + (labels.length - 1));
+    if (activeLocPath) {
+      locSummary.textContent = '· ' + activeLocPath.split('/').pop().replace(/-/g, ' ');
       locHeader.classList.add('active-filter');
     } else { locSummary.textContent = ''; locHeader.classList.remove('active-filter'); }
 
@@ -1971,10 +1988,9 @@ permalink: /gallery/
           activeSubjects.clear();
           document.querySelectorAll('.tag-pill.active').forEach(p => p.classList.remove('active'));
           document.querySelectorAll('.loc-label.active').forEach(p => p.classList.remove('active'));
-          activeDateKeys.clear();
+          activeDateYear = null; activeDateMonth = null;
           document.querySelectorAll('.date-label.active').forEach(p => p.classList.remove('active'));
-          activeLocPaths.clear();
-          activeLocPaths.add(locPath);
+          activeLocPath = locPath;
           setTimeout(() => {
             const el = document.querySelector(`.loc-label[data-loc-path="${locPath}"]`);
             if (el) el.classList.add('active');
@@ -2000,8 +2016,8 @@ permalink: /gallery/
           e.stopPropagation();
           closeLightbox();
           // Clear other filters, set this subject only
-          activeLocPaths.clear();
-          activeDateKeys.clear();
+          activeLocPath = null;
+          activeDateYear = null; activeDateMonth = null;
           document.querySelectorAll('.loc-label.active, .date-label.active, .tag-pill.active')
             .forEach(p => p.classList.remove('active'));
           activeSubjects.clear();
