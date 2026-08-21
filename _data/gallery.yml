@@ -1,6 +1,147 @@
 # gallery.yml — managed by gallery_import.py
 # Add new entries via the import tool; most recent first.
 
+- src: /assets/images/gallery/2026-08/port-resolution-yacht-club-check-in.webp
+  title: Port Resolution Yacht Club Check In
+  date: Aug 2026
+  date_taken: '2026-08-11'
+  tags:
+  - loc/pacific/vanuatu/tanna/port-resolution
+  - subject/bureaucracy
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-08/immaculate-village-road.webp
+  title: Immaculate Village Road
+  date: Aug 2026
+  date_taken: '2026-08-12'
+  tags:
+  - loc/pacific/vanuatu/tanna/port-resolution
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-08/port-resolution-fishing-fleet.webp
+  title: Port Resolution fishing fleet
+  date: Aug 2026
+  date_taken: '2026-08-10'
+  tags:
+  - loc/pacific/vanuatu/tanna/port-resolution
+  - subject/anchorages
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2026-08/local-fishing-canoe.webp
+  title: Local fishing canoe
+  date: Aug 2026
+  date_taken: '2026-08-12'
+  tags:
+  - loc/pacific/vanuatu/tanna/port-resolution
+  - subject/the-water
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-08/backgrop-to-the-campsite-on-yasur.webp
+  title: Backgrop to the campsite on Yasur
+  date: Aug 2026
+  date_taken: '2026-08-13'
+  tags:
+  - loc/pacific/vanuatu/tanna/port-resolution
+  - subject/landscapes
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-08/pulling-roots-for-tanna-soup.webp
+  title: Pulling roots for Tanna soup
+  date: Aug 2026
+  date_taken: '2026-08-13'
+  tags:
+  - loc/pacific/vanuatu/tanna/port-resolution
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2026-08/setting-off-up-the-volcano.webp
+  title: Setting off up the volcano
+  date: Aug 2026
+  date_taken: '2026-08-13'
+  tags:
+  - loc/pacific/vanuatu/tanna/port-resolution
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-08/banyon-tree-swing.webp
+  title: Banyon tree swing
+  date: Aug 2026
+  date_taken: '2026-08-14'
+  tags:
+  - loc/pacific/vanuatu/tanna/port-resolution
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-08/campsite-on-the-volcano-plain.webp
+  title: Campsite on the volcano plain
+  date: Aug 2026
+  date_taken: '2026-08-14'
+  tags:
+  - loc/pacific/vanuatu/tanna/port-resolution
+  - subject/landscapes
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-08/dawn-on-the-volcanic-rim.webp
+  title: Dawn on the volcanic rim
+  date: Aug 2026
+  date_taken: '2026-08-14'
+  tags:
+  - loc/pacific/vanuatu/tanna/port-resolution
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-08/looking-down-into-yasur.webp
+  title: Looking down into Yasur
+  date: Aug 2026
+  date_taken: '2026-08-14'
+  tags:
+  - loc/pacific/vanuatu/tanna/port-resolution
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-08/yasur-erupting.webp
+  title: Yasur erupting
+  date: Aug 2026
+  date_taken: '2026-08-14'
+  tags:
+  - loc/pacific/vanuatu/tanna/port-resolution
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-08/volcanic-explosion.webp
+  title: Volcanic explosion
+  date: Aug 2026
+  date_taken: '2026-08-13'
+  tags:
+  - loc/pacific/vanuatu/tanna/port-resolution
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-08/campsite-fire.webp
+  title: Campsite fire
+  date: Aug 2026
+  date_taken: '2026-08-13'
+  tags:
+  - loc/pacific/vanuatu/tanna/port-resolution
+  width: 1600
+  height: 1068
+- src: /assets/images/gallery/2026-08/looking-into-the-volcano.webp
+  title: Looking into the volcano
+  date: Aug 2026
+  date_taken: '2026-08-14'
+  tags:
+  - loc/pacific/vanuatu/tanna/port-resolution
+  width: 1600
+  height: 1068
+- src: /assets/images/gallery/2026-08/silhouette-at-night.webp
+  title: Silhouette at night
+  date: Aug 2026
+  date_taken: '2026-08-13'
+  tags:
+  - loc/pacific/vanuatu/tanna/port-resolution
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-08/5-family-boats-heading-to-yasur.webp
+  title: 5 family boats heading to Yasur
+  date: Aug 2026
+  date_taken: '2026-08-14'
+  tags:
+  - loc/pacific/vanuatu/tanna/port-resolution
+  width: 1530
+  height: 861
 - src: /assets/images/gallery/2026-07/anchorage-at-drueulu-on-lifou-island.webp
   title: Anchorage at Drueulu on Lifou island
   date: Jul 2026
@@ -9,14 +150,6 @@
   - loc/pacific/new-caledonia/loyalty-islands/lifou/drueulu
   - subject/anchorages
   - subject/beaches
-  width: 1600
-  height: 1200
-- src: /assets/images/gallery/2026-07/traditional-house-in-the-loyalty-islands.webp
-  title: Traditional house in the Loyalty Islands
-  date: Jul 2026
-  date_taken: '2026-07-02'
-  tags:
-  - loc/pacific/new-caledonia/loyalty-islands/lifou/drueulu
   width: 1600
   height: 1200
 - src: /assets/images/gallery/2026-07/scrambling-into-caves-under-the-coral-cliffs.webp
@@ -93,8 +226,8 @@
   - subject/the-water
   width: 1600
   height: 1067
-- src: /assets/images/gallery/2026-07/angus-and-rufus-sailing-jadamamas-dinghy.webp
-  title: Angus and Rufus sailing Jadamama's dinghy
+- src: /assets/images/gallery/2026-07/the-boys-sailing.webp
+  title: The boys sailing
   date: Jul 2026
   date_taken: '2026-07-05'
   tags:
@@ -112,8 +245,8 @@
   - subject/the-water
   width: 1600
   height: 1067
-- src: /assets/images/gallery/2026-07/isla-and-lily-sailing.webp
-  title: Isla and Lily sailing
+- src: /assets/images/gallery/2026-07/the-girls-sailing.webp
+  title: The girls sailing
   date: Jul 2026
   date_taken: '2026-07-05'
   tags:
@@ -375,14 +508,6 @@
   - loc/pacific/new-caledonia/loyalty-islands/mare/tenane
   width: 1600
   height: 1200
-- src: /assets/images/gallery/2026-06/with-jadamama-at-the-local-market-restaurant.webp
-  title: With Jadamama at the local market 'restaurant'
-  date: Jun 2026
-  date_taken: '2026-06-27'
-  tags:
-  - loc/pacific/new-caledonia/loyalty-islands/mare/tenane
-  width: 1600
-  height: 1200
 - src: /assets/images/gallery/2026-06/treating-ourselves-to-a-meal-out-at-the-local-mark.webp
   title: Treating ourselves to a meal out at the local market
   date: Jun 2026
@@ -546,14 +671,6 @@
   - subject/landscapes
   width: 1600
   height: 1200
-- src: /assets/images/gallery/2026-06/hiking-up-to-the-lighthouse-with-friends-on-jadama.webp
-  title: Hiking up to the lighthouse with friends on Jadamama
-  date: Jun 2026
-  date_taken: '2026-06-25'
-  tags:
-  - loc/pacific/new-caledonia/prony
-  width: 1600
-  height: 1200
 - src: /assets/images/gallery/2026-06/views-from-the-lighthouse-above-prony-bay-1.webp
   title: Views from the lighthouse above Prony bay
   date: Jun 2026
@@ -647,14 +764,6 @@
   tags:
   - loc/pacific/new-caledonia/prony
   - subject/landscapes
-  width: 1600
-  height: 1067
-- src: /assets/images/gallery/2026-06/views-out-over-the-lagoon.webp
-  title: Views out over the lagoon
-  date: Jun 2026
-  date_taken: '2026-06-24'
-  tags:
-  - loc/pacific/new-caledonia/prony
   width: 1600
   height: 1067
 - src: /assets/images/gallery/2026-06/sea-krate-looking-for-a-spot-to-warm-up-in-the-sun.webp
