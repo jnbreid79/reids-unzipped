@@ -1,6 +1,80 @@
 # gallery.yml — managed by gallery_import.py
 # Add new entries via the import tool; most recent first.
 
+- src: /assets/images/gallery/2026-08/amedee-anchorage-and-reef-beyond.webp
+  title: Amedee anchorage and reef beyond
+  date: Aug 2026
+  date_taken: '2026-08-08'
+  tags:
+  - loc/pacific/new-caledonia/amadee
+  - subject/anchorages
+  - subject/landscapes
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2026-08/setting-sail-from-amedee.webp
+  title: Setting Sail From Amedee
+  date: Aug 2026
+  date_taken: '2026-08-08'
+  tags:
+  - loc/pacific/new-caledonia/amadee
+  - subject/sailing
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-08/looking-out-over-the-anchorage-from-the-amadee-lig.webp
+  title: Looking out over the anchorage from the Amadee lighthouse
+  date: Aug 2026
+  date_taken: '2026-08-08'
+  tags:
+  - loc/pacific/new-caledonia/amadee
+  - subject/anchorages
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-08/view-from-the-amadee-lighthouse.webp
+  title: View from the Amadee lighthouse
+  date: Aug 2026
+  date_taken: '2026-08-08'
+  tags:
+  - loc/pacific/new-caledonia/amadee
+  - subject/landscapes
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-08/looking-up-the-amadee-lighthouse-staircase.webp
+  title: Looking up the Amadee lighthouse staircase
+  date: Aug 2026
+  date_taken: '2026-08-08'
+  tags:
+  - loc/pacific/new-caledonia/amadee
+  width: 1200
+  height: 1600
+- src: /assets/images/gallery/2026-08/on-top-of-the-amadee-lighthouse.webp
+  title: On top of the Amadee lighthouse
+  date: Aug 2026
+  date_taken: '2026-08-08'
+  tags:
+  - loc/pacific/new-caledonia/amadee
+  - subject/family
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-08/paul-joining-zipper-again-for-another-passage.webp
+  title: Paul joining Zipper again for another passage
+  date: Aug 2026
+  date_taken: '2026-08-09'
+  tags:
+  - loc/pacific/new-caledonia
+  - subject/passages
+  - subject/sailing
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-08/sunset-on-passage-from-new-caledonia-to-vanuatu.webp
+  title: Sunset on passage from New Caledonia to Vanuatu
+  date: Aug 2026
+  date_taken: '2026-08-10'
+  tags:
+  - loc/pacific/new-caledonia/amadee
+  - subject/passages
+  - subject/sunsets
+  width: 1600
+  height: 1200
 - src: /assets/images/gallery/2026-08/port-resolution-yacht-club-check-in.webp
   title: Port Resolution Yacht Club Check In
   date: Aug 2026
