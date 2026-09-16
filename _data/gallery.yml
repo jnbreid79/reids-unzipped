@@ -1,6 +1,97 @@
 # gallery.yml — managed by gallery_import.py
 # Add new entries via the import tool; most recent first.
 
+- src: /assets/images/gallery/2026-06/baie-du-nord.webp
+  title: Baie Du Nord
+  date: Jun 2026
+  date_taken: '2026-06-28'
+  tags:
+  - loc/pacific/new-caledonia/loyalty-islands/mare
+  - subject/anchorages
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2026-07/beach-burial.webp
+  title: Beach Burial
+  date: Jul 2026
+  date_taken: '2026-07-12'
+  tags:
+  - loc/pacific/new-caledonia/loyalty-islands/ouvea
+  - subject/beaches
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-07/clouds-of-fish.webp
+  title: Clouds Of Fish
+  date: Jul 2026
+  date_taken: '2026-07-12'
+  tags:
+  - loc/pacific/new-caledonia/loyalty-islands/ouvea
+  - subject/snorkelling
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2026-07/hang-tough.webp
+  title: Hang Tough
+  date: Jul 2026
+  date_taken: '2026-07-06'
+  tags:
+  - loc/pacific/new-caledonia/loyalty-islands/mare
+  - subject/boat-life
+  - subject/the-water
+  width: 1536
+  height: 2048
+- src: /assets/images/gallery/2026-07/inquisitive-white-tip.webp
+  title: Inquisitive White Tip
+  date: Jul 2026
+  date_taken: '2026-07-12'
+  tags:
+  - loc/pacific/new-caledonia/loyalty-islands/ouvea
+  - subject/snorkelling
+  - subject/wildlife
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2026-07/kanaky-shirt.webp
+  title: Kanaky Shirt
+  date: Jul 2026
+  date_taken: '2026-07-12'
+  tags:
+  - loc/pacific/new-caledonia/loyalty-islands/ouvea
+  - subject/boat-life
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2026-07/matariki-celebration.webp
+  title: Matariki Celebration
+  date: Jul 2026
+  date_taken: '2026-07-10'
+  tags:
+  - loc/pacific/new-caledonia/loyalty-islands/ouvea
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-06/plastic-strewn-beach.webp
+  title: Plastic Strewn Beach
+  date: Jun 2026
+  date_taken: '2026-06-29'
+  tags:
+  - loc/pacific/new-caledonia/loyalty-islands/mare
+  - subject/beaches
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-07/postcard-beach.webp
+  title: Postcard Beach
+  date: Jul 2026
+  date_taken: '2026-07-08'
+  tags:
+  - loc/pacific/new-caledonia/loyalty-islands/ouvea
+  - subject/beaches
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-07/traditional-house.webp
+  title: Traditional House
+  date: Jul 2026
+  date_taken: '2026-07-02'
+  tags:
+  - loc/pacific/new-caledonia/loyalty-islands/mare
+  - subject/history
+  width: 1600
+  height: 1200
 - src: /assets/images/gallery/2026-08/amedee-anchorage-and-reef-beyond.webp
   title: Amedee anchorage and reef beyond
   date: Aug 2026
