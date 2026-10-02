@@ -1,6 +1,241 @@
 # gallery.yml — managed by gallery_import.py
 # Add new entries via the import tool; most recent first.
 
+- src: /assets/images/gallery/2026-08/dinghy-in-to-meet-the-phillip-family.webp
+  title: Dinghy in to meet the Phillip family
+  date: Aug 2026
+  date_taken: '2026-08-27'
+  tags:
+  - loc/pacific/vanuatu/malekula/maskelynes
+  - subject/anchorages
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-08/phillips-welcome-and-potluck-dinner.webp
+  title: Phillip's welcome and potluck dinner
+  date: Aug 2026
+  date_taken: '2026-08-27'
+  tags:
+  - loc/pacific/vanuatu/malekula/maskelynes
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-08/sandbar-anchorage.webp
+  title: Sandbar anchorage
+  date: Aug 2026
+  date_taken: '2026-08-28'
+  tags:
+  - loc/pacific/vanuatu/malekula/maskelynes
+  - subject/anchorages
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-08/beach-by-the-fruit-and-vegetable-gardens.webp
+  title: Beach by the fruit and vegetable gardens
+  date: Aug 2026
+  date_taken: '2026-08-29'
+  tags:
+  - loc/pacific/vanuatu/malekula/maskelynes
+  - subject/anchorages
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-08/gaspard-bay.webp
+  title: Gaspard bay
+  date: Aug 2026
+  date_taken: '2026-08-29'
+  tags:
+  - loc/pacific/vanuatu/malekula/maskelynes
+  - subject/anchorages
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-08/dugong-pair-close-by.webp
+  title: Dugong Pair Close By
+  date: Aug 2026
+  date_taken: '2026-08-29'
+  tags:
+  - loc/pacific/vanuatu/malekula/maskelynes
+  - subject/the-water
+  - subject/wildlife
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2026-08/dugong-pair.webp
+  title: Dugong pair
+  date: Aug 2026
+  date_taken: '2026-08-29'
+  tags:
+  - loc/pacific/vanuatu/malekula/maskelynes
+  - subject/the-water
+  - subject/wildlife
+  width: 1204
+  height: 677
+- src: /assets/images/gallery/2026-08/dugong-scratched-skin.webp
+  title: Dugong scratched skin
+  date: Aug 2026
+  date_taken: '2026-08-29'
+  tags:
+  - loc/pacific/vanuatu/malekula/maskelynes
+  - subject/the-water
+  - subject/wildlife
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2026-08/inquisitive-ramora-wondering-if-id-be-a-better-hos.webp
+  title: Inquisitive ramora wondering if I'd be a better host
+  date: Aug 2026
+  date_taken: '2026-08-29'
+  tags:
+  - loc/pacific/vanuatu/malekula/maskelynes
+  - subject/the-water
+  - subject/wildlife
+  width: 1220
+  height: 686
+- src: /assets/images/gallery/2026-08/single-dugong.webp
+  title: Single dugong
+  date: Aug 2026
+  date_taken: '2026-08-29'
+  tags:
+  - loc/pacific/vanuatu/malekula/maskelynes
+  - subject/the-water
+  - subject/wildlife
+  width: 1249
+  height: 703
+- src: /assets/images/gallery/2026-08/nets-attended-to.webp
+  title: Nets attended to
+  date: Aug 2026
+  date_taken: '2026-08-10'
+  tags:
+  - loc/pacific/vanuatu/tanna/port-resolution
+  - subject/anchorages
+  - subject/fishing
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2026-08/floats-marking-nets-everywhere.webp
+  title: Floats marking nets everywhere
+  date: Aug 2026
+  date_taken: '2026-08-10'
+  tags:
+  - loc/pacific/vanuatu/tanna/port-resolution
+  - subject/anchorages
+  - subject/fishing
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2026-08/nets-laid-with-floats-around-anchorage.webp
+  title: Nets laid with floats around anchorage
+  date: Aug 2026
+  date_taken: '2026-08-10'
+  tags:
+  - loc/pacific/vanuatu/tanna/port-resolution
+  - subject/anchorages
+  - subject/fishing
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2026-08/busy-day-fishing.webp
+  title: Busy day fishing
+  date: Aug 2026
+  date_taken: '2026-08-11'
+  tags:
+  - loc/pacific/vanuatu/tanna/port-resolution
+  - subject/anchorages
+  - subject/fishing
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-08/dugout-canoe-being-built.webp
+  title: Dugout canoe being built
+  date: Aug 2026
+  date_taken: '2026-08-11'
+  tags:
+  - loc/pacific/vanuatu/tanna/port-resolution
+  - subject/fishing
+  width: 1200
+  height: 1600
+- src: /assets/images/gallery/2026-08/dugout-canoe-loaded-with-fishing-net.webp
+  title: Dugout canoe loaded with fishing net
+  date: Aug 2026
+  date_taken: '2026-08-12'
+  tags:
+  - loc/pacific/vanuatu/tanna/port-resolution
+  - subject/fishing
+  width: 1200
+  height: 1600
+- src: /assets/images/gallery/2026-08/outrigger-canoe.webp
+  title: Outrigger canoe
+  date: Aug 2026
+  date_taken: '2026-08-12'
+  tags:
+  - loc/pacific/vanuatu/tanna/port-resolution
+  - subject/fishing
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-09/struggling-to-lift-wahoo-one-handed.webp
+  title: struggling to lift wahoo one handed
+  date: Sep 2026
+  date_taken: '2026-09-01'
+  tags:
+  - loc/pacific/vanuatu/malekula
+  - subject/fishing
+  width: 1600
+  height: 2133
+- src: /assets/images/gallery/2026-09/wahoo-fight-won.webp
+  title: Wahoo fight won
+  date: Sep 2026
+  date_taken: '2026-09-01'
+  tags:
+  - loc/pacific/vanuatu/malekula
+  - subject/fishing
+  width: 1600
+  height: 2133
+- src: /assets/images/gallery/2026-09/fishing-donuts.webp
+  title: Fishing donuts
+  date: Sep 2026
+  date_taken: '2026-09-03'
+  tags:
+  - loc/pacific/vanuatu/santo/tutuba
+  - subject/anchorages
+  - subject/fishing
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2026-09/high-speed-donuts-around-anchored-yachts.webp
+  title: High speed donuts around anchored yachts
+  date: Sep 2026
+  date_taken: '2026-09-03'
+  tags:
+  - loc/pacific/vanuatu/santo/tutuba
+  - subject/anchorages
+  - subject/fishing
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2026-09/snorkeller-signalling-for-donuts-beside-us.webp
+  title: Snorkeller signalling for donuts beside us
+  date: Sep 2026
+  date_taken: '2026-09-03'
+  tags:
+  - loc/pacific/vanuatu/santo/tutuba
+  - subject/fishing
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2026-09/wahoo-fillets.webp
+  title: Wahoo fillets
+  date: Sep 2026
+  date_taken: '2026-09-01'
+  tags:
+  - loc/pacific/vanuatu/malekula
+  - subject/fishing
+  width: 1398
+  height: 1864
+- src: /assets/images/gallery/2026-09/wahoo-landed.webp
+  title: Wahoo landed
+  date: Sep 2026
+  date_taken: '2026-09-01'
+  tags:
+  - loc/pacific/vanuatu/malekula
+  - subject/fishing
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2026-09/wahoo-making-a-mess.webp
+  title: Wahoo making a mess
+  date: Sep 2026
+  date_taken: '2026-09-01'
+  tags:
+  - loc/pacific/vanuatu/malekula
+  - subject/fishing
+  width: 1600
+  height: 900
 - src: /assets/images/gallery/2026-06/baie-du-nord.webp
   title: Baie Du Nord
   date: Jun 2026

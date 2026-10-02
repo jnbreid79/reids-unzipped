@@ -66,6 +66,8 @@ permalink: /gallery/
     padding: 0.55rem 1.5rem;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+    row-gap: 0.4rem;
     gap: 0;
   }
 
@@ -380,7 +382,6 @@ permalink: /gallery/
     border: none;
     cursor: pointer;
     padding: 0.2rem 0.4rem;
-    margin-left: auto;
     transition: color 0.15s;
   }
   .clear-all-btn:hover { color: var(--ice); }
@@ -407,6 +408,53 @@ permalink: /gallery/
     color: var(--navy);
     font-weight: 500;
   }
+
+  /* =====================================================================
+     SHARE — lives in the active-filters bar, next to Clear all; only
+     rendered once a filter is applied (there's then something worth
+     sharing beyond the plain gallery link already in the nav)
+     ===================================================================== */
+  .share-chip-wrap { position: relative; display: inline-flex; margin-left: auto; }
+  .share-chip-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.2rem 0.4rem;
+    transition: color 0.15s;
+  }
+  .share-chip-btn:hover { color: var(--ice); }
+  .share-chip-btn svg { flex-shrink: 0; }
+
+  /* "Link copied" tooltip, anchored to the share button */
+  .share-fab-tip {
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    right: 0;
+    z-index: 501;
+    background: var(--navy);
+    color: var(--ice);
+    border: 1px solid rgba(184,212,232,0.4);
+    border-radius: 2px;
+    padding: 0.45rem 0.9rem;
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateY(4px);
+    transition: opacity 0.25s, transform 0.25s;
+    pointer-events: none;
+  }
+  .share-fab-tip.show { opacity: 1; transform: translateY(0); }
 
   /* ── Masonry grid ── */
   .gallery-container {
@@ -1669,6 +1717,8 @@ permalink: /gallery/
       bar.appendChild(chip);
     });
 
+    bar.appendChild(makeShareControl());
+
     const btn = document.createElement('button');
     btn.className = 'clear-all-btn';
     btn.textContent = 'Clear all';
@@ -1682,6 +1732,74 @@ permalink: /gallery/
     chip.innerHTML = text + ' <span class="chip-remove">✕</span>';
     chip.querySelector('.chip-remove').addEventListener('click', onRemove);
     return chip;
+  }
+
+  // ── Share control — built fresh each time renderChips() runs, since
+  // the whole #active-filters bar is wiped (bar.innerHTML = '') on every
+  // render; a listener attached once in init() would be lost as soon as
+  // the first filter changed. Mirrors the makeChip() pattern above.
+  function activeFilterSummary() {
+    const parts = [];
+    if (activeLocPaths.size > 0)
+      parts.push([...activeLocPaths].map(p => p.split('/').pop().replace(/-/g, ' ')).join(', '));
+    if (activeSubjects.size > 0)
+      parts.push([...activeSubjects].map(s => s.replace(/-/g, ' ')).join(', '));
+    if (activeDateKeys.size > 0)
+      parts.push([...activeDateKeys].map(key => {
+        const [year, month] = key.split('|');
+        return month ? month + ' ' + year : year;
+      }).join(', '));
+    return parts.length ? parts.join(' — ') : 'the voyage';
+  }
+
+  function makeShareControl() {
+    const wrap = document.createElement('div');
+    wrap.className = 'share-chip-wrap';
+
+    const btn = document.createElement('button');
+    btn.className = 'share-chip-btn';
+    btn.setAttribute('aria-label', 'Share this view');
+    btn.innerHTML =
+      '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" ' +
+      'stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/>' +
+      '<circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>' +
+      '<line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg> Share';
+
+    const tip = document.createElement('div');
+    tip.className = 'share-fab-tip';
+    tip.textContent = 'Link copied!';
+
+    function showTip() {
+      tip.classList.add('show');
+      setTimeout(() => tip.classList.remove('show'), 2200);
+    }
+
+    btn.addEventListener('click', async () => {
+      const shareData = {
+        title: document.title,
+        text:  'Photos from Reid\u2019s Unzipped: ' + activeFilterSummary(),
+        url:   window.location.href
+      };
+      try {
+        if (navigator.share) {
+          await navigator.share(shareData);
+        } else {
+          await navigator.clipboard.writeText(window.location.href);
+          showTip();
+        }
+      } catch (err) {
+        if (err.name !== 'AbortError') {
+          try {
+            await navigator.clipboard.writeText(window.location.href);
+            showTip();
+          } catch (e) {}
+        }
+      }
+    });
+
+    wrap.appendChild(btn);
+    wrap.appendChild(tip);
+    return wrap;
   }
 
   function clearAllFilters() {
@@ -1848,10 +1966,15 @@ permalink: /gallery/
 
     initLocSearch();
 
+    // Restore any filters encoded in the URL (e.g. a shared ?loc= link)
+    // BEFORE the first render, since applyFiltersAndPage() below calls
+    // updateUrl(), which rewrites the address bar from whatever's in
+    // activeLocPaths/activeSubjects/activeDateKeys — running it first would
+    // wipe a shared link's query string before restoreFromUrl() ever reads it.
+    restoreFromUrl();
+
     // Initialise — run through filters/pagination to set initial display
     applyFiltersAndPage();
-
-    restoreFromUrl();
   })();
 
   // ── Lightbox ────────────────────────────────────────────────
