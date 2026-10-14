@@ -1,0 +1,16 @@
+{% comment %}
+  _includes/analytics.html
+  GoatCounter page-view tracking (cookie-free, no consent banner needed).
+  Included once, from the end of _includes/footer.html, so it covers every
+  page that uses the shared footer.
+
+  1. Replace YOUR-SITE-CODE with the code chosen at goatcounter.com.
+  2. Only fires on the live build (JEKYLL_ENV=production, the GitHub Pages
+     default), so local `bundle exec jekyll serve` visits are not counted.
+  3. Source tagging: links ending ?ref=whatsapp, ?ref=facebook, ?ref=email
+     etc. show up under that name in the Referrers panel.
+{% endcomment %}
+{% if jekyll.environment == "production" %}
+<script data-goatcounter="https://reidsunzipped.goatcounter.com/count"
+        async src="https://gc.zgo.at/count.js"></script>
+{% endif %}

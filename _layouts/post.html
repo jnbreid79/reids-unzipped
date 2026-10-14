@@ -421,6 +421,37 @@ layout: none
     cursor: zoom-in;
   }
 
+  /* =====================================================================
+     VIDEO SPLIT — vertical video with text alongside (landscape only)
+     <div class="video-split"> = video left
+     <div class="video-split video-split--right"> = video right
+     !important overrides the inline max-width/margin on the embeds.
+     ===================================================================== */
+  .video-split { margin: 2rem 0; }
+  .video-split > .video-embed {
+    max-width: 360px !important;
+    margin: 0 auto 1.5rem !important;
+  }
+  .video-split > :last-child,
+  .video-split > :last-child > p:last-child { margin-bottom: 0; }
+
+  @media (min-width: 900px) {
+    .video-split {
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      gap: 2rem;
+      align-items: start;
+      /* width: min(820px, calc(100vw - 3rem)); 				*/
+      /* margin-left: calc(50% - min(410px, 50vw - 1.5rem)); 	*/
+    }
+    .video-split > .video-embed {
+      max-width: none !important;
+      margin: 0 !important;
+    }
+    .video-split--right { grid-template-columns: 1fr 300px; }
+    .video-split--right > .video-embed { order: 2; }
+  }
+  
     /* =====================================================================
      LIGHTBOX
      ===================================================================== */
@@ -824,22 +855,24 @@ layout: none
 
     if (fabSh) {
       fabSh.addEventListener('click', async () => {
-        const shareData = {
+        const shareUrl = new URL(window.location.href);
+		shareUrl.searchParams.set('ref', 'share');
+		const shareData = {
           title: document.title,
           text:  '{{ page.excerpt | strip_html | strip | truncatewords: 20 | escape }}',
-          url:   window.location.href
+          url:   shareUrl.toString()
         };
         try {
           if (navigator.share) {
             await navigator.share(shareData);
           } else {
-            await navigator.clipboard.writeText(window.location.href);
-            showTip('Link copied!');
+            await navigator.clipboard.writeText(shareUrl.toString());
+			showTip('Link copied!');
           }
         } catch(err) {
           if (err.name !== 'AbortError') {
             try {
-              await navigator.clipboard.writeText(window.location.href);
+              await navigator.clipboard.writeText(shareUrl.toString());
               showTip('Link copied!');
             } catch(e) {}
           }

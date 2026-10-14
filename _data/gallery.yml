@@ -1,6 +1,254 @@
 # gallery.yml — managed by gallery_import.py
 # Add new entries via the import tool; most recent first.
 
+- src: /assets/images/gallery/2026-08/erromango-anchorage.webp
+  title: Erromango anchorage
+  date: Aug 2026
+  date_taken: '2026-08-15'
+  tags:
+  - loc/pacific/vanuatu/erromango
+  - subject/anchorages
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-08/port-vila-anchorage.webp
+  title: Port Vila anchorage
+  date: Aug 2026
+  date_taken: '2026-08-18'
+  tags:
+  - loc/pacific/vanuatu/efate/port-vila
+  - subject/anchorages
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-08/port-vila-craft-market.webp
+  title: Port Vila craft market
+  date: Aug 2026
+  date_taken: '2026-08-21'
+  tags:
+  - loc/pacific/vanuatu/efate/port-vila
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-08/banyon-tree.webp
+  title: Banyon tree
+  date: Aug 2026
+  date_taken: '2026-08-23'
+  tags:
+  - loc/pacific/vanuatu/efate/havannah
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-08/evening-beach-trip.webp
+  title: Evening beach trip
+  date: Aug 2026
+  date_taken: '2026-08-24'
+  tags:
+  - loc/pacific/vanuatu/efate/moso-island
+  - subject/beaches
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-08/goodbye-paul-and-thank-you.webp
+  title: Goodbye Paul and thank you
+  date: Aug 2026
+  date_taken: '2026-08-26'
+  tags:
+  - loc/pacific/vanuatu/efate/havannah
+  - subject/boat-life
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-08/vanuatu-crew.webp
+  title: Vanuatu crew
+  date: Aug 2026
+  date_taken: '2026-08-26'
+  tags:
+  - loc/pacific/vanuatu/efate/havannah
+  - subject/boat-life
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-08/moon-rise.webp
+  title: Moon rise
+  date: Aug 2026
+  date_taken: '2026-08-28'
+  tags:
+  - loc/pacific/vanuatu/malekula/maskelynes/uilendeuv-sandbank
+  - subject/boat-life
+  width: 1200
+  height: 1600
+- src: /assets/images/gallery/2026-08/angus-on-bommie-watch.webp
+  title: Angus on bommie watch
+  date: Aug 2026
+  date_taken: '2026-08-29'
+  tags:
+  - loc/pacific/vanuatu/malekula/maskelynes/gaspard-bay
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-08/coral-amongst-black-sand.webp
+  title: Coral amongst black sand
+  date: Aug 2026
+  date_taken: '2026-08-30'
+  tags:
+  - loc/pacific/vanuatu/ambrym/craig-cove
+  - subject/snorkelling
+  - subject/the-water
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2026-08/ambrym-anchorage.webp
+  title: Ambrym anchorage
+  date: Aug 2026
+  date_taken: '2026-08-31'
+  tags:
+  - loc/pacific/vanuatu/ambrym/craig-cove
+  - subject/anchorages
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-08/hot-springs-on-ambrym.webp
+  title: Hot Springs On Ambrym
+  date: Aug 2026
+  date_taken: '2026-08-31'
+  tags:
+  - loc/pacific/vanuatu/ambrym/craig-cove
+  - subject/beaches
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-09/bruce-and-arlene-from-migration-leading-games.webp
+  title: Bruce and Arlene from Migration leading games
+  date: Sep 2026
+  date_taken: '2026-09-02'
+  tags:
+  - loc/pacific/vanuatu/malekula/wala
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-09/drums-at-the-wala-festival.webp
+  title: Drums at the Wala festival
+  date: Sep 2026
+  date_taken: '2026-09-02'
+  tags:
+  - loc/pacific/vanuatu/malekula/wala
+  - subject/history
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-09/yam-kastom-dance.webp
+  title: Yam kastom dance
+  date: Sep 2026
+  date_taken: '2026-09-02'
+  tags:
+  - loc/pacific/vanuatu/malekula/wala
+  - subject/history
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2026-09/school-children-audience.webp
+  title: School children audience
+  date: Sep 2026
+  date_taken: '2026-09-02'
+  tags:
+  - loc/pacific/vanuatu/malekula/wala
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-09/school-children-walk-to-festival.webp
+  title: School children walk to festival
+  date: Sep 2026
+  date_taken: '2026-09-02'
+  tags:
+  - loc/pacific/vanuatu/malekula/wala
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-09/school-girls-between-dances-at-festival.webp
+  title: School girls between dances at festival
+  date: Sep 2026
+  date_taken: '2026-09-02'
+  tags:
+  - loc/pacific/vanuatu/malekula/wala
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-09/happy-on-passage-from-malekula.webp
+  title: Happy on passage from Malekula
+  date: Sep 2026
+  date_taken: '2026-09-06'
+  tags:
+  - loc/pacific/vanuatu/malekula
+  - subject/family
+  - subject/passages
+  width: 1600
+  height: 2133
+- src: /assets/images/gallery/2026-08/sand-drawing-ship.webp
+  title: Sand drawing ship
+  date: Aug 2026
+  date_taken: '2026-08-19'
+  tags:
+  - loc/pacific/vanuatu/efate/port-vila
+  - subject/history
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-08/fire-breathing.webp
+  title: Fire breathing
+  date: Aug 2026
+  date_taken: '2026-08-21'
+  tags:
+  - loc/pacific/vanuatu/efate/port-vila
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-08/fire-wheel.webp
+  title: Fire wheel
+  date: Aug 2026
+  date_taken: '2026-08-21'
+  tags:
+  - loc/pacific/vanuatu/efate/port-vila
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-08/sand-drawing-grid.webp
+  title: Sand drawing grid
+  date: Aug 2026
+  date_taken: '2026-08-19'
+  tags:
+  - loc/pacific/vanuatu/efate/port-vila
+  - subject/history
+  width: 720
+  height: 1280
+- src: /assets/images/gallery/2026-09/kastom-dance-fish.webp
+  title: Kastom dance fish
+  date: Sep 2026
+  date_taken: '2026-09-02'
+  tags:
+  - loc/pacific/vanuatu/malekula/wala
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2026-09/kastom-dance-women.webp
+  title: Kastom dance women
+  date: Sep 2026
+  date_taken: '2026-09-02'
+  tags:
+  - loc/pacific/vanuatu/malekula/wala
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2026-09/gaua-private-show.webp
+  title: Gaua private show
+  date: Sep 2026
+  date_taken: '2026-09-13'
+  tags:
+  - loc/pacific/vanuatu/gaua/bushmans-bay
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2026-09/gaua-water-music.webp
+  title: Gaua water music
+  date: Sep 2026
+  date_taken: '2026-09-13'
+  tags:
+  - loc/pacific/vanuatu/gaua/bushmans-bay
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2026-09/water-music-our-turn.webp
+  title: Water music our turn
+  date: Sep 2026
+  date_taken: '2026-09-07'
+  tags:
+  - loc/pacific/vanuatu/gaua/bushmans-bay
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2026-09/kava-bar.webp
+  title: Kava bar
+  date: Sep 2026
+  date_taken: '2026-09-12'
+  tags:
+  - loc/pacific/vanuatu/efate/port-vila
+  width: 1600
+  height: 1200
 - src: /assets/images/gallery/2026-08/dinghy-in-to-meet-the-phillip-family.webp
   title: Dinghy in to meet the Phillip family
   date: Aug 2026
