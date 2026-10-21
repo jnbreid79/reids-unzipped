@@ -1,6 +1,344 @@
 # gallery.yml — managed by gallery_import.py
 # Add new entries via the import tool; most recent first.
 
+- src: /assets/images/gallery/2026-08/vanuatu-route.webp
+  title: Vanuatu route
+  date: Aug 2026
+  date_taken: '2026-08-19'
+  tags:
+  - loc/pacific/vanuatu
+  - subject/passages
+  width: 1600
+  height: 788
+- src: /assets/images/gallery/2026-09/angus-swing-at-riri.webp
+  title: Angus swing at Riri
+  date: Sep 2026
+  date_taken: '2026-09-07'
+  tags:
+  - loc/pacific/vanuatu/santo/oyster-island
+  - subject/activities
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2026-09/riri-river.webp
+  title: Riri river
+  date: Sep 2026
+  date_taken: '2026-09-07'
+  tags:
+  - loc/pacific/vanuatu/santo/oyster-island
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-09/beach-evening.webp
+  title: Beach evening
+  date: Sep 2026
+  date_taken: '2026-09-07'
+  tags:
+  - loc/pacific/vanuatu/santo/oyster-island
+  - subject/beaches
+  - subject/social
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-09/minicat-sailing.webp
+  title: Minicat sailing
+  date: Sep 2026
+  date_taken: '2026-09-10'
+  tags:
+  - loc/pacific/vanuatu/santo/oyster-island
+  - subject/activities
+  width: 1600
+  height: 1068
+- src: /assets/images/gallery/2026-09/tiwal-racing.webp
+  title: Tiwal racing
+  date: Sep 2026
+  date_taken: '2026-09-10'
+  tags:
+  - loc/pacific/vanuatu/santo/oyster-island
+  - subject/activities
+  width: 1600
+  height: 1068
+- src: /assets/images/gallery/2026-09/port-olry-shop.webp
+  title: Port Olry shop
+  date: Sep 2026
+  date_taken: '2026-09-11'
+  tags:
+  - loc/pacific/vanuatu/santo/port-olry
+  - subject/provisioning
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-09/pot-olry-decorated-house.webp
+  title: Pot Olry decorated house
+  date: Sep 2026
+  date_taken: '2026-09-11'
+  tags:
+  - loc/pacific/vanuatu/santo/port-olry
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-09/port-olry-kava-drying.webp
+  title: Port Olry kava drying
+  date: Sep 2026
+  date_taken: '2026-09-11'
+  tags:
+  - loc/pacific/vanuatu/santo/port-olry
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-09/port-olry-landing.webp
+  title: Port Olry landing
+  date: Sep 2026
+  date_taken: '2026-09-11'
+  tags:
+  - loc/pacific/vanuatu/santo/port-olry
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-09/port-olry-dinghy-landing.webp
+  title: Port Olry dinghy landing
+  date: Sep 2026
+  date_taken: '2026-09-11'
+  tags:
+  - loc/pacific/vanuatu/santo/port-olry
+  - subject/beaches
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-09/bushmans-bay-village.webp
+  title: Bushman's bay village
+  date: Sep 2026
+  date_taken: '2026-09-14'
+  tags:
+  - loc/pacific/vanuatu/gaua/bushmans-bay
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-09/volcanic-ash-from-gaua.webp
+  title: Volcanic ash from Gaua
+  date: Sep 2026
+  date_taken: '2026-09-17'
+  tags:
+  - loc/pacific/vanuatu/gaua/bushmans-bay
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-09/volcanic-ash-coating-from-gaua.webp
+  title: Volcanic ash coating from Gaua
+  date: Sep 2026
+  date_taken: '2026-09-17'
+  tags:
+  - loc/pacific/vanuatu/gaua/bushmans-bay
+  width: 1200
+  height: 1600
+- src: /assets/images/gallery/2026-09/broken-wharf-sola.webp
+  title: Broken wharf Sola
+  date: Sep 2026
+  date_taken: '2026-09-17'
+  tags:
+  - loc/pacific/vanuatu/sola
+  - subject/beaches
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-09/checking-out-of-vanuatu-in-sola.webp
+  title: Checking out of vanuatu in Sola
+  date: Sep 2026
+  date_taken: '2026-09-17'
+  tags:
+  - loc/pacific/vanuatu/sola
+  - subject/family
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-09/searching-for-immigration-in-sola.webp
+  title: Searching for immigration in Sola
+  date: Sep 2026
+  date_taken: '2026-09-17'
+  tags:
+  - loc/pacific/vanuatu/sola
+  - subject/bureaucracy
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-09/immaculate-sola-village.webp
+  title: Immaculate Sola village
+  date: Sep 2026
+  date_taken: '2026-09-17'
+  tags:
+  - loc/pacific/vanuatu/sola
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-09/sola-village.webp
+  title: Sola village
+  date: Sep 2026
+  date_taken: '2026-09-17'
+  tags:
+  - loc/pacific/vanuatu/sola
+  width: 1200
+  height: 1600
+- src: /assets/images/gallery/2026-09/sailing-into-sola.webp
+  title: Sailing into Sola
+  date: Sep 2026
+  date_taken: '2026-09-17'
+  tags:
+  - loc/pacific/vanuatu/sola
+  - subject/sailing
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-09/hanging-out-in-bushmans-bay.webp
+  title: Hanging out in Bushman's bay
+  date: Sep 2026
+  date_taken: '2026-09-14'
+  tags:
+  - loc/pacific/vanuatu/gaua/bushmans-bay
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-09/isla-tree-swing-matevulu.webp
+  title: Isla tree swing matevulu
+  date: Sep 2026
+  date_taken: '2026-09-08'
+  tags:
+  - loc/pacific/vanuatu/santo/oyster-island
+  - subject/activities
+  width: 1024
+  height: 576
+- src: /assets/images/gallery/2026-09/riri-blue-hole.webp
+  title: Riri blue hole
+  date: Sep 2026
+  date_taken: '2026-09-07'
+  tags:
+  - loc/pacific/vanuatu/santo/oyster-island
+  - subject/the-water
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2026-09/riri-blue-hole-entrance.webp
+  title: Riri blue hole entrance
+  date: Sep 2026
+  date_taken: '2026-09-07'
+  tags:
+  - loc/pacific/vanuatu/santo/oyster-island
+  - subject/the-water
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2026-09/riri-blue-hole-landing.webp
+  title: Riri blue hole landing
+  date: Sep 2026
+  date_taken: '2026-09-07'
+  tags:
+  - loc/pacific/vanuatu/santo/oyster-island
+  - subject/the-water
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2026-09/pinata.webp
+  title: Pinata
+  date: Sep 2026
+  date_taken: '2026-09-09'
+  tags:
+  - loc/pacific/vanuatu/santo/oyster-island
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-09/facepainting.webp
+  title: Facepainting
+  date: Sep 2026
+  date_taken: '2026-09-09'
+  tags:
+  - loc/pacific/vanuatu/santo/oyster-island
+  width: 1200
+  height: 1600
+- src: /assets/images/gallery/2026-09/potluck-dinner.webp
+  title: Potluck dinner
+  date: Sep 2026
+  date_taken: '2026-09-09'
+  tags:
+  - loc/pacific/vanuatu/santo/oyster-island
+  width: 1200
+  height: 1600
+- src: /assets/images/gallery/2026-09/potluck-dinner-team.webp
+  title: Potluck dinner team
+  date: Sep 2026
+  date_taken: '2026-09-09'
+  tags:
+  - loc/pacific/vanuatu/santo/oyster-island
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-09/sharannas-cake.webp
+  title: Sharannas cake
+  date: Sep 2026
+  date_taken: '2026-09-09'
+  tags:
+  - loc/pacific/vanuatu/santo/oyster-island
+  - subject/boat-life
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2026-09/tiwal-match-racing.webp
+  title: Tiwal match racing
+  date: Sep 2026
+  date_taken: '2026-09-10'
+  tags:
+  - loc/pacific/vanuatu/santo/oyster-island
+  - subject/boat-life
+  - subject/the-water
+  width: 1600
+  height: 1068
+- src: /assets/images/gallery/2026-09/winning-crew.webp
+  title: Winning crew
+  date: Sep 2026
+  date_taken: '2026-09-09'
+  tags:
+  - loc/pacific/vanuatu/santo/oyster-island
+  - subject/boat-life
+  - subject/the-water
+  width: 1600
+  height: 1068
+- src: /assets/images/gallery/2026-08/anemone-clown-fish.webp
+  title: Anemone clown fish
+  date: Aug 2026
+  date_taken: '2026-08-30'
+  tags:
+  - loc/pacific/vanuatu/ambrym/craig-cove
+  - subject/snorkelling
+  - subject/the-water
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2026-08/black-sand-bommie.webp
+  title: Black sand bommie
+  date: Aug 2026
+  date_taken: '2026-08-30'
+  tags:
+  - loc/pacific/vanuatu/ambrym/craig-cove
+  - subject/snorkelling
+  - subject/the-water
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2026-08/christmas-tree-worms.webp
+  title: Christmas tree worms
+  date: Aug 2026
+  date_taken: '2026-08-30'
+  tags:
+  - loc/pacific/vanuatu/santo/oyster-island
+  - subject/snorkelling
+  - subject/the-water
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2026-08/clown-fish.webp
+  title: Clown fish
+  date: Aug 2026
+  date_taken: '2026-08-30'
+  tags:
+  - loc/pacific/vanuatu/santo/oyster-island
+  - subject/snorkelling
+  - subject/the-water
+  - subject/wildlife
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2026-08/coral-amongst-black-sand-1.webp
+  title: Coral amongst black sand
+  date: Aug 2026
+  date_taken: '2026-08-30'
+  tags:
+  - loc/pacific/vanuatu/santo/oyster-island
+  - subject/snorkelling
+  - subject/the-water
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2026-08/sprawling-anemone.webp
+  title: Sprawling anemone
+  date: Aug 2026
+  date_taken: '2026-08-30'
+  tags:
+  - loc/pacific/vanuatu/santo/oyster-island
+  - subject/snorkelling
+  - subject/the-water
+  width: 1600
+  height: 900
 - src: /assets/images/gallery/2026-08/erromango-anchorage.webp
   title: Erromango anchorage
   date: Aug 2026
@@ -241,12 +579,12 @@
   - loc/pacific/vanuatu/gaua/bushmans-bay
   width: 1600
   height: 900
-- src: /assets/images/gallery/2026-09/kava-bar.webp
+- src: /assets/images/gallery/2026-08/kava-bar.webp
   title: Kava bar
-  date: Sep 2026
-  date_taken: '2026-09-12'
+  date: Aug 2026
+  date_taken: '2026-08-30'
   tags:
-  - loc/pacific/vanuatu/efate/port-vila
+  - loc/pacific/vanuatu/ambrym/craig-cove
   width: 1600
   height: 1200
 - src: /assets/images/gallery/2026-08/dinghy-in-to-meet-the-phillip-family.webp

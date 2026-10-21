@@ -3,7 +3,7 @@
 # =============================================================================
 
 # Theme
-remote_theme: "mmistakes/minimal-mistakes@4.26.2"
+theme: minimal-mistakes-jekyll
 minimal_mistakes_skin: "zipper"   # our custom skin (see _sass/minimal-mistakes/skins/_zipper.scss)
 
 # Site settings
