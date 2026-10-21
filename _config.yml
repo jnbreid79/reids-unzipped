@@ -3,7 +3,7 @@
 # =============================================================================
 
 # Theme
-theme: minimal-mistakes-jekyll
+remote_theme: "mmistakes/minimal-mistakes@4.26.2"
 minimal_mistakes_skin: "zipper"   # our custom skin (see _sass/minimal-mistakes/skins/_zipper.scss)
 
 # Site settings
@@ -123,3 +123,11 @@ og_image: "/assets/images/zipper-og-image.jpg"   # ← a nice hero shot for soci
 sass:
   sass_dir: _sass
   style: compressed
+
+# =============================================================================
+# Exclude
+# =============================================================================
+exclude:
+  - _config_local.yml
+  
+  
