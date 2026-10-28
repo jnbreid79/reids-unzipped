@@ -1,6 +1,167 @@
 # gallery.yml — managed by gallery_import.py
 # Add new entries via the import tool; most recent first.
 
+- src: /assets/images/gallery/2026-09/beautiful-basket-to-welcome-us-to-lata.webp
+  title: Beautiful basket to welcome us to Lata
+  date: Sep 2026
+  date_taken: '2026-09-19'
+  tags:
+  - loc/pacific/solomon-islands/lata/shaw-point
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-09/welcome-flowers.webp
+  title: Welcome flowers
+  date: Sep 2026
+  date_taken: '2026-09-19'
+  tags:
+  - loc/pacific/solomon-islands/lata/shaw-point
+  width: 1200
+  height: 1600
+- src: /assets/images/gallery/2026-09/meeting-the-bishop-on-bishop-pattesons-day.webp
+  title: Meeting the Bishop on Bishop Patteson's day
+  date: Sep 2026
+  date_taken: '2026-09-20'
+  tags:
+  - loc/pacific/solomon-islands/lata/shaw-point
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-09/keeping-flies-away-as-feast-is-prepared.webp
+  title: Keeping flies away as feast is prepared
+  date: Sep 2026
+  date_taken: '2026-09-20'
+  tags:
+  - loc/pacific/solomon-islands/lata/shaw-point
+  - subject/festival
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-09/high-table-at-the-feast.webp
+  title: High table at the feast
+  date: Sep 2026
+  date_taken: '2026-09-20'
+  tags:
+  - loc/pacific/solomon-islands/lata/shaw-point
+  - subject/festival
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-09/everyone-sitting-down-for-the-feast.webp
+  title: Everyone sitting down for the feast
+  date: Sep 2026
+  date_taken: '2026-09-20'
+  tags:
+  - loc/pacific/solomon-islands/lata/shaw-point
+  - subject/festival
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-09/feast-table-lines-arranged-by-island-group.webp
+  title: Feast table lines arranged by island group
+  date: Sep 2026
+  date_taken: '2026-09-20'
+  tags:
+  - loc/pacific/solomon-islands/lata/shaw-point
+  - subject/festival
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-09/zipper-anchored-at-shaw-point.webp
+  title: Zipper anchored at Shaw Point
+  date: Sep 2026
+  date_taken: '2026-09-21'
+  tags:
+  - loc/pacific/solomon-islands/lata/shaw-point
+  - subject/anchorages
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-09/enjoying-sunset-on-jadamama.webp
+  title: Enjoying sunset on jadamama
+  date: Sep 2026
+  date_taken: '2026-09-21'
+  tags:
+  - loc/pacific/solomon-islands/lata/shaw-point
+  - subject/anchorages
+  - subject/sunsets
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-09/rare-photo-together.webp
+  title: Rare photo together
+  date: Sep 2026
+  date_taken: '2026-09-21'
+  tags:
+  - loc/pacific/solomon-islands/lata/shaw-point
+  - subject/anchorages
+  - subject/sunsets
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-09/pan-pipes-playing-throughout-the-dancing.webp
+  title: Pan pipes playing throughout the dancing
+  date: Sep 2026
+  date_taken: '2026-09-20'
+  tags:
+  - loc/pacific/solomon-islands/lata/shaw-point
+  - subject/festival
+  width: 1280
+  height: 720
+- src: /assets/images/gallery/2026-09/dorado-catch.webp
+  title: Dorado catch
+  date: Sep 2026
+  date_taken: '2026-09-18'
+  tags:
+  - loc/pacific/solomon-islands
+  - subject/fishing
+  - subject/passages
+  width: 1600
+  height: 2133
+- src: /assets/images/gallery/2026-09/chatting-with-the-bishop.webp
+  title: Chatting with the bishop
+  date: Sep 2026
+  date_taken: '2026-09-20'
+  tags:
+  - loc/pacific/solomon-islands/lata/shaw-point
+  - subject/festival
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-09/feast-to-celebrate-bishop-pattesons-day.webp
+  title: Feast to celebrate bishop patteson's day
+  date: Sep 2026
+  date_taken: '2026-09-20'
+  tags:
+  - loc/pacific/solomon-islands/lata/shaw-point
+  - subject/festival
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-09/sharing-morning-tea-with-the-bishop.webp
+  title: Sharing morning tea with the bishop
+  date: Sep 2026
+  date_taken: '2026-09-20'
+  tags:
+  - loc/pacific/solomon-islands/lata/shaw-point
+  - subject/festival
+  width: 1600
+  height: 1328
+- src: /assets/images/gallery/2026-09/sharing-nail-varnish-with-melody.webp
+  title: Sharing nail varnish with melody
+  date: Sep 2026
+  date_taken: '2026-09-20'
+  tags:
+  - loc/pacific/solomon-islands/lata/shaw-point
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-09/dancing-at-the-festival.webp
+  title: Dancing at the festival
+  date: Sep 2026
+  date_taken: '2026-09-20'
+  tags:
+  - loc/pacific/solomon-islands/lata/shaw-point
+  - subject/festival
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2026-09/elaborate-dancing-at-the-festival.webp
+  title: Elaborate dancing at the festival
+  date: Sep 2026
+  date_taken: '2026-09-20'
+  tags:
+  - loc/pacific/solomon-islands/lata/shaw-point
+  - subject/festival
+  width: 1016
+  height: 572
 - src: /assets/images/gallery/2026-08/vanuatu-route.webp
   title: Vanuatu route
   date: Aug 2026
