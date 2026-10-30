@@ -1,6 +1,620 @@
 # gallery.yml — managed by gallery_import.py
 # Add new entries via the import tool; most recent first.
 
+- src: /assets/images/gallery/2026-09/welcome-to-roderick-bay.webp
+  title: Welcome to Roderick Bay
+  date: Sep 2026
+  date_taken: '2026-09-30'
+  tags:
+  - loc/pacific/solomon-islands/roderick-bay
+  - subject/family
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-10/roderick-bay.webp
+  title: Roderick Bay
+  date: Oct 2026
+  date_taken: '2026-10-01'
+  tags:
+  - loc/pacific/solomon-islands/roderick-bay
+  - subject/landscapes
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-10/the-yachties-beach-at-roderick-bay.webp
+  title: The yachties beach at Roderick Bay
+  date: Oct 2026
+  date_taken: '2026-10-02'
+  tags:
+  - loc/pacific/solomon-islands/roderick-bay
+  - subject/anchorages
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-10/hiking-with-robert-to-the-gardens.webp
+  title: Hiking with Robert to the gardens
+  date: Oct 2026
+  date_taken: '2026-10-02'
+  tags:
+  - loc/pacific/solomon-islands/roderick-bay
+  - subject/village
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-10/robert-shimming-up-a-beetlenut-tree.webp
+  title: Robert shimming up a beetlenut tree
+  date: Oct 2026
+  date_taken: '2026-10-02'
+  tags:
+  - loc/pacific/solomon-islands/roderick-bay
+  - subject/village
+  width: 1200
+  height: 1600
+- src: /assets/images/gallery/2026-10/robert-showing-us-his-gardens.webp
+  title: Robert showing us his gardens
+  date: Oct 2026
+  date_taken: '2026-10-02'
+  tags:
+  - loc/pacific/solomon-islands/roderick-bay
+  - subject/village
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-10/growing-fruit-and-veg-on-steep-hillsides.webp
+  title: Growing fruit and veg on steep hillsides
+  date: Oct 2026
+  date_taken: '2026-10-02'
+  tags:
+  - loc/pacific/solomon-islands/roderick-bay
+  - subject/village
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-10/scary-looking-spiders-harmless-apparently.webp
+  title: Scary looking spiders, harmless (apparently)
+  date: Oct 2026
+  date_taken: '2026-10-02'
+  tags:
+  - loc/pacific/solomon-islands/roderick-bay
+  - subject/village
+  width: 1200
+  height: 1600
+- src: /assets/images/gallery/2026-10/panpipe-demonstration.webp
+  title: Panpipe demonstration
+  date: Oct 2026
+  date_taken: '2026-10-02'
+  tags:
+  - loc/pacific/solomon-islands/roderick-bay
+  - subject/village
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-10/the-local-shop-identified-by-mobile-phone-top-up-s.webp
+  title: The local shop, identified by mobile phone top up sign
+  date: Oct 2026
+  date_taken: '2026-10-03'
+  tags:
+  - loc/pacific/solomon-islands/simons-nature-reserve
+  - subject/village
+  width: 1600
+  height: 902
+- src: /assets/images/gallery/2026-10/the-village-over-by-simons.webp
+  title: The village over by simon's
+  date: Oct 2026
+  date_taken: '2026-10-03'
+  tags:
+  - loc/pacific/solomon-islands/simons-nature-reserve
+  - subject/village
+  width: 1600
+  height: 902
+- src: /assets/images/gallery/2026-10/village-over-near-simons.webp
+  title: Village over near simon's
+  date: Oct 2026
+  date_taken: '2026-10-03'
+  tags:
+  - loc/pacific/solomon-islands/simons-nature-reserve
+  - subject/village
+  width: 1600
+  height: 902
+- src: /assets/images/gallery/2026-10/mangroves.webp
+  title: Mangroves
+  date: Oct 2026
+  date_taken: '2026-10-03'
+  tags:
+  - loc/pacific/solomon-islands/simons-nature-reserve
+  width: 1600
+  height: 902
+- src: /assets/images/gallery/2026-10/simons-shelter-with-carvings-and-shells.webp
+  title: Simon's shelter with carvings and shells
+  date: Oct 2026
+  date_taken: '2026-10-03'
+  tags:
+  - loc/pacific/solomon-islands/simons-nature-reserve
+  - subject/village
+  width: 1600
+  height: 902
+- src: /assets/images/gallery/2026-10/roderick-bay-anchorage.webp
+  title: Roderick bay anchorage
+  date: Oct 2026
+  date_taken: '2026-10-03'
+  tags:
+  - loc/pacific/solomon-islands/roderick-bay
+  - subject/anchorages
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-10/happy-mums.webp
+  title: Happy mums
+  date: Oct 2026
+  date_taken: '2026-10-03'
+  tags:
+  - loc/pacific/solomon-islands/roderick-bay
+  - subject/village
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-10/happy-reid-ladies.webp
+  title: Happy Reid ladies
+  date: Oct 2026
+  date_taken: '2026-10-03'
+  tags:
+  - loc/pacific/solomon-islands/roderick-bay
+  - subject/village
+  width: 1200
+  height: 1600
+- src: /assets/images/gallery/2026-10/setup-for-the-kastom-dance.webp
+  title: Setup for the kastom dance
+  date: Oct 2026
+  date_taken: '2026-10-03'
+  tags:
+  - loc/pacific/solomon-islands/roderick-bay
+  - subject/festival
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-10/kastom-dance-setup-overlooking-the-anchorage.webp
+  title: Kastom dance setup overlooking the anchorage
+  date: Oct 2026
+  date_taken: '2026-10-03'
+  tags:
+  - loc/pacific/solomon-islands/roderick-bay
+  - subject/festival
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-10/ready-for-the-kastom-dance.webp
+  title: Ready for the kastom dance
+  date: Oct 2026
+  date_taken: '2026-10-03'
+  tags:
+  - loc/pacific/solomon-islands/roderick-bay
+  - subject/festival
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-10/move-over-i-got-this.webp
+  title: Move over, I got this...
+  date: Oct 2026
+  date_taken: '2026-10-03'
+  tags:
+  - loc/pacific/solomon-islands/roderick-bay
+  - subject/festival
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-10/wreck-at-the-end-of-roderick-bay.webp
+  title: Wreck at the end of Roderick Bay
+  date: Oct 2026
+  date_taken: '2026-10-03'
+  tags:
+  - loc/pacific/solomon-islands/roderick-bay
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-10/joseph-relaxing-into-some-internet-time.webp
+  title: Joseph relaxing into some internet time
+  date: Oct 2026
+  date_taken: '2026-10-04'
+  tags:
+  - loc/pacific/solomon-islands/roderick-bay
+  - subject/anchorages
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-10/out-comes-the-big-skipping-rope.webp
+  title: Out comes the big skipping rope
+  date: Oct 2026
+  date_taken: '2026-10-04'
+  tags:
+  - loc/pacific/solomon-islands/roderick-bay
+  - subject/village
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-10/skipping-rope-proves-a-big-hit.webp
+  title: Skipping rope proves a big hit
+  date: Oct 2026
+  date_taken: '2026-10-04'
+  tags:
+  - loc/pacific/solomon-islands/roderick-bay
+  - subject/village
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-10/sibling-affection.webp
+  title: Sibling affection
+  date: Oct 2026
+  date_taken: '2026-10-01'
+  tags:
+  - loc/pacific/solomon-islands/roderick-bay
+  - subject/family
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-10/wonderful-welcome-drinks-and-centrepiece.webp
+  title: Wonderful welcome drinks and centrepiece
+  date: Oct 2026
+  date_taken: '2026-10-01'
+  tags:
+  - loc/pacific/solomon-islands/roderick-bay
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-10/girls-beaming-with-their-leis.webp
+  title: Girls beaming with their leis
+  date: Oct 2026
+  date_taken: '2026-10-04'
+  tags:
+  - loc/pacific/solomon-islands/roderick-bay
+  - subject/festival
+  width: 1200
+  height: 1600
+- src: /assets/images/gallery/2026-10/sophie-receiving-her-lei.webp
+  title: Sophie receiving her lei
+  date: Oct 2026
+  date_taken: '2026-10-04'
+  tags:
+  - loc/pacific/solomon-islands/roderick-bay
+  - subject/festival
+  width: 1200
+  height: 1600
+- src: /assets/images/gallery/2026-10/scoping-our-way-through-the-reef-at-simons.webp
+  title: Scoping our way through the reef at simon's
+  date: Oct 2026
+  date_taken: '2026-10-03'
+  tags:
+  - loc/pacific/solomon-islands/simons-nature-reserve
+  - subject/the-water
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-10/pan-pipes-how-hard-can-this-be.webp
+  title: Pan pipes, how hard can this be
+  date: Oct 2026
+  date_taken: '2026-10-04'
+  tags:
+  - loc/pacific/solomon-islands/roderick-bay
+  - subject/festival
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-10/visiting-the-school-over-at-simons.webp
+  title: Visiting the school over at simon's
+  date: Oct 2026
+  date_taken: '2026-10-03'
+  tags:
+  - loc/pacific/solomon-islands/simons-nature-reserve
+  - subject/village
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-10/roderick-bay-pan-pipes.webp
+  title: Roderick Bay pan pipes
+  date: Oct 2026
+  date_taken: '2026-10-30'
+  tags:
+  - loc/pacific/solomon-islands/roderick-bay
+  - subject/festival
+  - subject/culture
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2026-10/roderick-bay-kastom-dance.webp
+  title: Roderick Bay kastom dance
+  date: Oct 2026
+  date_taken: '2026-10-30'
+  tags:
+  - loc/pacific/solomon-islands/roderick-bay
+  - subject/festival
+  - subject/culture
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2026-10/clown-fish-in-blue-anemone.webp
+  title: Clown fish in blue anemone
+  date: Oct 2026
+  date_taken: '2026-10-03'
+  tags:
+  - loc/pacific/solomon-islands/simons-nature-reserve
+  - subject/snorkelling
+  - subject/wildlife
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2026-10/clown-fish-family-in-brown-anemone.webp
+  title: Clown fish family in brown anemone
+  date: Oct 2026
+  date_taken: '2026-10-03'
+  tags:
+  - loc/pacific/solomon-islands/simons-nature-reserve
+  - subject/snorkelling
+  - subject/wildlife
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2026-10/another-clown-fish.webp
+  title: Another clown fish
+  date: Oct 2026
+  date_taken: '2026-10-03'
+  tags:
+  - loc/pacific/solomon-islands/simons-nature-reserve
+  - subject/snorkelling
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2026-10/blue-fish-in-coral.webp
+  title: Blue fish in coral
+  date: Oct 2026
+  date_taken: '2026-10-03'
+  tags:
+  - loc/pacific/solomon-islands/simons-nature-reserve
+  - subject/snorkelling
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2026-10/clown-fish-in-soft-brown-anemone.webp
+  title: Clown fish in soft brown anemone
+  date: Oct 2026
+  date_taken: '2026-10-03'
+  tags:
+  - loc/pacific/solomon-islands/simons-nature-reserve
+  - subject/snorkelling
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2026-10/tiny-clown-fish-hiding-in-hard-coral.webp
+  title: Tiny clown fish hiding in hard coral
+  date: Oct 2026
+  date_taken: '2026-10-03'
+  tags:
+  - loc/pacific/solomon-islands/simons-nature-reserve
+  - subject/snorkelling
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2026-10/clown-fish-in-white-tipped-anemone.webp
+  title: Clown fish in white tipped anemone
+  date: Oct 2026
+  date_taken: '2026-10-03'
+  tags:
+  - loc/pacific/solomon-islands/simons-nature-reserve
+  - subject/snorkelling
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2026-09/light-downwind-sailing-towards-honiara.webp
+  title: Light downwind sailing towards Honiara
+  date: Sep 2026
+  date_taken: '2026-09-27'
+  tags:
+  - loc/pacific/solomon-islands/guadalcanal/honiara
+  - subject/sailing
+  width: 1200
+  height: 1600
+- src: /assets/images/gallery/2026-09/uncomfortable-stern-tie-anchorage-in-honiara.webp
+  title: Uncomfortable stern tie anchorage in Honiara
+  date: Sep 2026
+  date_taken: '2026-09-29'
+  tags:
+  - loc/pacific/solomon-islands/guadalcanal/honiara
+  - subject/anchorages
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-09/enjoying-the-breakwater-cafe.webp
+  title: Enjoying the Breakwater cafe
+  date: Sep 2026
+  date_taken: '2026-09-29'
+  tags:
+  - loc/pacific/solomon-islands/guadalcanal/honiara
+  - subject/anchorages
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-09/honiaras-amazing-market.webp
+  title: Honiara's amazing market
+  date: Sep 2026
+  date_taken: '2026-09-29'
+  tags:
+  - loc/pacific/solomon-islands/guadalcanal/honiara
+  - subject/provisioning
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-09/honiaras-amazing-market-1.webp
+  title: Honiara's amazing market
+  date: Sep 2026
+  date_taken: '2026-09-29'
+  tags:
+  - loc/pacific/solomon-islands/guadalcanal/honiara
+  - subject/provisioning
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-09/honiaras-amazing-market-2.webp
+  title: Honiara's amazing market
+  date: Sep 2026
+  date_taken: '2026-09-29'
+  tags:
+  - loc/pacific/solomon-islands/guadalcanal/honiara
+  - subject/provisioning
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-09/selwyn-bay.webp
+  title: Selwyn bay
+  date: Sep 2026
+  date_taken: '2026-09-26'
+  tags:
+  - loc/pacific/solomon-islands/uki/selwyn-bay
+  - subject/anchorages
+  - subject/beaches
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-09/landing-in-selwyn-bay.webp
+  title: Landing in selwyn bay
+  date: Sep 2026
+  date_taken: '2026-09-26'
+  tags:
+  - loc/pacific/solomon-islands/uki/selwyn-bay
+  - subject/beaches
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-09/can-we-keep-it-please.webp
+  title: Can we keep it please
+  date: Sep 2026
+  date_taken: '2026-09-26'
+  tags:
+  - loc/pacific/solomon-islands/uki/selwyn-bay
+  - subject/village
+  width: 1200
+  height: 1600
+- src: /assets/images/gallery/2026-09/kittens.webp
+  title: Kittens...!
+  date: Sep 2026
+  date_taken: '2026-09-26'
+  tags:
+  - loc/pacific/solomon-islands/uki/selwyn-bay
+  - subject/village
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-09/henrys-gardens-beginning.webp
+  title: Henry's gardens beginning
+  date: Sep 2026
+  date_taken: '2026-09-26'
+  tags:
+  - loc/pacific/solomon-islands/uki/selwyn-bay
+  - subject/village
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-09/henrys-house.webp
+  title: Henry's house
+  date: Sep 2026
+  date_taken: '2026-09-26'
+  tags:
+  - loc/pacific/solomon-islands/uki/selwyn-bay
+  - subject/village
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-09/exploring.webp
+  title: Exploring
+  date: Sep 2026
+  date_taken: '2026-09-26'
+  tags:
+  - loc/pacific/solomon-islands/uki/selwyn-bay
+  - subject/boat-life
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-09/meeting-henry-and-family.webp
+  title: Meeting henry and family
+  date: Sep 2026
+  date_taken: '2026-09-26'
+  tags:
+  - loc/pacific/solomon-islands/uki/selwyn-bay
+  - subject/village
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-09/touring-santa-ana-village.webp
+  title: Touring Santa Ana village
+  date: Sep 2026
+  date_taken: '2026-09-23'
+  tags:
+  - loc/pacific/solomon-islands/santa-ana
+  - subject/village
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-09/central-village-at-santa-ana.webp
+  title: Central village at santa ana
+  date: Sep 2026
+  date_taken: '2026-09-23'
+  tags:
+  - loc/pacific/solomon-islands/santa-ana
+  - subject/village
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-09/new-church-build-started.webp
+  title: New church build started
+  date: Sep 2026
+  date_taken: '2026-09-23'
+  tags:
+  - loc/pacific/solomon-islands/santa-ana
+  - subject/village
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-09/netball-in-santa-ana.webp
+  title: Netball in santa ana
+  date: Sep 2026
+  date_taken: '2026-09-23'
+  tags:
+  - loc/pacific/solomon-islands/santa-ana
+  - subject/village
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-09/outskirts-of-santa-ana-village.webp
+  title: Outskirts of santa ana village
+  date: Sep 2026
+  date_taken: '2026-09-23'
+  tags:
+  - loc/pacific/solomon-islands/santa-ana
+  - subject/village
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-09/kids-playing-on-the-beach.webp
+  title: Kids playing on the beach
+  date: Sep 2026
+  date_taken: '2026-09-23'
+  tags:
+  - loc/pacific/solomon-islands/santa-ana
+  - subject/beaches
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-09/evening-send-off-from-the-locals.webp
+  title: Evening send off from the locals
+  date: Sep 2026
+  date_taken: '2026-09-23'
+  tags:
+  - loc/pacific/solomon-islands/santa-ana
+  - subject/beaches
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-09/introducing-locals-to-the-piano.webp
+  title: Introducing locals to the piano
+  date: Sep 2026
+  date_taken: '2026-09-24'
+  tags:
+  - loc/pacific/solomon-islands/santa-ana
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-09/zipper-overrun-with-local-kids.webp
+  title: Zipper overrun with local kids
+  date: Sep 2026
+  date_taken: '2026-09-24'
+  tags:
+  - loc/pacific/solomon-islands/santa-ana
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-09/local-kids-playing-on-zipper.webp
+  title: Local kids playing on zipper
+  date: Sep 2026
+  date_taken: '2026-09-24'
+  tags:
+  - loc/pacific/solomon-islands/santa-ana
+  - subject/anchorages
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-09/meeting-chief-john.webp
+  title: Meeting chief john
+  date: Sep 2026
+  date_taken: '2026-09-24'
+  tags:
+  - loc/pacific/solomon-islands/santa-ana
+  - subject/bureaucracy
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-09/chief-johns-welcoming-shelter.webp
+  title: Chief john's welcoming shelter
+  date: Sep 2026
+  date_taken: '2026-09-24'
+  tags:
+  - loc/pacific/solomon-islands/santa-ana
+  - subject/bureaucracy
+  - subject/village
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-09/signing-chief-johns-visitors-book.webp
+  title: Signing chief john's visitors book
+  date: Sep 2026
+  date_taken: '2026-09-24'
+  tags:
+  - loc/pacific/solomon-islands/santa-ana
+  - subject/bureaucracy
+  - subject/village
+  width: 1600
+  height: 1200
 - src: /assets/images/gallery/2026-09/beautiful-basket-to-welcome-us-to-lata.webp
   title: Beautiful basket to welcome us to Lata
   date: Sep 2026
