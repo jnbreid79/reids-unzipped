@@ -1,6 +1,469 @@
 # gallery.yml — managed by gallery_import.py
 # Add new entries via the import tool; most recent first.
 
+- src: /assets/images/gallery/2026-10/stake-marking-a-nest-covered-by-fronds.webp
+  title: Stake marking a nest covered by fronds
+  date: Oct 2026
+  date_taken: '2026-10-08'
+  tags:
+  - loc/pacific/solomon-islands/arnavon-islands
+  width: 1067
+  height: 1600
+- src: /assets/images/gallery/2026-10/hatchlings-beginning-their-perilous-journey.webp
+  title: Hatchlings beginning their perilous journey
+  date: Oct 2026
+  date_taken: '2026-10-08'
+  tags:
+  - loc/pacific/solomon-islands/arnavon-islands
+  - subject/wildlife
+  width: 1067
+  height: 1600
+- src: /assets/images/gallery/2026-10/hatchlings-following-the-dug-route.webp
+  title: Hatchlings following the dug route
+  date: Oct 2026
+  date_taken: '2026-10-08'
+  tags:
+  - loc/pacific/solomon-islands/arnavon-islands
+  - subject/wildlife
+  width: 1067
+  height: 1600
+- src: /assets/images/gallery/2026-10/rangers-counting-the-hatchlings-out.webp
+  title: Rangers counting the hatchlings out
+  date: Oct 2026
+  date_taken: '2026-10-08'
+  tags:
+  - loc/pacific/solomon-islands/arnavon-islands
+  - subject/wildlife
+  width: 1067
+  height: 1600
+- src: /assets/images/gallery/2026-10/sandy-hatchling.webp
+  title: Sandy hatchling
+  date: Oct 2026
+  date_taken: '2026-10-08'
+  tags:
+  - loc/pacific/solomon-islands/arnavon-islands
+  - subject/wildlife
+  width: 1067
+  height: 1600
+- src: /assets/images/gallery/2026-10/busy-nest-of-hatchlings.webp
+  title: Busy nest of hatchlings
+  date: Oct 2026
+  date_taken: '2026-10-08'
+  tags:
+  - loc/pacific/solomon-islands/arnavon-islands
+  - subject/wildlife
+  width: 1067
+  height: 1600
+- src: /assets/images/gallery/2026-10/overseeing-the-initial-stages-of-the-hatchlings-jo.webp
+  title: Overseeing the initial stages of the hatchlings' journeys
+  date: Oct 2026
+  date_taken: '2026-10-08'
+  tags:
+  - loc/pacific/solomon-islands/arnavon-islands
+  - subject/beaches
+  width: 1067
+  height: 1600
+- src: /assets/images/gallery/2026-10/heading-for-the-water.webp
+  title: Heading for the water
+  date: Oct 2026
+  date_taken: '2026-10-08'
+  tags:
+  - loc/pacific/solomon-islands/arnavon-islands
+  - subject/beaches
+  - subject/wildlife
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2026-10/small-stones-are-substantial-obstacles-for-the-lit.webp
+  title: Small stones are substantial obstacles for the little hatchl
+  date: Oct 2026
+  date_taken: '2026-10-08'
+  tags:
+  - loc/pacific/solomon-islands/arnavon-islands
+  - subject/wildlife
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2026-10/hatchling-capsized-on-obstacle-course.webp
+  title: Hatchling capsized on obstacle course
+  date: Oct 2026
+  date_taken: '2026-10-08'
+  tags:
+  - loc/pacific/solomon-islands/arnavon-islands
+  - subject/wildlife
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2026-10/made-it-into-the-water.webp
+  title: Made it into the water
+  date: Oct 2026
+  date_taken: '2026-10-08'
+  tags:
+  - loc/pacific/solomon-islands/arnavon-islands
+  - subject/wildlife
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2026-10/helping-some-along.webp
+  title: Helping some along
+  date: Oct 2026
+  date_taken: '2026-10-08'
+  tags:
+  - loc/pacific/solomon-islands/arnavon-islands
+  - subject/wildlife
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2026-10/isla-helping-out-a-little-hatchling.webp
+  title: Isla helping out a little hatchling
+  date: Oct 2026
+  date_taken: '2026-10-08'
+  tags:
+  - loc/pacific/solomon-islands/arnavon-islands
+  - subject/wildlife
+  width: 1067
+  height: 1600
+- src: /assets/images/gallery/2026-10/isla-launching-a-hatchling.webp
+  title: Isla launching a hatchling
+  date: Oct 2026
+  date_taken: '2026-10-08'
+  tags:
+  - loc/pacific/solomon-islands/arnavon-islands
+  - subject/wildlife
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2026-10/giving-a-hatchling-a-better-launch.webp
+  title: Giving a hatchling a better launch
+  date: Oct 2026
+  date_taken: '2026-10-08'
+  tags:
+  - loc/pacific/solomon-islands/arnavon-islands
+  - subject/wildlife
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2026-10/starting-to-swim-for-it.webp
+  title: Starting to swim for it
+  date: Oct 2026
+  date_taken: '2026-10-08'
+  tags:
+  - loc/pacific/solomon-islands/arnavon-islands
+  - subject/wildlife
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2026-10/rangers-looking-on-as-we-help.webp
+  title: Rangers looking on as we help
+  date: Oct 2026
+  date_taken: '2026-10-08'
+  tags:
+  - loc/pacific/solomon-islands/arnavon-islands
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2026-10/zipper-anchored-in-the-arnavon-islands.webp
+  title: Zipper anchored in the arnavon islands
+  date: Oct 2026
+  date_taken: '2026-10-08'
+  tags:
+  - loc/pacific/solomon-islands/arnavon-islands
+  - subject/anchorages
+  width: 1067
+  height: 1600
+- src: /assets/images/gallery/2026-10/turtle-sanctuary-sections.webp
+  title: Turtle sanctuary sections
+  date: Oct 2026
+  date_taken: '2026-10-08'
+  tags:
+  - loc/pacific/solomon-islands/arnavon-islands
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-10/being-educated-by-the-rangers.webp
+  title: Being educated by the rangers
+  date: Oct 2026
+  date_taken: '2026-10-08'
+  tags:
+  - loc/pacific/solomon-islands/arnavon-islands
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-10/channel-dug-in-preparation-for-the-hatch.webp
+  title: Channel dug in preparation for the hatch
+  date: Oct 2026
+  date_taken: '2026-10-08'
+  tags:
+  - loc/pacific/solomon-islands/arnavon-islands
+  - subject/beaches
+  width: 1200
+  height: 1600
+- src: /assets/images/gallery/2026-10/tracks-showing-a-turtle-not-finding-suitable-nest-.webp
+  title: Tracks showing a turtle not finding suitable nest site
+  date: Oct 2026
+  date_taken: '2026-10-08'
+  tags:
+  - loc/pacific/solomon-islands/arnavon-islands
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-10/red-parrots-overlooking-the-turtle-nests.webp
+  title: Red parrots overlooking the turtle nests
+  date: Oct 2026
+  date_taken: '2026-10-08'
+  tags:
+  - loc/pacific/solomon-islands/arnavon-islands
+  - subject/wildlife
+  width: 1600
+  height: 900
+- src: /assets/images/gallery/2026-10/mother-turtle-laying-her-eggs-at-night.webp
+  title: Mother turtle laying her eggs at night
+  date: Oct 2026
+  date_taken: '2026-10-09'
+  tags:
+  - loc/pacific/solomon-islands/arnavon-islands
+  - subject/wildlife
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2026-10/mother-turtle-stopped-for-measuring-and-tagging.webp
+  title: Mother turtle stopped for measuring and tagging
+  date: Oct 2026
+  date_taken: '2026-10-09'
+  tags:
+  - loc/pacific/solomon-islands/arnavon-islands
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2026-10/counting-the-eggs-laid-in-the-nest.webp
+  title: Counting the eggs laid in the nest
+  date: Oct 2026
+  date_taken: '2026-10-09'
+  tags:
+  - loc/pacific/solomon-islands/arnavon-islands
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2026-10/newly-laid-eggs-extracted-for-counting.webp
+  title: Newly laid eggs extracted for counting
+  date: Oct 2026
+  date_taken: '2026-10-09'
+  tags:
+  - loc/pacific/solomon-islands/arnavon-islands
+  - subject/wildlife
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2026-10/mother-turtle-returning-after-laying.webp
+  title: Mother turtle returning after laying
+  date: Oct 2026
+  date_taken: '2026-10-09'
+  tags:
+  - loc/pacific/solomon-islands/arnavon-islands
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2026-10/mother-turtle-after-laying-her-eggs.webp
+  title: Mother turtle after laying her eggs
+  date: Oct 2026
+  date_taken: '2026-10-09'
+  tags:
+  - loc/pacific/solomon-islands/arnavon-islands
+  - subject/wildlife
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2026-10/us-with-the-rangers-at-the-turtle-sanctuary.webp
+  title: Us with the rangers at the turtle sanctuary
+  date: Oct 2026
+  date_taken: '2026-10-12'
+  tags:
+  - loc/pacific/solomon-islands/arnavon-islands
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-10/paul-john-arranging-carving-displays-in-mbili.webp
+  title: Paul John arranging carving displays in Mbili
+  date: Oct 2026
+  date_taken: '2026-10-06'
+  tags:
+  - loc/pacific/solomon-islands/marovo-lagoon
+  - subject/anchorages
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-10/rockys-squid-carving.webp
+  title: Rocky's squid carving
+  date: Oct 2026
+  date_taken: '2026-10-07'
+  tags:
+  - loc/pacific/solomon-islands/marovo-lagoon
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2026-10/rockys-octopus-carving.webp
+  title: Rocky's octopus carving
+  date: Oct 2026
+  date_taken: '2026-10-07'
+  tags:
+  - loc/pacific/solomon-islands/marovo-lagoon
+  width: 1067
+  height: 1600
+- src: /assets/images/gallery/2026-10/rockys-lionfish-carving.webp
+  title: Rocky's lionfish carving
+  date: Oct 2026
+  date_taken: '2026-10-07'
+  tags:
+  - loc/pacific/solomon-islands/marovo-lagoon
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2026-10/anchorage-from-rockys-balcony.webp
+  title: Anchorage from rocky's balcony
+  date: Oct 2026
+  date_taken: '2026-10-07'
+  tags:
+  - loc/pacific/solomon-islands/marovo-lagoon
+  - subject/anchorages
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2026-10/telina-island-from-the-anchorage.webp
+  title: Telina island from the anchorage
+  date: Oct 2026
+  date_taken: '2026-10-07'
+  tags:
+  - loc/pacific/solomon-islands/marovo-lagoon
+  - subject/anchorages
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2026-10/seaweed-farm-on-bottles.webp
+  title: Seaweed farm on bottles
+  date: Oct 2026
+  date_taken: '2026-10-07'
+  tags:
+  - loc/pacific/solomon-islands/marovo-lagoon
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2026-10/northern-marovo-lagoon.webp
+  title: Northern marovo lagoon
+  date: Oct 2026
+  date_taken: '2026-10-07'
+  tags:
+  - loc/pacific/solomon-islands/marovo-lagoon
+  - subject/landscapes
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2026-10/hills-behind-telina-in-the-northern-marovo-lagoon.webp
+  title: Hills behind telina in the northern marovo lagoon
+  date: Oct 2026
+  date_taken: '2026-10-07'
+  tags:
+  - loc/pacific/solomon-islands/marovo-lagoon
+  - subject/landscapes
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-10/carvings-on-rockys-balcony.webp
+  title: Carvings on rocky's balcony
+  date: Oct 2026
+  date_taken: '2026-10-07'
+  tags:
+  - loc/pacific/solomon-islands/marovo-lagoon
+  - subject/village
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-10/rockys-house-on-telina.webp
+  title: Rocky's house on telina
+  date: Oct 2026
+  date_taken: '2026-10-07'
+  tags:
+  - loc/pacific/solomon-islands/marovo-lagoon
+  - subject/village
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-10/anchored-off-telina.webp
+  title: Anchored off telina
+  date: Oct 2026
+  date_taken: '2026-10-07'
+  tags:
+  - loc/pacific/solomon-islands/marovo-lagoon
+  - subject/anchorages
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-10/vaino-showing-us-his-carvings.webp
+  title: Vaino showing us his carvings
+  date: Oct 2026
+  date_taken: '2026-10-07'
+  tags:
+  - loc/pacific/solomon-islands/marovo-lagoon
+  - subject/village
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-10/octopus-carving.webp
+  title: Octopus carving
+  date: Oct 2026
+  date_taken: '2026-10-07'
+  tags:
+  - loc/pacific/solomon-islands/marovo-lagoon
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-10/vaino-signing-our-bottle-carving.webp
+  title: Vaino signing our bottle carving
+  date: Oct 2026
+  date_taken: '2026-10-07'
+  tags:
+  - loc/pacific/solomon-islands/marovo-lagoon
+  width: 1200
+  height: 1600
+- src: /assets/images/gallery/2026-10/thanking-vaino-for-our-carving.webp
+  title: Thanking vaino for our carving
+  date: Oct 2026
+  date_taken: '2026-10-07'
+  tags:
+  - loc/pacific/solomon-islands/marovo-lagoon
+  - subject/village
+  width: 1200
+  height: 1600
+- src: /assets/images/gallery/2026-10/john-wayne-and-vainos-house.webp
+  title: John wayne and vaino's house
+  date: Oct 2026
+  date_taken: '2026-10-07'
+  tags:
+  - loc/pacific/solomon-islands/marovo-lagoon
+  - subject/village
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-10/kids-being-kids.webp
+  title: Kids being kids
+  date: Oct 2026
+  date_taken: '2026-10-07'
+  tags:
+  - loc/pacific/solomon-islands/marovo-lagoon
+  - subject/boat-life
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-10/kids-being-kids-1.webp
+  title: Kids being kids
+  date: Oct 2026
+  date_taken: '2026-10-07'
+  tags:
+  - loc/pacific/solomon-islands/marovo-lagoon
+  - subject/boat-life
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-10/local-kids-showing-their-moves.webp
+  title: Local kids showing their moves
+  date: Oct 2026
+  date_taken: '2026-10-07'
+  tags:
+  - loc/pacific/solomon-islands/marovo-lagoon
+  - subject/boat-life
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-07/mba-kouen-with-outer-reef-in-background.webp
+  title: Mba kouen with outer reef in background
+  date: Jul 2026
+  date_taken: '2026-07-24'
+  tags:
+  - loc/pacific/new-caledonia/mba-kouen
+  - subject/anchorages
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-07/mba-kouen-looking-into-the-lagoon.webp
+  title: Mba kouen looking into the lagoon
+  date: Jul 2026
+  date_taken: '2026-07-24'
+  tags:
+  - loc/pacific/new-caledonia/mba-kouen
+  - subject/anchorages
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-07/zipper-at-anchor-off-mba-kouen.webp
+  title: Zipper at anchor off mba kouen
+  date: Jul 2026
+  date_taken: '2026-07-24'
+  tags:
+  - loc/pacific/new-caledonia/mba-kouen
+  - subject/anchorages
+  width: 1600
+  height: 1200
 - src: /assets/images/gallery/2026-09/welcome-to-roderick-bay.webp
   title: Welcome to Roderick Bay
   date: Sep 2026
