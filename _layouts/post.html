@@ -360,40 +360,30 @@ layout: none
   .post-body img:hover { opacity: 0.92; }
 
   /* =====================================================================
-     GALLERY — CSS grid, natural image proportions, left-to-right order
-     Consecutive images in a post are wrapped in .gallery by JS.
-     Images display at their natural aspect ratio — no forced crop.
-     Grid fills across then down (row by row), matching markdown order.
+     GALLERY — justified rows, natural image proportions, no cropping
+     Consecutive images in a post are wrapped in .gallery by JS, which
+     splits them into .gallery-row flex rows (max 3 per row, 2 on narrow
+     screens, never a lone image on the last row unless there is only one).
+     Each item's flex-grow is set by JS to its aspect ratio (x1000), so
+     widths are proportional to aspect ratio and every image in a row ends
+     up exactly the same height — portrait beside landscape is not cropped,
+     it is simply narrower. A single image keeps its natural shape.
      Clicking opens the full image in the lightbox.
      ===================================================================== */
 
-  /* CSS columns — items fill top-to-bottom within each column,
-     cascading any uneven space to the bottom rather than leaving
-     gaps mid-grid. JS reorders items so the visual reading order
-     is left-to-right (across then down) matching markdown order. */
-  .gallery {
-    columns: 3;
-    column-gap: 6px;
-    margin: 1.5rem 0;
-  }
+  .gallery { margin: 1.5rem 0; }
 
-  /* Single image — full width */
-  .gallery.count-1 { columns: 1; }
-
-  /* Two images — side by side */
-  .gallery.count-2 { columns: 2; }
-
-  @media (max-width: 700px) {
-    .gallery         { columns: 2; }
-    .gallery.count-1 { columns: 1; }
-  }
-  @media (max-width: 400px) {
-    .gallery { columns: 1; }
-  }
-
-  .gallery-item {
-    break-inside: avoid;
+  .gallery-row {
+    display: flex;
+    gap: 6px;
     margin-bottom: 6px;
+  }
+  .gallery-row:last-child { margin-bottom: 0; }
+
+  /* flex-grow 1500 ≈ 3:2 landscape until JS sets the real ratio on load */
+  .gallery-item {
+    flex: 1500 1 0px;
+    min-width: 0;
     overflow: hidden;
     border-radius: 2px;
     cursor: zoom-in;
@@ -905,7 +895,7 @@ layout: none
   };
 
   // ── Gallery builder ────────────────────────────────────────────────────
-  // Gallery builder — groups images for display.
+  // Groups consecutive images into justified-row galleries.
   //
   // Jekyll rendering rules:
   //   - Images on consecutive lines (no blank line) → all inside ONE <p> tag
@@ -916,6 +906,9 @@ layout: none
   //   - Consecutive image-only <p> tags = one group (blank lines between each)
   //   - Any <p> with real text content, or any non-<p> element = group break
   //
+  // Layout: each group becomes a .gallery of .gallery-row flex rows. Item
+  // widths are proportional to image aspect ratio, so images in a row share
+  // one height with no cropping. DOM order always equals markdown order.
   (function() {
     const body = document.querySelector('.post-body');
     if (!body) return;
@@ -942,49 +935,71 @@ layout: none
     });
     if (current.length) groups.push(current);
 
-    // Build a gallery for each group
+    // Row sizes for n images, at most `max` per row, spread as evenly as
+    // possible so there is never a lone image on a row (unless n === 1,
+    // or max is 2 and n is odd). e.g. max 3: 4→[2,2]  5→[3,2]  7→[3,2,2]
+    function rowPlan(n, max) {
+      if (n <= max) return [n];
+      const rows = Math.ceil(n / max);
+      const base = Math.floor(n / rows);
+      const extra = n % rows;
+      return Array.from({ length: rows }, (_, i) => base + (i < extra ? 1 : 0));
+    }
+
+    // Set an item's flex-grow from its image's natural aspect ratio
+    function applyRatio(item) {
+      const img = item.querySelector('img');
+      const set = () => {
+        if (img.naturalWidth && img.naturalHeight) {
+          item.style.flexGrow = Math.round(img.naturalWidth / img.naturalHeight * 1000);
+        }
+      };
+      if (img.complete) set();
+      else img.addEventListener('load', set, { once: true });
+    }
+
+    const built = [];   // { gallery, items }
+
     groups.forEach(group => {
-      // Collect all imgs from all <p> elements in this group
       const imgs = group.flatMap(p => Array.from(p.querySelectorAll('img')));
       if (!imgs.length) return;
 
-      const n = imgs.length;
       const gallery = document.createElement('div');
-      gallery.className = n <= 2 ? `gallery count-${n}` : 'gallery';
-
+      gallery.className = 'gallery';
       group[0].parentNode.insertBefore(gallery, group[0]);
 
-      // CSS columns fills top-to-bottom within each column, so the natural
-      // display order is: col1-item1, col1-item2, col2-item1, col2-item2 …
-      // We want left-to-right reading order (row by row), so we reorder
-      // the items to distribute them column-by-column before inserting.
-      //
-      // Example: 7 items, 3 columns → rows are [1,2,3], [4,5,6], [7]
-      // Column 0 gets items at row-indices: 0,3,6  → imgs[0], imgs[3], imgs[6]
-      // Column 1 gets items at row-indices: 1,4    → imgs[1], imgs[4]
-      // Column 2 gets items at row-indices: 2,5    → imgs[2], imgs[5]
-      // Inserting in that order makes CSS columns display them left-to-right.
-
-      const cols = n <= 2 ? n : 3;
-      const rows = Math.ceil(n / cols);
-      const reordered = [];
-      for (let col = 0; col < cols; col++) {
-        for (let row = 0; row < rows; row++) {
-          const idx = row * cols + col;
-          if (idx < n) reordered.push(imgs[idx]);
-        }
-      }
-
-      reordered.forEach(img => {
+      const items = imgs.map(img => {
         const item = document.createElement('div');
         item.className = 'gallery-item';
-        gallery.appendChild(item);
         item.appendChild(img);
+        applyRatio(item);
+        return item;
       });
+
+      built.push({ gallery, items });
 
       // Remove the now-empty <p> wrappers
       group.forEach(p => p.remove());
     });
+
+    // (Re)build the rows — 3 per row normally, 2 per row on narrow screens
+    const narrow = window.matchMedia('(max-width: 700px)');
+    function layoutGalleries() {
+      const max = narrow.matches ? 2 : 3;
+      built.forEach(({ gallery, items }) => {
+        gallery.textContent = '';
+        let i = 0;
+        rowPlan(items.length, max).forEach(size => {
+          const row = document.createElement('div');
+          row.className = 'gallery-row';
+          items.slice(i, i + size).forEach(item => row.appendChild(item));
+          gallery.appendChild(row);
+          i += size;
+        });
+      });
+    }
+    layoutGalleries();
+    narrow.addEventListener('change', layoutGalleries);
   })();
 
   // ── Lightbox ───────────────────────────────────────────────────────────

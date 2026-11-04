@@ -1,6 +1,297 @@
 # gallery.yml — managed by gallery_import.py
 # Add new entries via the import tool; most recent first.
 
+- src: /assets/images/gallery/2026-08/geothermal-steam.webp
+  title: Geothermal steam
+  date: Aug 2026
+  date_taken: '2026-08-12'
+  tags:
+  - loc/pacific/vanuatu/tanna/port-resolution
+  - subject/anchorages
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2026-09/enjoying-the-wala-festival-with-freeranger-and-oth.webp
+  title: Enjoying the Wala festival with Freeranger and other cruiser
+  date: Sep 2026
+  date_taken: '2026-09-02'
+  tags:
+  - loc/pacific/vanuatu/malekula/wala
+  - subject/festival
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-09/fellow-cruisers-in-the-crowd-at-the-wala-festival.webp
+  title: Fellow cruisers in the crowd at the Wala festival
+  date: Sep 2026
+  date_taken: '2026-09-02'
+  tags:
+  - loc/pacific/vanuatu/malekula/wala
+  - subject/festival
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-09/stereotypical-vanuatan-outrigger-canoe.webp
+  title: Stereotypical Vanuatan outrigger canoe
+  date: Sep 2026
+  date_taken: '2026-09-11'
+  tags:
+  - loc/pacific/vanuatu/santo/port-olry
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-09/cricket-with-the-local-kids.webp
+  title: Cricket with the local kids
+  date: Sep 2026
+  date_taken: '2026-09-13'
+  tags:
+  - loc/pacific/vanuatu/gaua/bushmans-bay
+  - subject/village
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-09/vanuatu-route.webp
+  title: Vanuatu route
+  date: Sep 2026
+  date_taken: '2026-09-17'
+  tags:
+  - loc/pacific/vanuatu
+  - subject/passages
+  width: 1600
+  height: 788
+- src: /assets/images/gallery/2026-10/stopping-in-at-joes-after-exploring-the-island.webp
+  title: Stopping in at Joe's after exploring the island
+  date: Oct 2026
+  date_taken: '2026-10-12'
+  tags:
+  - loc/pacific/solomon-islands/new-georgia/lola
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-10/angus-and-sophie-cool-down.webp
+  title: Angus and sophie cool down
+  date: Oct 2026
+  date_taken: '2026-10-16'
+  tags:
+  - loc/pacific/solomon-islands/new-georgia/fatboys
+  - subject/anchorages
+  - subject/the-water
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-10/beach-clean-burning-the-rubbish.webp
+  title: Beach clean, burning the rubbish
+  date: Oct 2026
+  date_taken: '2026-10-09'
+  tags:
+  - loc/pacific/solomon-islands/arnavon-islands
+  - subject/beaches
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-10/taking-a-well-earned-break-from-the-beach-clean.webp
+  title: Taking a well earned break from the beach clean
+  date: Oct 2026
+  date_taken: '2026-10-09'
+  tags:
+  - loc/pacific/solomon-islands/arnavon-islands
+  - subject/beaches
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-10/lobster-and-squid-in-the-fish-market-at-noro.webp
+  title: Lobster and squid in the fish market at Noro
+  date: Oct 2026
+  date_taken: '2026-10-12'
+  tags:
+  - loc/pacific/solomon-islands/new-georgia/noro
+  - subject/provisioning
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-10/busy-landing-at-the-noro-market.webp
+  title: Busy landing at the noro market
+  date: Oct 2026
+  date_taken: '2026-10-12'
+  tags:
+  - loc/pacific/solomon-islands/new-georgia/noro
+  - subject/village
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-10/bananas-from-the-marovo-lagoon-starting-to-ripen-a.webp
+  title: Bananas from the marovo lagoon starting to ripen after a wee
+  date: Oct 2026
+  date_taken: '2026-10-12'
+  tags:
+  - loc/pacific/solomon-islands/new-georgia/noro
+  - subject/provisioning
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-10/zipper-needs-a-deep-clean-after-less-than-24-hours.webp
+  title: Zipper needs a deep clean after less than 24 hours anchored in Noro
+  date: Oct 2026
+  date_taken: '2026-10-12'
+  tags:
+  - loc/pacific/solomon-islands/new-georgia/noro
+  - subject/boat-work
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-10/dinghy-dock-at-the-gizo-market.webp
+  title: Dinghy dock at the Gizo market
+  date: Oct 2026
+  date_taken: '2026-10-16'
+  tags:
+  - loc/pacific/solomon-islands/new-georgia/gizo
+  - subject/village
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-10/gizo-fruit-and-veg-market.webp
+  title: Gizo fruit and veg market
+  date: Oct 2026
+  date_taken: '2026-10-16'
+  tags:
+  - loc/pacific/solomon-islands/new-georgia/gizo
+  - subject/provisioning
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-10/gizo-fruit-and-veg-market-roots-section.webp
+  title: Gizo fruit and veg market, roots section
+  date: Oct 2026
+  date_taken: '2026-10-16'
+  tags:
+  - loc/pacific/solomon-islands/new-georgia/gizo
+  - subject/provisioning
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-10/repairing-the-mainsail-on-our-way-out-of-the-solom.webp
+  title: Repairing the mainsail on our way out of the Solomon Islands
+  date: Oct 2026
+  date_taken: '2026-10-17'
+  tags:
+  - loc/pacific/solomon-islands/new-georgia/gizo
+  - subject/boat-work
+  - subject/passages
+  width: 1200
+  height: 1600
+- src: /assets/images/gallery/2026-10/sunset-leaving-the-solomon-islands.webp
+  title: Sunset leaving the Solomon Islands
+  date: Oct 2026
+  date_taken: '2026-10-17'
+  tags:
+  - loc/pacific/solomon-islands/new-georgia/gizo
+  - subject/sunsets
+  width: 1200
+  height: 1600
+- src: /assets/images/gallery/2026-10/crew-swap-boys-on-bommie-watch-on-jadamama.webp
+  title: Crew swap, boys on bommie watch on Jadamama
+  date: Oct 2026
+  date_taken: '2026-10-14'
+  tags:
+  - loc/pacific/solomon-islands/new-georgia/noro
+  - subject/boat-life
+  width: 1536
+  height: 2048
+- src: /assets/images/gallery/2026-10/crew-swap-girls-crafting-on-zipper.webp
+  title: Crew swap, girls crafting on Zipper
+  date: Oct 2026
+  date_taken: '2026-10-14'
+  tags:
+  - loc/pacific/solomon-islands/new-georgia/noro
+  - subject/boat-life
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-10/happy-crew-leaving-the-solomons-for-png.webp
+  title: Happy crew leaving the Solomon's for PNG
+  date: Oct 2026
+  date_taken: '2026-10-17'
+  tags:
+  - loc/pacific/solomon-islands/new-georgia/gizo
+  - subject/family
+  - subject/passages
+  width: 1600
+  height: 1202
+- src: /assets/images/gallery/2026-10/sailrite-on-deck-for-a-mainsail-repair.webp
+  title: Sailrite on deck for a mainsail repair
+  date: Oct 2026
+  date_taken: '2026-10-17'
+  tags:
+  - loc/pacific/solomon-islands/new-georgia/noro
+  - subject/boat-work
+  - subject/passages
+  width: 1600
+  height: 2133
+- src: /assets/images/gallery/2026-10/passage-through-the-lagoon-south-of-noro.webp
+  title: Passage through the lagoon south of Noro
+  date: Oct 2026
+  date_taken: '2026-10-12'
+  tags:
+  - loc/pacific/solomon-islands/new-georgia
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2026-10/tropical-islands-in-the-lagoon-south-of-noro.webp
+  title: Tropical islands in the lagoon south of Noro
+  date: Oct 2026
+  date_taken: '2026-10-14'
+  tags:
+  - loc/pacific/solomon-islands/new-georgia
+  - subject/landscapes
+  - subject/the-water
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2026-10/lola-island.webp
+  title: Lola island
+  date: Oct 2026
+  date_taken: '2026-10-14'
+  tags:
+  - loc/pacific/solomon-islands/new-georgia
+  - subject/anchorages
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-10/lola-lagoon-view.webp
+  title: Lola lagoon view
+  date: Oct 2026
+  date_taken: '2026-10-14'
+  tags:
+  - loc/pacific/solomon-islands/new-georgia
+  - subject/anchorages
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-10/zipper-anchored-off-lola.webp
+  title: Zipper anchored off lola
+  date: Oct 2026
+  date_taken: '2026-10-14'
+  tags:
+  - loc/pacific/solomon-islands/new-georgia
+  - subject/anchorages
+  width: 1600
+  height: 1200
+- src: /assets/images/gallery/2026-10/locals-fishing-in-the-lagoon.webp
+  title: Locals fishing in the lagoon
+  date: Oct 2026
+  date_taken: '2026-10-15'
+  tags:
+  - loc/pacific/solomon-islands/new-georgia
+  - subject/fishing
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2026-10/fatboys-anchorage.webp
+  title: Fatboys anchorage
+  date: Oct 2026
+  date_taken: '2026-10-15'
+  tags:
+  - loc/pacific/solomon-islands/new-georgia
+  - subject/anchorages
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2026-10/canoe-fishing-outside-gizo.webp
+  title: Canoe fishing outside gizo
+  date: Oct 2026
+  date_taken: '2026-10-16'
+  tags:
+  - loc/pacific/solomon-islands/new-georgia
+  - subject/fishing
+  - subject/the-water
+  width: 1600
+  height: 1067
+- src: /assets/images/gallery/2026-10/zipper-anchored-off-fatboys.webp
+  title: Zipper anchored off fatboys
+  date: Oct 2026
+  date_taken: '2026-10-16'
+  tags:
+  - loc/pacific/solomon-islands/new-georgia
+  - subject/anchorages
+  width: 1600
+  height: 1200
 - src: /assets/images/gallery/2026-10/stake-marking-a-nest-covered-by-fronds.webp
   title: Stake marking a nest covered by fronds
   date: Oct 2026

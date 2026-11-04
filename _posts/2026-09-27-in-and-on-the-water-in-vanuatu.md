@@ -1,5 +1,5 @@
 ---
-title: "In and on the water in Vanuatu"
+title: "In and On the Water in Vanuatu"
 date: 2026-09-27
 layout: post
 author: Jamie Reid
